@@ -32,6 +32,13 @@ export function objectiveAccomplished(objectiveId, accomplishedScore = null){
     accomplished_score:accomplishedScore,
   };
 }
+//nueva accion para guardar xml en el estado
+export function jsonSaved(jsonredux){
+  return {
+    type:'JSONSAVED',
+    jsoninterno:jsonredux,
+  };
+}
 
 // Example of action created using the redux-thunk middleware for Redux
 export function objectiveAccomplishedThunk(objectiveId, accomplishedScore = null){

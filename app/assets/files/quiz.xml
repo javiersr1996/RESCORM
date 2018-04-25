@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="truefalse">
+<tipo>truefalse</tipo>
+<dificultad>2</dificultad>
+<solucion>Clara simulación, defensor puntea quieto con brazos arriba</solucion>
+<name>
+<text>Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Falta sobre el tirador al invadir el defensor su cilindro</text>
+</questiontext>
+<media>
+<type>video</type>
+<source>../assets/videos/video9.mp4</source>
+</media>
+<answer fraction="0">
+<text>false</text>
+</answer>
+<answer fraction="0">
+<text>false</text>
+</answer>
+</question>
+<question type="truefalse">
+<tipo>truefalse</tipo>
+<name>
+<text>Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Simulación del tirador</text>
+</questiontext>
+<answer fraction="100">
+<text>true</text>
+</answer>
+<answer fraction="100">
+<text>true</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<tipo>multichoice</tipo>
+<dificultad>2</dificultad>
+<solucion>Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</solucion>
+<name>
+<text>Señala la respuesta correcta­</text>
+</name>
+<questiontext>
+<text>Señala la respuesta correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source>../assets/videos/video1.mp4</source>
+</media>
+<answer fraction="0">
+<text>Paso 0 correctamente aplicado</text>
+</answer>
+<answer fraction="100">
+<text>Dos pasos consecutivos con el mismo pie. Violación</text>
+</answer>
+<answer fraction="0">
+<text>Traspiés válido</text>
+</answer>
+<answer fraction="0">
+<text>Jugada ilegal por dar tres apoyos con el balón en las manos</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<tipo>multichoice</tipo>
+<dificultad>3</dificultad>
+<solucion>Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</solucion>
+<name>
+<text>Señala la respuesta correcta­</text>
+</name>
+<questiontext>
+<text>Señala la respuesta correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source>../assets/videos/video2.mp4</source>
+</media>
+<answer fraction="0">
+<text>Paso 0 correctamente aplicado</text>
+</answer>
+<answer fraction="100">
+<text>Dos pasos consecutivos con el mismo pie. Violación</text>
+</answer>
+<answer fraction="0">
+<text>Traspiés válido</text>
+</answer>
+<answer fraction="0">
+<text>Jugada ilegal por dar tres apoyos con el balón en las manos</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<tipo>multichoice</tipo>
+<dificultad>1</dificultad>
+<solucion>Jugador atacante comete violación de pasos tras rebote ofensivo antes de recibir la falta</solucion>
+<name>
+<text>Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>­En esta jugada se produce...</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source>../assets/videos/video3.mp4</source>
+</media>
+<answer fraction="100">
+<text>Pasos tras rebote ofensivo</text>
+</answer>
+<answer fraction="0">
+<text>Falta en acción de tiro</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<tipo>multichoice</tipo>
+<dificultad>1</dificultad>
+<solucion>En mini hay 2 tiempos muertos por parte no acumulables, así que no tiene razón</solucion>
+<name>
+<text>Un entrenador de minibasket nos dice lo siguiente durante el partido. ¿Tiene razón?</text>
+</name>
+<questiontext>
+<text>Un entrenador de minibasket nos dice lo siguiente durante el partido. ¿Tiene razón?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>audio</type>
+<source>../assets/audios/audio0.mp3</source>
+</media>
+<answer fraction="100">
+<text>No</text>
+</answer>
+<answer fraction="0">
+<text>Sí</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="truefalse">
+<dificultad>1</dificultad>
+<tipo>truefalse</tipo>
+<solucion>Se produce falta personal en acción de tiro al tener el jugador en balón en las manos, por tanto son dos tiros libres</solucion>
+<name>
+<text>En la siguiente jugada se produce falta personal...</text>
+</name>
+<questiontext>
+<text>no en acción de tiro. Es fondo para el equipo atacante</text>
+</questiontext>
+<media>
+<type>video</type>
+<source>../assets/videos/video10.mp4</source>
+</media>
+<answer fraction="0">
+<text>true</text>
+</answer>
+<answer fraction="0">
+<text>false</text>
+</answer>
+</question>
+<question type="truefalse">
+<tipo>truefalse</tipo>
+<name>
+<text>En la siguiente jugada se produce falta personal...</text>
+</name>
+<questiontext>
+<text>en acción de tiro, por tanto se sanciona con dos tiros libres</text>
+</questiontext>
+<answer fraction="100">
+<text>true</text>
+</answer>
+<answer fraction="100">
+<text>false</text>
+</answer>
+</question>
+<question type="truefalse">
+<tipo>truefalse</tipo>
+<name>
+<text>En la siguiente jugada se produce falta personal...</text>
+</name>
+<questiontext>
+<text>en ataque, contacta ilegalmente con su defensor</text>
+</questiontext>
+<answer fraction="0">
+<text>true</text>
+</answer>
+<answer fraction="0">
+<text>false</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="truefalse">
+<tipo>truefalse</tipo>
+<dificultad>3</dificultad>
+<solucion>Falta muy clara con el cuerpo. Jugador está en acción de tiro desde que lanza hasta que vuelve a poner los pies en el suelo</solucion>
+<name>
+<text>Señala la respuesta incorrecta</text>
+</name>
+<questiontext>
+<text>No es falta personal ya que el contacto no interviene en la acción de tiro</text>
+</questiontext>
+<media>
+<type>video</type>
+<source>../assets/videos/video11.mp4</source>
+</media>
+<answer fraction="100">
+<text>true</text>
+</answer>
+<answer fraction="100">
+<text>false</text>
+</answer>
+</question>
+<question type="truefalse">
+<tipo>truefalse</tipo>
+<name>
+<text>Señala la respuesta incorrecta</text>
+</name>
+<questiontext>
+<text>Falta en acción de tiro</text>
+</questiontext>
+<answer fraction="0">
+<text>true</text>
+</answer>
+<answer fraction="0">
+<text>false</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="truefalse">
+<dificultad>1</dificultad>
+<tipo>truefalse</tipo>
+<media>
+<type>audio</type>
+<source>../assets/audios/audio0.mp3</source>
+</media>
+<solucion>Solucion audio truefalse</solucion>
+<name>
+<text>Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Se sancionan dos técnicas,una a cada equipo.Ambos equipos tiran un tiro libre y posesión para visitantes</text>
+</questiontext>
+<answer fraction="0">
+<text>true</text>
+</answer>
+<answer fraction="0">
+<text>false</text>
+</answer>
+</question>
+<question type="truefalse">
+<tipo>truefalse</tipo>
+<name>
+<text>Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Se sanciona una técnica a cada equipo pero no se tiran tiros libres. Posesión para locales</text>
+</questiontext>
+<answer fraction="100">
+<text>true</text>
+</answer>
+<answer fraction="100">
+<text>false</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<tipo>multichoice</tipo>
+<dificultad>1</dificultad>
+<solucion>No hay control de balón por parte del atacante (palmea) por tanto no hay campo atrás</solucion>
+<name>
+<text>En la jugada...</text>
+</name>
+<questiontext>
+<text>En la jugada...</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source>../assets/videos/video4.mp4</source>
+</media>
+<answer fraction="100">
+<text>No se produce violación de campo atrás al no tener control ej jugador</text>
+</answer>
+<answer fraction="0">
+<text>Árbitro sanciona correctamente violación de campo atrás al controlar el jugador el balón en campo de ataque</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<tipo>multichoice</tipo>
+<dificultad>2</dificultad>
+<solucion>Mal sancionada. Hay que esperar cuando jugador recibe balón para ver si lanza a canasta o no</solucion>
+<name>
+<text>Se produce violación por tres segundos en la zona</text>
+</name>
+<questiontext>
+<text>Se produce violación por tres segundos en la zona</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source>../assets/videos/video5.mp4</source>
+</media>
+<answer fraction="0">
+<text>Bien sancionada</text>
+</answer>
+<answer fraction="0">
+<text>Bien sancionada aunque hubiera estado mejor antes</text>
+</answer>
+<answer fraction="100">
+<text>Mal sancionada</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<tipo>multichoice</tipo>
+<dificultad>2</dificultad>
+<solucion>Como mínimo merece aviso. Primero reacciona jocosamente y después se apoya en el árbitro</solucion>
+<name>
+<text>El entrenador reacciona de la siguiente manera</text>
+</name>
+<questiontext>
+<text>El entrenador reacciona de la siguiente manera. Señala la opción incorrecta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source>../assets/videos/video6.mp4</source>
+</media>
+<answer fraction="100">
+<text>Los árbitros hacen bien al no sancionar nada</text>
+</answer>
+<answer fraction="0">
+<text>Merece falta técnica por dicha reacción</text>
+</answer>
+<answer fraction="0">
+<text>Como mínimo debe ser avisado de falta técnica</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<tipo>multichoice</tipo>
+<dificultad>3</dificultad>
+<solucion>Se aprecia que el atacante realiza una pantalla legal, respetando distancia y tiempo y con los pies en el suelo. Clara simulación</solucion>
+<name>
+<text>Señala la opción correcta</text>
+</name>
+<questiontext>
+<text>Señala la opción correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source>../assets/videos/video7.mp4</source>
+</media>
+<answer fraction="0">
+<text>Falta en ataque por pantalla ilegal</text>
+</answer>
+<answer fraction="0">
+<text>Simulación del defensor</text>
+</answer>
+<answer fraction="100">
+<text>Simulación del defensor que debe ser avisado de falta técnica</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<tipo>multichoice</tipo>
+<dificultad>3</dificultad>
+<solucion>Reacción jocosa de la jugadora, la cual implica falta de respeto hacia los árbitros. Como mínimo se le debe avisar</solucion>
+<name>
+<text>Señala la opción correcta</text>
+</name>
+<questiontext>
+<text>Señala la opción correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source>../assets/videos/video8.mp4</source>
+</media>
+<answer fraction="0">
+<text>Hay falta que no debía haber sido sancionada</text>
+</answer>
+<answer fraction="100">
+<text>Jugadora merece falta técnica por desprecio hacia los árbitros</text>
+</answer>
+</question>
+</quiz>;
