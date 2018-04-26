@@ -1,11 +1,11 @@
-import JSON_INTERNO from './../constants/constants.jsx'
+import INITIAL_STATE from './../constants/constants.jsx'
 
-function jsonSavedReducer(state = JSON_INTERNO, action){
+function jsonSavedReducer(state ={}, action){
   switch (action.type){
   case 'JSONSAVED':
-    return action.jsonredux
-
-
+    let newState = JSON.parse(JSON.stringify(state));
+    newState = action.quiz;
+    return newState;
 
   default:
     return state;

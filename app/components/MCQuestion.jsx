@@ -31,16 +31,16 @@ export default class MCQuestion extends React.Component {
   }
   onAnswerQuestion(){
     // Calculate score
-    let nChoices = this.props.question.choices.length;
+    let nChoices = this.props.question.respuestas.length;
     let correctAnswers = 0;
     let incorrectAnswers = 0;
     let blankAnswers = 0;
 
     for(let i = 0; i < nChoices; i++){
-      let choice = this.props.question.choices[i];
+      let choice = this.props.question.respuestas[i];
       if(this.state.selected_choices_ids.indexOf(choice.id) !== -1){
         // Answered choice
-        if(choice.answer === true){
+        if(choice.valor === "100"){
           correctAnswers += 1;
         } else {
           incorrectAnswers += 1;
@@ -49,7 +49,7 @@ export default class MCQuestion extends React.Component {
         blankAnswers += 1;
       }
     }
-    let scorePercentage = Math.max(0, (correctAnswers - incorrectAnswers) / this.props.question.choices.filter(function(c){return c.answer === true;}).length);
+    let scorePercentage = Math.max(0, (correctAnswers - incorrectAnswers) / this.props.question.respuestas.filter(function(c){return c.answer === true;}).length);
 
     // Send data via SCORM
     let objective = this.props.objective;
@@ -66,13 +66,16 @@ export default class MCQuestion extends React.Component {
     this.props.onNextQuestion();
   }
   render(){
+    console.log("olaaaaaaaaaaaaaaaaaasssssssssssssss")
+    console.log(this.props.question.respuestas.length)
     let choices = [];
-    for(let i = 0; i < this.props.question.choices.length; i++){
-      choices.push(<MCQuestionChoice key={"MyQuestion_" + "question_choice_" + i} choice={this.props.question.choices[i]} checked={this.state.selected_choices_ids.indexOf(this.props.question.choices[i].id) !== -1} handleChange={this.handleChoiceChange.bind(this)} questionAnswered={this.state.answered}/>);
+    for(let i = 0; i < this.props.question.respuestas.length; i++){
+      console.log("numero respuestas pregunta "+this.props.question.respuestas.length)
+      choices.push(<MCQuestionChoice key={"MyQuestion_" + "question_choice_" + i} choice={this.props.question.respuestas[i]} checked={this.state.selected_choices_ids.indexOf(this.props.question.respuestas[i].id) !== -1} handleChange={this.handleChoiceChange.bind(this)} questionAnswered={this.state.answered}/>);
     }
     return (
       <div className="question">
-        <h1>{this.props.question.value}</h1>
+        <h1>{this.props.question.texto}</h1>
         {choices}
         <QuestionButtons I18n={this.props.I18n} onAnswerQuestion={this.onAnswerQuestion.bind(this)} onResetQuestion={this.onResetQuestion.bind(this)} onResetQuiz={this.props.onResetQuiz} onNextQuestion={this.onNextQuestion.bind(this)} answered={this.state.answered} quizCompleted={this.props.quizCompleted} allow_finish={this.props.isLastQuestion}/>
       </div>

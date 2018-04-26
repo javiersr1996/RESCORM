@@ -33,10 +33,10 @@ export function objectiveAccomplished(objectiveId, accomplishedScore = null){
   };
 }
 //nueva accion para guardar xml en el estado
-export function jsonSaved(jsonredux){
+export function jsonSaved(quiz){
   return {
     type:'JSONSAVED',
-    jsoninterno:jsonredux,
+    quiz:quiz,
   };
 }
 

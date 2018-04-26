@@ -5,42 +5,6 @@
 <text>Moodle QUIZ XML export</text>
 </category>
 </question>
-<question type="truefalse">
-<tipo>truefalse</tipo>
-<dificultad>2</dificultad>
-<solucion>Clara simulación, defensor puntea quieto con brazos arriba</solucion>
-<name>
-<text>Señala la respuesta correcta</text>
-</name>
-<questiontext>
-<text>Falta sobre el tirador al invadir el defensor su cilindro</text>
-</questiontext>
-<media>
-<type>video</type>
-<source>../assets/videos/video9.mp4</source>
-</media>
-<answer fraction="0">
-<text>false</text>
-</answer>
-<answer fraction="0">
-<text>false</text>
-</answer>
-</question>
-<question type="truefalse">
-<tipo>truefalse</tipo>
-<name>
-<text>Señala la respuesta correcta</text>
-</name>
-<questiontext>
-<text>Simulación del tirador</text>
-</questiontext>
-<answer fraction="100">
-<text>true</text>
-</answer>
-<answer fraction="100">
-<text>true</text>
-</answer>
-</question>
 <question type="category">
 <category>
 <text>Moodle QUIZ XML export</text>
@@ -169,139 +133,6 @@
 <category>
 <text>Moodle QUIZ XML export</text>
 </category>
-</question>
-<question type="truefalse">
-<dificultad>1</dificultad>
-<tipo>truefalse</tipo>
-<solucion>Se produce falta personal en acción de tiro al tener el jugador en balón en las manos, por tanto son dos tiros libres</solucion>
-<name>
-<text>En la siguiente jugada se produce falta personal...</text>
-</name>
-<questiontext>
-<text>no en acción de tiro. Es fondo para el equipo atacante</text>
-</questiontext>
-<media>
-<type>video</type>
-<source>../assets/videos/video10.mp4</source>
-</media>
-<answer fraction="0">
-<text>true</text>
-</answer>
-<answer fraction="0">
-<text>false</text>
-</answer>
-</question>
-<question type="truefalse">
-<tipo>truefalse</tipo>
-<name>
-<text>En la siguiente jugada se produce falta personal...</text>
-</name>
-<questiontext>
-<text>en acción de tiro, por tanto se sanciona con dos tiros libres</text>
-</questiontext>
-<answer fraction="100">
-<text>true</text>
-</answer>
-<answer fraction="100">
-<text>false</text>
-</answer>
-</question>
-<question type="truefalse">
-<tipo>truefalse</tipo>
-<name>
-<text>En la siguiente jugada se produce falta personal...</text>
-</name>
-<questiontext>
-<text>en ataque, contacta ilegalmente con su defensor</text>
-</questiontext>
-<answer fraction="0">
-<text>true</text>
-</answer>
-<answer fraction="0">
-<text>false</text>
-</answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
-<question type="truefalse">
-<tipo>truefalse</tipo>
-<dificultad>3</dificultad>
-<solucion>Falta muy clara con el cuerpo. Jugador está en acción de tiro desde que lanza hasta que vuelve a poner los pies en el suelo</solucion>
-<name>
-<text>Señala la respuesta incorrecta</text>
-</name>
-<questiontext>
-<text>No es falta personal ya que el contacto no interviene en la acción de tiro</text>
-</questiontext>
-<media>
-<type>video</type>
-<source>../assets/videos/video11.mp4</source>
-</media>
-<answer fraction="100">
-<text>true</text>
-</answer>
-<answer fraction="100">
-<text>false</text>
-</answer>
-</question>
-<question type="truefalse">
-<tipo>truefalse</tipo>
-<name>
-<text>Señala la respuesta incorrecta</text>
-</name>
-<questiontext>
-<text>Falta en acción de tiro</text>
-</questiontext>
-<answer fraction="0">
-<text>true</text>
-</answer>
-<answer fraction="0">
-<text>false</text>
-</answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
-<question type="truefalse">
-<dificultad>1</dificultad>
-<tipo>truefalse</tipo>
-<media>
-<type>audio</type>
-<source>../assets/audios/audio0.mp3</source>
-</media>
-<solucion>Solucion audio truefalse</solucion>
-<name>
-<text>Señala la respuesta correcta</text>
-</name>
-<questiontext>
-<text>Se sancionan dos técnicas,una a cada equipo.Ambos equipos tiran un tiro libre y posesión para visitantes</text>
-</questiontext>
-<answer fraction="0">
-<text>true</text>
-</answer>
-<answer fraction="0">
-<text>false</text>
-</answer>
-</question>
-<question type="truefalse">
-<tipo>truefalse</tipo>
-<name>
-<text>Señala la respuesta correcta</text>
-</name>
-<questiontext>
-<text>Se sanciona una técnica a cada equipo pero no se tiran tiros libres. Posesión para locales</text>
-</questiontext>
-<answer fraction="100">
-<text>true</text>
-</answer>
-<answer fraction="100">
-<text>false</text>
-</answer>
 </question>
 <question type="category">
 <category>
@@ -452,4 +283,4 @@
 <text>Jugadora merece falta técnica por desprecio hacia los árbitros</text>
 </answer>
 </question>
-</quiz>;
+</quiz>

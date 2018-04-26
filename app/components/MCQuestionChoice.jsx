@@ -5,16 +5,17 @@ export default class MCQuestionChoice extends React.Component {
     super(props);
   }
   render(){
+    console.log("olaaaaaaaaaaaaaaaaaaa MCQuestionChoice")
     let questionClassName = "question_choice";
     let showCorrection = (this.props.questionAnswered);
     if(showCorrection){
       if(this.props.checked){
-        if(this.props.choice.answer === true){
+        if(this.props.choice.answer === "100"){
           questionClassName += " question_choice_correct";
         } else {
           questionClassName += " question_choice_incorrect";
         }
-      } else if(this.props.choice.answer === true){
+      } else if(this.props.choice.answer === "100"){
         questionClassName += " question_choice_correct";
       }
     }
@@ -24,7 +25,7 @@ export default class MCQuestionChoice extends React.Component {
           <input type="checkbox" checked={this.props.checked} onChange={() => this.props.handleChange(this.props.choice)} disabled={showCorrection}/>
         </div>
         <div className="questionC2">
-          <p>{this.props.choice.value}</p>
+          <p>{this.props.choice.texto}</p>
         </div>
       </div>
     );
