@@ -6,6 +6,9 @@ import {addObjectives, resetObjectives, finishApp} from './../reducers/actions';
 
 import QuizHeader from './QuizHeader.jsx';
 import MCQuestion from './MCQuestion.jsx';
+import Video from './Video.jsx';
+import Audio from './Audio.jsx';
+import TimeDown from './TimeDown.jsx';
 
 export default class Quiz extends React.Component {
   constructor(props){
@@ -49,6 +52,7 @@ export default class Quiz extends React.Component {
     this.state = {
       questions: questions,
       current_question_index:1,
+      num_key:0
     };
   }
   componentDidMount(){
@@ -65,6 +69,7 @@ export default class Quiz extends React.Component {
     console.log("objetive ok")
   }
   onNextQuestion(){
+    this.setState({num_key:this.state.num_key+1})
     let isLastQuestion = (this.state.current_question_index === this.state.questions.length);
     if(isLastQuestion === false){
       this.setState({current_question_index:(this.state.current_question_index + 1)});
@@ -73,33 +78,66 @@ export default class Quiz extends React.Component {
     }
   }
   onResetQuiz(){
+    this.setState({num_key:this.state.num_key+1})
     this.setState({current_question_index:1});
     this.props.dispatch(resetObjectives());
   }
-  render(){
-    console.log("render quiz")
-    //console.log(this.state.questions);
+  /*
+  ******************************************
+   nueva key en ResetQuestion para poder volver a ver el vídeo
+  ******************************************
+  */
+  numKey(){
+    this.setState({num_key:this.state.num_key+1})
+  }
 
+
+  render(){
     let currentQuestion = this.state.questions[this.state.current_question_index-1];
     let isLastQuestion = (this.state.current_question_index === this.state.questions.length);
 
     let objective = this.props.tracking.objectives["Question" + (this.state.current_question_index)];
     let onNextQuestion = this.onNextQuestion.bind(this);
     let onResetQuiz = this.onResetQuiz.bind(this);
+    let numKey = this.numKey.bind(this);
     let currentQuestionRender = "";
+
+    let secondsRemaining = "";
 
     switch (currentQuestion.tipo){
     case "multichoice":
-      currentQuestionRender = (<MCQuestion question={currentQuestion} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished}/>);
+      currentQuestionRender = (<MCQuestion question={currentQuestion} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished}/>);
       break;
     default:
       currentQuestionRender = "Question type not supported";
     }
+    //video o audio
 
+    let media = "";
+    let timeDown = 0;
+
+    if(currentQuestion.media.type == "video"){
+      secondsRemaining = 10;
+      media = (<Video video={currentQuestion.media.source} key_video={this.state.num_key}/>);
+      timeDown =(<TimeDown /*onAnswerQuiz={this.onAnswerQuiz.bind(this)}*/ secondsRemaining={secondsRemaining} key_segundos={this.state.num_key}/>);
+    } else if (currentQuestion.media.type == "audio") {
+      secondsRemaining = 50;
+      media = (<Audio source_audio={currentQuestion.media.source} key_audio={this.state.num_key}/>);
+      timeDown =(<TimeDown /*onAnswerQuiz={this.onAnswerQuiz.bind(this)}*/ secondsRemaining={secondsRemaining} key_segundos={this.state.num_key}/>);
+
+    } else {
+      media = "";
+
+
+    }
     return (
       <div className="quiz">
         <QuizHeader I18n={this.props.I18n} questions={this.state.questions} currentQuestionIndex={this.state.current_question_index}/>
+        {timeDown}
+        {media}
         {currentQuestionRender}
+
+
       </div>
     );
   }
