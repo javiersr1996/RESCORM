@@ -12,6 +12,7 @@ export default class MCQuestion extends React.Component {
     this.state = {
       selected_choices_ids:[],
       answered:false,
+      respuesta: "",
     };
   }
   componentWillUpdate(prevProps, prevState){
@@ -31,25 +32,38 @@ export default class MCQuestion extends React.Component {
   }
   onAnswerQuestion(){
     // Calculate score
+    console.log("onAnswerQuestion MCQuestion")
+    this.setState({
+      respuesta: this.props.question.solucion
+    });
     let nChoices = this.props.question.respuestas.length;
     let correctAnswers = 0;
     let incorrectAnswers = 0;
     let blankAnswers = 0;
 
-    for(let i = 0; i < nChoices; i++){
-      let choice = this.props.question.respuestas[i];
-      if(this.state.selected_choices_ids.indexOf(choice.id) !== -1){
-        // Answered choice
-        if(choice.valor === "100"){
-          correctAnswers += 1;
+    if (this.state.selected_choices_ids === 0){
+      console.log("respuesta en blaaancoooooooooooooooooooo")
+      correctAnswers = 0;
+      incorrectAnswers = 0;
+
+    }else{
+      for(let i = 0; i < nChoices; i++){
+        let choice = this.props.question.respuestas[i];
+        if(this.state.selected_choices_ids.indexOf(choice.id) !== -1){
+          // Answered choice
+          if(choice.valor === "100"){
+            correctAnswers += 1;
+          } else if(choice.valor === "0") {
+            incorrectAnswers += 1;
+          }
         } else {
-          incorrectAnswers += 1;
+          blankAnswers += 1;
         }
-      } else {
-        blankAnswers += 1;
       }
     }
-    let scorePercentage = Math.max(0, (correctAnswers - incorrectAnswers) / this.props.question.respuestas.filter(function(c){return c.answer === true;}).length);
+
+
+    let scorePercentage = Math.max(0, (correctAnswers - incorrectAnswers) / this.props.question.respuestas.filter(function(c){return c.valor === "100";}).length);
 
     // Send data via SCORM
     let objective = this.props.objective;
@@ -61,12 +75,17 @@ export default class MCQuestion extends React.Component {
   }
   onResetQuestion(){
     this.setState({selected_choices_ids:[], answered:false});
+    this.props.numKey();
   }
   onNextQuestion(){
     this.props.onNextQuestion();
+    this.setState({
+      respuesta:"",
+    })
+
   }
   render(){
-    console.log("olaaaaaaaaaaaaaaaaaasssssssssssssss")
+    console.log("olaaaaa render MCQuestion")
     console.log(this.props.question.respuestas.length)
     let choices = [];
     for(let i = 0; i < this.props.question.respuestas.length; i++){
@@ -77,6 +96,7 @@ export default class MCQuestion extends React.Component {
       <div className="question">
         <h1>{this.props.question.texto}</h1>
         {choices}
+        <p id="respuesta">{this.state.respuesta}</p>
         <QuestionButtons I18n={this.props.I18n} onAnswerQuestion={this.onAnswerQuestion.bind(this)} onResetQuestion={this.onResetQuestion.bind(this)} onResetQuiz={this.props.onResetQuiz} onNextQuestion={this.onNextQuestion.bind(this)} answered={this.state.answered} quizCompleted={this.props.quizCompleted} allow_finish={this.props.isLastQuestion}/>
       </div>
     );

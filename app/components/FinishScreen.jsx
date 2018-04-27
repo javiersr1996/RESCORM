@@ -14,7 +14,7 @@ export default class FinishScreen extends React.Component {
     } else if(hasProgressMeasure){
       finishTitleText = this.props.I18n.getTrans("i.finish_screen_title_wpm", {progress_measure:(progress_measure * 100)});
     } else if(hasScore){
-      finishTitleText = this.props.I18n.getTrans("i.finish_screen_title_ws", {score:(score * 100)});
+      finishTitleText = this.props.I18n.getTrans("i.finish_screen_title_ws", {score:(Math.floor(score * 100))});
     }
     if(typeof finishTitleText === "undefined"){
       finishTitleText = this.props.I18n.getTrans("i.finish_screen_title_simple");

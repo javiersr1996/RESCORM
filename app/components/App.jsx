@@ -15,10 +15,15 @@ import {jsonSaved} from './../reducers/actions.jsx';
 import {INITIAL_STATE} from './../constants/constants.jsx';
 import $ from 'jquery';
 
+import{ Panel, Carousel } from 'react-bootstrap';
+
 export class App extends React.Component {
   constructor(props){
     super(props);
     I18n.init();
+    this.state = {
+      presentacion:0,
+    }
 
   }
   /*
@@ -113,10 +118,7 @@ export class App extends React.Component {
                 jsonpropio[num]["media"]["type"] = (json.quiz.question[indice].media[0].type[0]);
                 jsonpropio[num]["media"]["source"] = (json.quiz.question[indice].media[0].source[0]);
                 jsonpropio[num]["respuestas"] = [];
-                //jsonpropio["quiz"]["truefalse_"+numtf]["audio"] = (json.quiz.question[indice].audio[0].source);
-                //aray de preguntas --> questions_size
                 for(let j = 0; j < questions_size[i - 1]; j++){
-
                   var t = indice + j
                   jsonpropio[num]["respuestas"][j] ={};
                   jsonpropio[num]["respuestas"][j]["texto"] = (json.quiz.question[t].questiontext[0].text[0]);
@@ -125,9 +127,7 @@ export class App extends React.Component {
                   if (j == questions_size[i - 1] -1){
                       jsonpropio[num]["respuestas"]["longitud"] = j;
                   }
-
                 }
-
                 if(json.quiz.question[indice].dificultad[0] == 1){
                   preguntas_facil.push(num)
                 } else if(json.quiz.question[indice].dificultad[0] == 2){
@@ -135,7 +135,6 @@ export class App extends React.Component {
                 } else if(json.quiz.question[indice].dificultad[0] == 3){
                   preguntas_dificil.push(num)
                 }
-
                 num++;
               }
               //el tipo de pregunta es multichoice
@@ -149,9 +148,7 @@ export class App extends React.Component {
                 jsonpropio[num]["media"]["source"] = (json.quiz.question[indice].media[0].source[0]);
                 jsonpropio[num]["dificultad"] = (json.quiz.question[indice].dificultad[0]);
                 jsonpropio[num]["respuestas"] =[];
-
                 for(let j = 0; j < json.quiz.question[indice].answer.length; j++){
-
                   jsonpropio[num]["respuestas"][j] = {};
                   jsonpropio[num]["respuestas"][j]["id"] = j;
                   jsonpropio[num]["respuestas"][j]["texto"] = (json.quiz.question[indice].answer[j].text[0]);
@@ -337,6 +334,14 @@ export class App extends React.Component {
 
   //-----------------FIN COMPONENTDIDMOUNT--------------------------------------------
   //---------------------------------------------------------------------------------
+
+  //cambiar this.state.presentacion
+  onPresentacion(){
+    this.setState({
+      presentacion:1,
+    })
+    return;
+  }
   render(){
     console.log("reeeeeeeeendeer")
     console.log(this.props.jsoninterno);
@@ -344,8 +349,34 @@ export class App extends React.Component {
     let appContent = "";
 
 
-    //console.log(this.state.jsoninterno.quiz.questions);
 
+    //if(this.state.presentacion === 1){
+      if((this.props.tracking.finished !== true) || (GLOBAL_CONFIG.finish_screen === false)){
+        appHeader = (
+          <Header user_profile={this.props.user_profile} tracking={this.props.tracking} config={GLOBAL_CONFIG} I18n={I18n}/>
+        );
+        if(this.props.wait_for_user_profile !== true){
+          appContent = (
+            <Quiz dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} quiz={this.props.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n}/>
+          );
+        }
+      } else {
+        appContent = (
+          <FinishScreen dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking}  config={GLOBAL_CONFIG} I18n={I18n}/>
+        );
+      }
+
+      return (
+        <div id="container">
+          <SCORM dispatch={this.props.dispatch} tracking={this.props.tracking} config={GLOBAL_CONFIG}/>
+          {appHeader}
+          {appContent}
+        </div>
+      );
+    //fin presentacion 1
+  //}
+ /*
+   else if(this.state.presentacion === 0){
     if((this.props.tracking.finished !== true) || (GLOBAL_CONFIG.finish_screen === false)){
       appHeader = (
         <Header user_profile={this.props.user_profile} tracking={this.props.tracking} config={GLOBAL_CONFIG} I18n={I18n}/>
@@ -355,19 +386,64 @@ export class App extends React.Component {
           <Quiz dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} quiz={this.props.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n}/>
         );
       }
-    } else {
-      appContent = (
-        <FinishScreen dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking}  config={GLOBAL_CONFIG} I18n={I18n}/>
-      );
     }
+    console.log(this.props.jsoninterno);
+      return(
+        <div>
+          {appHeader}
+          <Panel className="jumbotron w3-center w3-animate-left">
+            <Carousel>
+              <Carousel.Item>
+                <img width={1500} height={1500} align="middle" src="../assets/images/fbm2.jpg" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img width={1500} height={1500}  align="middle" src="  ../assets/images/amaab.jpg" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img width={1500} height={1500}  align="middle" src="  ../assets/images/arbitro.jpg" />
+                <Carousel.Caption>
+                  <h3>No se trata de ser los más rápidos, los más fuertes, o los más grandes. Se trata de ser nosotros mismos</h3>
+                  <p> Kilian Jornet</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img width={1500} height={1500} align="middle" src="../assets/images/arbitro2.jpg" />
+                <Carousel.Caption>
+                  <h3>Si tú sabes lo que vales, ve y consigue lo que mereces</h3>
+                  <p>Rocky Balboa</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img width={1500} height={1500}  align="middle" src="  ../assets/images/cuerpo_arbitral.jpg" />
+                <Carousel.Caption>
+                  <h3>Ninguno de nosotros es tan bueno como todos nosotros juntos</h3>
+                  <p> Ray Kroc</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img width={1500} height={1500}  align="middle" src="  ../assets/images/arbitras.jpg" />
+                <Carousel.Caption>
+                  <h3>El arbitro considera la equidad, el juez la ley</h3>
+                  <p> Aristóteles</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel>;
 
-    return (
-      <div id="container">
-        <SCORM dispatch={this.props.dispatch} tracking={this.props.tracking} config={GLOBAL_CONFIG}/>
-        {appHeader}
-        {appContent}
-      </div>
-    );
+            <p className="quiz">Selecciona el nivel de dificultad y haz click en comenzar</p>
+            <p className="quiz">Selecciona las opciones que consideres correctas</p>
+            <p className="quiz">Las preguntas tienen imágenes/vídeos/audios</p>
+            <p className="quiz">Puedes usar comodines = tener más tiempo por pregunta</p>
+          </Panel>
+            <div className="quizButtonsWrapper">
+              <button  onClick={this.onPresentacion.bind(this)} >COMENZAR</button>
+
+            </div>
+
+        </div>
+      );
+      //corchete presentacion 0
+  //}
+*/
   }
 }
 
