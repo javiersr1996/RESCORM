@@ -23,6 +23,7 @@ export class App extends React.Component {
     I18n.init();
     this.state = {
       presentacion:0,
+      jsoninterno:[],
     }
 
   }
@@ -329,7 +330,9 @@ export class App extends React.Component {
       this.props.dispatch(jsonSaved(jsonredux));
   */
   this.props.dispatch(jsonSaved(jsonredux));
-
+  this.setState({
+    jsoninterno:jsonredux,
+  })
   }
 
   //-----------------FIN COMPONENTDIDMOUNT--------------------------------------------
@@ -350,14 +353,14 @@ export class App extends React.Component {
 
 
 
-    //if(this.state.presentacion === 1){
+    if(this.state.presentacion === 1){
       if((this.props.tracking.finished !== true) || (GLOBAL_CONFIG.finish_screen === false)){
         appHeader = (
           <Header user_profile={this.props.user_profile} tracking={this.props.tracking} config={GLOBAL_CONFIG} I18n={I18n}/>
         );
-        if(this.props.wait_for_user_profile !== true){
+        if(this.props.wait_for_user_profile !== false){
           appContent = (
-            <Quiz dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} quiz={this.props.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n}/>
+            <Quiz dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} quiz={this.state.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n}/>
           );
         }
       } else {
@@ -374,8 +377,8 @@ export class App extends React.Component {
         </div>
       );
     //fin presentacion 1
-  //}
- /*
+  }
+
    else if(this.state.presentacion === 0){
     if((this.props.tracking.finished !== true) || (GLOBAL_CONFIG.finish_screen === false)){
       appHeader = (
@@ -394,7 +397,7 @@ export class App extends React.Component {
           <Panel className="jumbotron w3-center w3-animate-left">
             <Carousel>
               <Carousel.Item>
-                <img width={1500} height={1500} align="middle" src="../assets/images/fbm2.jpg" />
+                <img width={1500} height={1500} align="middle" src="../assets/images/quiz_logo.png" />
               </Carousel.Item>
               <Carousel.Item>
                 <img width={1500} height={1500}  align="middle" src="  ../assets/images/amaab.jpg" />
@@ -442,8 +445,8 @@ export class App extends React.Component {
         </div>
       );
       //corchete presentacion 0
-  //}
-*/
+    }
+
   }
 }
 
