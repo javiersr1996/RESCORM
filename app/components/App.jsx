@@ -356,14 +356,14 @@ export class App extends React.Component {
 
 
 
-    //if(this.state.presentacion === 1){
+    if(this.state.presentacion === 1){
       if((this.props.tracking.finished !== true) || (GLOBAL_CONFIG.finish_screen === false)){
         appHeader = (
           <Header user_profile={this.props.user_profile} tracking={this.props.tracking} config={GLOBAL_CONFIG} I18n={I18n}/>
         );
-        if(this.props.wait_for_user_profile !== true){
+        if(this.props.wait_for_user_profile !== false){
           appContent = (
-            <Quiz dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} quiz={this.props.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n}/>
+            <Quiz dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} quiz={this.state.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n}/>
           );
         }
       } else {
@@ -380,8 +380,8 @@ export class App extends React.Component {
         </div>
       );
     //fin presentacion 1
-  //}
- /*
+  }
+
    else if(this.state.presentacion === 0){
     if((this.props.tracking.finished !== true) || (GLOBAL_CONFIG.finish_screen === false)){
       appHeader = (
@@ -448,8 +448,8 @@ export class App extends React.Component {
         </div>
       );
       //corchete presentacion 0
-  //}
-*/
+    }
+
   }
 }
 
