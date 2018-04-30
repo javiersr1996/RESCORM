@@ -23,7 +23,9 @@ export class App extends React.Component {
     I18n.init();
     this.state = {
       presentacion:0,
-      jsoninterno: [],
+      jsoninterno:[],
+      jsoninterno1: [],
+      jsoninterno2: [],
     }
 
   }
@@ -33,17 +35,21 @@ export class App extends React.Component {
   *****************************************
   */
   componentDidMount(){
-    var jsonpropio = [];
+    var jsonpropio1 = [];
+    var jsonpropio2 = [];
     var preguntas_facil = [];
     var preguntas_medio = [];
     var preguntas_dificil = [];
-    var jsonredux = [];
+    var jsonredux1 = [];
+    var jsonredux2 = [];
     //Load Moodle XML file
 
+
+   //Primer ajax para exam1
     $.ajax({
         async:false,
         method: 'GET',
-        url: "http://localhost:8080/assets/files/quiz.xml",
+        url: "http://localhost:8080/config/quiz1.xml",
         dataType: 'text',
 
 
@@ -52,7 +58,7 @@ export class App extends React.Component {
            parseString(data, function (err, result){
 
             var json = (result);
-            console.log("***************result**************")
+            console.log("***************result    1**************")
             console.log(result)
 
             //json obtenido del parseado
@@ -85,9 +91,6 @@ export class App extends React.Component {
               var index = 0;
               var longitudes_anteriores_questions = 0;
               var long_cat = 0;
-              if(number_question == 0){
-                console.log("error")
-              }
               ;
               if(number_question == 1){
                 index = 1
@@ -111,22 +114,22 @@ export class App extends React.Component {
               //el tipo de pregunta es truefalse
               if(tipo_pregunta == "truefalse"){
                 console.log("holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
-                jsonpropio[num] = {};
-                jsonpropio[num]["dificultad"] = (json.quiz.question[indice].dificultad[0]);
-                jsonpropio[num]["tipo"] = (json.quiz.question[indice].tipo[0]);
-                jsonpropio[num]["texto"] = (json.quiz.question[indice].name[0].text[0]);
-                jsonpropio[num]["media"] = {};
-                jsonpropio[num]["media"]["type"] = (json.quiz.question[indice].media[0].type[0]);
-                jsonpropio[num]["media"]["source"] = (json.quiz.question[indice].media[0].source[0]);
-                jsonpropio[num]["respuestas"] = [];
+                jsonpropio1[num] = {};
+                jsonpropio1[num]["dificultad"] = (json.quiz.question[indice].dificultad[0]);
+                jsonpropio1[num]["tipo"] = (json.quiz.question[indice].tipo[0]);
+                jsonpropio1[num]["texto"] = (json.quiz.question[indice].name[0].text[0]);
+                jsonpropio1[num]["media"] = {};
+                jsonpropio1[num]["media"]["type"] = (json.quiz.question[indice].media[0].type[0]);
+                jsonpropio1[num]["media"]["source"] = (json.quiz.question[indice].media[0].source[0]);
+                jsonpropio1[num]["respuestas"] = [];
                 for(let j = 0; j < questions_size[i - 1]; j++){
                   var t = indice + j
-                  jsonpropio[num]["respuestas"][j] ={};
-                  jsonpropio[num]["respuestas"][j]["texto"] = (json.quiz.question[t].questiontext[0].text[0]);
-                  jsonpropio[num]["respuestas"][j]["id"] = k;
-                  jsonpropio[num]["respuestas"][j]["valor"] = (json.quiz.question[t].answer[0].$.fraction);
+                  jsonpropio1[num]["respuestas"][j] ={};
+                  jsonpropio1[num]["respuestas"][j]["texto"] = (json.quiz.question[t].questiontext[0].text[0]);
+                  jsonpropio1[num]["respuestas"][j]["id"] = k;
+                  jsonpropio1[num]["respuestas"][j]["valor"] = (json.quiz.question[t].answer[0].$.fraction);
                   if (j == questions_size[i - 1] -1){
-                      jsonpropio[num]["respuestas"]["longitud"] = j;
+                      jsonpropio1[num]["respuestas"]["longitud"] = j;
                   }
                 }
                 if(json.quiz.question[indice].dificultad[0] == 1){
@@ -140,22 +143,22 @@ export class App extends React.Component {
               }
               //el tipo de pregunta es multichoice
               else if(tipo_pregunta == "multichoice"){
-                jsonpropio[num] = {};
-                jsonpropio[num]["tipo"] = (json.quiz.question[indice].tipo[0]);
-                jsonpropio[num]["texto"] = (json.quiz.question[indice].questiontext[0].text[0]);
-                jsonpropio[num]["solucion"] = (json.quiz.question[indice].solucion[0]);
-                jsonpropio[num]["media"] = {};
-                jsonpropio[num]["media"]["type"] = (json.quiz.question[indice].media[0].type[0]);
-                jsonpropio[num]["media"]["source"] = (json.quiz.question[indice].media[0].source[0]);
-                jsonpropio[num]["dificultad"] = (json.quiz.question[indice].dificultad[0]);
-                jsonpropio[num]["respuestas"] =[];
+                jsonpropio1[num] = {};
+                jsonpropio1[num]["tipo"] = (json.quiz.question[indice].tipo[0]);
+                jsonpropio1[num]["texto"] = (json.quiz.question[indice].questiontext[0].text[0]);
+                jsonpropio1[num]["solucion"] = (json.quiz.question[indice].solucion[0]);
+                jsonpropio1[num]["media"] = {};
+                jsonpropio1[num]["media"]["type"] = (json.quiz.question[indice].media[0].type[0]);
+                jsonpropio1[num]["media"]["source"] = (json.quiz.question[indice].media[0].source[0]);
+                jsonpropio1[num]["dificultad"] = (json.quiz.question[indice].dificultad[0]);
+                jsonpropio1[num]["respuestas"] =[];
                 for(let j = 0; j < json.quiz.question[indice].answer.length; j++){
-                  jsonpropio[num]["respuestas"][j] = {};
-                  jsonpropio[num]["respuestas"][j]["id"] = j;
-                  jsonpropio[num]["respuestas"][j]["texto"] = (json.quiz.question[indice].answer[j].text[0]);
-                  jsonpropio[num]["respuestas"][j]["valor"] = (json.quiz.question[indice].answer[j].$.fraction);
+                  jsonpropio1[num]["respuestas"][j] = {};
+                  jsonpropio1[num]["respuestas"][j]["id"] = j;
+                  jsonpropio1[num]["respuestas"][j]["texto"] = (json.quiz.question[indice].answer[j].text[0]);
+                  jsonpropio1[num]["respuestas"][j]["valor"] = (json.quiz.question[indice].answer[j].$.fraction);
                   if (j == json.quiz.question[indice].answer.length -1){
-                      jsonpropio[num]["respuestas"]["longitud"] = j;
+                      jsonpropio1[num]["respuestas"]["longitud"] = j;
                   }
                 }
                 if(json.quiz.question[indice].dificultad[0] == 1){
@@ -169,11 +172,7 @@ export class App extends React.Component {
               }
             }
           });
-          console.log("console log jsonpropio")
-          console.log(jsonpropio)
-          console.log("console log jsonredux")
-           jsonredux = jsonpropio;
-          console.log(jsonredux)
+
         }.bind(this),
         error: function(xhr, status, err) {
             console.log(status, err.toString());
@@ -181,158 +180,153 @@ export class App extends React.Component {
 
     });
 
-/*
-     fetch('assets/files/quiz.xml')
-      .then(function(response) {
-        return response.text();
-      })
-      .then(function(myXML) {
+    //Segundo ajax para el examen dos
 
-        console.log(myXML);
-        var parseString = require('xml2js').parseString;
-         parseString(myXML, function (err, result){
-
-          var json = (result);
-          //json obtenido del parseado
+    $.ajax({
+        async:false,
+        method: 'GET',
+        url: "http://localhost:8080/config/quiz2.xml",
+        dataType: 'text',
 
 
-          var customjson = {}
+        success: function(data) {
+          var parseString = require('xml2js').parseString;
+           parseString(data, function (err, result){
 
-          customjson["quiz_xml"] = {}
-          customjson["quiz_xml"] = (json.quiz)
+            var json = (result);
+            console.log("***************result      2**************")
+            console.log(result)
 
-
-          var i = 0;
-          var j = 0;
-
-          //caso de xml con mas de una pregunta y de diferentes tipos
-
-          //sacar el numero de preguntas que tengo y la longitud de cada una de ellas
-
-          var questions_size = [];
-          var number_question = 0;
-          var question_size = 0;
-
-          for(let i = 0; i < json.quiz.question.length; i++){
-            let tipo_pregunta = (json.quiz.question[i].$.type);
-            if(tipo_pregunta == "category" && number_question == 0){
-              number_question++;
-            } else if(tipo_pregunta != "category" && number_question != 0){
-              question_size++;
-            } else if(tipo_pregunta == "category" && number_question != 0){
-              questions_size.push(question_size);
-              question_size = 0;
-              number_question++;
-
-            }
-          }
-          //mete en el array el tamaño de la última pregunta recorrida
-          questions_size.push(question_size);
-
-          //se obtiene el indice de las preguntas
-          function indexQuestion(number_question){
-            var index = 0;
-            var longitudes_anteriores_questions = 0;
-            var long_cat = 0;
-            if(number_question == 0){
-              console.log("error")
-            }
-            ;
-            if(number_question == 1){
-              index = 1
-            }
-            if(number_question !== 1 && number_question <= questions_size.length){
-              for(let i = 0; i < number_question - 1; i++){
-                longitudes_anteriores_questions += questions_size[i];
+            //json obtenido del parseado
+            var customjson = {}
+            customjson["quiz_xml"] = {}
+            customjson["quiz_xml"] = (json.quiz)
+            var i = 0;
+            var j = 0;
+            //caso de xml con mas de una pregunta y de diferentes tipos
+            //sacar el numero de preguntas que tengo y la longitud de cada una de ellas
+            var questions_size = [];
+            var number_question = 0;
+            var question_size = 0;
+            for(let i = 0; i < json.quiz.question.length; i++){
+              let tipo_pregunta = (json.quiz.question[i].$.type);
+              if(tipo_pregunta == "category" && number_question == 0){
+                number_question++;
+              } else if(tipo_pregunta != "category" && number_question != 0){
+                question_size++;
+              } else if(tipo_pregunta == "category" && number_question != 0){
+                questions_size.push(question_size);
+                question_size = 0;
+                number_question++;
               }
-              long_cat = number_question;
-              index = long_cat + longitudes_anteriores_questions;
             }
+            //mete en el array el tamaño de la última pregunta recorrida
+            questions_size.push(question_size);
+            //se obtiene el indice de las preguntas
+            function indexQuestion(number_question){
+              var index = 0;
+              var longitudes_anteriores_questions = 0;
+              var long_cat = 0;
 
-            return index;
-          }
-
-
-          var num = 1;
-          for(let i = 1; i <= number_question; i++){
-            var indice = indexQuestion(i);
-            let tipo_pregunta = (json.quiz.question[indice].$.type);
-            //el tipo de pregunta es truefalse
-            if(tipo_pregunta == "truefalse"){
-              jsonpropio[num] = {};
-              jsonpropio[num]["dificultad"] = (json.quiz.question[indice].dificultad[0]);
-              jsonpropio[num]["tipo"] = (json.quiz.question[indice].tipo[0]);
-              jsonpropio[num]["texto"] = (json.quiz.question[indice].name[0].text[0]);
-              jsonpropio[num]["media"] = {};
-              jsonpropio[num]["media"]["type"] = (json.quiz.question[indice].media[0].type[0]);
-              jsonpropio[num]["media"]["source"] = (json.quiz.question[indice].media[0].source[0]);
-              jsonpropio[num]["respuestas"] ={};
-              //jsonpropio["quiz"]["truefalse_"+numtf]["audio"] = (json.quiz.question[indice].audio[0].source);
-              //aray de preguntas --> questions_size
-              for(let j = 0; j < questions_size[i - 1]; j++){
-                var k = 1 + j;
-                var t = indice + j
-                jsonpropio[num]["respuestas"][k] = {};
-                jsonpropio[num]["respuestas"][k]["texto"] = (json.quiz.question[t].questiontext[0].text[0]);
-                jsonpropio[num]["respuestas"][k]["valor"] = (json.quiz.question[t].answer[0].$.fraction);
-                if (j == questions_size[i - 1] -1){
-                    jsonpropio[num]["respuestas"]["longitud"] = k;
+              ;
+              if(number_question == 1){
+                index = 1
+              }
+              if(number_question !== 1 && number_question <= questions_size.length){
+                for(let i = 0; i < number_question - 1; i++){
+                  longitudes_anteriores_questions += questions_size[i];
                 }
-
+                long_cat = number_question;
+                index = long_cat + longitudes_anteriores_questions;
               }
 
-              if(json.quiz.question[indice].dificultad[0] == 1){
-                preguntas_facil.push(num)
-              } else if(json.quiz.question[indice].dificultad[0] == 2){
-                preguntas_medio.push(num)
-              } else if(json.quiz.question[indice].dificultad[0] == 3){
-                preguntas_dificil.push(num)
-              }
-
-              num++;
+              return index;
             }
-            //el tipo de pregunta es multichoice
-            else if(tipo_pregunta == "multichoice"){
 
-              jsonpropio[num] = {};
-              jsonpropio[num]["tipo"] = (json.quiz.question[indice].tipo[0]);
-              jsonpropio[num]["texto"] = (json.quiz.question[indice].questiontext[0].text[0]);
-              jsonpropio[num]["solucion"] = (json.quiz.question[indice].solucion[0]);
-              jsonpropio[num]["media"] = {};
-              jsonpropio[num]["media"]["type"] = (json.quiz.question[indice].media[0].type[0]);
-              jsonpropio[num]["media"]["source"] = (json.quiz.question[indice].media[0].source[0]);
-              jsonpropio[num]["dificultad"] = (json.quiz.question[indice].dificultad[0]);
-              jsonpropio[num]["respuestas"] ={};
 
-              for(let j = 0; j < json.quiz.question[indice].answer.length; j++){
-                var k = 1 + j;
-                jsonpropio[num]["respuestas"][k] = {};
-                jsonpropio[num]["respuestas"][k]["texto"] = (json.quiz.question[indice].answer[j].text[0]);
-                jsonpropio[num]["respuestas"][k]["valor"] = (json.quiz.question[indice].answer[j].$.fraction);
-                if (j == json.quiz.question[indice].answer.length -1){
-                    jsonpropio[num]["respuestas"]["longitud"] = k;
+            var num = 0;
+            for(let i = 0; i <= number_question; i++){
+              var indice = indexQuestion(i);
+              let tipo_pregunta = (json.quiz.question[indice].$.type);
+              //el tipo de pregunta es truefalse
+              if(tipo_pregunta == "truefalse"){
+                console.log("holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+                jsonpropio2[num] = {};
+                jsonpropio2[num]["dificultad"] = (json.quiz.question[indice].dificultad[0]);
+                jsonpropio2[num]["tipo"] = (json.quiz.question[indice].tipo[0]);
+                jsonpropio2[num]["texto"] = (json.quiz.question[indice].name[0].text[0]);
+                jsonpropio2[num]["media"] = {};
+                jsonpropio2[num]["media"]["type"] = (json.quiz.question[indice].media[0].type[0]);
+                jsonpropio2[num]["media"]["source"] = (json.quiz.question[indice].media[0].source[0]);
+                jsonpropio2[num]["respuestas"] = [];
+                for(let j = 0; j < questions_size[i - 1]; j++){
+                  var t = indice + j
+                  jsonpropio2[num]["respuestas"][j] ={};
+                  jsonpropio2[num]["respuestas"][j]["texto"] = (json.quiz.question[t].questiontext[0].text[0]);
+                  jsonpropio2[num]["respuestas"][j]["id"] = k;
+                  jsonpropio2[num]["respuestas"][j]["valor"] = (json.quiz.question[t].answer[0].$.fraction);
+                  if (j == questions_size[i - 1] -1){
+                      jsonpropio2[num]["respuestas"]["longitud"] = j;
+                  }
                 }
+                if(json.quiz.question[indice].dificultad[0] == 1){
+                  preguntas_facil.push(num)
+                } else if(json.quiz.question[indice].dificultad[0] == 2){
+                  preguntas_medio.push(num)
+                } else if(json.quiz.question[indice].dificultad[0] == 3){
+                  preguntas_dificil.push(num)
+                }
+                num++;
               }
-              if(json.quiz.question[indice].dificultad[0] == 1){
-                preguntas_facil.push(num)
-              } else if(json.quiz.question[indice].dificultad[0] == 2){
-                preguntas_medio.push(num)
-              } else if(json.quiz.question[indice].dificultad[0] == 3){
-                preguntas_dificil.push(num)
+              //el tipo de pregunta es multichoice
+              else if(tipo_pregunta == "multichoice"){
+                jsonpropio2[num] = {};
+                jsonpropio2[num]["tipo"] = (json.quiz.question[indice].tipo[0]);
+                jsonpropio2[num]["texto"] = (json.quiz.question[indice].questiontext[0].text[0]);
+                jsonpropio2[num]["solucion"] = (json.quiz.question[indice].solucion[0]);
+                jsonpropio2[num]["media"] = {};
+                jsonpropio2[num]["media"]["type"] = (json.quiz.question[indice].media[0].type[0]);
+                jsonpropio2[num]["media"]["source"] = (json.quiz.question[indice].media[0].source[0]);
+                jsonpropio2[num]["dificultad"] = (json.quiz.question[indice].dificultad[0]);
+                jsonpropio2[num]["respuestas"] =[];
+                for(let j = 0; j < json.quiz.question[indice].answer.length; j++){
+                  jsonpropio2[num]["respuestas"][j] = {};
+                  jsonpropio2[num]["respuestas"][j]["id"] = j;
+                  jsonpropio2[num]["respuestas"][j]["texto"] = (json.quiz.question[indice].answer[j].text[0]);
+                  jsonpropio2[num]["respuestas"][j]["valor"] = (json.quiz.question[indice].answer[j].$.fraction);
+                  if (j == json.quiz.question[indice].answer.length -1){
+                      jsonpropio2[num]["respuestas"]["longitud"] = j;
+                  }
+                }
+                if(json.quiz.question[indice].dificultad[0] == 1){
+                  preguntas_facil.push(num)
+                } else if(json.quiz.question[indice].dificultad[0] == 2){
+                  preguntas_medio.push(num)
+                } else if(json.quiz.question[indice].dificultad[0] == 3){
+                  preguntas_dificil.push(num)
+                }
+                num++;
               }
-              num++;
             }
-          }
-        });
-      })
-      jsonredux = jsonpropio
-      console.log(jsonredux)
-      this.props.dispatch(jsonSaved(jsonredux));
-  */
-  this.props.dispatch(jsonSaved(jsonredux));
+          });
+
+        }.bind(this),
+        error: function(xhr, status, err) {
+            console.log(status, err.toString());
+        },
+
+    });
+
+    jsonredux1 = jsonpropio1;
+    jsonredux2 = jsonpropio2;
+
+  this.props.dispatch(jsonSaved(jsonredux1));
+  this.props.dispatch(jsonSaved(jsonredux2));
+
 
   this.setState({
-    jsoninterno:jsonredux,
+    jsoninterno1:jsonredux1,
+    jsoninterno2:jsonredux2,
   })
 
   }
@@ -347,10 +341,41 @@ export class App extends React.Component {
     })
     return;
   }
+  selectExam1(){
+    var exam1 = [];
+    for(let i=0; i<this.state.jsoninterno1.length; i++){
+      exam1.push(this.state.jsoninterno1[i]);
+    }
+
+    exam1.sort(function() {return Math.random() - 0.5});
+    console.log(exam1)
+    for(let i =0; i<exam1.length; i++){
+      exam1[i].respuestas.sort(function() {return Math.random() - 0.5});
+    }
+
+    this.setState({
+      jsoninterno:exam1,
+      jsoninterno1:exam1,
+    })
+    return;
+  }
+  selectExam2(){
+    var exam2 = [];
+    for(let i=0; i<this.state.jsoninterno2.length; i++){
+      exam2.push(this.state.jsoninterno2[i]);
+    }
+    exam2.sort(function() {return Math.random() - 0.5});
+    for(let i =0; i<exam2.length; i++){
+      exam2[i].respuestas.sort(function() {return Math.random() - 0.5});
+    }
+    this.setState({
+      jsoninterno:exam2,
+      jsoninterno2:exam2,
+    })
+    return;
+  }
   render(){
-    console.log("reeeeeeeeendeer")
-    console.log(this.props.jsoninterno);
-    console.log(this.state.jsoninterno);
+
     let appHeader = "";
     let appContent = "";
 
@@ -361,6 +386,7 @@ export class App extends React.Component {
         appHeader = (
           <Header user_profile={this.props.user_profile} tracking={this.props.tracking} config={GLOBAL_CONFIG} I18n={I18n}/>
         );
+        //false o true ???? --> si se pone a false funciona la presentacion
         if(this.props.wait_for_user_profile !== false){
           appContent = (
             <Quiz dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} quiz={this.state.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n}/>
@@ -393,7 +419,7 @@ export class App extends React.Component {
         );
       }
     }
-    console.log(this.props.jsoninterno);
+
       return(
         <div>
           {appHeader}
@@ -441,7 +467,9 @@ export class App extends React.Component {
             <p className="quiz">Puedes usar comodines = tener más tiempo por pregunta</p>
           </Panel>
             <div className="quizButtonsWrapper">
-              <button  onClick={this.onPresentacion.bind(this)} >COMENZAR</button>
+              <button onClick={this.onPresentacion.bind(this)} >COMENZAR</button>
+              <button className="answerQuiz" onClick={this.selectExam1.bind(this)} >EXAMEN 1</button>
+              <button className="answerQuiz" onClick={this.selectExam2.bind(this)} >EXAMEN 2</button>
 
             </div>
 

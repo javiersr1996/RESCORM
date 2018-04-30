@@ -44,12 +44,13 @@ export default class TimeDown extends React.Component {
 
 
   render() {
+     let key = this.props.key;
      let tiempo = Math.floor(this.state.secondsRemaining);
      if(tiempo == -1){
        tiempo = 0;
      }
     return (
-        <div>
+        <div key={key}>
           <div>
             Tiempo: {tiempo} s
          </div>

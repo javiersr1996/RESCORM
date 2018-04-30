@@ -12,6 +12,7 @@ export const INITIAL_STATE = {
     learner_preference:{},
   },
   wait_for_user_profile:false,
-  jsoninterno:{},
+  jsoninterno1:{},
+  jsoninterno2:{},
 
 };

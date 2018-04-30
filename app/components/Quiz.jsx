@@ -66,7 +66,6 @@ export default class Quiz extends React.Component {
       objectives.push(new Utils.Objective({id:("Question" + (i + 1)), progress_measure:(1 / nQuestions), score:(1 / nQuestions)}));
     }
     this.props.dispatch(addObjectives(objectives));
-    console.log("objetive ok")
   }
   onNextQuestion(){
     this.setState({num_key:this.state.num_key+1})
@@ -93,6 +92,7 @@ export default class Quiz extends React.Component {
 
 
   render(){
+    console.log("render quiz index question = "+this.state.current_question_index)
     let currentQuestion = this.state.questions[this.state.current_question_index-1];
     let isLastQuestion = (this.state.current_question_index === this.state.questions.length);
 
@@ -117,16 +117,16 @@ export default class Quiz extends React.Component {
     let timeDown = 0;
 
     if(currentQuestion.media.type == "video"){
-      secondsRemaining = 10;
+      secondsRemaining = 25;
       media = (<Video video={currentQuestion.media.source} key_video={this.state.num_key}/>);
-      timeDown =(<TimeDown /*onAnswerQuiz={this.onAnswerQuiz.bind(this)}*/ secondsRemaining={secondsRemaining} key_segundos={this.state.num_key}/>);
+      timeDown =(<TimeDown /*onAnswerQuiz={this.onAnswerQuiz.bind(this)}*/ secondsRemaining={secondsRemaining} key={this.state.current_question_index}/>);
     } else if (currentQuestion.media.type == "audio") {
-      secondsRemaining = 50;
+      secondsRemaining = 25;
       media = (<Audio source_audio={currentQuestion.media.source} key_audio={this.state.num_key}/>);
-      timeDown =(<TimeDown /*onAnswerQuiz={this.onAnswerQuiz.bind(this)}*/ secondsRemaining={secondsRemaining} key_segundos={this.state.num_key}/>);
-
+      timeDown =(<TimeDown /*onAnswerQuiz={this.onAnswerQuiz.bind(this)}*/ secondsRemaining={secondsRemaining} key_segundos={this.state.current_question_index}/>);
     } else {
       media = "";
+      timeDown =(<TimeDown /*onAnswerQuiz={this.onAnswerQuiz.bind(this)}*/ secondsRemaining={secondsRemaining} key_segundos={this.state.current_question_index}/>);
 
 
     }

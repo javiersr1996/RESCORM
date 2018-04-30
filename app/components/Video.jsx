@@ -1,28 +1,29 @@
 import React from 'react';
+import { Panel } from 'react-bootstrap';
+import './../assets/scss/main.scss';
+
 
 export default class Video extends React.Component {
   constructor(props) {
     super(props);
+
   };
   /*
   *****************************************************
    CAMBIO DEL VOLUMEN
   *****************************************************
   */
-  componentDidMount(){
-    //cambiar volumen de CADA VIDEO
-    //probado con id="myVideo" y con id={this.props.key_video}
-    this.setVolume();
-
+  setVolume(){
+      var vid = document.getElementById("myVideo");
+      vid.volume = 0.0;
   }
+
 
   /*
   *****************************************************
    FULLSCREEN API STANDARD
   *****************************************************
   */
-  // funciona para todos
-
   fullScreenClick(){
     var elem = document.getElementById("myVideo");
     if (elem.requestFullscreen) {
@@ -34,28 +35,16 @@ export default class Video extends React.Component {
     }
   }
 
-  setVolume(){
-    var vid = document.getElementById("myVideo");
-    vid.volume = 0.0;
-  }
-
-
-
-
   render() {
-    //console.log("estoy en Video.jsx y la source es "+ this.props.video);
+    var video = (<video id="myVideo" onLoadStart={this.setVolume.bind(this)} onClick={this.fullScreenClick.bind(this)} key={key} width="700" height="400" autoPlay>
+      <source src={this.props.video} type="video/mp4"/>
+    </video>);
     let key= this.props.key_video;
-    let myVideo = ""
-
-
     return (
+      <div id="Panel" key={key}>
 
-      <div>
-        <div>
-          <video id="myVideo" onClick={this.fullScreenClick.bind(this)} key={key} width="700" height="400" autoPlay>
-            <source src={this.props.video} type="video/mp4"/>
-          </video>
-        </div>
+          {video}
+
       </div>
     )
   }

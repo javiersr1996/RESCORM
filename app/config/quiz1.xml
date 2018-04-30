@@ -172,10 +172,10 @@
 <dificultad>2</dificultad>
 <solucion>Mal sancionada. Hay que esperar cuando jugador recibe balón para ver si lanza a canasta o no</solucion>
 <name>
-<text>Se produce violación por tres segundos en la zona</text>
+<text>Se produce violación por tres segundos en la zona.Señala las opciones incorrectas</text>
 </name>
 <questiontext>
-<text>Se produce violación por tres segundos en la zona</text>
+<text>Se produce violación por tres segundos en la zona.Señala las opciones incorrectas</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
@@ -183,13 +183,13 @@
 <type>video</type>
 <source>../assets/videos/video5.mp4</source>
 </media>
-<answer fraction="0">
+<answer fraction="100">
 <text>Bien sancionada</text>
 </answer>
-<answer fraction="0">
+<answer fraction="100">
 <text>Bien sancionada aunque hubiera estado mejor antes</text>
 </answer>
-<answer fraction="100">
+<answer fraction="0">
 <text>Mal sancionada</text>
 </answer>
 </question>

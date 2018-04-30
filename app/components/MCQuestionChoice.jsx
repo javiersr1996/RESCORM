@@ -4,8 +4,8 @@ export default class MCQuestionChoice extends React.Component {
   constructor(props){
     super(props);
   }
+
   render(){
-    console.log("olaaaaaaaaaaaaaaaaaaa MCQuestionChoice")
     let questionClassName = "question_choice";
     let showCorrection = (this.props.questionAnswered);
     if(showCorrection){

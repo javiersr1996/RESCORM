@@ -10,7 +10,9 @@ const GlobalState = combineReducers({
   scorm:scormReducer,
   user_profile:userProfileReducer,
   wait_for_user_profile:waitForUserProfileReducer,
-  jsoninterno:jsonSavedReducer,
+  jsoninterno1:jsonSavedReducer,
+  jsoninterno2:jsonSavedReducer,
+
 });
 
 export default GlobalState;
