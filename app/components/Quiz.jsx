@@ -49,8 +49,10 @@ export default class Quiz extends React.Component {
     this.state = {
       questions: questions,
       current_question_index:1,
-      num_key:0
+      num_key:0,
+    //  timeout:0,
     };
+    //this.tiempoAgotado = this.tiempoAgotado.bind(this);
   }
   componentDidMount(){
 
@@ -86,8 +88,17 @@ export default class Quiz extends React.Component {
   */
   numKey(){
     this.setState({num_key:this.state.num_key+1})
-  }
 
+  }
+/*
+  tiempoAgotado(){
+    console.log("tiempo agotado quiz")
+    this.setState({
+      timeout:1,
+    })
+
+  }
+  */
 
   render(){
     let currentQuestion = this.state.questions[this.state.current_question_index-1];
@@ -103,7 +114,7 @@ export default class Quiz extends React.Component {
 
     switch (currentQuestion.tipo){
     case "multichoice":
-      currentQuestionRender = (<MCQuestion question={currentQuestion} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished}/>);
+      currentQuestionRender = (<MCQuestion /*timeout={this.state.timeout}*/ question={currentQuestion} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished}/>);
       break;
     default:
       currentQuestionRender = "Question type not supported";
@@ -114,18 +125,17 @@ export default class Quiz extends React.Component {
     let timeDown = 0;
 
     if(currentQuestion.media.type == "video"){
-      secondsRemaining = 10;
+      secondsRemaining = 5;
       media = (<Video video={currentQuestion.media.source} key_video={this.state.num_key}/>);
-      timeDown =(<TimeDown /*onAnswerQuiz={this.onAnswerQuiz.bind(this)}*/ secondsRemaining={secondsRemaining} key_segundos={this.state.num_key}/>);
+      timeDown =(<TimeDown /*tiempoAgotado={this.tiempoAgotado()}*/ secondsRemaining={secondsRemaining} key={this.state.num_key}/>);
     } else if (currentQuestion.media.type == "audio") {
-      secondsRemaining = 50;
+      secondsRemaining = 5;
       media = (<Audio source_audio={currentQuestion.media.source} key_audio={this.state.num_key}/>);
-      timeDown =(<TimeDown secondsRemaining={secondsRemaining} key_segundos={this.state.num_key}/>);
+      timeDown =(<TimeDown /*tiempoAgotado={this.tiempoAgotado()}*/  secondsRemaining={secondsRemaining} key={this.state.num_key}/>);
 
     } else {
       media = "";
-
-
+      timeDown =(<TimeDown /*tiempoAgotado={this.tiempoAgotado()}*/ secondsRemaining={secondsRemaining} key={this.state.num_key}/>);
     }
     return (
       <div className="quiz">

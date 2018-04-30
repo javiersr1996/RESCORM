@@ -40,15 +40,18 @@ export default class MCQuestion extends React.Component {
     let correctAnswers = 0;
     let incorrectAnswers = 0;
     let blankAnswers = 0;
+    let totalCorrectAnswers = 0;
 
     if (this.state.selected_choices_ids === 0){
-      console.log("respuesta en blaaancoooooooooooooooooooo")
       correctAnswers = 0;
       incorrectAnswers = 0;
 
     }else{
       for(let i = 0; i < nChoices; i++){
         let choice = this.props.question.respuestas[i];
+        if(choice.valor == "100"){
+        totalCorrectAnswers++;
+      }
         if(this.state.selected_choices_ids.indexOf(choice.id) !== -1){
           // Answered choice
           if(choice.valor === "100"){
@@ -61,8 +64,10 @@ export default class MCQuestion extends React.Component {
         }
       }
     }
-
-
+    if(correctAnswers !== totalCorrectAnswers){
+    correctAnswers = 0;
+    incorrectAnswers = 0;
+  }
     let scorePercentage = Math.max(0, (correctAnswers - incorrectAnswers) / this.props.question.respuestas.filter(function(c){return c.valor === "100";}).length);
 
     // Send data via SCORM
@@ -85,8 +90,6 @@ export default class MCQuestion extends React.Component {
 
   }
   render(){
-    console.log("olaaaaa render MCQuestion")
-    console.log(this.props.question.respuestas.length)
     let choices = [];
     for(let i = 0; i < this.props.question.respuestas.length; i++){
       console.log("numero respuestas pregunta "+this.props.question.respuestas.length)

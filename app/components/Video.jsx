@@ -9,12 +9,7 @@ export default class Video extends React.Component {
    CAMBIO DEL VOLUMEN
   *****************************************************
   */
-  componentDidMount(){
-    //cambiar volumen de CADA VIDEO
-    //probado con id="myVideo" y con id={this.props.key_video}
-    this.setVolume();
 
-  }
 
   /*
   *****************************************************
@@ -52,7 +47,7 @@ export default class Video extends React.Component {
 
       <div>
         <div>
-          <video id="myVideo" onClick={this.fullScreenClick.bind(this)} key={key} width="700" height="400" autoPlay>
+          <video id="myVideo" onLoadStart={this.setVolume.bind(this)} onClick={this.fullScreenClick.bind(this)} key={key} width="700" height="400" autoPlay>
             <source src={this.props.video} type="video/mp4"/>
           </video>
         </div>

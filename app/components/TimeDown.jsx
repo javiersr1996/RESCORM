@@ -12,44 +12,46 @@ export default class TimeDown extends React.Component {
     //this.tiempoAgotado = this.tiempoAgotado.bind(this);
 
   };
-
-  tick(){
-    this.setState({
-      secondsRemaining:this.state.secondsRemaining -0.1
-    });
-    if(this.state.secondsRemaining <=0){
-      clearInterval(this.interval);
-
-    }
-  };
-
   componentDidMount(){
     this.setState({
       secondsRemaining: this.props.secondsRemaining,
+      secondsRemainingProgressBar: this.props.secondsRemaining,
       totalSeconds: this.props.secondsRemaining,
     });
 
     this.interval = setInterval(this.tick,100);
   }
 
+  tick(){
+    console.log("hola")
+    this.setState({
+      secondsRemaining:this.state.secondsRemaining - 0.1,
+    });
+    if(this.state.secondsRemaining <=0){
+      clearInterval(this.interval);
+      //this.tiempoAgotado()
+
+    }
+  };
   componentWillUnmount(){
     clearInterval(this.interval)
   };
-  /*
+ /*
   tiempoAgotado(){
-    this.props.onAnswerQuiz();
+    console.log("tiempo agotado timedown")
+    this.props.tiempoAgotado();
+    return;
   }
   */
 
-
-
   render() {
+     let key = this.props.key;
      let tiempo = Math.floor(this.state.secondsRemaining);
      if(tiempo == -1){
        tiempo = 0;
      }
     return (
-        <div>
+        <div key={key}>
           <div>
             Tiempo: {tiempo} s
          </div>

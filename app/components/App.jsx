@@ -340,8 +340,14 @@ export class App extends React.Component {
 
   //cambiar this.state.presentacion
   onPresentacion(){
+    for(let i =0; i<this.state.jsoninterno.length; i++){
+     this.state.jsoninterno[i].respuestas.sort(function() {return Math.random() - 0.5});
+    }
+    let jsoninternoSort = this.state.jsoninterno;
+
     this.setState({
       presentacion:1,
+      jsoninterno: jsoninternoSort
     })
     return;
   }
