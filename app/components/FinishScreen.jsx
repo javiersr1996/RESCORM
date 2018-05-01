@@ -1,6 +1,7 @@
 import React from 'react';
 import './../assets/scss/finish_screen.scss';
 import MediaFinalView from './MediaFinalView';
+import {GLOBAL_CONFIG} from '../config/config.js';
 
 export default class FinishScreen extends React.Component {
   constructor(props){
@@ -50,15 +51,12 @@ export default class FinishScreen extends React.Component {
         array_tipos:array_tipos,
         array_sources: array_sources,
       })
-
     }
   }
   render(){
-    console.log("hola FinalScreen")
-    console.log(this.state.questions);
     let muestras_finales = [];
     //let l = this.props.questions.length;
-    for(let i = 0; i < 9; i++){
+    for(let i = 0; i <this.state.questions.length ; i++){
     muestras_finales.push(
       <div id="MediaFinalView">
          <p id="totalpreguntas">{this.state.array_totalpreguntas[i]}</p>
@@ -71,12 +69,20 @@ export default class FinishScreen extends React.Component {
     }
 
     let finishTitleText = this._getFinishScreenTitle(this.props.tracking.progress_measure, this.props.tracking.score);
-    return (
-      <div className="finish_screen">
-        <h1 id="finish_title">{finishTitleText}</h1>
-        {muestras_finales}
+    if(GLOBAL_CONFIG === "examen"){
+      return (
+        <div className="finish_screen">
+          <h1 id="finish_title">{finishTitleText}</h1>
+          {muestras_finales}
+        </div>
+      );
+    } else {
+      return (
+        <div className="finish_screen">
+          <h1 id="finish_title">{finishTitleText}</h1>
+        </div>
+      );
+    }
 
-      </div>
-    );
   }
 }

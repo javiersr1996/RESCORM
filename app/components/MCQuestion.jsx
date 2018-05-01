@@ -5,6 +5,7 @@ import {objectiveAccomplished, objectiveAccomplishedThunk} from './../reducers/a
 
 import MCQuestionChoice from './MCQuestionChoice.jsx';
 import QuestionButtons from './QuestionButtons.jsx';
+import {GLOBAL_CONFIG} from '../config/config.js';
 
 export default class MCQuestion extends React.Component {
   constructor(props){
@@ -12,10 +13,9 @@ export default class MCQuestion extends React.Component {
     this.state = {
       selected_choices_ids:[],
       answered:false,
-
-
+      repeticiones: 0,
+      respuesta: "",
     };
-
   }
 
   componentWillUpdate(prevProps, prevState){
@@ -36,6 +36,11 @@ export default class MCQuestion extends React.Component {
   onAnswerQuestion(){
     // Calculate score
     console.log("onAnswerQuestion MCQuestion")
+    if(GLOBAL_CONFIG.modo === "repaso"){
+      this.setState({
+        respuesta: this.props.question.solucion
+      });
+    }
     let nChoices = this.props.question.respuestas.length;
     let correctAnswers = 0;
     let incorrectAnswers = 0;
@@ -78,12 +83,22 @@ export default class MCQuestion extends React.Component {
     this.setState({answered:true});
   }
   onResetQuestion(){
-    this.setState({selected_choices_ids:[], answered:false});
+    this.setState({
+      selected_choices_ids:[],
+      answered:false,
+      repeticiones: this.state.repeticiones+1,
+    });
     this.props.numKey();
+    console.log("repeticiones "+this.state.repeticiones);
+
   }
   onNextQuestion(){
     this.props.onNextQuestion();
-
+    if(GLOBAL_CONFIG.modo === "repaso"){
+      this.setState({
+        respuesta:"",
+      })
+    }
   }
   render(){
     let choices = [];
@@ -96,7 +111,8 @@ export default class MCQuestion extends React.Component {
       <div className="question">
         <h1>{this.props.question.texto}</h1>
         {choices}
-        <QuestionButtons I18n={this.props.I18n} onAnswerQuestion={this.onAnswerQuestion.bind(this)} onResetQuestion={this.onResetQuestion.bind(this)} onResetQuiz={this.props.onResetQuiz} onNextQuestion={this.onNextQuestion.bind(this)} answered={this.state.answered} quizCompleted={this.props.quizCompleted} allow_finish={this.props.isLastQuestion}/>
+        <p id="respuesta">{this.state.respuesta}</p>
+        <QuestionButtons repeticiones={this.state.repeticiones} I18n={this.props.I18n} onAnswerQuestion={this.onAnswerQuestion.bind(this)} onResetQuestion={this.onResetQuestion.bind(this)} onResetQuiz={this.props.onResetQuiz} onNextQuestion={this.onNextQuestion.bind(this)} answered={this.state.answered} quizCompleted={this.props.quizCompleted} allow_finish={this.props.isLastQuestion}/>
       </div>
     );
   }

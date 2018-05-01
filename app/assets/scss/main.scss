@@ -2,12 +2,31 @@ body {
   background-color: #f5f5f0;
 
 }
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#appTodo {
+  justify-content: center;
+  align-items: center;
+}
+#appPresentacion {
+  justify-content: center;
+  align-items: center;
+}
+#panelPresentacion {
+  text-align: center;
+  font-size: 20px;
+}
+#headerProgressLogScore {
+  text-align: center ;
+}
 #logo {
   width:150px;
 }
-
 #myVideo {
-
   float: right;
   position: relative;
 }
@@ -28,6 +47,10 @@ body {
   justify-content: center;
   align-items: stretch;
 }
+#tiempo {
+  font-size: 30px;
+  text-align: center;
+}
 div.header_wrapper img {
   width: 71px;
   height: 50px;
@@ -38,7 +61,7 @@ div.header_wrapper img {
 #heading {
   font-size: 30px;
   margin: 8px;
-  text-align: center;
+  text-align: right;
 }
 
 #tracking{

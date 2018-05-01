@@ -3,7 +3,7 @@ export let GLOBAL_CONFIG = {
     debug:true,
     debug_scorm_api:false,
     debug_scorm_api_window:false,
-    available_locales:["en", "es"],
+    available_locales:["es", "en"],
     // locale: "es",
     adaptive:true,
     finish_screen:true,
@@ -11,7 +11,19 @@ export let GLOBAL_CONFIG = {
       completion_threshold:0.5,
       score_threshold:0.6,
     },
-    n:9,
+    //numero de preguntas maximas a mostrar
+    n:10,
+    //modo de juego: examen o repaso
+    modo:"examen",
+    //xml a cargar: examen1, examen2, repaso
+    /*
+    ****************************************************************************
+    quiz1 --> http://localhost:8080/config/quiz1.xml
+    quiz2 --> http://localhost:8080/config/quiz2.xml
+    ****************************************************************************
+    */
+    xml: "http://localhost:8080/config/quiz1.xml",
+    //secondsRemaining:300,
   },
   production:{
     debug:false,

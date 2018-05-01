@@ -10,11 +10,11 @@ export let LOCALES = {
     "i.quiz_header_title":"Question: #{current}/#{total}",
     "i.logged_as":"Logged as",
     "i.next":"Next",
-    "i.progress_measure":"Progress Measure",
-    "i.reset_question":"Reset question",
+    "i.progress_measure":"Progress",
+    "i.reset_question":"Repeat question",
     "i.reset_quiz":"Reset quiz",
     "i.score":"Score",
-    "i.title":"RESCORM Boilerplate",
+    "i.title":"Referee Basketball Test",
   },
   es:{
     "i.answer":"Responder",
@@ -31,5 +31,6 @@ export let LOCALES = {
     "i.reset_question":"Resetear pregunta",
     "i.reset_quiz":"Resetear cuestionario",
     "i.score":"Puntuación",
+    "i.title":"Referee Basketball Test",
   },
 };

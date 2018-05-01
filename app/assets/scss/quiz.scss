@@ -1,5 +1,5 @@
 div.quizHeader p {
-  font-size: 20px;
+  font-size: 30px;
   margin-top: 25px;
   margin-bottom: 20px;
   width:800px;
@@ -11,15 +11,16 @@ div.question h1 {
   margin-top: 20px;
   margin-bottom: 20px;
   width:800px;
-  background-color: #f5f5f0;
+
 }
 
 div.question div.question_choice {
-  background: white;
+  background:#f5f5f0;
   margin: 10px;
   padding: 2px;
   width: 800px;
-  background-color: #f5f5f0;
+
+
 }
 
 div.question div.question_choice div.questionC1{
@@ -27,7 +28,8 @@ div.question div.question_choice div.questionC1{
   width: 35px;
   margin-top: 9px;
   margin-left: 10px;
-  background-color: #f5f5f0;
+
+
 
 }
 
@@ -35,7 +37,8 @@ div.question div.question_choice div.questionC2{
   display: inline-block;
   width: auto;
   margin: 12px 8px 12px 8px;
-  background-color: #f5f5f0;
+
+
 
 }
 
@@ -43,35 +46,44 @@ div.question div.question_choice input[type="checkbox"] {
   width: 23px;
   height: 23px;
   cursor: pointer;
-  background-color: #f5f5f0;
+
 }
 
 div.question div.question_choice input[type="checkbox"][disabled]{
   cursor: default;
-  background-color: #f5f5f0;
+
 }
 
 div.question div.question_choice p {
   display: inline-block;
   font-size: 20px;
   margin: 0px 0px 0px 0px;
-  background-color: #f5f5f0;
+
 }
 
+div.question div.question_choice_correct_examen {
+  color: black;
+  border-radius: 25px;
+  background:#f5f5f0;
+
+}
 div.question div.question_choice_correct {
-  background: #f5f5f0;
+  color: black;
+  border-radius: 25px;
+  background:#7cfC00;
 }
 
 div.question div.question_choice_incorrect {
-  background: #f5f5f0;
-}
-
-div.question div.question_choice_correct, div.question div.question_choice_incorrect {
   color: black;
   border-radius: 25px;
-  background: #f5f5f0;
-
+  background:#ff6347;
 }
+div.question div.question_choice_incorrect_examen {
+  color: black;
+  border-radius: 25px;
+  background:#f5f5f0;
+}
+
 
 div.question div.questionButtonsWrapper {
   padding: 10px;

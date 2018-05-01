@@ -1,5 +1,7 @@
 import React from 'react';
 import { ProgressBar } from 'react-bootstrap';
+import './../assets/scss/main.scss';
+import {GLOBAL_CONFIG} from '../config/config.js';
 
 export default class TimeDown extends React.Component {
   constructor(props) {
@@ -19,6 +21,7 @@ export default class TimeDown extends React.Component {
     });
     if(this.state.secondsRemaining <=0){
       clearInterval(this.interval);
+        this.props.finishTime();
 
     }
   };
@@ -35,29 +38,45 @@ export default class TimeDown extends React.Component {
   componentWillUnmount(){
     clearInterval(this.interval)
   };
-  /*
-  tiempoAgotado(){
-    this.props.onAnswerQuiz();
-  }
-  */
-
-
-
   render() {
-     let key = this.props.key;
+    let key = "";
+    if(GLOBAL_CONFIG.modo === "examen"){
+      key = "";
+    } else if(GLOBAL_CONFIG.modo === "repaso"){
+      key = this.props.key;
+      console.log("qqqqqqqqqqqq"+key);
+      }
+   //tiempo en formato minutos:segundos
      let tiempo = Math.floor(this.state.secondsRemaining);
      if(tiempo == -1){
        tiempo = 0;
      }
-    return (
-        <div key={key}>
+     let minutos = "";
+     if(tiempo>120){
+       minutos =  Math.floor(tiempo/60) + " minutos";
+     } else if (tiempo<120 && tiempo>60){
+       minutos =  Math.floor(tiempo/60) + " minuto";
+     } else {
+       minutos = "";
+     }
+     let segundos = tiempo % 60;
+    if(GLOBAL_CONFIG.modo === "examen"){
+      return (
           <div>
-            Tiempo: {tiempo} s
+            <div id="tiempo">
+              Tiempo: {minutos} {segundos} segundos
+           </div>
+           <div>
+               <ProgressBar width="100" active striped bsStyle="warning" now={100*this.state.secondsRemaining/this.state.totalSeconds}/>
+           </div>
          </div>
-         <div width="50">
-             <ProgressBar width="100" active striped bsStyle="warning" now={100*this.state.secondsRemaining/this.state.totalSeconds}/>
-         </div>
-       </div>
-      )
+       );
+    } else {
+      return (
+          <div></div>
+        )
+
+    }
+
   }
 }

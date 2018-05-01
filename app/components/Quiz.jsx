@@ -3,7 +3,7 @@ import './../assets/scss/quiz.scss';
 
 import * as Utils from '../vendors/Utils.js';
 import {addObjectives, resetObjectives, finishApp} from './../reducers/actions';
-
+import {GLOBAL_CONFIG} from '../config/config.js';
 import QuizHeader from './QuizHeader.jsx';
 import MCQuestion from './MCQuestion.jsx';
 import Video from './Video.jsx';
@@ -46,17 +46,13 @@ export default class Quiz extends React.Component {
       questions = questions.slice(0, Math.min(this.props.config.n, questions.length));
 
     }
-
-
-
     this.state = {
       questions: questions,
       current_question_index:1,
-      num_key:0
+      num_key:1,
     };
   }
   componentDidMount(){
-
     // Create objectives (One per question included in the quiz)
     let objectives = [];
     let nQuestions = this.state.questions.length;
@@ -89,10 +85,15 @@ export default class Quiz extends React.Component {
   numKey(){
     this.setState({num_key:this.state.num_key+1})
   }
+  finishTime(){
+    if(GLOBAL_CONFIG.modo === "examen"){
+      this.props.finishTime();
+    } else {
+      this.onNextQuestion();
+    }
 
-
+  }
   render(){
-    console.log("render quiz index question = "+this.state.current_question_index)
     let currentQuestion = this.state.questions[this.state.current_question_index-1];
     let isLastQuestion = (this.state.current_question_index === this.state.questions.length);
 
@@ -102,8 +103,6 @@ export default class Quiz extends React.Component {
     let numKey = this.numKey.bind(this);
     let currentQuestionRender = "";
 
-    let secondsRemaining = "";
-
     switch (currentQuestion.tipo){
     case "multichoice":
       currentQuestionRender = (<MCQuestion question={currentQuestion} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished}/>);
@@ -111,24 +110,24 @@ export default class Quiz extends React.Component {
     default:
       currentQuestionRender = "Question type not supported";
     }
+    //en modo examen es el mismo tiempo para todo el quiz --> único key para llamar a TimeDown
+    //en modo repaso se resetea el tiempo para cada pregunta --> distinto key en cada llamada a TimeDown
+    let secondsRemaining = 0;
+    let timeDown = "";
+    if(GLOBAL_CONFIG.modo === "examen"){
+      secondsRemaining = 300;
+      timeDown =(<TimeDown finishTime={this.finishTime.bind(this)} secondsRemaining={secondsRemaining}/>);
+    } else if(GLOBAL_CONFIG.modo === "repaso"){
+      //timeDown =(<TimeDown finishTime={this.finishTime.bind(this)} secondsRemaining={secondsRemaining} key={this.state.num_key}/>);
+    }
     //video o audio
-
     let media = "";
-    let timeDown = 0;
-
     if(currentQuestion.media.type == "video"){
-      secondsRemaining = 25;
       media = (<Video video={currentQuestion.media.source} key_video={this.state.num_key}/>);
-      timeDown =(<TimeDown /*onAnswerQuiz={this.onAnswerQuiz.bind(this)}*/ secondsRemaining={secondsRemaining} key={this.state.current_question_index}/>);
     } else if (currentQuestion.media.type == "audio") {
-      secondsRemaining = 25;
       media = (<Audio source_audio={currentQuestion.media.source} key_audio={this.state.num_key}/>);
-      timeDown =(<TimeDown /*onAnswerQuiz={this.onAnswerQuiz.bind(this)}*/ secondsRemaining={secondsRemaining} key_segundos={this.state.current_question_index}/>);
     } else {
       media = "";
-      timeDown =(<TimeDown /*onAnswerQuiz={this.onAnswerQuiz.bind(this)}*/ secondsRemaining={secondsRemaining} key_segundos={this.state.current_question_index}/>);
-
-
     }
     return (
       <div className="quiz">
@@ -136,8 +135,6 @@ export default class Quiz extends React.Component {
         {timeDown}
         {media}
         {currentQuestionRender}
-
-
       </div>
     );
   }

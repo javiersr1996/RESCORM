@@ -1,4 +1,6 @@
 import React from 'react';
+import {GLOBAL_CONFIG} from '../config/config.js';
+import './../assets/scss/main.scss';
 
 export default class Header extends React.Component {
   constructor(props){
@@ -36,17 +38,24 @@ export default class Header extends React.Component {
     let trackingEls = trackingTexts.map(function(text, index){
       return <span key={index}>{text}</span>;
     });
-    /*
-    <p id="tracking">{trackingEls}</p>
-    {loggedEl}
-    */
+    if(GLOBAL_CONFIG.modo === "examen"){
+      return (
+        <div className="header_wrapper">
+          <a target="_blank" href="https://github.com/javiersr1996/RESCORM"><img id="logo" src="assets/images/quiz_logo.png"/></a>
+          <h1 id="heading">{this.props.I18n.getTrans("i.title")}</h1>
 
-    return (
-      <div className="header_wrapper">
-        <a target="_blank" href="https://github.com/javiersr1996/RESCORM"><img id="logo" src="assets/images/quiz_logo.png"/></a>
-        <h1 id="heading">{this.props.I18n.getTrans("i.title")}</h1>
+        </div>
+      );
+    } else {
+      return (
+        <div id="headerProgressLogScore" className="header_wrapper">
+          <a target="_blank" href="https://github.com/javiersr1996/RESCORM"><img id="logo" src="assets/images/quiz_logo.png"/></a>
+          <h1 id="heading">{this.props.I18n.getTrans("i.title")}</h1>
+          <p id="tracking">{trackingEls}</p>
+          {loggedEl}
+        </div>
+      );
+    }
 
-      </div>
-    );
   }
 }

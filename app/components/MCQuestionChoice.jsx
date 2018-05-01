@@ -1,4 +1,6 @@
 import React from 'react';
+import {GLOBAL_CONFIG} from '../config/config.js';
+import './../assets/scss/quiz.scss';
 
 export default class MCQuestionChoice extends React.Component {
   constructor(props){
@@ -12,13 +14,28 @@ export default class MCQuestionChoice extends React.Component {
       if(this.props.checked){
         console.log("correccion")
         if(this.props.choice.valor === "100"){
-          questionClassName += " question_choice_correct";
-          console.log("corrrectooooooooooooooooooooooooooo")
+          if(GLOBAL_CONFIG.modo === "examen"){
+            console.log("corrrectooooooooooooooooooooooooooo")
+            questionClassName += " question_choice_correct_examen";
+          } else {
+            questionClassName += " question_choice_correct";
+          }
+
         } else if (this.props.choice.valor === "0") {
-          questionClassName += " question_choice_incorrect";
+          if(GLOBAL_CONFIG.modo === "examen"){
+            questionClassName += " question_choice_incorrect_examen";
+          } else {
+              questionClassName += " question_choice_incorrect";
+          }
+
         }
       } else if(this.props.choice.valor === "100"){
-        questionClassName += " question_choice_correct";
+        if(GLOBAL_CONFIG.modo === "examen"){
+          questionClassName += " question_choice_correct_examen";
+        } else {
+          questionClassName += " question_choice_correct";
+        }
+
       }
     }
     return (
