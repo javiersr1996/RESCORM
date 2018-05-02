@@ -41,28 +41,21 @@ export default class MediaFinalView extends React.Component {
 
 
   render() {
-    //console.log("estoy en Video.jsx y la source es "+ this.props.video);
     let key= this.props.key;
-
    if (this.props.tipo == "video")
     return (
-
-      <div id="MediaFinalView">
-
+      <div>
           <video id="myVideo2" onClick={this.fullScreenClick.bind(this)} key={key} width="500" height="500" controls>
             <source src={this.props.source} type="video/mp4"/>
           </video>
-
       </div>
     )
     else if (this.props.tipo == "audio"){
       return(
-        <div id="MediaFinalView">
-
+        <div>
             <audio id="myAudio2" key={key} width="500" height="500" controls>
               <source src={this.props.source} type="video/mp4"/>
             </audio>
-
         </div>
       )
     } else {

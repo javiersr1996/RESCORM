@@ -36,7 +36,7 @@
 </question>
 <question type="multichoice">
 <dificultad>2</dificultad>
-<solucion>Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</solucion>
+<solucion>Dos pasos consecutivos con el mismo pie. Violación --> Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</solucion>
 <name>
 <text>Señala la respuesta correcta­</text>
 </name>
@@ -69,7 +69,7 @@
 </question>
 <question type="multichoice">
 <dificultad>3</dificultad>
-<solucion>Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</solucion>
+<solucion>Dos pasos consecutivos con el mismo pie. Violación --> Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</solucion>
 <name>
 <text>Señala la respuesta correcta­</text>
 </name>
@@ -83,13 +83,13 @@
 <source>../assets/videos/video2.mp4</source>
 </media>
 <answer fraction="0">
-<text>Paso 0 correctamente aplicado</text>
+<text>Pasos en la recepción de balón</text>
 </answer>
 <answer fraction="100">
 <text>Dos pasos consecutivos con el mismo pie. Violación</text>
 </answer>
 <answer fraction="0">
-<text>Traspiés válido</text>
+<text>Traspiés cogiendo balón en el aire</text>
 </answer>
 <answer fraction="0">
 <text>Jugada ilegal por dar tres apoyos con el balón en las manos</text>
@@ -102,7 +102,7 @@
 </question>
 <question type="multichoice">
 <dificultad>1</dificultad>
-<solucion>Jugador atacante comete violación de pasos tras rebote ofensivo antes de recibir la falta</solucion>
+<solucion>Pasos tras rebote ofensivo --> Jugador atacante comete violación de pasos tras rebote ofensivo antes de recibir la falta</solucion>
 <name>
 <text>Señala la respuesta correcta</text>
 </name>
@@ -129,7 +129,7 @@
 </question>
 <question type="multichoice">
 <dificultad>1</dificultad>
-<solucion>En mini hay 2 tiempos muertos por parte no acumulables, así que no tiene razón</solucion>
+<solucion>no --> En mini hay 2 tiempos muertos por parte no acumulables, así que no tiene razón</solucion>
 <name>
 <text>Un entrenador de minibasket nos dice lo siguiente durante el partido. ¿Tiene razón?</text>
 </name>
@@ -154,14 +154,9 @@
 <text>Moodle QUIZ XML export</text>
 </category>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <dificultad>1</dificultad>
-<solucion>No hay control de balón por parte del atacante (palmea) por tanto no hay campo atrás</solucion>
+<solucion>No se produce violación de campo atrás al no tener control el jugador --> No hay control de balón por parte del atacante (palmea) por tanto no hay campo atrás</solucion>
 <name>
 <text>En la jugada...</text>
 </name>
@@ -175,7 +170,7 @@
 <source>../assets/videos/video4.mp4</source>
 </media>
 <answer fraction="100">
-<text>No se produce violación de campo atrás al no tener control ej jugador</text>
+<text>No se produce violación de campo atrás al no tener control el jugador</text>
 </answer>
 <answer fraction="0">
 <text>Árbitro sanciona correctamente violación de campo atrás al controlar el jugador el balón en campo de ataque</text>
@@ -188,7 +183,7 @@
 </question>
 <question type="multichoice">
 <dificultad>2</dificultad>
-<solucion>Mal sancionada. Hay que esperar cuando jugador recibe balón para ver si lanza a canasta o no</solucion>
+<solucion>Bien sancionada y Bien sancionada aunque hubiera estado mejor antes --> Mal sancionada. Hay que esperar cuando jugador recibe balón para ver si lanza a canasta o no</solucion>
 <name>
 <text>Se produce violación por tres segundos en la zona.Señala las opciones incorrectas</text>
 </name>
@@ -218,9 +213,9 @@
 </question>
 <question type="multichoice">
 <dificultad>2</dificultad>
-<solucion>Como mínimo merece aviso. Primero reacciona jocosamente y después se apoya en el árbitro</solucion>
+<solucion>Los árbitros hacen bien al no sancionar nada --> Como mínimo merece aviso. Primero reacciona jocosamente y después se apoya en el árbitro</solucion>
 <name>
-<text>El entrenador reacciona de la siguiente manera</text>
+<text>El entrenador reacciona de la siguiente manera. Señala la opción incorrecta</text>
 </name>
 <questiontext>
 <text>El entrenador reacciona de la siguiente manera. Señala la opción incorrecta</text>
@@ -248,7 +243,7 @@
 </question>
 <question type="multichoice">
 <dificultad>3</dificultad>
-<solucion>Se aprecia que el atacante realiza una pantalla legal, respetando distancia y tiempo y con los pies en el suelo. Clara simulación</solucion>
+<solucion>Simulación del defensor que debe ser avisado de falta técnica --> Se aprecia que el atacante realiza una pantalla legal, respetando distancia y tiempo y con los pies en el suelo. Clara simulación</solucion>
 <name>
 <text>Señala la opción correcta</text>
 </name>
@@ -265,7 +260,7 @@
 <text>Falta en ataque por pantalla ilegal</text>
 </answer>
 <answer fraction="0">
-<text>Simulación del defensor</text>
+<text>Simulación del defensor, el cual no merece falta técnica</text>
 </answer>
 <answer fraction="100">
 <text>Simulación del defensor que debe ser avisado de falta técnica</text>
@@ -278,7 +273,7 @@
 </question>
 <question type="multichoice">
 <dificultad>3</dificultad>
-<solucion>Reacción jocosa de la jugadora, la cual implica falta de respeto hacia los árbitros. Como mínimo se le debe avisar</solucion>
+<solucion>Jugadora merece falta técnica por desprecio hacia los árbitros --> Reacción jocosa de la jugadora, la cual implica falta de respeto hacia los árbitros. Como mínimo se le debe avisar</solucion>
 <name>
 <text>Señala la opción correcta</text>
 </name>

@@ -1,4 +1,5 @@
 import React from 'react';
+import './../assets/scss/main.scss';
 
 import * as Utils from '../vendors/Utils.js';
 import {objectiveAccomplished, objectiveAccomplishedThunk} from './../reducers/actions';
@@ -14,7 +15,7 @@ export default class MCQuestion extends React.Component {
       selected_choices_ids:[],
       answered:false,
       repeticiones: 0,
-      respuesta: "",
+      solucion: "",
     };
   }
 
@@ -38,7 +39,7 @@ export default class MCQuestion extends React.Component {
     console.log("onAnswerQuestion MCQuestion")
     if(GLOBAL_CONFIG.modo === "repaso"){
       this.setState({
-        respuesta: this.props.question.solucion
+        solucion: this.props.question.solucion
       });
     }
     let nChoices = this.props.question.respuestas.length;
@@ -96,22 +97,20 @@ export default class MCQuestion extends React.Component {
     this.props.onNextQuestion();
     if(GLOBAL_CONFIG.modo === "repaso"){
       this.setState({
-        respuesta:"",
+        solucion:"",
       })
     }
   }
   render(){
     let choices = [];
     for(let i = 0; i < this.props.question.respuestas.length; i++){
-      console.log("numero respuestas pregunta "+this.props.question.respuestas.length)
-
       choices.push(<MCQuestionChoice key={"MyQuestion_" + "question_choice_" + i} choice={this.props.question.respuestas[i]} checked={this.state.selected_choices_ids.indexOf(this.props.question.respuestas[i].id) !== -1} handleChange={this.handleChoiceChange.bind(this)} questionAnswered={this.state.answered}/>);
     }
     return (
       <div className="question">
         <h1>{this.props.question.texto}</h1>
         {choices}
-        <p id="respuesta">{this.state.respuesta}</p>
+        <p>{this.state.solucion}</p>
         <QuestionButtons repeticiones={this.state.repeticiones} I18n={this.props.I18n} onAnswerQuestion={this.onAnswerQuestion.bind(this)} onResetQuestion={this.onResetQuestion.bind(this)} onResetQuiz={this.props.onResetQuiz} onNextQuestion={this.onNextQuestion.bind(this)} answered={this.state.answered} quizCompleted={this.props.quizCompleted} allow_finish={this.props.isLastQuestion}/>
       </div>
     );
