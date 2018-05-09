@@ -104,7 +104,7 @@ export default class Quiz extends React.Component {
     let numKey = this.numKey.bind(this);
     let currentQuestionRender = "";
 
-    
+
 
     switch (currentQuestion.tipo){
     case "multichoice":
@@ -126,10 +126,11 @@ export default class Quiz extends React.Component {
     }
     //video o audio
     let media = "";
+
     if(currentQuestion.media.type == "video"){
-      media = (<Video video={currentQuestion.media.source} key_video={this.state.num_key}/>);
+      media = (<Video video={currentQuestion.media.sources} key_video={this.state.num_key}/>);
     } else if (currentQuestion.media.type == "audio") {
-      media = (<Audio source_audio={currentQuestion.media.source} key_audio={this.state.num_key}/>);
+      media = (<Audio audio={currentQuestion.media.sources} key_audio={this.state.num_key}/>);
     } else {
       media = "";
     }

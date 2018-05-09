@@ -123,10 +123,22 @@ export class App extends React.Component {
                   jsonpropio[num]["media"] = {};
                   jsonpropio[num]["media"]["type"] = "no tiene";
                   jsonpropio[num]["media"]["source"] = "no tiene";
-                } else {
-                  jsonpropio[num]["media"] = {};
-                  jsonpropio[num]["media"]["type"] = (json.quiz.question[indice].media[0].type[0]);
-                  jsonpropio[num]["media"]["source"] = (json.quiz.question[indice].media[0].source[0]);
+
+                  } else {
+                    jsonpropio[num]["media"] = {};
+                    jsonpropio[num]["media"]["type"] = (json.quiz.question[indice].media[0].type[0]);
+                    jsonpropio[num]["media"]["sources"] = {}
+                  for(let j = 0; j < 3; j++){
+                      if(json.quiz.question[indice].media[0].source[j] !== undefined){
+                        jsonpropio[num]["media"]["sources"][j] = {};
+                        jsonpropio[num]["media"]["sources"][j]["texto"] = (json.quiz.question[indice].media[0].source[j]._);
+                        jsonpropio[num]["media"]["sources"][j]["formato"] = (json.quiz.question[indice].media[0].source[j].$.type);
+
+                    } else {
+                      console.log("indefinido")
+
+                    }
+                  }
                 }
                 jsonpropio[num]["respuestas"] =[];
                 for(let j = 0; j < json.quiz.question[indice].answer.length; j++){
@@ -149,6 +161,7 @@ export class App extends React.Component {
             console.log(status, err.toString());
         }
     });
+    console.log(jsonredux)
 
   }
   //-----------------FIN COMPONENTDIDMOUNT--------------------------------------------
@@ -178,6 +191,8 @@ export class App extends React.Component {
     this.props.dispatch(finishApp(true));
   }
   render(){
+
+    console.log(this.props.jsoninterno)
     let TextoBienvenida ="Referee Basketball Test";
 
     let texto1 = "";

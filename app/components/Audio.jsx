@@ -16,6 +16,15 @@ export default class Audio extends React.Component {
   }
 
   render() {
+    let sources = [];
+
+    for(let i=0; i<3; i++){
+      if(this.props.audio[i] !== undefined){
+        sources.push(<source src={this.props.audio[i].texto} type={this.props.audio[i].formato} key={i}/>)
+      } else {
+        console.log("texto source indefinida")
+      }
+    }
     //console.log("estoy en Video.jsx y la source es "+ this.props.video);
     let key= this.props.key_audio;
     if(GLOBAL_CONFIG.modo === "repaso"){
@@ -23,7 +32,7 @@ export default class Audio extends React.Component {
         <div>
           <div>
             <audio id="myAudio" onLoadStart={this.setVolume.bind(this)} key={key} width="700" height="500" controls>
-              <source src={this.props.source_audio} type="video/mp4"/>
+              {sources}
             </audio>
           </div>
         </div>
@@ -33,7 +42,7 @@ export default class Audio extends React.Component {
         <div>
           <div>
             <audio id="myAudio" onLoadStart={this.setVolume.bind(this)} key={key} width="700" height="500" autoPlay>
-              <source src={this.props.source_audio} type="video/mp4"/>
+              {sources}
             </audio>
           </div>
         </div>

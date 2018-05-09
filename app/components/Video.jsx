@@ -58,19 +58,34 @@ export default class Video extends React.Component {
   }
 
   render() {
+
+    //cuantas sources tengo
+    let sources = [];
+
+    for(let i=0; i<3; i++){
+      if(this.props.video[i] !== undefined){
+        console.log(this.props.video[i].formato)
+        console.log(this.props.video[i].texto)
+        sources.push(<source src={this.props.video[i].texto} type={this.props.video[i].formato} key={i}/>)
+      } else {
+        console.log("texto source indefinida")
+      }
+    }
+
+
     var video = "";
     let key= this.props.key_video;
     if(GLOBAL_CONFIG.modo === "examen"){
       video = (
           <div id="Panel" key={key} className="myVideoExamen">
             <video id="myVideoExamen" className="myVideoExamen" onLoadStart={this.setVolumeExamen.bind(this)} onClick={this.fullScreenClickExamen.bind(this)} key={key} width="700" height="400" autoPlay>
-              <source src={this.props.video} type="video/mp4"/>
+              {sources}
             </video>
           </div>
     );
     } else {
       video = (<video id="myVideoRepaso" onLoadStart={this.setVolumeRepaso.bind(this)} onClick={this.fullScreenClickRepaso.bind(this)} key={key} width="700" height="400" controls>
-        <source src={this.props.video} type="video/mp4"/>
+        {sources}
       </video>);
     }
     return (
