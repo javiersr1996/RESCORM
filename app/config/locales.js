@@ -3,7 +3,7 @@ export let LOCALES = {
     "i.answer":"Answer",
     "i.difficulty":"Difficulty",
     "i.finish_quiz":"Finish quiz",
-    "i.finish_screen_title_full":"The content has ended. You may close this window. Your final progress was #{progress_measure}% and your final score was #{score}%.",
+    "i.finish_screen_title_full":"End of the quiz. Your final progress was #{progress_measure}% and your final score was #{score}%.",
     "i.finish_screen_title_wpm":"The content has ended. You may close this window. Your final progress was #{progress_measure}%.",
     "i.finish_screen_title_ws":"The content has ended. You may close this window. Your final score was #{score}%.",
     "i.finish_screen_title_simple":"The content has ended. You may close this window.",

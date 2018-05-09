@@ -51,6 +51,7 @@ export default class Quiz extends React.Component {
       current_question_index:1,
       num_key:1,
     };
+    //this.tiempoAgotado = this.tiempoAgotado.bind(this);
   }
   componentDidMount(){
     // Create objectives (One per question included in the quiz)
@@ -102,6 +103,8 @@ export default class Quiz extends React.Component {
     let onResetQuiz = this.onResetQuiz.bind(this);
     let numKey = this.numKey.bind(this);
     let currentQuestionRender = "";
+
+    
 
     switch (currentQuestion.tipo){
     case "multichoice":

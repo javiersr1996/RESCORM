@@ -16,7 +16,7 @@ export let GLOBAL_CONFIG = {
       score_threshold:0.6,
     },
     //numero de preguntas maximas a mostrar
-    n:1,
+    n:10,
     //modo de juego: examen o repaso
     modo:"examen",
     /*
