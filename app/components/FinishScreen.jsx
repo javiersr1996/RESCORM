@@ -62,11 +62,11 @@ export default class FinishScreen extends React.Component {
     //let l = this.props.questions.length;
     for(let i = 0; i <this.state.questions.length ; i++){
     muestras_finales.push(
-      <div id="appPresentacion">
+      <div id="appPresentacion" key={i}>
          <p id="totalpreguntas">{this.state.array_totalpreguntas[i]}</p>
          <p id="respuestas">{this.state.array_textos[i]}</p>
          <p id="respuestas">{this.state.array_soluciones[i]}</p>
-         <MediaFinalView tipo={this.state.array_tipos[i]} source={this.state.array_sources[i]} key={i}/>
+         <MediaFinalView tipo={this.state.array_tipos[i]} source={this.state.array_sources[i]} key_fw={i}/>
          <h3></h3>
 
       </div>
@@ -79,7 +79,7 @@ export default class FinishScreen extends React.Component {
         <div id="AppTodo" className="finish_screen">
           <h2></h2>
           <div id="appPresentacion">
-            <img align="middle" src="  ../assets/images/quiz_logo.png" className="center" />
+            <img align="middle" src="assets/images/quiz_logo.png" className="center" />
           </div>
           <h1 id="finish_title">{finishTitleText}</h1>
           <h1>Soluciones</h1>
@@ -89,10 +89,8 @@ export default class FinishScreen extends React.Component {
     } else {
       return (
         <div id="AppTodo" className="finish_screen">
-          <h1></h1>
-          <h1></h1>
           <div id="appPresentacion">
-            <img align="middle" src="  ../assets/images/quiz_logo.png" className="center" />
+            <img align="middle" src="assets/images/quiz_logo.png" className="center" />
           </div>
           <h1 id="finish_title">{finishTitleText}</h1>
         </div>

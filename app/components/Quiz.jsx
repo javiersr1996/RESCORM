@@ -115,9 +115,10 @@ export default class Quiz extends React.Component {
     let secondsRemaining = 0;
     let timeDown = "";
     if(GLOBAL_CONFIG.modo === "examen"){
-      secondsRemaining = 300;
+      secondsRemaining = GLOBAL_CONFIG.secondsRemaining;
       timeDown =(<TimeDown finishTime={this.finishTime.bind(this)} secondsRemaining={secondsRemaining}/>);
     } else if(GLOBAL_CONFIG.modo === "repaso"){
+      secondsRemaining = 0;
       //timeDown =(<TimeDown finishTime={this.finishTime.bind(this)} secondsRemaining={secondsRemaining} key={this.state.num_key}/>);
     }
     //video o audio

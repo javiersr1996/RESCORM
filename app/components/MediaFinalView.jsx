@@ -1,5 +1,5 @@
 import React from 'react';
-import './../assets/scss/finish_screen.scss';
+
 
 export default class MediaFinalView extends React.Component {
   constructor(props) {
@@ -11,14 +11,22 @@ export default class MediaFinalView extends React.Component {
   *****************************************************
   */
   componentDidMount(){
-    if(this.props.tipo == "video"){
-      var vid = document.getElementById("myVideo2");
-      vid.volume = 0.1;
-    } else if (this.props.tipo == "audio"){
-      var audio = document.getElementById("myAudio2");
-      audio.volume = 0.5;
+    if (this.props.tipo == "video"){
+      var video = document.getElementById("myVideo");
+      video.volume = 0.0;
+    } else if(this.props.tipo == "audio")  {
+      var audio = document.getElementById("myAudio");
+      audio.volume = 0.0;
+    } else {
+      console.log("NO MEDIA")
     }
+
+
+
+
+
   }
+
 
   /*
   *****************************************************
@@ -27,7 +35,7 @@ export default class MediaFinalView extends React.Component {
   */
 
   fullScreenClick(){
-    var elem = document.getElementById("myVideo2");
+    var elem = document.getElementById("myVideo");
     if (elem.requestFullscreen) {
       elem.requestFullscreen();
     } else if (elem.mozRequestFullScreen) {
@@ -36,16 +44,12 @@ export default class MediaFinalView extends React.Component {
       elem.webkitRequestFullscreen();
     }
   }
-
-
-
-
   render() {
-    let key= this.props.key;
+    let key= this.props.key_fw;
    if (this.props.tipo == "video")
     return (
       <div>
-          <video id="myVideo2" onClick={this.fullScreenClick.bind(this)} key={key} width="500" height="500" controls>
+          <video id="myVideo" onClick={this.fullScreenClick.bind(this)} /*onLoadStart={this.setVolumeVideo.bind(this)}*/ key={key} width="500" height="500" controls>
             <source src={this.props.source} type="video/mp4"/>
           </video>
       </div>
@@ -53,7 +57,7 @@ export default class MediaFinalView extends React.Component {
     else if (this.props.tipo == "audio"){
       return(
         <div>
-            <audio id="myAudio2" key={key} width="500" height="500" controls>
+            <audio id="myAudio"  /*onLoadStart={this.setVolumeAudio.bind(this)}*/ key={key} width="500" height="500" controls>
               <source src={this.props.source} type="video/mp4"/>
             </audio>
         </div>

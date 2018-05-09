@@ -18,7 +18,7 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source>../assets/videos/video3.mp4</source>
+<source>assets/videos/video3.mp4</source>
 </media>
 <answer fraction="100">
 <text>Pasos tras rebote ofensivo</text>
@@ -75,7 +75,7 @@
 <single>false</single>
 <media>
 <type>audio</type>
-<source>../assets/audios/audio0.mp3</source>
+<source>assets/audios/audio0.mp3</source>
 </media>
 <answer fraction="100">
 <text>No</text>
@@ -132,7 +132,7 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source>../assets/videos/video4.mp4</source>
+<source>assets/videos/video4.mp4</source>
 </media>
 <answer fraction="100">
 <text>No se produce violación de campo atrás al no tener control el jugador</text>
@@ -159,7 +159,7 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source>../assets/videos/video5.mp4</source>
+<source>assets/videos/video5.mp4</source>
 </media>
 <answer fraction="0">
 <text>Bien sancionada</text>
@@ -189,7 +189,7 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source>../assets/videos/video6.mp4</source>
+<source>assets/videos/video6.mp4</source>
 </media>
 <answer fraction="100">
 <text>Los árbitros hacen bien al no sancionar nada</text>
@@ -219,7 +219,7 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source>../assets/videos/video7.mp4</source>
+<source>assets/videos/video7.mp4</source>
 </media>
 <answer fraction="0">
 <text>Falta en ataque por pantalla ilegal</text>
@@ -249,7 +249,7 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source>../assets/videos/video8.mp4</source>
+<source>assets/videos/video8.mp4</source>
 </media>
 <answer fraction="0">
 <text>Hay falta que no debía haber sido sancionada</text>

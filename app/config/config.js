@@ -3,6 +3,10 @@ export let GLOBAL_CONFIG = {
     debug:true,
     debug_scorm_api:false,
     debug_scorm_api_window:false,
+    /*
+    para jugar la partida en inglés, cambiar el orden de es/en
+      available_locales:["en", "es"],
+    */
     available_locales:["es", "en"],
     // locale: "es",
     adaptive:true,
@@ -12,18 +16,21 @@ export let GLOBAL_CONFIG = {
       score_threshold:0.6,
     },
     //numero de preguntas maximas a mostrar
-    n:10,
+    n:1,
     //modo de juego: examen o repaso
-    modo:"repaso",
-    //xml a cargar: examen1, examen2, repaso
+    modo:"examen",
     /*
     ****************************************************************************
-    quiz1 --> http://localhost:8080/config/quiz1.xml
-    quiz2 --> http://localhost:8080/config/quiz2.xml
+    xml: "http://localhost:8080/config/<CUESTIONARIO>.xml",
+    <CUESTIONARIO> en castellano: examen1, examen2, repaso1, repaso2
+    <CUESTIONARIO> en inglés: examen1_en, examen2_en, repaso1_en, repaso2_en
     ****************************************************************************
     */
-    xml: "http://localhost:8080/config/quiz1.xml",
-    //secondsRemaining:300,
+    xml: "http://localhost:8080/config/examen1.xml",
+
+
+    //tiempo para completar la partida --> modo examen
+    secondsRemaining:300,
   },
   production:{
     debug:false,

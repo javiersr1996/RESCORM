@@ -15,7 +15,7 @@ import {jsonSaved, finishApp} from './../reducers/actions.jsx';
 import {INITIAL_STATE} from './../constants/constants.jsx';
 import $ from 'jquery';
 
-import{ Panel } from 'react-bootstrap';
+import{ Panel, Jumbotron } from 'react-bootstrap';
 
 export class App extends React.Component {
   constructor(props){
@@ -24,9 +24,6 @@ export class App extends React.Component {
     this.state = {
       presentacion:0,
       jsoninterno:[],
-      tracking_finished:false,
-      finalScreen:false,
-      wait_for_user_profile:true,
     }
   }
   /*
@@ -36,13 +33,10 @@ export class App extends React.Component {
   */
   componentDidMount(){
     var jsonpropio = [];
-    var preguntas_facil = [];
-    var preguntas_medio = [];
-    var preguntas_dificil = [];
     var jsonredux = [];
     //Load Moodle XML file
     $.ajax({
-        async:false,
+        async:true,
         method: 'GET',
         url: GLOBAL_CONFIG.xml,
         dataType: 'text',
@@ -50,8 +44,7 @@ export class App extends React.Component {
           var parseString = require('xml2js').parseString;
            parseString(data, function (err, result){
             var json = (result);
-            console.log("***************result    1**************")
-            console.log(result)
+            console.log(result);
             //json obtenido del parseado
             var customjson = {}
             customjson["quiz_xml"] = {}
@@ -82,7 +75,6 @@ export class App extends React.Component {
               var index = 0;
               var longitudes_anteriores_questions = 0;
               var long_cat = 0;
-              ;
               if(number_question == 1){
                 index = 1
               }
@@ -102,7 +94,6 @@ export class App extends React.Component {
               //el tipo de pregunta es truefalse
               if(tipo_pregunta == "truefalse"){
                 jsonpropio[num] = {};
-                //jsonpropio1[num]["dificultad"] = (json.quiz.question[indice].dificultad[0]);
                 jsonpropio[num]["tipo"] = (json.quiz.question[indice].$.type);
                 jsonpropio[num]["texto"] = (json.quiz.question[indice].name[0].text[0]);
                 jsonpropio[num]["media"] = {};
@@ -127,10 +118,16 @@ export class App extends React.Component {
                 jsonpropio[num]["tipo"] = (json.quiz.question[indice].$.type);
                 jsonpropio[num]["texto"] = (json.quiz.question[indice].questiontext[0].text[0]);
                 jsonpropio[num]["solucion"] = (json.quiz.question[indice].solucion[0]);
-                jsonpropio[num]["media"] = {};
-                jsonpropio[num]["media"]["type"] = (json.quiz.question[indice].media[0].type[0]);
-                jsonpropio[num]["media"]["source"] = (json.quiz.question[indice].media[0].source[0]);
-                //jsonpropio1[num]["dificultad"] = (json.quiz.question[indice].dificultad[0]);
+                if(json.quiz.question[indice].media === undefined){
+                  console.log("no tiene media")
+                  jsonpropio[num]["media"] = {};
+                  jsonpropio[num]["media"]["type"] = "no tiene";
+                  jsonpropio[num]["media"]["source"] = "no tiene";
+                } else {
+                  jsonpropio[num]["media"] = {};
+                  jsonpropio[num]["media"]["type"] = (json.quiz.question[indice].media[0].type[0]);
+                  jsonpropio[num]["media"]["source"] = (json.quiz.question[indice].media[0].source[0]);
+                }
                 jsonpropio[num]["respuestas"] =[];
                 for(let j = 0; j < json.quiz.question[indice].answer.length; j++){
                   jsonpropio[num]["respuestas"][j] = {};
@@ -144,19 +141,14 @@ export class App extends React.Component {
                 num++;
               }
             }
-          });
-
+            jsonredux = jsonpropio;
+            this.props.dispatch(jsonSaved(jsonredux));
+          }.bind(this));
         }.bind(this),
         error: function(xhr, status, err) {
             console.log(status, err.toString());
         }
     });
-    jsonredux = jsonpropio;
-    this.props.dispatch(jsonSaved(jsonredux));
-    this.setState({
-      tracking_finished:this.props.tracking.finished,
-      finalScreen:GLOBAL_CONFIG.finish_screen,
-    })
 
   }
   //-----------------FIN COMPONENTDIDMOUNT--------------------------------------------
@@ -174,7 +166,6 @@ export class App extends React.Component {
     this.setState({
       presentacion:1,
       jsoninterno: this.props.jsoninterno,
-      wait_for_user_profile:true,
     })
     return;
   }
@@ -187,6 +178,8 @@ export class App extends React.Component {
     this.props.dispatch(finishApp(true));
   }
   render(){
+    let TextoBienvenida ="Referee Basketball Test";
+
     let texto1 = "";
     let texto2 = "";
     let texto3 = "";
@@ -197,16 +190,14 @@ export class App extends React.Component {
       texto2 = "Respuestas incorrectas no restan";
       texto3 = "Pincha en el vídeo para verlo en pantalla completa";
       texto4 = "Dispones de 3 repeticiones de vídeo/audio (sin haber contestado a la pregunta)";
-      imgModo = (<img width="500" heigth="500" align="middle" src="  ../assets/images/examen.png" className="center" />);
+      imgModo = (<img width="250" heigth="250" align="middle" src="assets/images/examen.png" className="center" />);
     } else {
       texto1 = "MODO REPASO";
       texto2 = "Preguntas centradas en una temática concreta";
       texto3 = "No hay límite de tiempo por pregunta ni por el cuestionario";
       texto4 = "Puedes manejar el vídeo/audio con los controles";
-      imgModo = (<img align="middle" src="  ../assets/images/repaso.png" className="center" />);
+      imgModo = (<img width="250" heigth="250" align="middle" src="assets/images/repaso.png" className="center" />);
     }
-
-
 
     let appHeader = "";
     let appContent = "";
@@ -237,10 +228,16 @@ export class App extends React.Component {
    else if(this.state.presentacion === 0){
       return(
         <div id="AppTodo">
+          <Jumbotron>
+            <div id="appPresentacion">
+              <img width="250" heigth="250" align="middle" src="  ../assets/images/quiz_logo.png" className="center" />
+            </div>
+            <h1 id="textoBienvenida">{TextoBienvenida}</h1>
+            <div id="appPresentacion">
+              <img width="275" heigth="275" align="middle" src="  ../assets/images/fbm.png" className="center" />
+            </div>
+          </Jumbotron>
           {appHeader}
-          <div id="appPresentacion">
-            <img align="middle" src="  ../assets/images/fbm2.png" className="center" />
-          </div>
               <div id="panelPresentacion">
                   <h1></h1>
                   <p className="quiz">{texto1}</p>
@@ -250,10 +247,11 @@ export class App extends React.Component {
               </div>
               <div id="appPresentacion">
                 {imgModo}
+                <p></p>
+                <button id="buttonApp" onClick={this.onPresentacion.bind(this)} >COMENZAR</button>
               </div>
-            <div className="quizButtonsWrapper">
-              <button onClick={this.onPresentacion.bind(this)} >COMENZAR</button>
-            </div>
+
+
         </div>
       );
 

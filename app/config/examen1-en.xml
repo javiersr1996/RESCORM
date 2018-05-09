@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<solucion>Saque de lateral para el equipo B, desde su pista delantera</solucion>
+<name>
+<text>A4 controla el balón botándolo en pista delantera. B5 palmea el balón, que se aleja hacia la pista trasera del equipo A. Ambos jugadores salen corriendo para coger el balón. El árbitro sanciona falta de A4 sobre B5, quinta falta de equipo en el período, aún en pista delantera de B</text>
+</name>
+<questiontext>
+<text>A4 controla el balón botándolo en pista delantera. B5 palmea el balón, que se aleja hacia la pista trasera del equipo A. Ambos jugadores salen corriendo para coger el balón. El árbitro sanciona falta de A4 sobre B5, quinta falta de equipo en el período, aún en pista delantera de B</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Free throws for B5</text>
+</answer>
+<answer fraction="100">
+<text>Saque de lateral para el equipo B, desde su pista delantera </text>
+</answer>
+<answer fraction="0">
+<text>­Saque de lateral para el equipo B, desde su pista trasera</text>
+</answer>
+<media>
+<type>no tiene</type>
+<source>no tiene</source>
+</media>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+
+<solucion>Violation: two steps with the same feet --> Traveling</solucion>
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source>assets/videos/video1.mp4</source>
+</media>
+<answer fraction="0">
+<text>Correct 'step 0'</text>
+</answer>
+<answer fraction="100">
+<text>Violation: two steps with the same feet</text>
+</answer>
+<answer fraction="0">
+<text>Traspiés válido</text>
+</answer>
+<answer fraction="0">
+<text>Illegal play: three steps with the ball in the hands</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+
+<solucion>Violation: two steps with the same feet --> Traveling</solucion>
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source>assets/videos/video2.mp4</source>
+</media>
+<answer fraction="0">
+<text>Traveling when receiving the ball</text>
+</answer>
+<answer fraction="100">
+<text>Violation: two steps with the same feet</text>
+</answer>
+<answer fraction="0">
+<text>Legal play when getting the ball in the air</text>
+</answer>
+<answer fraction="0">
+<text>Illegal play: three steps with the ball in the hands</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<solucion>Traveling before personal foul --> Traveling violation after getting the offensive rebound and before receiving personal foul</solucion>
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>In this play...</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source>assets/videos/video3.mp4</source>
+</media>
+<answer fraction="100">
+<text>Traveling violation after offensive rebound</text>
+</answer>
+<answer fraction="0">
+<text>Personal foul when shooting</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<solucion>no -->The coach is wrong: there're 2 not cumulative timeouts per half </solucion>
+<name>
+<text>Minibasket coach ask referee this question. ¿Is him right?</text>
+</name>
+<questiontext>
+<text>Minibasket coach ask referee this question. ¿Is him right?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>audio</type>
+<source>assets/audios/audio0.mp3</source>
+</media>
+<answer fraction="100">
+<text>No</text>
+</answer>
+<answer fraction="0">
+<text>Yes</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<solucion>No backcourt violation --> player isn't dribbling</solucion>
+<name>
+<text>In this play...</text>
+</name>
+<questiontext>
+<text>In this play...</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source>assets/videos/video4.mp4</source>
+</media>
+<answer fraction="100">
+<text>There's no backcourt violation: player isn't dribbling</text>
+</answer>
+<answer fraction="0">
+<text>Correct backourt violation</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<solucion>Correct violation and correct violation (better seconds before)--> Incorrect violation. Referee must wait to player if he decides shooting</solucion>
+<name>
+<text>Three seconds foul lane. Choose the incorrect answers</text>
+</name>
+<questiontext>
+<text>Three seconds foul lane. Choose the incorrect answers</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source>assets/videos/video5.mp4</source>
+</media>
+<answer fraction="100">
+<text>Correct violation applied by the referee</text>
+</answer>
+<answer fraction="100">
+<text>Correct violation applied by the referee (better seconds before)</text>
+</answer>
+<answer fraction="0">
+<text>Incorrect violation applied by the referee</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<solucion>Los árbitros hacen bien al no sancionar nada --> Como mínimo merece aviso. Primero reacciona jocosamente y después se apoya en el árbitro</solucion>
+<name>
+<text>Pay attention to coach reaction. Choose the incorrect answer</text>
+</name>
+<questiontext>
+<text>Pay attention to coach reaction. Choose the incorrect answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source>assets/videos/video6.mp4</source>
+</media>
+<answer fraction="100">
+<text>Correct decision from officials (they don't do nothing)</text>
+</answer>
+<answer fraction="0">
+<text>Coach deserves technical foul</text>
+</answer>
+<answer fraction="0">
+<text>Coach deserves, at least, a notice of technical foul</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<solucion>Simulación del defensor que debe ser avisado de falta técnica --> Se aprecia que el atacante realiza una pantalla legal, respetando distancia y tiempo y con los pies en el suelo. Clara simulación</solucion>
+<name>
+<text>Señala la opción correcta</text>
+</name>
+<questiontext>
+<text>Señala la opción correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source>assets/videos/video7.mp4</source>
+</media>
+<answer fraction="0">
+<text>Falta en ataque por pantalla ilegal</text>
+</answer>
+<answer fraction="0">
+<text>Simulación del defensor, el cual no merece falta técnica</text>
+</answer>
+<answer fraction="100">
+<text>Simulación del defensor que debe ser avisado de falta técnica</text>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<solucion>Jugadora merece falta técnica por desprecio hacia los árbitros --> Reacción jocosa de la jugadora, la cual implica falta de respeto hacia los árbitros. Como mínimo se le debe avisar</solucion>
+<name>
+<text>Señala la opción correcta</text>
+</name>
+<questiontext>
+<text>Señala la opción correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source>assets/videos/video8.mp4</source>
+</media>
+<answer fraction="0">
+<text>Hay falta que no debía haber sido sancionada</text>
+</answer>
+<answer fraction="100">
+<text>Jugadora merece falta técnica por desprecio hacia los árbitros</text>
+</answer>
+</question>
+</quiz>
