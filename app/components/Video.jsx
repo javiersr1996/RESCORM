@@ -64,8 +64,6 @@ export default class Video extends React.Component {
 
     for(let i=0; i<3; i++){
       if(this.props.video[i] !== undefined){
-        console.log(this.props.video[i].formato)
-        console.log(this.props.video[i].texto)
         sources.push(<source src={this.props.video[i].texto} type={this.props.video[i].formato} key={i}/>)
       } else {
         console.log("texto source indefinida")

@@ -47,7 +47,7 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source>assets/videos/video1.mp4</source>
+<source type="video/mp4">assets/videos/video1.mp4</source>
 </media>
 <answer fraction="0">
 <text>Correct 'step 0'</text>
@@ -80,7 +80,7 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source>assets/videos/video2.mp4</source>
+<source type="video/mp4">assets/videos/video2.mp4</source>
 </media>
 <answer fraction="0">
 <text>Traveling when receiving the ball</text>
@@ -112,7 +112,7 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source>assets/videos/video3.mp4</source>
+<source type="video/mp4">assets/videos/video3.mp4</source>
 </media>
 <answer fraction="100">
 <text>Traveling violation after offensive rebound</text>
@@ -138,7 +138,7 @@
 <single>false</single>
 <media>
 <type>audio</type>
-<source>assets/audios/audio0.mp3</source>
+<source type="audio/mp3">assets/audios/audio0.mp3</source>
 </media>
 <answer fraction="100">
 <text>No</text>
@@ -164,7 +164,7 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source>assets/videos/video4.mp4</source>
+<source type="video/mp4">assets/videos/video4.mp4</source>
 </media>
 <answer fraction="100">
 <text>There's no backcourt violation: player isn't dribbling</text>
@@ -190,7 +190,7 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source>assets/videos/video5.mp4</source>
+<source type="video/mp4">assets/videos/video5.mp4</source>
 </media>
 <answer fraction="100">
 <text>Correct violation applied by the referee</text>
@@ -219,7 +219,7 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source>assets/videos/video6.mp4</source>
+<source type="video/mp4">assets/videos/video6.mp4</source>
 </media>
 <answer fraction="100">
 <text>Correct decision from officials (they don't do nothing)</text>
@@ -248,7 +248,7 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source>assets/videos/video7.mp4</source>
+<source type="video/mp4">assets/videos/video7.mp4</source>
 </media>
 <answer fraction="0">
 <text>Falta en ataque por pantalla ilegal</text>
@@ -277,7 +277,7 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source>assets/videos/video8.mp4</source>
+<source type="video/mp4">assets/videos/video8.mp4</source>
 </media>
 <answer fraction="0">
 <text>Hay falta que no debía haber sido sancionada</text>

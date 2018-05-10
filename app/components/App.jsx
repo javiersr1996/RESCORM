@@ -44,7 +44,7 @@ export class App extends React.Component {
           var parseString = require('xml2js').parseString;
            parseString(data, function (err, result){
             var json = (result);
-            console.log(result);
+            //console.log(result);
             //json obtenido del parseado
             var customjson = {}
             customjson["quiz_xml"] = {}
@@ -117,12 +117,11 @@ export class App extends React.Component {
                 jsonpropio[num] = {};
                 jsonpropio[num]["tipo"] = (json.quiz.question[indice].$.type);
                 jsonpropio[num]["texto"] = (json.quiz.question[indice].questiontext[0].text[0]);
-                jsonpropio[num]["solucion"] = (json.quiz.question[indice].solucion[0]);
                 if(json.quiz.question[indice].media === undefined){
-                  console.log("no tiene media")
+                  //console.log("no tiene media")
                   jsonpropio[num]["media"] = {};
                   jsonpropio[num]["media"]["type"] = "no tiene";
-                  jsonpropio[num]["media"]["source"] = "no tiene";
+                  jsonpropio[num]["media"]["sources"] = "no tiene";
 
                   } else {
                     jsonpropio[num]["media"] = {};
@@ -145,6 +144,7 @@ export class App extends React.Component {
                   jsonpropio[num]["respuestas"][j] = {};
                   jsonpropio[num]["respuestas"][j]["id"] = j;
                   jsonpropio[num]["respuestas"][j]["texto"] = (json.quiz.question[indice].answer[j].text[0]);
+                  jsonpropio[num]["respuestas"][j]["solucion"] = (json.quiz.question[indice].answer[j].feedback[0].text[0]);
                   jsonpropio[num]["respuestas"][j]["valor"] = (json.quiz.question[indice].answer[j].$.fraction);
                   if (j == json.quiz.question[indice].answer.length -1){
                       jsonpropio[num]["respuestas"]["longitud"] = j;
@@ -154,6 +154,7 @@ export class App extends React.Component {
               }
             }
             jsonredux = jsonpropio;
+            console.log(jsonredux)
             this.props.dispatch(jsonSaved(jsonredux));
           }.bind(this));
         }.bind(this),
@@ -161,7 +162,7 @@ export class App extends React.Component {
             console.log(status, err.toString());
         }
     });
-    console.log(jsonredux)
+
 
   }
   //-----------------FIN COMPONENTDIDMOUNT--------------------------------------------
@@ -192,7 +193,7 @@ export class App extends React.Component {
   }
   render(){
 
-    console.log(this.props.jsoninterno)
+    //console.log(this.props.jsoninterno)
     let TextoBienvenida ="Referee Basketball Test";
 
     let texto1 = "";

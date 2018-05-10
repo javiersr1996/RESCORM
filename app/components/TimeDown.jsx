@@ -44,27 +44,20 @@ export default class TimeDown extends React.Component {
       key = "";
     } else if(GLOBAL_CONFIG.modo === "repaso"){
       key = this.props.key;
-      console.log("qqqqqqqqqqqq"+key);
       }
    //tiempo en formato minutos:segundos
      let tiempo = Math.floor(this.state.secondsRemaining);
      if(tiempo == -1){
        tiempo = 0;
      }
-     let minutos = "";
-     if(tiempo>120){
-       minutos =  Math.floor(tiempo/60) + " minutos";
-     } else if (tiempo<120 && tiempo>60){
-       minutos =  Math.floor(tiempo/60) + " minuto";
-     } else {
-       minutos = "";
-     }
+
+     let minutos =  Math.floor(tiempo/60);
      let segundos = tiempo % 60;
     if(GLOBAL_CONFIG.modo === "examen"){
       return (
           <div>
             <div id="tiempo">
-              Tiempo: {minutos} {segundos} segundos
+              Tiempo: {minutos} min {segundos} s
            </div>
            <div>
                <ProgressBar width="100" active striped bsStyle="warning" now={100*this.state.secondsRemaining/this.state.totalSeconds}/>

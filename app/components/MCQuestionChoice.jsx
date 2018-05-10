@@ -5,8 +5,11 @@ import './../assets/scss/quiz.scss';
 export default class MCQuestionChoice extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      solucion: "",
+      classNameDivSolucion: "hiddenDiv",
+    }
   }
-
   render(){
     let questionClassName = "question_choice";
     let showCorrection = (this.props.questionAnswered);
@@ -38,15 +41,35 @@ export default class MCQuestionChoice extends React.Component {
 
       }
     }
-    return (
-      <div className={questionClassName}>
-        <div className="questionC1">
-          <input type="checkbox" checked={this.props.checked} onChange={() => this.props.handleChange(this.props.choice)} disabled={showCorrection}/>
+    if(this.props.hiddenSolucion === true) {
+      return (
+        <div className={questionClassName}>
+          <div className="questionC1">
+            <input type="checkbox" checked={this.props.checked} onChange={() => this.props.handleChange(this.props.choice)} disabled={showCorrection}/>
+          </div>
+          <div className="questionC2">
+            <p>{this.props.choice.texto}</p>
+          </div>
+          <div className="hiddenDiv">
+            <p>{this.props.choice.solucion}</p>
+          </div>
         </div>
-        <div className="questionC2">
-          <p>{this.props.choice.texto}</p>
+      );
+    } else {
+      return (
+        <div className={questionClassName}>
+          <div className="questionC1">
+            <input type="checkbox" checked={this.props.checked} onChange={() => this.props.handleChange(this.props.choice)} disabled={showCorrection}/>
+          </div>
+          <div className="questionC2">
+            <p>{this.props.choice.texto}</p>
+          </div>
+          <div className="questionC3">
+            <p>{this.props.choice.solucion}</p>
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
+
   }
 }

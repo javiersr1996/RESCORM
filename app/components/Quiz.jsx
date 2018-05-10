@@ -57,8 +57,8 @@ export default class Quiz extends React.Component {
     // Create objectives (One per question included in the quiz)
     let objectives = [];
     let nQuestions = this.state.questions.length;
-    console.log("numero de preguntas did mount quiz = "+this.state.questions.length)
-    console.log("nQuestions = "+nQuestions)
+    //console.log("numero de preguntas did mount quiz = "+this.state.questions.length)
+    //console.log("nQuestions = "+nQuestions)
     for(let i = 0; i < nQuestions; i++){
       objectives.push(new Utils.Objective({id:("Question" + (i + 1)), progress_measure:(1 / nQuestions), score:(1 / nQuestions)}));
     }

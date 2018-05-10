@@ -6,7 +6,6 @@
 </category>
 </question>
 <question type="multichoice">
-<solucion>Saque de lateral para el equipo B, desde su pista delantera</solucion>
 <name>
 <text>A4 controla el balón botándolo en pista delantera. B5 palmea el balón, que se aleja hacia la pista trasera del equipo A. Ambos jugadores salen corriendo para coger el balón. El árbitro sanciona falta de A4 sobre B5, quinta falta de equipo en el período, aún en pista delantera de B</text>
 </name>
@@ -17,12 +16,15 @@
 <single>true</single>
 <answer fraction="0">
 <text>­Se conceden dos tiros libres a B5</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="100">
 <text>Saque de lateral para el equipo B, desde su pista delantera </text>
+<feedback><text>Correcta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>­Saque de lateral para el equipo B, desde su pista trasera</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="category">
@@ -31,10 +33,8 @@
 </category>
 </question>
 <question type="multichoice">
-
-<solucion>Dos pasos consecutivos con el mismo pie. Violación --> Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</solucion>
 <name>
-<text>Señala la respuesta correcta­</text>
+<text>Señala la respuesta correcta</text>
 </name>
 <questiontext>
 <text>Señala la respuesta correcta</text>
@@ -49,15 +49,19 @@
 </media>
 <answer fraction="0">
 <text>Paso 0 correctamente aplicado</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="100">
 <text>Dos pasos consecutivos con el mismo pie. Violación</text>
+<feedback><text>Dos pasos consecutivos con el mismo pie. Violación --> Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Traspiés válido</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Jugada ilegal por dar tres apoyos con el balón en las manos</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="category">
@@ -66,8 +70,6 @@
 </category>
 </question>
 <question type="multichoice">
-
-<solucion>Dos pasos consecutivos con el mismo pie. Violación --> Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</solucion>
 <name>
 <text>Señala la respuesta correcta­</text>
 </name>
@@ -82,15 +84,19 @@
 </media>
 <answer fraction="0">
 <text>Pasos en la recepción de balón</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="100">
 <text>Dos pasos consecutivos con el mismo pie. Violación</text>
+<feedback><text>Dos pasos consecutivos con el mismo pie. Violación --> Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Traspiés cogiendo balón en el aire</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Jugada ilegal por dar tres apoyos con el balón en las manos</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="category">
@@ -99,7 +105,6 @@
 </category>
 </question>
 <question type="multichoice">
-<solucion>Pasos tras rebote ofensivo --> Jugador atacante comete violación de pasos tras rebote ofensivo antes de recibir la falta</solucion>
 <name>
 <text>Señala la respuesta correcta</text>
 </name>
@@ -114,9 +119,11 @@
 </media>
 <answer fraction="100">
 <text>Pasos tras rebote ofensivo</text>
+<feedback><text>Pasos tras rebote ofensivo --> Jugador atacante comete violación de pasos tras rebote ofensivo antes de recibir la falta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Falta en acción de tiro</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="category">
@@ -125,7 +132,6 @@
 </category>
 </question>
 <question type="multichoice">
-<solucion>no --> En mini hay 2 tiempos muertos por parte no acumulables, así que no tiene razón</solucion>
 <name>
 <text>Un entrenador de minibasket nos dice lo siguiente durante el partido. ¿Tiene razón?</text>
 </name>
@@ -137,11 +143,15 @@
 <media>
 <type>audio</type>
 <source type="audio/mp3">assets/audios/audio0.mp3</source>
+<source type="audio/ogg">assets/audios/audio0.ogg</source>
+<source type="audio/wav">assets/audios/audio0.wav</source>
 </media>
 <answer fraction="100">
 <text>No</text>
+<feedback><text>no --> En mini hay 2 tiempos muertos por parte no acumulables, así que no tiene razón</text></feedback>
 </answer>
 <answer fraction="0">
+<feedback><text>Incorrecta</text></feedback>
 <text>Sí</text>
 </answer>
 </question>
@@ -151,7 +161,6 @@
 </category>
 </question>
 <question type="multichoice">
-<solucion>No se produce violación de campo atrás al no tener control el jugador --> No hay control de balón por parte del atacante (palmea) por tanto no hay campo atrás</solucion>
 <name>
 <text>En la jugada...</text>
 </name>
@@ -166,9 +175,11 @@
 </media>
 <answer fraction="100">
 <text>No se produce violación de campo atrás al no tener control el jugador</text>
+<feedback><text>No se produce violación de campo atrás al no tener control el jugador --> No hay control de balón por parte del atacante (palmea) por tanto no hay campo atrás</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Árbitro sanciona correctamente violación de campo atrás al controlar el jugador el balón en campo de ataque</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="category">
@@ -177,7 +188,6 @@
 </category>
 </question>
 <question type="multichoice">
-<solucion>Bien sancionada y Bien sancionada aunque hubiera estado mejor antes --> Mal sancionada. Hay que esperar cuando jugador recibe balón para ver si lanza a canasta o no</solucion>
 <name>
 <text>Se produce violación por tres segundos en la zona.Señala las opciones incorrectas</text>
 </name>
@@ -192,12 +202,15 @@
 </media>
 <answer fraction="100">
 <text>Bien sancionada</text>
+<feedback><text>Bien sancionada y Bien sancionada aunque hubiera estado mejor antes --> Mal sancionada. Hay que esperar cuando jugador recibe balón para ver si lanza a canasta o no</text></feedback>
 </answer>
 <answer fraction="100">
 <text>Bien sancionada aunque hubiera estado mejor antes</text>
+<feedback><text>Bien sancionada y Bien sancionada aunque hubiera estado mejor antes --> Mal sancionada. Hay que esperar cuando jugador recibe balón para ver si lanza a canasta o no</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Mal sancionada</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="category">
@@ -206,7 +219,6 @@
 </category>
 </question>
 <question type="multichoice">
-<solucion>Los árbitros hacen bien al no sancionar nada --> Como mínimo merece aviso. Primero reacciona jocosamente y después se apoya en el árbitro</solucion>
 <name>
 <text>El entrenador reacciona de la siguiente manera. Señala la opción incorrecta</text>
 </name>
@@ -221,12 +233,15 @@
 </media>
 <answer fraction="100">
 <text>Los árbitros hacen bien al no sancionar nada</text>
+<feedback><text>Los árbitros hacen bien al no sancionar nada --> Como mínimo merece aviso. Primero reacciona jocosamente y después se apoya en el árbitro</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Merece falta técnica por dicha reacción</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Como mínimo debe ser avisado de falta técnica</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="category">
@@ -235,7 +250,6 @@
 </category>
 </question>
 <question type="multichoice">
-<solucion>Simulación del defensor que debe ser avisado de falta técnica --> Se aprecia que el atacante realiza una pantalla legal, respetando distancia y tiempo y con los pies en el suelo. Clara simulación</solucion>
 <name>
 <text>Señala la opción correcta</text>
 </name>
@@ -250,12 +264,15 @@
 </media>
 <answer fraction="0">
 <text>Falta en ataque por pantalla ilegal</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Simulación del defensor, el cual no merece falta técnica</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="100">
 <text>Simulación del defensor que debe ser avisado de falta técnica</text>
+<feedback><text>Simulación del defensor que debe ser avisado de falta técnica --> Se aprecia que el atacante realiza una pantalla legal, respetando distancia y tiempo y con los pies en el suelo. Clara simulación</text></feedback>
 </answer>
 </question>
 <question type="category">
@@ -264,7 +281,6 @@
 </category>
 </question>
 <question type="multichoice">
-<solucion>Jugadora merece falta técnica por desprecio hacia los árbitros --> Reacción jocosa de la jugadora, la cual implica falta de respeto hacia los árbitros. Como mínimo se le debe avisar</solucion>
 <name>
 <text>Señala la opción correcta</text>
 </name>
@@ -279,9 +295,11 @@
 </media>
 <answer fraction="0">
 <text>Hay falta que no debía haber sido sancionada</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="100">
 <text>Jugadora merece falta técnica por desprecio hacia los árbitros</text>
+<feedback><text>Jugadora merece falta técnica por desprecio hacia los árbitros --> Reacción jocosa de la jugadora, la cual implica falta de respeto hacia los árbitros. Como mínimo se le debe avisar</text></feedback>
 </answer>
 </question>
 </quiz>

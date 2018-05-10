@@ -45,12 +45,25 @@ export default class MediaFinalView extends React.Component {
     }
   }
   render() {
+    let sources = [];
+    if(this.props.sources === "no tiene" || this.props.sources === undefined){
+      console.log("texto source indefinida")
+    } else {
+      for(let i=0; i<3; i++){
+        if(this.props.sources[i] !== undefined){
+          sources.push(<source src={this.props.sources[i].texto} type={this.props.sources[i].formato} key={i}/>)
+        } else {
+          console.log("no elemento source añadido")
+        }
+      }
+    }
+
     let key= this.props.key_fw;
    if (this.props.tipo == "video")
     return (
       <div>
           <video id="myVideo" onClick={this.fullScreenClick.bind(this)} /*onLoadStart={this.setVolumeVideo.bind(this)}*/ key={key} width="500" height="500" controls>
-            <source src={this.props.source} type="video/mp4"/>
+            {sources}
           </video>
       </div>
     )
@@ -58,7 +71,7 @@ export default class MediaFinalView extends React.Component {
       return(
         <div>
             <audio id="myAudio"  /*onLoadStart={this.setVolumeAudio.bind(this)}*/ key={key} width="500" height="500" controls>
-              <source src={this.props.source} type="video/mp4"/>
+              {sources}
             </audio>
         </div>
       )

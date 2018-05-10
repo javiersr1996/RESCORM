@@ -1,6 +1,7 @@
 import React from 'react';
 import './../assets/scss/finish_screen.scss';
 import MediaFinalView from './MediaFinalView';
+import SolucionesPregunta from './SolucionesPregunta';
 import {GLOBAL_CONFIG} from '../config/config.js';
 
 export default class FinishScreen extends React.Component {
@@ -44,7 +45,9 @@ export default class FinishScreen extends React.Component {
       index = i+1
       array_totalpreguntas.push("Pregunta "+index);
       array_textos.push(this.state.questions[i].texto);
-      array_soluciones.push("SOLUCION:"+" "+this.state.questions[i].solucion)
+
+
+      //array_soluciones.push("SOLUCION:"+" "+this.state.questions[i].solucion)
       array_tipos.push(this.state.questions[i].media.type);
       array_sources.push(this.state.questions[i].media.source);
 
@@ -52,7 +55,7 @@ export default class FinishScreen extends React.Component {
       this.setState({
         array_totalpreguntas: array_totalpreguntas,
         array_textos:array_textos,
-        array_soluciones:array_soluciones,
+        //array_soluciones:array_soluciones,
         array_tipos:array_tipos,
         array_sources: array_sources,
       });
@@ -61,16 +64,28 @@ export default class FinishScreen extends React.Component {
     let muestras_finales = [];
     //let l = this.props.questions.length;
     for(let i = 0; i <this.state.questions.length ; i++){
-    muestras_finales.push(
-      <div id="appPresentacion" key={i}>
-         <p id="totalpreguntas">{this.state.array_totalpreguntas[i]}</p>
-         <p id="respuestas">{this.state.array_textos[i]}</p>
-         <p id="respuestas">{this.state.array_soluciones[i]}</p>
-         <MediaFinalView tipo={this.state.array_tipos[i]} source={this.state.array_sources[i]} key_fw={i}/>
-         <h3></h3>
+      if(this.state.questions[i].media.sources !== undefined){
+        muestras_finales.push(
+          <div id="appPresentacion" key={i}>
+             <p id="totalpreguntas">{this.state.array_totalpreguntas[i]}</p>
+             <p id="respuestas">{this.state.array_textos[i]}</p>
+             <SolucionesPregunta pregunta={this.state.questions[i]} key_pregunta={i}/>
+             <MediaFinalView tipo={this.state.array_tipos[i]} sources={this.state.questions[i].media.sources} key_fw={i}/>
+             <h3></h3>
+          </div>
+         );
+      } else {
+        muestras_finales.push(
+          <div id="appPresentacion" key={i}>
+             <p id="totalpreguntas">{this.state.array_totalpreguntas[i]}</p>
+             <p id="respuestas">{this.state.array_textos[i]}</p>
+             <SolucionesPregunta pregunta={this.state.questions[i]} key_pregunta={i}/>
+             <h3></h3>
+          </div>
+         );
 
-      </div>
-     );
+      }
+
     }
 
     let finishTitleText = this._getFinishScreenTitle(this.props.tracking.progress_measure, this.props.tracking.score);

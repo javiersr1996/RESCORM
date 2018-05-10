@@ -30,7 +30,7 @@ export let GLOBAL_CONFIG = {
 
 
     //tiempo para completar la partida --> modo examen
-    secondsRemaining:300,
+    secondsRemaining:62,
   },
   production:{
     debug:false,

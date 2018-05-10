@@ -15,7 +15,7 @@ export default class MCQuestion extends React.Component {
       selected_choices_ids:[],
       answered:false,
       repeticiones: 0,
-      solucion: "",
+      hiddenSolucion:true,
     };
   }
 
@@ -39,8 +39,8 @@ export default class MCQuestion extends React.Component {
     console.log("onAnswerQuestion MCQuestion")
     if(GLOBAL_CONFIG.modo === "repaso"){
       this.setState({
-        solucion: this.props.question.solucion
-      });
+        hiddenSolucion:false,
+      })
     }
     let nChoices = this.props.question.respuestas.length;
     let correctAnswers = 0;
@@ -52,7 +52,7 @@ export default class MCQuestion extends React.Component {
       correctAnswers = 0;
       incorrectAnswers = 0;
 
-    }else{
+    } else{
       for(let i = 0; i < nChoices; i++){
         let choice = this.props.question.respuestas[i];
         if(choice.valor == "100"){
@@ -90,27 +90,26 @@ export default class MCQuestion extends React.Component {
       repeticiones: this.state.repeticiones+1,
     });
     this.props.numKey();
-    console.log("repeticiones "+this.state.repeticiones);
+    //console.log("repeticiones "+this.state.repeticiones);
 
   }
   onNextQuestion(){
     this.props.onNextQuestion();
     if(GLOBAL_CONFIG.modo === "repaso"){
       this.setState({
-        solucion:"",
+        hiddenSolucion: true,
       })
     }
   }
   render(){
     let choices = [];
     for(let i = 0; i < this.props.question.respuestas.length; i++){
-      choices.push(<MCQuestionChoice key={"MyQuestion_" + "question_choice_" + i} choice={this.props.question.respuestas[i]} checked={this.state.selected_choices_ids.indexOf(this.props.question.respuestas[i].id) !== -1} handleChange={this.handleChoiceChange.bind(this)} questionAnswered={this.state.answered}/>);
+      choices.push(<MCQuestionChoice key={"MyQuestion_" + "question_choice_" + i} choice={this.props.question.respuestas[i]}  hiddenSolucion={this.state.hiddenSolucion} checked={this.state.selected_choices_ids.indexOf(this.props.question.respuestas[i].id) !== -1} handleChange={this.handleChoiceChange.bind(this)} questionAnswered={this.state.answered}/>);
     }
     return (
       <div className="question">
         <h1>{this.props.question.texto}</h1>
         {choices}
-        <p>{this.state.solucion}</p>
         <QuestionButtons repeticiones={this.state.repeticiones} I18n={this.props.I18n} onAnswerQuestion={this.onAnswerQuestion.bind(this)} onResetQuestion={this.onResetQuestion.bind(this)} onResetQuiz={this.props.onResetQuiz} onNextQuestion={this.onNextQuestion.bind(this)} answered={this.state.answered} quizCompleted={this.props.quizCompleted} allow_finish={this.props.isLastQuestion}/>
       </div>
     );
