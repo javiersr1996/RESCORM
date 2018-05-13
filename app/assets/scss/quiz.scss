@@ -4,21 +4,27 @@ div.quizHeader p {
   margin-bottom: 20px;
   width:800px;
   background-color: #f5f5f0;
+  margin-left: 1%;
 }
 div.hiddenDiv {
   visibility: hidden;
 }
 div.questionC3 {
-  
-  width: auto;
-  margin: 12px 8px 12px 8px;
-}
+  margin-left: 8%;
 
+}
+div.questionC3  {
+  font-size: 10px;
+}
+#textoSolucion  {
+  font-size: 13px;
+}
 div.question h1 {
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
-  width:800px;
+  width:50%;
+  margin-left: 1%;
 
 }
 
@@ -26,8 +32,8 @@ div.question div.question_choice {
   background:#f5f5f0;
   margin: 10px;
   padding: 2px;
-  width: 800px;
-
+  width: 45%;
+  height: 100px;
 
 }
 
@@ -36,14 +42,11 @@ div.question div.question_choice div.questionC1{
   width: 35px;
   margin-top: 9px;
   margin-left: 10px;
-
-
-
 }
 
 div.question div.question_choice div.questionC2{
   display: inline-block;
-  width: auto;
+  width: 90%;
   margin: 12px 8px 12px 8px;
 
 
@@ -73,7 +76,6 @@ div.question div.question_choice_correct_examen {
   color: black;
   border-radius: 25px;
   background:#f5f5f0;
-
 }
 div.question div.question_choice_correct {
   color: black;
@@ -85,6 +87,7 @@ div.question div.question_choice_incorrect {
   color: black;
   border-radius: 25px;
   background:#ff6347;
+
 }
 div.question div.question_choice_incorrect_examen {
   color: black;
@@ -96,6 +99,9 @@ div.question div.question_choice_incorrect_examen {
 div.question div.questionButtonsWrapper {
   padding: 10px;
   background: #f5f5f0;
+  position: absolute;
+  bottom:0;
+
 }
 
 div.question div.questionButtonsWrapper button.answerQuestion, div.question div.questionButtonsWrapper button.resetQuestion, div.question div.questionButtonsWrapper button.resetQuiz, div.question div.questionButtonsWrapper button.nextQuestion {
@@ -108,6 +114,7 @@ div.question div.questionButtonsWrapper button.answerQuestion, div.question div.
   font-weight: bold;
   cursor: pointer;
   background-color: #f5f5f0;
+
 
 }
 

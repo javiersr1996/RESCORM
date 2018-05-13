@@ -212,7 +212,7 @@ export class App extends React.Component {
       texto2 = "Preguntas centradas en una temática concreta";
       texto3 = "No hay límite de tiempo por pregunta ni por el cuestionario";
       texto4 = "Puedes manejar el vídeo/audio con los controles";
-      imgModo = (<img width="250" heigth="250" align="middle" src="assets/images/repaso.png" className="center" />);
+      imgModo = (<img width="200" heigth="200" align="middle" src="assets/images/repaso.png" className="center" />);
     }
 
     let appHeader = "";
@@ -243,31 +243,27 @@ export class App extends React.Component {
 
    else if(this.state.presentacion === 0){
       return(
-        <div id="AppTodo">
-          <Jumbotron>
-            <div id="appPresentacion">
-              <img width="250" heigth="250" align="middle" src="  ../assets/images/quiz_logo.png" className="center" />
-            </div>
-            <h1 id="textoBienvenida">{TextoBienvenida}</h1>
-            <div id="appPresentacion">
-              <img width="275" heigth="275" align="middle" src="  ../assets/images/fbm.png" className="center" />
-            </div>
-          </Jumbotron>
-          {appHeader}
-              <div id="panelPresentacion">
-                  <h1></h1>
+        <div>
+          <div className="divJumbotron">
+              <div className="appPresentacion">
+                <img width="200" heigth="200" align="middle" src="  ../assets/images/quiz_logo.png" className="center" />
+              </div>
+              <h1 id="textoBienvenida">{TextoBienvenida}</h1>
+              <div className="appPresentacion">
+                <img width="225" heigth="225" align="middle" src="  ../assets/images/fbm.png" className="center" />
+              </div>
+          </div>
+          <div className="modoJuego">
                   <p className="quiz">{texto1}</p>
                   <p className="quiz">{texto2}</p>
                   <p className="quiz">{texto3}</p>
                   <p className="quiz">{texto4}</p>
-              </div>
-              <div id="appPresentacion">
-                {imgModo}
+                  {imgModo}
+              <div className="appPresentacion">
                 <p></p>
                 <button id="buttonApp" onClick={this.onPresentacion.bind(this)} >COMENZAR</button>
               </div>
-
-
+          </div>
         </div>
       );
 

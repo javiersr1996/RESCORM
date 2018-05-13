@@ -17,7 +17,8 @@ export default class MCQuestion extends React.Component {
       repeticiones: 0,
       hiddenSolucion:true,
     };
-  }
+  };
+
 
   componentWillUpdate(prevProps, prevState){
     if(prevProps.question !== this.props.question){
@@ -74,7 +75,8 @@ export default class MCQuestion extends React.Component {
       correctAnswers = 0;
       incorrectAnswers = 0;
     }
-    let scorePercentage = Math.max(0, (correctAnswers - incorrectAnswers) / this.props.question.respuestas.filter(function(c){return c.valor === "100";}).length);
+
+    let scorePercentage = Math.max(0, (correctAnswers - 10*incorrectAnswers) / this.props.question.respuestas.filter(function(c){return c.valor === "100";}).length);
     // Send data via SCORM
     let objective = this.props.objective;
     this.props.dispatch(objectiveAccomplished(objective.id, objective.score * scorePercentage));

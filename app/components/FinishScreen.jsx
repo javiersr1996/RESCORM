@@ -16,24 +16,28 @@ export default class FinishScreen extends React.Component {
       array_soluciones:[],
       array_tipos:[],
       array_sources: [],
+      score:0,
     }
+    this.returnScore = this.returnScore.bind(this);
   }
   _getFinishScreenTitle(progress_measure, score){
     let finishTitleText;
     let hasProgressMeasure = (typeof progress_measure === "number");
     let hasScore = (typeof score === "number");
     if(hasProgressMeasure && hasScore){
-      finishTitleText = this.props.I18n.getTrans("i.finish_screen_title_full", {progress_measure:(progress_measure * 100), score:(score * 100)});
+      finishTitleText = this.props.I18n.getTrans("i.finish_screen_title_full", {progress_measure:(progress_measure * 100), score:(score.toFixed(3) * 10)});
     } else if(hasProgressMeasure){
       finishTitleText = this.props.I18n.getTrans("i.finish_screen_title_wpm", {progress_measure:(progress_measure * 100)});
     } else if(hasScore){
-      finishTitleText = this.props.I18n.getTrans("i.finish_screen_title_ws", {score:(Math.floor(score * 100))});
+      finishTitleText = this.props.I18n.getTrans("i.finish_screen_title_ws", {score:(Math.floor(score.toFixed(3) * 10))});
     }
     if(typeof finishTitleText === "undefined"){
       finishTitleText = this.props.I18n.getTrans("i.finish_screen_title_simple");
     }
+  //  this.returnScore(score);
     return finishTitleText;
   }
+
   componentDidMount(){
     let array_totalpreguntas = [];
     let array_textos = [];
@@ -45,8 +49,6 @@ export default class FinishScreen extends React.Component {
       index = i+1
       array_totalpreguntas.push("Pregunta "+index);
       array_textos.push(this.state.questions[i].texto);
-
-
       //array_soluciones.push("SOLUCION:"+" "+this.state.questions[i].solucion)
       array_tipos.push(this.state.questions[i].media.type);
       array_sources.push(this.state.questions[i].media.source);
@@ -60,7 +62,61 @@ export default class FinishScreen extends React.Component {
         array_sources: array_sources,
       });
   }
+  returnScore(score){
+    console.log(score*10);
+    this.setState({
+      score:score,
+    })
+    return;
+  }
   render(){
+    let divNota = ""
+    //console.log(this.props.I18n.getTrans({score}));
+    /*
+    switch (this.state.score){
+    case this.state.score<5:
+      console.log("suspeeeeeeeeeeeeeeeenso")
+      divNota =(
+        <div>
+          <h1>SUSPENSO</h1>
+          <img width="200" heigth="200" align="middle" src="assets/images/suspenso.png" className="center" />
+        </div>
+      );
+      break;
+      case (this.state.score >= 5 && this.state.score < 7):
+        console.log("bieeeeeeeeeeeeeeeeeen")
+        divNota =(
+          <div>
+            <h1>APROBADO</h1>
+            <img width="200" heigth="200" align="middle" src="assets/images/aprobado.png" className="center" />
+          </div>
+        );
+      break;
+      case (this.state.score >= 7 && this.state.score < 9):
+        console.log("notaaaaaaaaaaable")
+        divNota =(
+          <div>
+            <h1>NOTABLE</h1>
+            <img width="200" heigth="200" align="middle" src="assets/images/notable.jpg" className="center" />
+          </div>
+        );
+      break;
+      case (this.state.score >= 9):
+        divNota =(
+          <div>
+            <h1>SOBRESALIENTE</h1>
+            <img width="200" heigth="200" align="middle" src="assets/images/sobresaliente.jpg" className="center" />
+          </div>
+        );
+      break;
+
+
+    default:
+      console.log("default");
+    }
+    */
+
+
     let muestras_finales = [];
     //let l = this.props.questions.length;
     for(let i = 0; i <this.state.questions.length ; i++){
@@ -83,9 +139,7 @@ export default class FinishScreen extends React.Component {
              <h3></h3>
           </div>
          );
-
       }
-
     }
 
     let finishTitleText = this._getFinishScreenTitle(this.props.tracking.progress_measure, this.props.tracking.score);
@@ -97,6 +151,7 @@ export default class FinishScreen extends React.Component {
             <img align="middle" src="assets/images/quiz_logo.png" className="center" />
           </div>
           <h1 id="finish_title">{finishTitleText}</h1>
+          {divNota}
           <h1>Soluciones</h1>
           {muestras_finales}
         </div>
@@ -108,6 +163,7 @@ export default class FinishScreen extends React.Component {
             <img align="middle" src="assets/images/quiz_logo.png" className="center" />
           </div>
           <h1 id="finish_title">{finishTitleText}</h1>
+          {divNota}
         </div>
       );
     }

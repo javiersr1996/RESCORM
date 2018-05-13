@@ -16,9 +16,9 @@ export let GLOBAL_CONFIG = {
       score_threshold:0.6,
     },
     //numero de preguntas maximas a mostrar
-    n:10,
+    n:3,
     //modo de juego: examen o repaso
-    modo:"examen",
+    modo:"repaso",
     /*
     ****************************************************************************
     xml: "http://localhost:8080/config/<CUESTIONARIO>.xml",

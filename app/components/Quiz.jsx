@@ -50,6 +50,7 @@ export default class Quiz extends React.Component {
       questions: questions,
       current_question_index:1,
       num_key:1,
+      hiddenSolucion: false,
     };
     //this.tiempoAgotado = this.tiempoAgotado.bind(this);
   }
@@ -74,8 +75,12 @@ export default class Quiz extends React.Component {
     }
   }
   onResetQuiz(){
-    this.setState({num_key:this.state.num_key+1})
-    this.setState({current_question_index:1});
+    this.setState({
+      num_key:this.state.num_key+1,
+      current_question_index:1,
+      hiddenSolucion:true,
+    })
+
     this.props.dispatch(resetObjectives());
   }
   /*
@@ -108,7 +113,7 @@ export default class Quiz extends React.Component {
 
     switch (currentQuestion.tipo){
     case "multichoice":
-      currentQuestionRender = (<MCQuestion question={currentQuestion} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished}/>);
+      currentQuestionRender = (<MCQuestion question={currentQuestion} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished} hiddenSolucion={this.state.hiddenSolucion}/>);
       break;
     default:
       currentQuestionRender = "Question type not supported";

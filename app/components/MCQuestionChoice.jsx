@@ -51,7 +51,7 @@ export default class MCQuestionChoice extends React.Component {
             <p>{this.props.choice.texto}</p>
           </div>
           <div className="hiddenDiv">
-            <p>{this.props.choice.solucion}</p>
+            <p id="textoSolucion">{this.props.choice.solucion}</p>
           </div>
         </div>
       );
@@ -65,7 +65,7 @@ export default class MCQuestionChoice extends React.Component {
             <p>{this.props.choice.texto}</p>
           </div>
           <div className="questionC3">
-            <p>{this.props.choice.solucion}</p>
+            <p id="textoSolucion">{this.props.choice.solucion}</p>
           </div>
         </div>
       );

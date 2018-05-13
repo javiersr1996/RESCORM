@@ -28,6 +28,7 @@ function trackingReducer(state = {}, action){
     let updateScore = ((typeof objective.score === "number") && (typeof action.accomplished_score === "number"));
     if(updateScore){
       objective.accomplished_score = Math.max(0, Math.min(Math.max(0, Math.min(1, objective.score)), action.accomplished_score));
+      objective.accomplished_score.toFixed(2);
     }
 
     objective.accomplished = true;
@@ -47,6 +48,7 @@ function trackingReducer(state = {}, action){
         }
         if(typeof newState.objectives[objectivesIds[i]].accomplished_score === "number"){
           newState.score += newState.objectives[objectivesIds[i]].accomplished_score;
+          newState.score.toFixed(2);
         }
       }
     }

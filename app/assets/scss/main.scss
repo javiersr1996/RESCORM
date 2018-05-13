@@ -1,5 +1,7 @@
 body {
   background-color: #f5f5f0;
+  width: auto;
+  height: 100%;
 
 }
 .center {
@@ -8,16 +10,24 @@ body {
     margin-right: auto;
 
 }
+div.modoJuego {
+  height: 50%;
+  width: auto;
+  text-align: center;
+  font-size: 20px;
+}
 #appTodo {
   justify-content: center;
   align-items: center;
 }
-#appPresentacion {
+div.appPresentacion {
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: auto;
+  width: auto;
 }
-#panelPresentacion {
+div.panelPresentacion {
   text-align: center;
   font-size: 20px;
 }
@@ -30,8 +40,6 @@ body {
 #myVideo {
   float: right;
   position: relative;
-
-
 }
 #logo {
   width:150px;
@@ -59,9 +67,15 @@ body {
 }
 #textoBienvenida {
   text-align: center;
+  font-size: 30px;
+}
+div.divJumbotron{
+  height: 50%;
+  width: auto;
 }
 #jumbotronApp {
   font-size: 50px;
+
 }
 #Quiz {
   width: 200px;
@@ -70,12 +84,9 @@ body {
   position: relative;
 }
 #Panel {
-  width: 750px;
-  height: 750px;
+  width: 50%;
+  height: 50%;
   float: right;
-  position: relative;
-  justify-content: center;
-  align-items: stretch;
 }
 #tiempo {
   font-size: 30px;
