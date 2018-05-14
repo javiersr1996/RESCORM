@@ -109,8 +109,6 @@ export default class Quiz extends React.Component {
     let numKey = this.numKey.bind(this);
     let currentQuestionRender = "";
 
-
-
     switch (currentQuestion.tipo){
     case "multichoice":
       currentQuestionRender = (<MCQuestion question={currentQuestion} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished} hiddenSolucion={this.state.hiddenSolucion}/>);

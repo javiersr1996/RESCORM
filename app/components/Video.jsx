@@ -75,7 +75,7 @@ export default class Video extends React.Component {
     let key= this.props.key_video;
     if(GLOBAL_CONFIG.modo === "examen"){
       video = (
-          <div id="Panel" key={key} className="myVideoExamen">
+          <div  key={key} className="myVideoExamen">
             <video id="myVideoExamen" className="myVideoExamen" onLoadStart={this.setVolumeExamen.bind(this)} onClick={this.fullScreenClickExamen.bind(this)} key={key} width="700" height="400" autoPlay>
               {sources}
             </video>

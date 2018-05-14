@@ -224,7 +224,7 @@ export class App extends React.Component {
         );
         if(this.props.wait_for_user_profile !== false){
           appContent = (
-            <Quiz finishTime={this.AppfinishTime.bind(this)} dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} quiz={this.state.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n}/>
+            <Quiz finishTime={this.AppfinishTime.bind(this)} dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} quiz={this.props.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n}/>
           );
         }
       } else {

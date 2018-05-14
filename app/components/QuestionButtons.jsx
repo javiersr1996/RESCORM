@@ -27,7 +27,6 @@ export default class QuestionButtons extends React.Component {
           {repeticionesTextoButton}
           {resetQuestionButton}
           <button className="nextQuestion" onClick={this.props.onNextQuestion} disabled={disable_next}>{this.props.allow_finish ? this.props.I18n.getTrans("i.finish_quiz") : this.props.I18n.getTrans("i.next")}</button>
-          {resetQuiz}
         </div>
       );
     } else {

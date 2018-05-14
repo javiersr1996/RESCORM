@@ -16,9 +16,7 @@ export default class FinishScreen extends React.Component {
       array_soluciones:[],
       array_tipos:[],
       array_sources: [],
-      score:0,
     }
-    this.returnScore = this.returnScore.bind(this);
   }
   _getFinishScreenTitle(progress_measure, score){
     let finishTitleText;
@@ -34,7 +32,7 @@ export default class FinishScreen extends React.Component {
     if(typeof finishTitleText === "undefined"){
       finishTitleText = this.props.I18n.getTrans("i.finish_screen_title_simple");
     }
-  //  this.returnScore(score);
+
     return finishTitleText;
   }
 
@@ -62,79 +60,60 @@ export default class FinishScreen extends React.Component {
         array_sources: array_sources,
       });
   }
-  returnScore(score){
-    console.log(score*10);
-    this.setState({
-      score:score,
-    })
-    return;
-  }
+
   render(){
     let divNota = ""
-    //console.log(this.props.I18n.getTrans({score}));
-    /*
-    switch (this.state.score){
-    case this.state.score<5:
-      console.log("suspeeeeeeeeeeeeeeeenso")
+    let nota = this.props.tracking.score*10;
+    if(nota<5){
       divNota =(
         <div>
           <h1>SUSPENSO</h1>
-          <img width="200" heigth="200" align="middle" src="assets/images/suspenso.png" className="center" />
+          <img width="400" heigth="400" align="middle" src="assets/images/suspenso.png" className="center" />
         </div>
       );
-      break;
-      case (this.state.score >= 5 && this.state.score < 7):
-        console.log("bieeeeeeeeeeeeeeeeeen")
-        divNota =(
-          <div>
-            <h1>APROBADO</h1>
-            <img width="200" heigth="200" align="middle" src="assets/images/aprobado.png" className="center" />
-          </div>
-        );
-      break;
-      case (this.state.score >= 7 && this.state.score < 9):
-        console.log("notaaaaaaaaaaable")
-        divNota =(
-          <div>
-            <h1>NOTABLE</h1>
-            <img width="200" heigth="200" align="middle" src="assets/images/notable.jpg" className="center" />
-          </div>
-        );
-      break;
-      case (this.state.score >= 9):
-        divNota =(
-          <div>
-            <h1>SOBRESALIENTE</h1>
-            <img width="200" heigth="200" align="middle" src="assets/images/sobresaliente.jpg" className="center" />
-          </div>
-        );
-      break;
-
-
-    default:
-      console.log("default");
+    } else if(nota >= 5 && nota < 7){
+      divNota =(
+        <div>
+          <h1>APROBADO</h1>
+          <img width="400" heigth="400" align="middle" src="assets/images/aprobado.png" className="center" />
+        </div>
+      );
+    } else if(nota >= 7 && nota < 9){
+      divNota =(
+        <div>
+          <h1>NOTABLE</h1>
+          <img width="400" heigth="400" align="middle" src="assets/images/notable.png" className="center" />
+        </div>
+      );
+    } else if(nota >= 9){
+      divNota =(
+        <div>
+          <h1>SOBRESALIENTE</h1>
+          <img width="400" heigth="400" align="middle" src="assets/images/sobresaliente.png" className="center" />
+        </div>
+      );
     }
-    */
-
 
     let muestras_finales = [];
     //let l = this.props.questions.length;
     for(let i = 0; i <this.state.questions.length ; i++){
       if(this.state.questions[i].media.sources !== undefined){
         muestras_finales.push(
-          <div id="appPresentacion" key={i}>
-             <p id="totalpreguntas">{this.state.array_totalpreguntas[i]}</p>
-             <p id="respuestas">{this.state.array_textos[i]}</p>
+          <div className="appPresentacion" key={i}>
+             <p className="totalpreguntas">{this.state.array_totalpreguntas[i]}</p>
+             <p className="respuestas">{this.state.array_textos[i]}</p>
              <SolucionesPregunta pregunta={this.state.questions[i]} key_pregunta={i}/>
-             <MediaFinalView tipo={this.state.array_tipos[i]} sources={this.state.questions[i].media.sources} key_fw={i}/>
+             <div className="mfv">
+               <MediaFinalView tipo={this.state.array_tipos[i]} sources={this.state.questions[i].media.sources} key_fw={i}/>
+             </div>
              <h3></h3>
           </div>
          );
       } else {
         muestras_finales.push(
-          <div id="appPresentacion" key={i}>
-             <p id="totalpreguntas">{this.state.array_totalpreguntas[i]}</p>
-             <p id="respuestas">{this.state.array_textos[i]}</p>
+          <div className="appPresentacion" key={i}>
+             <p className="totalpreguntas">{this.state.array_totalpreguntas[i]}</p>
+             <p className="respuestas">{this.state.array_textos[i]}</p>
              <SolucionesPregunta pregunta={this.state.questions[i]} key_pregunta={i}/>
              <h3></h3>
           </div>
@@ -143,6 +122,8 @@ export default class FinishScreen extends React.Component {
     }
 
     let finishTitleText = this._getFinishScreenTitle(this.props.tracking.progress_measure, this.props.tracking.score);
+    console.log("finishTitleText");
+    console.log(this.props.tracking.score);
     if(GLOBAL_CONFIG.modo === "examen"){
       return (
         <div id="AppTodo" className="finish_screen">

@@ -1,4 +1,5 @@
 import React from 'react';
+import './../assets/scss/finish_screen.scss';
 
 
 export default class MediaFinalView extends React.Component {
@@ -61,7 +62,7 @@ export default class MediaFinalView extends React.Component {
     let key= this.props.key_fw;
    if (this.props.tipo == "video")
     return (
-      <div>
+      <div className="mfv">
           <video id="myVideo" onClick={this.fullScreenClick.bind(this)} /*onLoadStart={this.setVolumeVideo.bind(this)}*/ key={key} width="500" height="500" controls>
             {sources}
           </video>
@@ -69,7 +70,7 @@ export default class MediaFinalView extends React.Component {
     )
     else if (this.props.tipo == "audio"){
       return(
-        <div>
+        <div className="mfv">
             <audio id="myAudio"  /*onLoadStart={this.setVolumeAudio.bind(this)}*/ key={key} width="500" height="500" controls>
               {sources}
             </audio>
