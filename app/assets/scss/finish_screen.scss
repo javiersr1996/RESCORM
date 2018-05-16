@@ -5,6 +5,7 @@ div.finish_screen h1 {
 }
 div.mfv {
   text-align: center;
+  heigth:600px;
 }
 
 div.solucion {
@@ -26,10 +27,47 @@ div.appTodo {
 div.appPresentacion {
   justify-content: center;
   align-items: center;
+}
+div.appPresentacionVideo {
+  justify-content: center;
+  align-items: center;
+}
+div.fsPresentacion {
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  text-align: center;
+  font-size: 20px;
+}
+div.fsPresentacionVideo {
+  justify-content: center;
+  align-items: center;
+  height: 750px;
+  text-align: center;
+  font-size: 20px;
+}
+div.fsPresentacionAudio {
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  text-align: center;
+  font-size: 20px;
+}
+#fsmyAudio{
+  text-align: center;
 
 }
+#fsmyVideo{
+  text-align: center;
+}
+#solucionTexto{
+  font-size: 35px;
+}
+div.solucionPregunta{
+  font-size: 25px;
+}
 
-div.totalpreguntas {
+p.totalpreguntas {
   font-size: 30px;
   text-align: center;
 }

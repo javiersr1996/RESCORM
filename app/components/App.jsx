@@ -254,6 +254,7 @@ export class App extends React.Component {
               </div>
           </div>
           <div className="modoJuego">
+                  <p></p>
                   <p className="quiz">{texto1}</p>
                   <p className="quiz">{texto2}</p>
                   <p className="quiz">{texto3}</p>

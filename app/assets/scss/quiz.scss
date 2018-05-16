@@ -19,11 +19,16 @@ div.questionC3  {
 #textoSolucion  {
   font-size: 13px;
 }
+div.question{
+  width: 50%;
+  height: auto;
+  margin-left: 0.5%;
+}
 div.question h1 {
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
-  width:50%;
+  width:100%;
   margin-left: 1%;
 
 }
@@ -32,14 +37,14 @@ div.question div.question_choice {
   background:#f5f5f0;
   margin: 10px;
   padding: 2px;
-  width: 45%;
+  width: 90%;
   height: 100px;
 
 }
 
 div.question div.question_choice div.questionC1{
   float: left;
-  width: 35px;
+  width: 5%;
   margin-top: 9px;
   margin-left: 10px;
 }
@@ -101,6 +106,7 @@ div.question div.questionButtonsWrapper {
   background: #f5f5f0;
   position: absolute;
   bottom:0;
+  width: 75%;
 
 }
 

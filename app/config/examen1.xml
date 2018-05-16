@@ -20,7 +20,7 @@
 </answer>
 <answer fraction="100">
 <text>Saque de lateral para el equipo B, desde su pista delantera </text>
-<feedback><text>Correcta</text></feedback>
+<feedback><text>La respuesta correcta es: saque lateral para el equipo B, desde su pista delantera</text></feedback>
 </answer>
 <answer fraction="0">
 <text>­Saque de lateral para el equipo B, desde su pista trasera</text>
@@ -133,26 +133,26 @@
 </question>
 <question type="multichoice">
 <name>
-<text>Un entrenador de minibasket nos dice lo siguiente durante el partido. ¿Tiene razón?</text>
+<text>¿Correcto?</text>
 </name>
 <questiontext>
-<text>Un entrenador de minibasket nos dice lo siguiente durante el partido. ¿Tiene razón?</text>
+<text>¿Correcto?</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
 <media>
 <type>audio</type>
-<source type="audio/mp3">assets/audios/audio0.mp3</source>
-<source type="audio/ogg">assets/audios/audio0.ogg</source>
-<source type="audio/wav">assets/audios/audio0.wav</source>
+<source type="audio/mp3">assets/audios/audio2.mp3</source>
+<source type="audio/ogg">assets/audios/audio2.ogg</source>
+<source type="audio/wav">assets/audios/audio2.wav</source>
 </media>
 <answer fraction="100">
 <text>No</text>
-<feedback><text>no --> En mini hay 2 tiempos muertos por parte no acumulables, así que no tiene razón</text></feedback>
+<feedback><text>No es la opción correcta. Hay 2 por parte no acumulables</text></feedback>
 </answer>
 <answer fraction="0">
 <feedback><text>Incorrecta</text></feedback>
-<text>Sí</text>
+<text>Sí es incorrecto.</text>
 </answer>
 </question>
 <question type="category">
@@ -202,15 +202,15 @@
 </media>
 <answer fraction="100">
 <text>Bien sancionada</text>
-<feedback><text>Bien sancionada y Bien sancionada aunque hubiera estado mejor antes --> Mal sancionada. Hay que esperar cuando jugador recibe balón para ver si lanza a canasta o no</text></feedback>
+<feedback><text>Bien sancionada es incorrecta, hay que esperar al jugador a ver si lanza o no a canasta</text></feedback>
 </answer>
 <answer fraction="100">
 <text>Bien sancionada aunque hubiera estado mejor antes</text>
-<feedback><text>Bien sancionada y Bien sancionada aunque hubiera estado mejor antes --> Mal sancionada. Hay que esperar cuando jugador recibe balón para ver si lanza a canasta o no</text></feedback>
+<feedback><text>Bien sancionada aunque hubiera estado mejor antes es incorrecta, porque no está bien sancionada al hacerlo nada más recibir el jugador</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Mal sancionada</text>
-<feedback><text>Incorrecta</text></feedback>
+<feedback><text>Mal sancionada es la opción correcta de las tres, debe esperar a ver si el jugador lanza a canasta o no </text></feedback>
 </answer>
 </question>
 <question type="category">

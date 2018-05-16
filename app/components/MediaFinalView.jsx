@@ -63,7 +63,7 @@ export default class MediaFinalView extends React.Component {
    if (this.props.tipo == "video")
     return (
       <div className="mfv">
-          <video id="myVideo" onClick={this.fullScreenClick.bind(this)} /*onLoadStart={this.setVolumeVideo.bind(this)}*/ key={key} width="500" height="500" controls>
+          <video id="fsmyVideo" onClick={this.fullScreenClick.bind(this)} /*onLoadStart={this.setVolumeVideo.bind(this)}*/ key={key} width="500" height="500" controls>
             {sources}
           </video>
       </div>
@@ -71,7 +71,7 @@ export default class MediaFinalView extends React.Component {
     else if (this.props.tipo == "audio"){
       return(
         <div className="mfv">
-            <audio id="myAudio"  /*onLoadStart={this.setVolumeAudio.bind(this)}*/ key={key} width="500" height="500" controls>
+            <audio id="fsmyAudio"  /*onLoadStart={this.setVolumeAudio.bind(this)}*/ key={key} width="500" height="500" controls>
               {sources}
             </audio>
         </div>

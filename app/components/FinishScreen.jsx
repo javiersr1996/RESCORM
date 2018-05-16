@@ -97,9 +97,21 @@ export default class FinishScreen extends React.Component {
     let muestras_finales = [];
     //let l = this.props.questions.length;
     for(let i = 0; i <this.state.questions.length ; i++){
-      if(this.state.questions[i].media.sources !== undefined){
+      if(this.state.questions[i].media.sources !== undefined && this.state.questions[i].media.type == "video"){
         muestras_finales.push(
-          <div className="appPresentacion" key={i}>
+          <div className="fsPresentacionVideo" key={i}>
+             <p className="totalpreguntas"><b>{this.state.array_totalpreguntas[i]}</b></p>
+             <p className="respuestas">{this.state.array_textos[i]}</p>
+             <SolucionesPregunta pregunta={this.state.questions[i]} key_pregunta={i}/>
+             <div className="mfv">
+               <MediaFinalView tipo={this.state.array_tipos[i]} sources={this.state.questions[i].media.sources} key_fw={i}/>
+             </div>
+             <h3></h3>
+          </div>
+         );
+      } else if(this.state.questions[i].media.sources !== undefined && this.state.questions[i].media.type == "audio"){
+        muestras_finales.push(
+          <div className="fsPresentacionAudio" key={i}>
              <p className="totalpreguntas">{this.state.array_totalpreguntas[i]}</p>
              <p className="respuestas">{this.state.array_textos[i]}</p>
              <SolucionesPregunta pregunta={this.state.questions[i]} key_pregunta={i}/>
@@ -111,7 +123,7 @@ export default class FinishScreen extends React.Component {
          );
       } else {
         muestras_finales.push(
-          <div className="appPresentacion" key={i}>
+          <div className="fsPresentacion" key={i}>
              <p className="totalpreguntas">{this.state.array_totalpreguntas[i]}</p>
              <p className="respuestas">{this.state.array_textos[i]}</p>
              <SolucionesPregunta pregunta={this.state.questions[i]} key_pregunta={i}/>
@@ -133,7 +145,8 @@ export default class FinishScreen extends React.Component {
           </div>
           <h1 id="finish_title">{finishTitleText}</h1>
           {divNota}
-          <h1>Soluciones</h1>
+          <h1 id="solucionTexto">Solución del examen</h1>
+          <p></p>
           {muestras_finales}
         </div>
       );

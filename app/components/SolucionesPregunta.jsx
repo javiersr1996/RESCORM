@@ -1,5 +1,6 @@
 import React from 'react';
 import {GLOBAL_CONFIG} from '../config/config.js';
+import './../assets/scss/finish_screen.scss';
 
 export default class SolucionesPregunta extends React.Component {
   constructor(props){
@@ -26,7 +27,7 @@ export default class SolucionesPregunta extends React.Component {
     }
     return(
       <div key={key}>
-        <div>{textoInicial}</div>
+        <div className="solucionPregunta">{textoInicial}</div>
          <div>{solucion}</div>
 
       </div>
