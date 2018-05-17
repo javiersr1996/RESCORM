@@ -15,9 +15,9 @@ export let GLOBAL_CONFIG = {
       completion_threshold:0.5,
       score_threshold:0.6,
     },
-    //numero de preguntas maximas a mostrar
-    n:2,
-    //modo de juego: examen o repaso
+    // numero de preguntas maximas a mostrar
+    n:10,
+    // modo de juego: examen o repaso
     modo:"examen",
     /*
     ****************************************************************************
@@ -26,22 +26,20 @@ export let GLOBAL_CONFIG = {
     <CUESTIONARIO> en inglés: examen1_en, examen2_en, repaso1_en, repaso2_en
     ****************************************************************************
     */
-    xml: "http://localhost:8080/config/examen1.xml",
+    xml:"http://localhost:8080/assets/examen1.xml",
 
-
-    //tiempo para completar la partida --> modo examen
+    // tiempo para completar la partida --> modo examen
     secondsRemaining:3000,
 
-    //textos pantalla inicial
-    //castellano modo examen1_en
+    // textos pantalla inicial
+    // castellano modo examen1_en
 
-    //castellano modo repaso1
+    // castellano modo repaso1
 
-    //ingles modo examen1_en
+    // ingles modo examen1_en
 
+    // ingles modo repaso1
 
-    //ingles modo repaso1
-    
   },
   production:{
     debug:false,

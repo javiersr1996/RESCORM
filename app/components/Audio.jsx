@@ -2,31 +2,31 @@ import React from 'react';
 import {GLOBAL_CONFIG} from '../config/config.js';
 
 export default class Audio extends React.Component {
-  constructor(props) {
+  constructor(props){
     super(props);
-  };
+  }
   /*
   *****************************************************
    CAMBIO DEL VOLUMEN
   *****************************************************
   */
   setVolume(){
-      var audio = document.getElementById("myAudio");
-      audio.volume = 0.5;
+    let audio = document.getElementById("myAudio");
+    audio.volume = 0.5;
   }
 
-  render() {
+  render(){
     let sources = [];
 
-    for(let i=0; i<3; i++){
+    for(let i = 0; i < 3; i++){
       if(this.props.audio[i] !== undefined){
-        sources.push(<source src={this.props.audio[i].texto} type={this.props.audio[i].formato} key={i}/>)
+        sources.push(<source src={this.props.audio[i].texto} type={this.props.audio[i].formato} key={i}/>);
       } else {
-        console.log("texto source indefinida")
+        console.log("texto source indefinida");
       }
     }
-    //console.log("estoy en Video.jsx y la source es "+ this.props.video);
-    let key= this.props.key_audio;
+    // console.log("estoy en Video.jsx y la source es "+ this.props.video);
+    let key = this.props.key_audio;
     if(GLOBAL_CONFIG.modo === "repaso"){
       return (
         <div>
@@ -36,9 +36,9 @@ export default class Audio extends React.Component {
             </audio>
           </div>
         </div>
-      )
-    } else {
-      return (
+      );
+    }
+    return (
         <div>
           <div>
             <audio id="myAudio" onLoadStart={this.setVolume.bind(this)} key={key} width="700" height="500" autoPlay>
@@ -46,8 +46,7 @@ export default class Audio extends React.Component {
             </audio>
           </div>
         </div>
-      )
-    }
+    );
 
   }
 }

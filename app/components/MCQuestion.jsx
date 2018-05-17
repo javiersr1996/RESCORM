@@ -14,11 +14,10 @@ export default class MCQuestion extends React.Component {
     this.state = {
       selected_choices_ids:[],
       answered:false,
-      repeticiones: 0,
+      repeticiones:0,
       hiddenSolucion:true,
     };
-  };
-
+  }
 
   componentWillUpdate(prevProps, prevState){
     if(prevProps.question !== this.props.question){
@@ -37,11 +36,11 @@ export default class MCQuestion extends React.Component {
   }
   onAnswerQuestion(){
     // Calculate score
-    console.log("onAnswerQuestion MCQuestion")
+    console.log("onAnswerQuestion MCQuestion");
     if(GLOBAL_CONFIG.modo === "repaso"){
       this.setState({
         hiddenSolucion:false,
-      })
+      });
     }
     let nChoices = this.props.question.respuestas.length;
     let correctAnswers = 0;
@@ -49,11 +48,11 @@ export default class MCQuestion extends React.Component {
     let blankAnswers = 0;
     let totalCorrectAnswers = 0;
 
-    if (this.state.selected_choices_ids === 0){
+    if(this.state.selected_choices_ids === 0){
       correctAnswers = 0;
       incorrectAnswers = 0;
 
-    } else{
+    } else {
       for(let i = 0; i < nChoices; i++){
         let choice = this.props.question.respuestas[i];
         if(choice.valor == "100"){
@@ -63,7 +62,7 @@ export default class MCQuestion extends React.Component {
           // Answered choice
           if(choice.valor === "100"){
             correctAnswers += 1;
-          } else if(choice.valor === "0") {
+          } else if(choice.valor === "0"){
             incorrectAnswers += 1;
           }
         } else {
@@ -76,7 +75,7 @@ export default class MCQuestion extends React.Component {
       incorrectAnswers = 0;
     }
 
-    let scorePercentage = Math.max(0, (correctAnswers - 10*incorrectAnswers) / this.props.question.respuestas.filter(function(c){return c.valor === "100";}).length);
+    let scorePercentage = Math.max(0, (correctAnswers - 10 * incorrectAnswers) / this.props.question.respuestas.filter(function(c){return c.valor === "100";}).length);
     // Send data via SCORM
     let objective = this.props.objective;
     this.props.dispatch(objectiveAccomplished(objective.id, objective.score * scorePercentage));
@@ -89,24 +88,24 @@ export default class MCQuestion extends React.Component {
     this.setState({
       selected_choices_ids:[],
       answered:false,
-      repeticiones: this.state.repeticiones+1,
+      repeticiones:this.state.repeticiones + 1,
     });
     this.props.numKey();
-    //console.log("repeticiones "+this.state.repeticiones);
+    // console.log("repeticiones "+this.state.repeticiones);
 
   }
   onNextQuestion(){
     this.props.onNextQuestion();
     if(GLOBAL_CONFIG.modo === "repaso"){
       this.setState({
-        hiddenSolucion: true,
-      })
+        hiddenSolucion:true,
+      });
     }
   }
   render(){
     let choices = [];
     for(let i = 0; i < this.props.question.respuestas.length; i++){
-      choices.push(<MCQuestionChoice key={"MyQuestion_" + "question_choice_" + i} choice={this.props.question.respuestas[i]}  hiddenSolucion={this.state.hiddenSolucion} checked={this.state.selected_choices_ids.indexOf(this.props.question.respuestas[i].id) !== -1} handleChange={this.handleChoiceChange.bind(this)} questionAnswered={this.state.answered}/>);
+      choices.push(<MCQuestionChoice key={"MyQuestion_" + "question_choice_" + i} choice={this.props.question.respuestas[i]} hiddenSolucion={this.state.hiddenSolucion} checked={this.state.selected_choices_ids.indexOf(this.props.question.respuestas[i].id) !== -1} handleChange={this.handleChoiceChange.bind(this)} questionAnswered={this.state.answered}/>);
     }
     return (
       <div className="question">

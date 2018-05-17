@@ -10,13 +10,13 @@ export default class FinishScreen extends React.Component {
     let questions = this.props.questions;
 
     this.state = {
-      questions: questions,
-      array_totalpreguntas: [],
+      questions:questions,
+      array_totalpreguntas:[],
       array_textos:[],
       array_soluciones:[],
       array_tipos:[],
-      array_sources: [],
-    }
+      array_sources:[],
+    };
   }
   _getFinishScreenTitle(progress_measure, score){
     let finishTitleText;
@@ -43,50 +43,50 @@ export default class FinishScreen extends React.Component {
     let array_tipos = [];
     let array_sources = [];
     let index = 0;
-    for(let i=0; i<GLOBAL_CONFIG.n; i++){
-      index = i+1
-      array_totalpreguntas.push("Pregunta "+index);
+    for(let i = 0; i < GLOBAL_CONFIG.n; i++){
+      index = i + 1;
+      array_totalpreguntas.push("Pregunta " + index);
       array_textos.push(this.state.questions[i].texto);
-      //array_soluciones.push("SOLUCION:"+" "+this.state.questions[i].solucion)
+      // array_soluciones.push("SOLUCION:"+" "+this.state.questions[i].solucion)
       array_tipos.push(this.state.questions[i].media.type);
       array_sources.push(this.state.questions[i].media.source);
 
     }
-      this.setState({
-        array_totalpreguntas: array_totalpreguntas,
-        array_textos:array_textos,
-        //array_soluciones:array_soluciones,
-        array_tipos:array_tipos,
-        array_sources: array_sources,
-      });
+    this.setState({
+      array_totalpreguntas:array_totalpreguntas,
+      array_textos:array_textos,
+        // array_soluciones:array_soluciones,
+      array_tipos:array_tipos,
+      array_sources:array_sources,
+    });
   }
 
   render(){
-    let divNota = ""
-    let nota = this.props.tracking.score*10;
-    if(nota<5){
-      divNota =(
+    let divNota = "";
+    let nota = this.props.tracking.score * 10;
+    if(nota < 5){
+      divNota = (
         <div>
           <h1>SUSPENSO</h1>
           <img width="400" heigth="400" align="middle" src="assets/images/suspenso.png" className="center" />
         </div>
       );
     } else if(nota >= 5 && nota < 7){
-      divNota =(
+      divNota = (
         <div>
           <h1>APROBADO</h1>
           <img width="400" heigth="400" align="middle" src="assets/images/aprobado.png" className="center" />
         </div>
       );
     } else if(nota >= 7 && nota < 9){
-      divNota =(
+      divNota = (
         <div>
           <h1>NOTABLE</h1>
           <img width="400" heigth="400" align="middle" src="assets/images/notable.png" className="center" />
         </div>
       );
     } else if(nota >= 9){
-      divNota =(
+      divNota = (
         <div>
           <h1>SOBRESALIENTE</h1>
           <img width="400" heigth="400" align="middle" src="assets/images/sobresaliente.png" className="center" />
@@ -95,8 +95,8 @@ export default class FinishScreen extends React.Component {
     }
 
     let muestras_finales = [];
-    //let l = this.props.questions.length;
-    for(let i = 0; i <GLOBAL_CONFIG.n ; i++){
+    // let l = this.props.questions.length;
+    for(let i = 0; i < GLOBAL_CONFIG.n; i++){
       if(this.state.questions[i].media.sources !== undefined && this.state.questions[i].media.type == "video"){
         muestras_finales.push(
           <div className="fsPresentacionVideo" key={i}>
@@ -106,7 +106,7 @@ export default class FinishScreen extends React.Component {
              <div className="mfv">
                <MediaFinalView tipo={this.state.array_tipos[i]} sources={this.state.questions[i].media.sources} key_fw={i}/>
              </div>
-             <h3></h3>
+             <h3 />
           </div>
          );
       } else if(this.state.questions[i].media.sources !== undefined && this.state.questions[i].media.type == "audio"){
@@ -118,7 +118,7 @@ export default class FinishScreen extends React.Component {
              <div className="mfv">
                <MediaFinalView tipo={this.state.array_tipos[i]} sources={this.state.questions[i].media.sources} key_fw={i}/>
              </div>
-             <h3></h3>
+             <h3 />
           </div>
          );
       } else {
@@ -127,7 +127,7 @@ export default class FinishScreen extends React.Component {
              <p className="totalpreguntas"><b>{this.state.array_totalpreguntas[i]}</b></p>
              <p className="respuestas">{this.state.array_textos[i]}</p>
              <SolucionesPregunta pregunta={this.state.questions[i]} key_pregunta={i}/>
-             <h3></h3>
+             <h3 />
           </div>
          );
       }
@@ -137,19 +137,19 @@ export default class FinishScreen extends React.Component {
     if(GLOBAL_CONFIG.modo === "examen"){
       return (
         <div id="AppTodo" className="finish_screen">
-          <h2></h2>
+          <h2 />
           <div id="appPresentacion">
             <img align="middle" src="assets/images/quiz_logo.png" className="center" />
           </div>
           <h1 id="finish_title">{finishTitleText}</h1>
           {divNota}
           <h1 id="solucionTexto">Solución del examen</h1>
-          <p></p>
+          <p />
           {muestras_finales}
         </div>
       );
-    } else {
-      return (
+    }
+    return (
         <div id="AppTodo" className="finish_screen">
           <div id="appPresentacion">
             <img align="middle" src="assets/images/quiz_logo.png" className="center" />
@@ -157,8 +157,7 @@ export default class FinishScreen extends React.Component {
           <h1 id="finish_title">{finishTitleText}</h1>
           {divNota}
         </div>
-      );
-    }
+    );
 
   }
 }

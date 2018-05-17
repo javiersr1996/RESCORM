@@ -46,16 +46,15 @@ export default class Header extends React.Component {
 
         </div>
       );
-    } else {
-      return (
+    }
+    return (
         <div id="headerProgressLogScore" className="header_wrapper">
           <a target="_blank" href="https://github.com/javiersr1996/RESCORM"><img id="logo" src="assets/images/quiz_logo.png"/></a>
           <h1 id="heading">{this.props.I18n.getTrans("i.title")}</h1>
           <p id="tracking">{trackingEls}</p>
           {loggedEl}
         </div>
-      );
-    }
+    );
 
   }
 }

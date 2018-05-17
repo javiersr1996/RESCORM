@@ -1,6 +1,6 @@
-import INITIAL_STATE from './../constants/constants.jsx'
+import INITIAL_STATE from './../constants/constants.jsx';
 
-function jsonSavedReducer(state ={}, action){
+function jsonSavedReducer(state = {}, action){
   switch (action.type){
   case 'JSONSAVED':
     let newState = JSON.parse(JSON.stringify(state));

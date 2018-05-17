@@ -32,7 +32,7 @@ export function objectiveAccomplished(objectiveId, accomplishedScore = null){
     accomplished_score:accomplishedScore,
   };
 }
-//accion para guardar xml en el estado
+// accion para guardar xml en el estado
 export function jsonSaved(quiz){
   return {
     type:'JSONSAVED',

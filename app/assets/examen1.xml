@@ -133,10 +133,10 @@
 </question>
 <question type="multichoice">
 <name>
-<text>¿Correcto?</text>
+<text>Escucha el siguiente audio. ¿Es correcto lo que se dice?</text>
 </name>
 <questiontext>
-<text>¿Correcto?</text>
+<text>Escucha el siguiente audio. ¿Es correcto lo que se dice?</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
@@ -152,7 +152,7 @@
 </answer>
 <answer fraction="0">
 <feedback><text>Incorrecta</text></feedback>
-<text>Sí es incorrecto.</text>
+<text>Sí</text>
 </answer>
 </question>
 <question type="category">

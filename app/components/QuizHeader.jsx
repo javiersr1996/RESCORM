@@ -2,14 +2,13 @@ import React from 'react';
 import {GLOBAL_CONFIG} from '../config/config.js';
 import './../assets/scss/main.scss';
 
-
 export default class QuizHeader extends React.Component {
   constructor(props){
     super(props);
   }
   render(){
-    //console.log("render quiz header")
-    //console.log(this.props.questions)
+    // console.log("render quiz header")
+    // console.log(this.props.questions)
 
     return (
       <div className="quizHeader">

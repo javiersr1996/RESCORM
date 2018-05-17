@@ -6,29 +6,29 @@ export default class MCQuestionChoice extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      solucion: "",
-      classNameDivSolucion: "hiddenDiv",
-    }
+      solucion:"",
+      classNameDivSolucion:"hiddenDiv",
+    };
   }
   render(){
     let questionClassName = "question_choice";
     let showCorrection = (this.props.questionAnswered);
     if(showCorrection){
       if(this.props.checked){
-        console.log("correccion")
+        console.log("correccion");
         if(this.props.choice.valor === "100"){
           if(GLOBAL_CONFIG.modo === "examen"){
-            console.log("corrrectooooooooooooooooooooooooooo")
+            console.log("corrrectooooooooooooooooooooooooooo");
             questionClassName += " question_choice_correct_examen";
           } else {
             questionClassName += " question_choice_correct";
           }
 
-        } else if (this.props.choice.valor === "0") {
+        } else if(this.props.choice.valor === "0"){
           if(GLOBAL_CONFIG.modo === "examen"){
             questionClassName += " question_choice_incorrect_examen";
           } else {
-              questionClassName += " question_choice_incorrect";
+            questionClassName += " question_choice_incorrect";
           }
 
         }
@@ -41,7 +41,7 @@ export default class MCQuestionChoice extends React.Component {
 
       }
     }
-    if(this.props.hiddenSolucion === true) {
+    if(this.props.hiddenSolucion === true){
       return (
         <div className={questionClassName}>
           <div className="questionC1">
@@ -55,8 +55,8 @@ export default class MCQuestionChoice extends React.Component {
           </div>
         </div>
       );
-    } else {
-      return (
+    }
+    return (
         <div className={questionClassName}>
           <div className="questionC1">
             <input type="checkbox" checked={this.props.checked} onChange={() => this.props.handleChange(this.props.choice)} disabled={showCorrection}/>
@@ -68,8 +68,7 @@ export default class MCQuestionChoice extends React.Component {
             <p id="textoSolucion">{this.props.choice.solucion}</p>
           </div>
         </div>
-      );
-    }
+    );
 
   }
 }

@@ -13,7 +13,7 @@ import TimeDown from './TimeDown.jsx';
 export default class Quiz extends React.Component {
   constructor(props){
     super(props);
-    //se le ha pasado a quiz el json generado por el xml
+    // se le ha pasado a quiz el json generado por el xml
     let questions = this.props.quiz;
 
     // Adaptive behaviour
@@ -36,10 +36,10 @@ export default class Quiz extends React.Component {
     }
 
     if(adaptive_sorted === false){
-      //questions = Utils.shuffleArray(questions);
+      // questions = Utils.shuffleArray(questions);
 
     }
-   //coje numero de preguntas determinado
+   // coje numero de preguntas determinado
     if((typeof this.props.config.n === "number") && (this.props.config.n >= 1)){
       // Limit number of questions
 
@@ -47,26 +47,26 @@ export default class Quiz extends React.Component {
 
     }
     this.state = {
-      questions: questions,
+      questions:questions,
       current_question_index:1,
       num_key:1,
-      hiddenSolucion: false,
+      hiddenSolucion:false,
     };
-    //this.tiempoAgotado = this.tiempoAgotado.bind(this);
+    // this.tiempoAgotado = this.tiempoAgotado.bind(this);
   }
   componentDidMount(){
     // Create objectives (One per question included in the quiz)
     let objectives = [];
     let nQuestions = this.state.questions.length;
-    //console.log("numero de preguntas did mount quiz = "+this.state.questions.length)
-    //console.log("nQuestions = "+nQuestions)
+    // console.log("numero de preguntas did mount quiz = "+this.state.questions.length)
+    // console.log("nQuestions = "+nQuestions)
     for(let i = 0; i < nQuestions; i++){
       objectives.push(new Utils.Objective({id:("Question" + (i + 1)), progress_measure:(1 / nQuestions), score:(1 / nQuestions)}));
     }
     this.props.dispatch(addObjectives(objectives));
   }
   onNextQuestion(){
-    this.setState({num_key:this.state.num_key+1})
+    this.setState({num_key:this.state.num_key + 1});
     let isLastQuestion = (this.state.current_question_index === this.state.questions.length);
     if(isLastQuestion === false){
       this.setState({current_question_index:(this.state.current_question_index + 1)});
@@ -76,10 +76,10 @@ export default class Quiz extends React.Component {
   }
   onResetQuiz(){
     this.setState({
-      num_key:this.state.num_key+1,
+      num_key:this.state.num_key + 1,
       current_question_index:1,
       hiddenSolucion:true,
-    })
+    });
 
     this.props.dispatch(resetObjectives());
   }
@@ -89,7 +89,7 @@ export default class Quiz extends React.Component {
   ******************************************
   */
   numKey(){
-    this.setState({num_key:this.state.num_key+1})
+    this.setState({num_key:this.state.num_key + 1});
   }
   finishTime(){
     if(GLOBAL_CONFIG.modo === "examen"){
@@ -101,7 +101,7 @@ export default class Quiz extends React.Component {
   }
   render(){
 
-    let currentQuestion = this.state.questions[this.state.current_question_index-1];
+    let currentQuestion = this.state.questions[this.state.current_question_index - 1];
     let isLastQuestion = (this.state.current_question_index === this.state.questions.length);
 
     let objective = this.props.tracking.objectives["Question" + (this.state.current_question_index)];
@@ -117,23 +117,23 @@ export default class Quiz extends React.Component {
     default:
       currentQuestionRender = "Question type not supported";
     }
-    //en modo examen es el mismo tiempo para todo el quiz --> único key para llamar a TimeDown
-    //en modo repaso se resetea el tiempo para cada pregunta --> distinto key en cada llamada a TimeDown
+    // en modo examen es el mismo tiempo para todo el quiz --> único key para llamar a TimeDown
+    // en modo repaso se resetea el tiempo para cada pregunta --> distinto key en cada llamada a TimeDown
     let secondsRemaining = 0;
     let timeDown = "";
     if(GLOBAL_CONFIG.modo === "examen"){
       secondsRemaining = GLOBAL_CONFIG.secondsRemaining;
-      timeDown =(<TimeDown finishTime={this.finishTime.bind(this)} secondsRemaining={secondsRemaining}/>);
+      timeDown = (<TimeDown finishTime={this.finishTime.bind(this)} secondsRemaining={secondsRemaining}/>);
     } else if(GLOBAL_CONFIG.modo === "repaso"){
       secondsRemaining = 0;
-      //timeDown =(<TimeDown finishTime={this.finishTime.bind(this)} secondsRemaining={secondsRemaining} key={this.state.num_key}/>);
+      // timeDown =(<TimeDown finishTime={this.finishTime.bind(this)} secondsRemaining={secondsRemaining} key={this.state.num_key}/>);
     }
-    //video o audio
+    // video o audio
     let media = "";
 
     if(currentQuestion.media.type == "video"){
       media = (<Video video={currentQuestion.media.sources} key_video={this.state.num_key}/>);
-    } else if (currentQuestion.media.type == "audio") {
+    } else if(currentQuestion.media.type == "audio"){
       media = (<Audio audio={currentQuestion.media.sources} key_audio={this.state.num_key}/>);
     } else {
       media = "";

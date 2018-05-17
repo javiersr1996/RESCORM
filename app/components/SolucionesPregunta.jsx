@@ -13,7 +13,7 @@ export default class SolucionesPregunta extends React.Component {
     let nSoluciones = 0;
     let textoInicial = "";
 
-    for(let i=0; i<respuestas.length; i++){
+    for(let i = 0; i < respuestas.length; i++){
       if(respuestas[i].valor === "100"){
         nSoluciones++;
         solucion.push(<div key={i}>{respuestas[i].solucion}</div>);
@@ -23,9 +23,9 @@ export default class SolucionesPregunta extends React.Component {
     if(nSoluciones === 1){
       textoInicial = "SOLUCIÓN";
     } else {
-      textoInicial = "SOLUCIONES"
+      textoInicial = "SOLUCIONES";
     }
-    return(
+    return (
       <div key={key}>
         <div className="solucionPregunta">{textoInicial}</div>
          <div>{solucion}</div>
