@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import './../assets/scss/main.scss';
 
 import {GLOBAL_CONFIG} from '../config/config.js';
+import {LOCALES} from '../config/locales.js';
 import * as I18n from '../vendors/I18n.js';
 import * as SAMPLES from '../config/samples.js';
 
@@ -202,16 +203,20 @@ export class App extends React.Component {
     let texto4 = "";
     let imgModo = "";
     if(GLOBAL_CONFIG.modo === "examen"){
-      texto1 = "MODO EXAMEN";
-      texto2 = "Respuestas incorrectas no restan";
-      texto3 = "Pincha en el vídeo para verlo en pantalla completa";
-      texto4 = "Dispones de 3 repeticiones de vídeo/audio (sin haber contestado a la pregunta)";
+      /*
+      texto1 = GLOBAL_CONFIG.modeExam;
+      texto2 = GLOBAL_CONFIG.questionsExam;
+      texto3 = GLOBAL_CONFIG.videoExam;
+      texto4 = GLOBAL_CONFIG.repetitionsExam;
+      */
       imgModo = (<img width="250" heigth="250" align="middle" src="assets/images/examen.png" className="center" />);
     } else {
-      texto1 = "MODO REPASO";
-      texto2 = "Preguntas centradas en una temática concreta";
-      texto3 = "No hay límite de tiempo por pregunta ni por el cuestionario";
-      texto4 = "Puedes manejar el vídeo/audio con los controles";
+      /*
+      texto1 = this.props.I18n.getTrans("i.modeStudying");
+      texto2 = this.props.I18n.getTrans("i.themeStudying");
+      texto3 = this.props.I18n.getTrans("i.timeStudying");
+      texto4 = this.props.I18n.getTrans("i.controlsStudying");
+      */
       imgModo = (<img width="200" heigth="200" align="middle" src="assets/images/repaso.png" className="center" />);
     }
 

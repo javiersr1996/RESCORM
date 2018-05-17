@@ -1,12 +1,15 @@
-div.myVideoExamen {
-
+div.divmyVideoExamen{
   video::-webkit-media-controls {
-  display: none;
+    display: none;
+  }
 }
-}
+
 #myVideoExamen{
   width: 90%;
   height: 20%;
+  video::-webkit-media-controls {
+    display: none;
+  }
 }
 #myVideoRepaso{
   width: 90%;

@@ -100,6 +100,7 @@ export default class Quiz extends React.Component {
 
   }
   render(){
+
     let currentQuestion = this.state.questions[this.state.current_question_index-1];
     let isLastQuestion = (this.state.current_question_index === this.state.questions.length);
 

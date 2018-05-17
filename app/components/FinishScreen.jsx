@@ -43,7 +43,7 @@ export default class FinishScreen extends React.Component {
     let array_tipos = [];
     let array_sources = [];
     let index = 0;
-    for(let i=0; i<this.state.questions.length; i++){
+    for(let i=0; i<GLOBAL_CONFIG.n; i++){
       index = i+1
       array_totalpreguntas.push("Pregunta "+index);
       array_textos.push(this.state.questions[i].texto);
@@ -96,7 +96,7 @@ export default class FinishScreen extends React.Component {
 
     let muestras_finales = [];
     //let l = this.props.questions.length;
-    for(let i = 0; i <this.state.questions.length ; i++){
+    for(let i = 0; i <GLOBAL_CONFIG.n ; i++){
       if(this.state.questions[i].media.sources !== undefined && this.state.questions[i].media.type == "video"){
         muestras_finales.push(
           <div className="fsPresentacionVideo" key={i}>
@@ -112,7 +112,7 @@ export default class FinishScreen extends React.Component {
       } else if(this.state.questions[i].media.sources !== undefined && this.state.questions[i].media.type == "audio"){
         muestras_finales.push(
           <div className="fsPresentacionAudio" key={i}>
-             <p className="totalpreguntas">{this.state.array_totalpreguntas[i]}</p>
+             <p className="totalpreguntas"><b>{this.state.array_totalpreguntas[i]}</b></p>
              <p className="respuestas">{this.state.array_textos[i]}</p>
              <SolucionesPregunta pregunta={this.state.questions[i]} key_pregunta={i}/>
              <div className="mfv">
@@ -124,7 +124,7 @@ export default class FinishScreen extends React.Component {
       } else {
         muestras_finales.push(
           <div className="fsPresentacion" key={i}>
-             <p className="totalpreguntas">{this.state.array_totalpreguntas[i]}</p>
+             <p className="totalpreguntas"><b>{this.state.array_totalpreguntas[i]}</b></p>
              <p className="respuestas">{this.state.array_textos[i]}</p>
              <SolucionesPregunta pregunta={this.state.questions[i]} key_pregunta={i}/>
              <h3></h3>
@@ -134,8 +134,6 @@ export default class FinishScreen extends React.Component {
     }
 
     let finishTitleText = this._getFinishScreenTitle(this.props.tracking.progress_measure, this.props.tracking.score);
-    console.log("finishTitleText");
-    console.log(this.props.tracking.score);
     if(GLOBAL_CONFIG.modo === "examen"){
       return (
         <div id="AppTodo" className="finish_screen">
