@@ -30,7 +30,21 @@ div.question h1 {
   margin-bottom: 20px;
   width:100%;
   margin-left: 1%;
-
+}
+div.repeticiones p{
+  color:orange;
+  margin-right: 25%;
+  font-size: 20px;
+  text-align: center;
+}
+div.repeticiones {
+  width: 50%
+}
+div.repeticionessinmedia{
+  width: 50%;
+  color:orange;
+  font-size: 20px;
+  margin-left: 1%;
 }
 
 div.question div.question_choice {

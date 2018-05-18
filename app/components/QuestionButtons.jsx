@@ -13,10 +13,10 @@ export default class QuestionButtons extends React.Component {
     if((this.props.allow_finish) && (disable_next === false)){
       resetQuiz = (<button className="resetQuiz" onClick={this.props.onResetQuiz}>{this.props.I18n.getTrans("i.reset_quiz")}</button>);
     }
-    let repeticionesTexto = "repeticiones usadas: " + this.props.repeticiones;
+    let repeticionesTexto = this.props.I18n.getTrans("i.repetitions") + this.props.repeticiones;
     let repeticionesTextoButton = (<p>{repeticionesTexto}</p>);
     let resetQuestionButton = (<button className="resetQuestion" onClick={this.props.onResetQuestion} disabled={disable_resetQuestion}>{this.props.I18n.getTrans("i.reset_question")}</button>);
-    if(this.props.repeticiones === 3){
+    if(this.props.repeticiones === GLOBAL_CONFIG.repeticiones){
       resetQuestionButton = "";
       repeticionesTextoButton = "";
     }
@@ -24,22 +24,24 @@ export default class QuestionButtons extends React.Component {
       if(this.props.question.media.type == "audio" || this.props.question.media.type == "video"){
         return (
           <div className="questionButtonsWrapper">
+            <div class="repeticionessinmedia"><b>{repeticionesTextoButton}</b></div>
             <div>
               <button className="answerQuestion" onClick={this.props.onAnswerQuestion} disabled={disable_answer}>{this.props.I18n.getTrans("i.answer")}</button>
               {resetQuestionButton}
               <button className="nextQuestion" onClick={this.props.onNextQuestion} disabled={disable_next}>{this.props.allow_finish ? this.props.I18n.getTrans("i.finish_quiz") : this.props.I18n.getTrans("i.next")}</button>
             </div>
-            <div>{repeticionesTextoButton}</div>
+
           </div>
         );
       }
       return (
           <div className="questionButtonsWrapper">
+              <div className="repeticionessinmedia"><b>{repeticionesTextoButton}</b></div>
             <div>
               <button className="answerQuestion" onClick={this.props.onAnswerQuestion} disabled={disable_answer}>{this.props.I18n.getTrans("i.answer")}</button>
               <button className="nextQuestion" onClick={this.props.onNextQuestion} disabled={disable_next}>{this.props.allow_finish ? this.props.I18n.getTrans("i.finish_quiz") : this.props.I18n.getTrans("i.next")}</button>
             </div>
-            <div>{repeticionesTextoButton}</div>
+
           </div>
       );
 

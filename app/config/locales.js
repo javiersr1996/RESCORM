@@ -21,8 +21,9 @@ export let LOCALES = {
     "i.themeStudying":"Questions focus in a specific theme",
     "i.videoExam":"Click in the video for full screen",
     "i.timeStudying":"No limit of time to finish",
-    "i.repetitionsExam":"3 repetitions of audio/video (without answering the question)",
+    "i.repetitionsExam":"10 repetitions of audio/video (without answering the question)",
     "i.controlsStudying":"You can manage audio/video with controls",
+    "i.repetitions": "repetitions used: ",
   },
   es:{
     "i.answer":"Responder",
@@ -47,7 +48,8 @@ export let LOCALES = {
     "i.themeStudying":"Preguntas centradas en una temática",
     "i.videoExam":"Pincha en el vídeo para verlo en pantalla completa",
     "i.timeStudying":"No hay límite de tiempo para completar el test",
-    "i.repetitionsExam":"Dispones de tres repeticiones de audio/vídeo (sin haber contestado a la pregunta)",
+    "i.repetitionsExam":"Dispones de 10 repeticiones de audio/vídeo (sin haber contestado a la pregunta)",
     "i.controlsStudying":"Puedes manejar el vídeo/audio con los controles",
+    "i.repetitions": "repeticiones usadas: ",
   },
 };
