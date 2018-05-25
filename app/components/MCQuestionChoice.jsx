@@ -15,10 +15,10 @@ export default class MCQuestionChoice extends React.Component {
     let showCorrection = (this.props.questionAnswered);
     if(showCorrection){
       if(this.props.checked){
-        console.log("correccion");
+
         if(this.props.choice.valor === "100"){
           if(GLOBAL_CONFIG.modo === "examen"){
-            console.log("corrrectooooooooooooooooooooooooooo");
+
             questionClassName += " question_choice_correct_examen";
           } else {
             questionClassName += " question_choice_correct";
@@ -43,31 +43,35 @@ export default class MCQuestionChoice extends React.Component {
     }
     if(this.props.hiddenSolucion === true){
       return (
-        <div className={questionClassName}>
-          <div className="questionC1">
-            <input type="checkbox" checked={this.props.checked} onChange={() => this.props.handleChange(this.props.choice)} disabled={showCorrection}/>
-          </div>
-          <div className="questionC2">
-            <p>{this.props.choice.texto}</p>
-          </div>
-          <div className="hiddenDiv">
-            <p id="textoSolucion">{this.props.choice.solucion}</p>
-          </div>
-        </div>
+
+            <div className={questionClassName}>
+              <div className="questionC1">
+                <input type="checkbox" checked={this.props.checked} onChange={() => this.props.handleChange(this.props.choice)} disabled={showCorrection}/>
+              </div>
+              <div className="questionC2">
+                <p>{this.props.choice.texto}</p>
+              </div>
+              <div className="hiddenDiv">
+                <p id="textoSolucion">{this.props.choice.solucion}</p>
+              </div>
+            </div>
+
       );
     }
     return (
-        <div className={questionClassName}>
-          <div className="questionC1">
-            <input type="checkbox" checked={this.props.checked} onChange={() => this.props.handleChange(this.props.choice)} disabled={showCorrection}/>
-          </div>
-          <div className="questionC2">
-            <p>{this.props.choice.texto}</p>
-          </div>
-          <div className="questionC3">
-            <p id="textoSolucion">{this.props.choice.solucion}</p>
-          </div>
-        </div>
+
+            <div className={questionClassName}>
+              <div className="questionC1">
+                <input type="checkbox" checked={this.props.checked} onChange={() => this.props.handleChange(this.props.choice)} disabled={showCorrection}/>
+              </div>
+              <div className="questionC2">
+                <p>{this.props.choice.texto}</p>
+              </div>
+              <div className="questionC3">
+                <p id="textoSolucion">{this.props.choice.solucion}</p>
+              </div>
+            </div>
+
     );
 
   }

@@ -21,8 +21,6 @@ export default class Audio extends React.Component {
     for(let i = 0; i < 3; i++){
       if(this.props.audio[i] !== undefined){
         sources.push(<source src={this.props.audio[i].texto} type={this.props.audio[i].formato} key={i}/>);
-      } else {
-        console.log("texto source indefinida");
       }
     }
     // console.log("estoy en Video.jsx y la source es "+ this.props.video);

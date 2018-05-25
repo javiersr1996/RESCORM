@@ -1,5 +1,7 @@
 import React from 'react';
 import './../assets/scss/main.scss';
+import Video from './Video.jsx';
+import Audio from './Audio.jsx';
 
 import * as Utils from '../vendors/Utils.js';
 import {objectiveAccomplished, objectiveAccomplishedThunk} from './../reducers/actions';
@@ -36,7 +38,7 @@ export default class MCQuestion extends React.Component {
   }
   onAnswerQuestion(){
     // Calculate score
-    console.log("onAnswerQuestion MCQuestion");
+
     if(GLOBAL_CONFIG.modo === "repaso"){
       this.setState({
         hiddenSolucion:false,
@@ -103,15 +105,52 @@ export default class MCQuestion extends React.Component {
     }
   }
   render(){
+
+    let divquestion = "";
+    let divmc = "";
+      if(GLOBAL_CONFIG.modo === "examen" && (this.props.question.media.type === "no tiene" || this.props.question.media.type === "audio" )){
+          divquestion = "questionExamen";
+          divmc = "MCQuestionChoiceExamenSinMedia";
+
+      } else if(GLOBAL_CONFIG.modo === "examen"){
+          divquestion = "questionExamen";
+          divmc = "MCQuestionChoiceExamen";
+
+      } else if(GLOBAL_CONFIG.modo === "repaso" && this.props.question.media.type === "no tiene"){
+          divquestion = "questionRepaso";
+          divmc = "MCQuestionChoiceRepasoSinMedia";
+
+      }  else {
+        divquestion = "questionRepaso";
+        divmc = "MCQuestionChoiceRepaso";
+    }
+      let media = "";
+
+      if(this.props.question.media.type == "video"){
+          media = (<Video video={this.props.question.media.sources} key_video={this.props.key_media}/>);
+      } else if(this.props.question.media.type == "audio"){
+          media = (<Audio audio={this.props.question.media.sources} key_audio={this.props.key_media}/>);
+      } else {
+          media = "";
+      }
+
+
     let choices = [];
     for(let i = 0; i < this.props.question.respuestas.length; i++){
       choices.push(<MCQuestionChoice key={"MyQuestion_" + "question_choice_" + i} choice={this.props.question.respuestas[i]} hiddenSolucion={this.state.hiddenSolucion} checked={this.state.selected_choices_ids.indexOf(this.props.question.respuestas[i].id) !== -1} handleChange={this.handleChoiceChange.bind(this)} questionAnswered={this.state.answered}/>);
     }
     return (
-      <div className="question">
-        <h1>{this.props.question.texto}</h1>
-        {choices}
-        <QuestionButtons question={this.props.question} repeticiones={this.state.repeticiones} I18n={this.props.I18n} onAnswerQuestion={this.onAnswerQuestion.bind(this)} onResetQuestion={this.onResetQuestion.bind(this)} onResetQuiz={this.props.onResetQuiz} onNextQuestion={this.onNextQuestion.bind(this)} answered={this.state.answered} quizCompleted={this.props.quizCompleted} allow_finish={this.props.isLastQuestion}/>
+       <div>
+        <div className={divquestion}>
+          <h1>{this.props.question.texto}</h1>
+          <div className={divmc}>
+            {choices}
+          </div>
+          {media}
+        </div>
+        <div className="buttons">
+          <QuestionButtons question={this.props.question} repeticiones={this.state.repeticiones} I18n={this.props.I18n} onAnswerQuestion={this.onAnswerQuestion.bind(this)} onResetQuestion={this.onResetQuestion.bind(this)} onResetQuiz={this.props.onResetQuiz} onNextQuestion={this.onNextQuestion.bind(this)} answered={this.state.answered} quizCompleted={this.props.quizCompleted} allow_finish={this.props.isLastQuestion}/>
+        </div>
       </div>
     );
   }

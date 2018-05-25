@@ -16,9 +16,9 @@ export default class Header extends React.Component {
       trackingTexts.push(this.props.I18n.getTrans("i.progress_measure") + ": null");
     }
     if(typeof this.props.tracking.score === "number"){
-      trackingTexts.push(this.props.I18n.getTrans("i.score") + ": " + (this.props.tracking.score * 100).toFixed(1) + "%");
+      trackingTexts.push(this.props.I18n.getTrans("i.score") + ": " + (this.props.tracking.score * 10).toFixed(1));
     } else {
-      trackingTexts.push(this.props.I18n.getTrans("i.score") + ": null");
+      trackingTexts.push(this.props.I18n.getTrans("i.score") + ": 0");
     }
     if(this.props.user_profile){
       if((typeof this.props.user_profile.name === "string")){

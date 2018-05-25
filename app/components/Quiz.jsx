@@ -6,8 +6,6 @@ import {addObjectives, resetObjectives, finishApp} from './../reducers/actions';
 import {GLOBAL_CONFIG} from '../config/config.js';
 import QuizHeader from './QuizHeader.jsx';
 import MCQuestion from './MCQuestion.jsx';
-import Video from './Video.jsx';
-import Audio from './Audio.jsx';
 import TimeDown from './TimeDown.jsx';
 
 export default class Quiz extends React.Component {
@@ -112,7 +110,7 @@ export default class Quiz extends React.Component {
 
     switch (currentQuestion.tipo){
     case "multichoice":
-      currentQuestionRender = (<MCQuestion question={currentQuestion} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished} hiddenSolucion={this.state.hiddenSolucion}/>);
+      currentQuestionRender = (<MCQuestion question={currentQuestion} key_media={this.state.num_key} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished} hiddenSolucion={this.state.hiddenSolucion}/>);
       break;
     default:
       currentQuestionRender = "Question type not supported";
@@ -129,20 +127,11 @@ export default class Quiz extends React.Component {
       // timeDown =(<TimeDown finishTime={this.finishTime.bind(this)} secondsRemaining={secondsRemaining} key={this.state.num_key}/>);
     }
     // video o audio
-    let media = "";
 
-    if(currentQuestion.media.type == "video"){
-      media = (<Video video={currentQuestion.media.sources} key_video={this.state.num_key}/>);
-    } else if(currentQuestion.media.type == "audio"){
-      media = (<Audio audio={currentQuestion.media.sources} key_audio={this.state.num_key}/>);
-    } else {
-      media = "";
-    }
     return (
       <div className="quiz">
         <QuizHeader I18n={this.props.I18n} questions={this.state.questions} currentQuestionIndex={this.state.current_question_index}/>
         {timeDown}
-        {media}
         {currentQuestionRender}
       </div>
     );

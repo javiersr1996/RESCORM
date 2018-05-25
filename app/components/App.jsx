@@ -134,9 +134,6 @@ export class App extends React.Component {
                     jsonpropio[num].media.sources[j].texto = (json.quiz.question[indice].media[0].source[j]._);
                     jsonpropio[num].media.sources[j].formato = (json.quiz.question[indice].media[0].source[j].$.type);
 
-                  } else {
-                    console.log("indefinido");
-
                   }
                 }
               }
@@ -155,7 +152,7 @@ export class App extends React.Component {
             }
           }
           jsonredux = jsonpropio;
-          console.log(jsonredux);
+
           this.props.dispatch(jsonSaved(jsonredux));
         }.bind(this));
       }.bind(this),
@@ -246,11 +243,12 @@ export class App extends React.Component {
         <div>
           <div className="divJumbotron">
               <div className="appPresentacion">
-                <img width="200" heigth="200" align="middle" src="  ../assets/images/quiz_logo.png" className="center" />
+                <img width="200" heigth="200" align="middle" src="
+                assets/images/quiz_logo.png" className="center" />
               </div>
               <h1 id="textoBienvenida">{TextoBienvenida}</h1>
               <div className="appPresentacion">
-                <img width="225" heigth="225" align="middle" src="  ../assets/images/fbm.png" className="center" />
+                <img width="225" heigth="225" align="middle" src="assets/images/fbm.png" className="center" />
               </div>
           </div>
           <div className="modoJuego">
