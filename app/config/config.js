@@ -8,7 +8,7 @@ export let GLOBAL_CONFIG = {
       available_locales:["en", "es"],
     */
     available_locales:["es", "en"],
-     //locale: "es",
+    locale: "es",
     adaptive:true,
     finish_screen:true,
     scorm:{
@@ -16,9 +16,9 @@ export let GLOBAL_CONFIG = {
       score_threshold:0.6,
     },
     // numero de preguntas maximas a mostrar
-    n:20,
+    n:10,
     // modo de juego: examen o repaso
-    modo:"examen",
+    modo:"repaso",
     /*
     ****************************************************************************
     xml: "http://localhost:8080/config/<CUESTIONARIO>.xml",
