@@ -1,5 +1,4 @@
 export let GLOBAL_CONFIG = {
-<<<<<<< HEAD
   dev:{
     debug:true,
     debug_scorm_api:false,
@@ -19,7 +18,7 @@ export let GLOBAL_CONFIG = {
     // numero de preguntas maximas a mostrar
     n:10,
     // modo de juego: examen o repaso
-    modo:"repaso",
+    modo:"examen",
     /*
     ****************************************************************************
     xml: "http://localhost:8080/config/<CUESTIONARIO>.xml",
@@ -28,40 +27,10 @@ export let GLOBAL_CONFIG = {
     ****************************************************************************
     */
     xml:"http://localhost:8080/assets/examen_pasos.xml",
-=======
-    dev: {
-        debug: true,
-        debug_scorm_api: false,
-        debug_scorm_api_window: false,
-        /*
-        para jugar la partida en inglés, cambiar el orden de es/en
-          available_locales:["en", "es"],
-        */
-        available_locales: ["es", "en"],
-        //locale: "es",
-        adaptive: true,
-        finish_screen: true,
-        scorm: {
-            completion_threshold: 0.5,
-            score_threshold: 0.6,
-        },
-        // numero de preguntas maximas a mostrar
-        n: 20,
-        // modo de juego: examen o repaso
-        modo: "repaso",
-        /*
-        ****************************************************************************
-        xml: "http://localhost:8080/config/<CUESTIONARIO>.xml",
-        <CUESTIONARIO> en castellano: examen1, examen2, repaso1, repaso2
-        <CUESTIONARIO> en inglés: examen1_en, examen2_en, repaso1_en, repaso2_en
-        ****************************************************************************
-        */
-        xml: "http://localhost:8080/assets/examen_pasos.xml",
->>>>>>> 0c57687e087c557b532c7dded03c68f716ef62a9
 
         // tiempo para completar la partida --> modo examen
-        secondsRemaining: 600,
-        repeticiones: 10,
+    secondsRemaining: 600,
+    repeticiones: 10,
 
         // textos pantalla inicial
         // castellano modo examen1_en
