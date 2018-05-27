@@ -16,11 +16,11 @@ export default class Video extends React.Component {
   */
   setVolumeExamen(){
     let vid = document.getElementById("myVideoExamen");
-    vid.volume = 0.0;
+    vid.volume = 0.2;
   }
   setVolumeRepaso(){
     let vid = document.getElementById("myVideoRepaso");
-    vid.volume = 0.0;
+    vid.volume = 0.2;
   }
 
   /*
