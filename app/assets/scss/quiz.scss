@@ -20,33 +20,44 @@ div.questionC3  {
   font-size: 13px;
 }
 div.MCQuestionChoiceExamen{
-  height: 400px;
+  height: 390px;
   float:left;
   width:50%;
 }
 div.MCQuestionChoiceExamenSinMedia{
-  height: 400px;
+  height: 390px;
   width:50%;
 }
+div.MCQuestionChoiceExamenAudio{
+  height: 390px;
+  width:50%;
+  float:left;
+}
 div.MCQuestionChoiceRepaso{
-  height: 450px;
+  height: 440px;
   float:left;
   width:50%;
 }
 div.MCQuestionChoiceRepasoSinMedia{
-  height: 450px;
+  height: 440px;
   width:50%;
 }
 
 div.questionRepaso{
   width: 100%;
-  height: 450px;
+  height: 440px;
   margin-left: 0.5%;
+}
+div.questionRepaso h1{
+ padding: 10px;
 }
 div.questionExamen{
   width: 100%;
-  height: 400px;
+  height: 390px;
   margin-left: 0.5%;
+}
+div.questionExamen h1{
+  padding: 10px;
 }
 
 div.repeticiones p{

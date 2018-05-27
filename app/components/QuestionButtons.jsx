@@ -52,7 +52,6 @@ export default class QuestionButtons extends React.Component {
         <div className="questionButtonsWrapper">
           <button className="answerQuestion" onClick={this.props.onAnswerQuestion} disabled={disable_answer}>{this.props.I18n.getTrans("i.answer")}</button>
           <button className="nextQuestion" onClick={this.props.onNextQuestion} disabled={disable_next}>{this.props.allow_finish ? this.props.I18n.getTrans("i.finish_quiz") : this.props.I18n.getTrans("i.next")}</button>
-          {resetQuiz}
         </div>
     );
 

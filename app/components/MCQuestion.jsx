@@ -108,7 +108,11 @@ export default class MCQuestion extends React.Component {
 
     let divquestion = "";
     let divmc = "";
-      if(GLOBAL_CONFIG.modo === "examen" && (this.props.question.media.type === "no tiene" || this.props.question.media.type === "audio" )){
+      if(GLOBAL_CONFIG.modo === "examen" && this.props.question.media.type === "audio"){
+          divquestion = "questionExamen";
+          divmc = "MCQuestionChoiceExamenAudio";
+
+      } else if(GLOBAL_CONFIG.modo === "examen" && this.props.question.media.type === "no tiene"){
           divquestion = "questionExamen";
           divmc = "MCQuestionChoiceExamenSinMedia";
 
