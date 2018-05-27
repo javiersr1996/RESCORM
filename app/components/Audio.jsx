@@ -16,20 +16,20 @@ export default class Audio extends React.Component {
   }
 
   render(){
+      let idpanel = "";
     let sources = [];
 
     for(let i = 0; i < 3; i++){
       if(this.props.audio[i] !== undefined){
         sources.push(<source src={this.props.audio[i].texto} type={this.props.audio[i].formato} key={i}/>);
-      } else {
-        console.log("texto source indefinida");
       }
     }
     // console.log("estoy en Video.jsx y la source es "+ this.props.video);
     let key = this.props.key_audio;
     if(GLOBAL_CONFIG.modo === "repaso"){
+      idpanel = "PanelRepaso";
       return (
-        <div>
+        <div id={idpanel}>
           <div>
             <audio id="myAudio" onLoadStart={this.setVolume.bind(this)} key={key} width="700" height="500" controls>
               {sources}
@@ -37,16 +37,19 @@ export default class Audio extends React.Component {
           </div>
         </div>
       );
+    } else {
+        idpanel = "PanelExamenAudio";
+        return (
+            <div id={idpanel}>
+                <div>
+                    <audio id="myAudio" onLoadStart={this.setVolume.bind(this)} key={key} width="700" height="500" autoPlay>
+                        {sources}
+                    </audio>
+                </div>
+            </div>
+        );
     }
-    return (
-        <div>
-          <div>
-            <audio id="myAudio" onLoadStart={this.setVolume.bind(this)} key={key} width="700" height="500" autoPlay>
-              {sources}
-            </audio>
-          </div>
-        </div>
-    );
+
 
   }
 }

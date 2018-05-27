@@ -80,11 +80,21 @@ div.divJumbotron{
   float: right;
   position: relative;
 }
-#Panel {
+#PanelRepaso {
   width: 50%;
-  height: 100%;
+  height: 500px;
   float: right;
 }
+#PanelExamen {
+  width: 50%;
+  height: 450px;
+  float: right;
+}
+#PanelExamenAudio {
+  width: 50%;
+  height: 450px;
+}
+
 #tiempo {
   font-size: 30px;
   text-align: center;

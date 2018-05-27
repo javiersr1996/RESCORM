@@ -19,35 +19,61 @@ div.questionC3  {
 #textoSolucion  {
   font-size: 13px;
 }
-div.question{
-  width: 50%;
-  height: auto;
+div.MCQuestionChoiceExamen{
+  height: 450px;
+  float:left;
+  width:50%;
+}
+div.MCQuestionChoiceExamenSinMedia{
+  height: 450px;
+  width:50%;
+}
+div.MCQuestionChoiceRepaso{
+  height: 500px;
+  float:left;
+  width:50%;
+}
+div.MCQuestionChoiceRepasoSinMedia{
+  height: 500px;
+  width:50%;
+}
+
+div.questionRepaso{
+  width: 100%;
+  height: 500px;
   margin-left: 0.5%;
 }
-div.question h1 {
+div.questionExamen{
+  width: 100%;
+  height: 450px;
+  margin-left: 0.5%;
+}
+
+div.repeticiones p{
+  color:orange;
+  font-size: 20px;
+  text-align: center;
+}
+div.repeticiones {
+  width: 100%
+}
+div.repeticionessinmedia {
+  width: 100%
+}
+div.repeticionessinmedia p{
+  color: #f5f5f0;
+  font-size: 20px;
+  text-align: center;
+}
+
+div.questionRepaso h1 {
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
   width:100%;
   margin-left: 1%;
 }
-div.repeticiones p{
-  color:orange;
-  margin-right: 25%;
-  font-size: 20px;
-  text-align: center;
-}
-div.repeticiones {
-  width: 50%
-}
-div.repeticionessinmedia{
-  width: 50%;
-  color:orange;
-  font-size: 20px;
-  margin-left: 1%;
-}
-
-div.question div.question_choice {
+div.questionRepaso div.question_choice {
   background:#f5f5f0;
   margin: 10px;
   padding: 2px;
@@ -56,14 +82,14 @@ div.question div.question_choice {
 
 }
 
-div.question div.question_choice div.questionC1{
+div.questionRepaso div.question_choice div.questionC1{
   float: left;
   width: 5%;
   margin-top: 9px;
   margin-left: 10px;
 }
 
-div.question div.question_choice div.questionC2{
+div.questionRepaso div.question_choice div.questionC2{
   display: inline-block;
   width: 90%;
   margin: 12px 8px 12px 8px;
@@ -72,59 +98,135 @@ div.question div.question_choice div.questionC2{
 
 }
 
-div.question div.question_choice input[type="checkbox"] {
+div.questionRepaso div.question_choice input[type="checkbox"] {
   width: 23px;
   height: 23px;
   cursor: pointer;
 
 }
 
-div.question div.question_choice input[type="checkbox"][disabled]{
+div.questionRepaso div.question_choice input[type="checkbox"][disabled]{
   cursor: default;
 
 }
 
-div.question div.question_choice p {
+div.questionRepaso div.question_choice p {
   display: inline-block;
   font-size: 20px;
   margin: 0px 0px 0px 0px;
 
 }
 
-div.question div.question_choice_correct_examen {
+div.questionRepaso div.question_choice_correct_examen {
   color: black;
   border-radius: 25px;
   background:#f5f5f0;
 }
-div.question div.question_choice_correct {
+div.questionRepaso div.question_choice_correct {
   color: black;
   border-radius: 25px;
   background:#7cfC00;
 }
 
-div.question div.question_choice_incorrect {
+div.questionRepaso div.question_choice_incorrect {
   color: black;
   border-radius: 25px;
   background:#ff6347;
 
 }
-div.question div.question_choice_incorrect_examen {
+div.questionRepaso div.question_choice_incorrect_examen {
   color: black;
   border-radius: 25px;
   background:#f5f5f0;
 }
 
 
-div.question div.questionButtonsWrapper {
-  padding: 10px;
-  background: #f5f5f0;
-  position: absolute;
-  bottom:0;
-  width: 75%;
+div.questionExamen h1 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width:100%;
+  margin-left: 1%;
+}
+div.questionExamen div.question_choice {
+  background:#f5f5f0;
+  margin: 10px;
+  padding: 2px;
+  width: 90%;
+  height: 100px;
 
 }
 
-div.question div.questionButtonsWrapper button.answerQuestion, div.question div.questionButtonsWrapper button.resetQuestion, div.question div.questionButtonsWrapper button.resetQuiz, div.question div.questionButtonsWrapper button.nextQuestion {
+div.questionExamen div.question_choice div.questionC1{
+  float: left;
+  width: 5%;
+  margin-top: 9px;
+  margin-left: 10px;
+}
+
+div.questionExamen div.question_choice div.questionC2{
+  display: inline-block;
+  width: 90%;
+  margin: 12px 8px 12px 8px;
+
+
+
+}
+
+div.questionExamen div.question_choice input[type="checkbox"] {
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+
+}
+
+div.questionExamen div.question_choice input[type="checkbox"][disabled]{
+  cursor: default;
+
+}
+
+div.questionExamen div.question_choice p {
+  display: inline-block;
+  font-size: 20px;
+  margin: 0px 0px 0px 0px;
+
+}
+
+div.questionExamen div.question_choice_correct_examen {
+  color: black;
+  border-radius: 25px;
+  background:#f5f5f0;
+}
+div.questionExamen div.question_choice_correct {
+  color: black;
+  border-radius: 25px;
+  background:#7cfC00;
+}
+
+div.questionExamen div.question_choice_incorrect {
+  color: black;
+  border-radius: 25px;
+  background:#ff6347;
+
+}
+div.questionExamen div.question_choice_incorrect_examen {
+  color: black;
+  border-radius: 25px;
+  background:#f5f5f0;
+}
+
+
+div.buttons div.questionButtonsWrapper {
+  padding: 10px;
+  background: #f5f5f0;
+  height: 100px;
+  bottom:0;
+  width: 100%;
+  text-align: center;
+
+}
+
+div.buttons div.questionButtonsWrapper button.answerQuestion, div.buttons div.questionButtonsWrapper button.resetQuestion, div.buttons div.questionButtonsWrapper button.resetQuiz, div.buttons div.questionButtonsWrapper button.nextQuestion {
   padding: 10px;
   margin-left: 10px;
   color: black;
@@ -138,7 +240,7 @@ div.question div.questionButtonsWrapper button.answerQuestion, div.question div.
 
 }
 
-div.question div.questionButtonsWrapper button[disabled]{
+div.buttons div.questionButtonsWrapper button[disabled]{
   color: gray;
   border: 2px solid gray;
   cursor: default;

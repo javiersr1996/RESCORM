@@ -11,14 +11,12 @@ export default class MediaFinalView extends React.Component {
   *****************************************************
   */
   componentDidMount(){
-    if(this.props.tipo == "video"){
-      let video = document.getElementById("myVideo");
+    if(this.props.tipo === "video"){
+      let video = document.getElementById("fsmyVideo");
       video.volume = 0.0;
-    } else if(this.props.tipo == "audio"){
-      let audio = document.getElementById("myAudio");
+    } else if(this.props.tipo === "audio"){
+      let audio = document.getElementById("fsmyAudio");
       audio.volume = 0.0;
-    } else {
-      console.log("NO MEDIA");
     }
 
   }
@@ -30,7 +28,7 @@ export default class MediaFinalView extends React.Component {
   */
 
   fullScreenClick(){
-    let elem = document.getElementById("myVideo");
+    let elem = document.getElementById("fsmyVideo");
     if(elem.requestFullscreen){
       elem.requestFullscreen();
     } else if(elem.mozRequestFullScreen){
@@ -42,27 +40,25 @@ export default class MediaFinalView extends React.Component {
   render(){
     let sources = [];
     if(this.props.sources === "no tiene" || this.props.sources === undefined){
-      console.log("texto source indefinida");
+
     } else {
       for(let i = 0; i < 3; i++){
         if(this.props.sources[i] !== undefined){
           sources.push(<source src={this.props.sources[i].texto} type={this.props.sources[i].formato} key={i}/>);
-        } else {
-          console.log("no elemento source añadido");
         }
       }
     }
 
     let key = this.props.key_fw;
-    if(this.props.tipo == "video")
-      {return (
+    if(this.props.tipo === "video") {
+      return (
       <div className="mfv">
           <video id="fsmyVideo" onClick={this.fullScreenClick.bind(this)} /* onLoadStart={this.setVolumeVideo.bind(this)}*/ key={key} width="500" height="500" controls>
             {sources}
           </video>
       </div>
       );}
-    else if(this.props.tipo == "audio"){
+    else if(this.props.tipo === "audio"){
       return (
         <div className="mfv">
             <audio id="fsmyAudio"  /* onLoadStart={this.setVolumeAudio.bind(this)}*/ key={key} width="500" height="500" controls>

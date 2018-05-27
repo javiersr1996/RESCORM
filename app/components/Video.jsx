@@ -16,11 +16,11 @@ export default class Video extends React.Component {
   */
   setVolumeExamen(){
     let vid = document.getElementById("myVideoExamen");
-    vid.volume = 0.0;
+    vid.volume = 0.2;
   }
   setVolumeRepaso(){
     let vid = document.getElementById("myVideoRepaso");
-    vid.volume = 0.0;
+    vid.volume = 0.2;
   }
 
   /*
@@ -36,7 +36,7 @@ export default class Video extends React.Component {
       elem.mozRequestFullScreen();
 
     } else if(elem.webkitRequestFullscreen){
-      console.log("controls fullscreen CHROME");
+
       elem.webkitRequestFullscreen();
 
     }
@@ -49,7 +49,7 @@ export default class Video extends React.Component {
       elem.mozRequestFullScreen();
 
     } else if(elem.webkitRequestFullscreen){
-      console.log("controls fullscreen CHROME");
+
       elem.webkitRequestFullscreen();
 
     }
@@ -63,14 +63,14 @@ export default class Video extends React.Component {
     for(let i = 0; i < 3; i++){
       if(this.props.video[i] !== undefined){
         sources.push(<source src={this.props.video[i].texto} type={this.props.video[i].formato} key={i}/>);
-      } else {
-        console.log("texto source indefinida");
       }
     }
 
     let video = "";
+    let idpanel = "";
     let key = this.props.key_video;
     if(GLOBAL_CONFIG.modo === "examen"){
+      idpanel = "PanelExamen";
       video = (
           <div key={key} className="divmyVideoExamen">
             <video id="myVideoExamen" className="myVideoExamen" onLoadStart={this.setVolumeExamen.bind(this)} onClick={this.fullScreenClickExamen.bind(this)} key={key} autoPlay>
@@ -79,12 +79,14 @@ export default class Video extends React.Component {
           </div>
     );
     } else {
-      video = (<video id="myVideoRepaso" className="myVideoRepaso" onLoadStart={this.setVolumeRepaso.bind(this)} onClick={this.fullScreenClickRepaso.bind(this)} key={key} controls>
-        {sources}
-      </video>);
+      idpanel = "PanelRepaso";
+      video = (
+          <video id="myVideoRepaso" className="myVideoRepaso" onLoadStart={this.setVolumeRepaso.bind(this)} onClick={this.fullScreenClickRepaso.bind(this)} key={key} controls>
+            {sources}
+          </video>);
     }
     return (
-      <div id="Panel" key={key}>
+      <div id={idpanel} key={key}>
 
           {video}
 

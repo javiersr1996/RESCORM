@@ -13,9 +13,6 @@ export default class FinishScreen extends React.Component {
       questions:questions,
       array_totalpreguntas:[],
       array_textos:[],
-      array_soluciones:[],
-      array_tipos:[],
-      array_sources:[],
     };
   }
   _getFinishScreenTitle(progress_measure, score){
@@ -39,29 +36,24 @@ export default class FinishScreen extends React.Component {
   componentDidMount(){
     let array_totalpreguntas = [];
     let array_textos = [];
-    let array_soluciones = [];
-    let array_tipos = [];
-    let array_sources = [];
     let index = 0;
     for(let i = 0; i < GLOBAL_CONFIG.n; i++){
       index = i + 1;
       array_totalpreguntas.push("Pregunta " + index);
       array_textos.push(this.state.questions[i].texto);
-      // array_soluciones.push("SOLUCION:"+" "+this.state.questions[i].solucion)
-      array_tipos.push(this.state.questions[i].media.type);
-      array_sources.push(this.state.questions[i].media.source);
 
     }
     this.setState({
       array_totalpreguntas:array_totalpreguntas,
       array_textos:array_textos,
-        // array_soluciones:array_soluciones,
-      array_tipos:array_tipos,
-      array_sources:array_sources,
+
+
     });
   }
 
   render(){
+
+
     let divNota = "";
     let nota = this.props.tracking.score * 10;
     if(nota < 5){
@@ -95,32 +87,35 @@ export default class FinishScreen extends React.Component {
     }
 
     let muestras_finales = [];
-    // let l = this.props.questions.length;
     for(let i = 0; i < GLOBAL_CONFIG.n; i++){
-      if(this.state.questions[i].media.sources !== undefined && this.state.questions[i].media.type == "video"){
+        console.log(this.state.questions[i].media.type)
+        console.log(this.state.questions[i].media.sources)
+      if(this.state.questions[i].media.sources !== undefined && this.state.questions[i].media.type === "video"){
         muestras_finales.push(
           <div className="fsPresentacionVideo" key={i}>
              <p className="totalpreguntas"><b>{this.state.array_totalpreguntas[i]}</b></p>
              <p className="respuestas">{this.state.array_textos[i]}</p>
              <SolucionesPregunta pregunta={this.state.questions[i]} key_pregunta={i}/>
              <div className="mfv">
-               <MediaFinalView tipo={this.state.array_tipos[i]} sources={this.state.questions[i].media.sources} key_fw={i}/>
+               <MediaFinalView tipo={this.state.questions[i].media.type} sources={this.state.questions[i].media.sources} key_fw={i}/>
              </div>
              <h3 />
           </div>
          );
-      } else if(this.state.questions[i].media.sources !== undefined && this.state.questions[i].media.type == "audio"){
+
+      } else if(this.state.questions[i].media.sources !== undefined && this.state.questions[i].media.type === "audio"){
         muestras_finales.push(
           <div className="fsPresentacionAudio" key={i}>
              <p className="totalpreguntas"><b>{this.state.array_totalpreguntas[i]}</b></p>
              <p className="respuestas">{this.state.array_textos[i]}</p>
              <SolucionesPregunta pregunta={this.state.questions[i]} key_pregunta={i}/>
              <div className="mfv">
-               <MediaFinalView tipo={this.state.array_tipos[i]} sources={this.state.questions[i].media.sources} key_fw={i}/>
+               <MediaFinalView tipo={this.state.questions[i].media.type} sources={this.state.questions[i].media.sources} key_fw={i}/>
              </div>
              <h3 />
           </div>
          );
+
       } else {
         muestras_finales.push(
           <div className="fsPresentacion" key={i}>
