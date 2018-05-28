@@ -208,7 +208,8 @@ export class App extends React.Component {
       texto1 = I18n.getTrans("i.modeExam");
       texto2 = I18n.getTrans("i.questionsExam");
       texto3 = I18n.getTrans("i.videoExam");
-      texto4 = I18n.getTrans("i.repetitionsExam");
+      texto4 = I18n.getTrans("i.repetitionsExam") + GLOBAL_CONFIG.repeticiones;
+      console.log(GLOBAL_CONFIG.repeticiones);
       imgModo = (<img width="250" heigth="250" align="middle" src="assets/images/examen.png" className="center" />);
     } else {
       texto1 = I18n.getTrans("i.modeStudying");

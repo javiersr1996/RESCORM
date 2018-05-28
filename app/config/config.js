@@ -5,7 +5,7 @@ export let GLOBAL_CONFIG = {
     debug_scorm_api_window:false,
     available_locales:["es", "en"],
     //locale fuerza el idioma
-    locale: "en",
+    locale: "es",
     adaptive:true,
     finish_screen:true,
     scorm:{
@@ -15,7 +15,7 @@ export let GLOBAL_CONFIG = {
     // numero de preguntas maximas a mostrar
     n:1,
     // modo de juego: examen o repaso
-    modo:"repaso",
+    modo:"examen",
     feedback:true,
     /*
     ****************************************************************************
