@@ -203,6 +203,7 @@ export class App extends React.Component {
     let texto3 = "";
     let texto4 = "";
     let imgModo = "";
+    let comenzar = I18n.getTrans("i.start");
     if(GLOBAL_CONFIG.modo === "examen"){
       texto1 = I18n.getTrans("i.modeExam");
       texto2 = I18n.getTrans("i.questionsExam");
@@ -265,7 +266,7 @@ export class App extends React.Component {
                   {imgModo}
               <div className="appPresentacion">
                 <p />
-                <button id="buttonApp" onClick={this.onPresentacion.bind(this)} >COMENZAR</button>
+                <button id="buttonApp" onClick={this.onPresentacion.bind(this)} >{comenzar}</button>
               </div>
           </div>
         </div>

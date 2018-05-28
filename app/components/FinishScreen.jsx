@@ -52,35 +52,39 @@ export default class FinishScreen extends React.Component {
   }
 
   render(){
-
+    let suspenso = this.props.I18n.getTrans("i.failed");
+    let aprobado = this.props.I18n.getTrans("i.approved");
+    let bien = this.props.I18n.getTrans("i.good");
+    let notable = this.props.I18n.getTrans("i.greatjob");
+    let sobresaliente = this.props.I18n.getTrans("i.merit");
 
     let divNota = "";
     let nota = this.props.tracking.score * 10;
     if(nota < 5){
       divNota = (
         <div>
-          <h1>SUSPENSO</h1>
+          <h1>{suspenso}</h1>
           <img width="400" heigth="400" align="middle" src="assets/images/suspenso.png" className="center" />
         </div>
       );
     } else if(nota >= 5 && nota < 7){
       divNota = (
         <div>
-          <h1>APROBADO</h1>
+          <h1>{aprobado}</h1>
           <img width="400" heigth="400" align="middle" src="assets/images/aprobado.png" className="center" />
         </div>
       );
     } else if(nota >= 7 && nota < 9){
       divNota = (
         <div>
-          <h1>NOTABLE</h1>
+          <h1>{notable}</h1>
           <img width="400" heigth="400" align="middle" src="assets/images/notable.png" className="center" />
         </div>
       );
     } else if(nota >= 9){
       divNota = (
         <div>
-          <h1>SOBRESALIENTE</h1>
+          <h1>{sobresaliente}</h1>
           <img width="400" heigth="400" align="middle" src="assets/images/sobresaliente.png" className="center" />
         </div>
       );

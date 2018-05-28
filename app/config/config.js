@@ -3,12 +3,9 @@ export let GLOBAL_CONFIG = {
     debug:true,
     debug_scorm_api:false,
     debug_scorm_api_window:false,
-    /*
-    para jugar la partida en inglés, cambiar el orden de es/en
-      available_locales:["en", "es"],
-    */
     available_locales:["es", "en"],
-    locale: "es",
+    //locale fuerza el idioma
+    locale: "en",
     adaptive:true,
     finish_screen:true,
     scorm:{
@@ -22,7 +19,7 @@ export let GLOBAL_CONFIG = {
     feedback:true,
     /*
     ****************************************************************************
-    xml: "http://localhost:8080/config/<CUESTIONARIO>.xml",
+    xml: "assets/<CUESTIONARIO>.xml",
     <CUESTIONARIO> en castellano: examen1, examen2, repaso1, repaso2
     <CUESTIONARIO> en inglés: examen1_en, examen2_en, repaso1_en, repaso2_en
     ****************************************************************************
