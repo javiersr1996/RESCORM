@@ -39,7 +39,7 @@ export default class FinishScreen extends React.Component {
     let index = 0;
     for(let i = 0; i < GLOBAL_CONFIG.n; i++){
       index = i + 1;
-      array_totalpreguntas.push("Pregunta " + index);
+      array_totalpreguntas.push(this.props.I18n.getTrans("i.questionText") + index);
       array_textos.push(this.state.questions[i].texto);
 
     }
@@ -57,6 +57,8 @@ export default class FinishScreen extends React.Component {
     let bien = this.props.I18n.getTrans("i.good");
     let notable = this.props.I18n.getTrans("i.greatjob");
     let sobresaliente = this.props.I18n.getTrans("i.merit");
+
+    let examenSolucion = this.props.I18n.getTrans("i.examSolution");
 
     let divNota = "";
     let nota = this.props.tracking.score * 10;
@@ -99,7 +101,7 @@ export default class FinishScreen extends React.Component {
           <div className="fsPresentacionVideo" key={i}>
              <p className="totalpreguntas"><b>{this.state.array_totalpreguntas[i]}</b></p>
              <p className="respuestas">{this.state.array_textos[i]}</p>
-             <SolucionesPregunta pregunta={this.state.questions[i]} key_pregunta={i}/>
+             <SolucionesPregunta  I18n={this.props.I18n} pregunta={this.state.questions[i]} key_pregunta={i}/>
              <div className="mfv">
                <MediaFinalView tipo={this.state.questions[i].media.type} sources={this.state.questions[i].media.sources} key_fw={i}/>
              </div>
@@ -142,7 +144,7 @@ export default class FinishScreen extends React.Component {
           </div>
           <h1 id="finish_title">{finishTitleText}</h1>
           {divNota}
-          <h1 id="solucionTexto">Solución del examen</h1>
+          <h1 id="solucionTexto">{examenSolucion}</h1>
           <p />
           {muestras_finales}
         </div>

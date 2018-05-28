@@ -30,6 +30,11 @@ export let LOCALES = {
     "i.greatjob": "great job!",
     "i.merit": "excelent!",
     "i.start": "START!",
+    "i.time": "Time",
+    "i.questionText": "Question ",
+    "i.solution": "Solution",
+    "i.solutions": "Solutions",
+    "i.examSolution": "Solution of the exam",
   },
   es:{
     "i.answer":"Responder",
@@ -63,5 +68,10 @@ export let LOCALES = {
     "i.merit": "¡sobresaliente!",
     "i.failed": "¡oh no, has suspendido!",
     "i.start": "COMENZAR",
+    "i.time": "Tiempo",
+    "i.questionText": "Pregunta ",
+    "i.solution": "Solución",
+    "i.solutions": "Soluciones",
+    "i.examSolution": "Solución del examen",
   },
 };

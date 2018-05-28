@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Is the referee right?</text>
+</name>
+<questiontext>
+<text>Is the referee right?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos17.mp4</source>
+</media>
+<answer fraction="0">
+<text>Yes</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>He's not right. No travelling in the finalization</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answers (one or more)</text>
+</name>
+<questiontext>
+<text>Choose the correct answers (one or more)</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Finalization without zero step</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Finalization with zero step</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="100">
+<text>If zero step exists, is with the right foot</text>
+<feedback><text>Zero step is with the right foot</text></feedback>
+</answer>
+<answer fraction="0">
+<text>If zero step exists, is with the left foot</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos1.mp4</source>
+</media>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answers (one or more)</text>
+</name>
+<questiontext>
+<text>Choose the correct answers (one or more)</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos2.mp4</source>
+</media>
+<answer fraction="0">
+<text>No travelling</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Travelling</text>
+<feedback><text>The player makes travelling clearly</text></feedback>
+</answer>
+<answer fraction="0">
+<text>The player makes a violation, which generates an advantage for him</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>The player makes a violation, but it doesn't generate an advantage for him</text>
+<feedback><text>Travelling doesn't generate advantage/disadvantage, so is correct not penalise</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Is the referee right?</text>
+</name>
+<questiontext>
+<text>Is the referee right?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos18.mp4</source>
+</media>
+<answer fraction="0">
+<text>Yes</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>The referee is not right: the player raises the pivot foot before leaking the ball</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer­</text>
+</name>
+<questiontext>
+<text>Choose the incorrect answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos3.mp4</source>
+</media>
+<answer fraction="100">
+<text>Travelling when receiving the ball</text>
+<feedback><text>This is incorrect due to the zero step</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No travelling when receiving the ball</text>
+<feedback><text>This answer is not incorrect because there's no travelling</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>­In this play, the order of events is...</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos4.mp4</source>
+</media>
+<answer fraction="100">
+<text>First travelling when getting the offensive rebound, then player receives personal foul</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="0">
+<text>First player receives personal foul before making travelling</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answers (one or more)</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos5.mp4</source>
+</media>
+<answer fraction="0">
+<text>Zero step with the left foot</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Zero step with the right foot</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answers (one or more)</text>
+</name>
+<questiontext>
+<text>Choose the correct answers (one or more)</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos6.mp4</source>
+</media>
+<answer fraction="0">
+<text>Illegal movement when receiving the ball, then correct finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Illegal movement when receiving the ball and correct finalization</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Legal movement when receiving the ball and illegal finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Illegal movement when receiving the ball and illegal finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer­</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos19.mp4</source>
+</media>
+<answer fraction="0">
+<text>Travelling when receiving the ball</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Two consecutive steps with the same foot. Violation</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Travelling when getting the ball in the air</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Three steps in the finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Is the referee right?</text>
+</name>
+<questiontext>
+<text>Is the referee right?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos13.mp4</source>
+</media>
+<answer fraction="0">
+<text>Yes</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Personal foul before travelling</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the incorrect answer</text>
+</name>
+<questiontext>
+<text>Choose the incorrect answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos14.mp4</source>
+</media>
+<answer fraction="100">
+<text>Yellow player receives personal foul, so he slips</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Yellow player slips making travelling</text>
+<feedback><text>Incorrect because is the correct one</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the incorrect answers (one or more)</text>
+</name>
+<questiontext>
+<text>Choose the incorrect answers (one or more)</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos7.mp4</source>
+</media>
+<answer fraction="100">
+<text>Finalization without zero step</text>
+<feedback><text>Correct, there's zero step</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Zero step finalization with the left foot</text>
+<feedback><text>The zero step is the right foot</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Zero step finalization with the right foot</text>
+<feedback><text>This answer is not incorrect</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the incorrect answers (one or more)</text>
+</name>
+<questiontext>
+<text>Choose the incorrect answers (one or more)</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos8.mp4</source>
+</media>
+<answer fraction="0">
+<text>Two consecutive steps with the right foot. Violation</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Two consecutive steps with the left foot. Violation</text>
+<feedback><text>The steps are with the right foot</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Legal finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Double dribble</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the incorrect answers (one or more)</text>
+</name>
+<questiontext>
+<text>Choose the incorrect answers (one or more)</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos9.mp4</source>
+</media>
+<answer fraction="0">
+<text>Zero step in the finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Two consecutive steps with the left foot. Violation</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Travelling due to four steps</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Two consecutive steps with the right foot. Violation</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the incorrect answers (one or more)</text>
+</name>
+<questiontext>
+<text>Choose the incorrect answers (one or more)</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos10.mp4</source>
+</media>
+<answer fraction="100">
+<text>Travelling when receiving the ball. An advantage is generated</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Correct 2+1</text>
+<feedback><text>Correct. Player receives personal foul with the ball in his hands</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Travelling that doesn't generate an advantage</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Incorrect 2+1</text>
+<feedback><text>False</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answers (one or more)</text>
+</name>
+<questiontext>
+<text>Choose the correct answers (one or more)</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos11.mp4</source>
+</media>
+<answer fraction="0">
+<text>Zero step when receiving the ball and zero step in the finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Travelling when receiving the ball and correct zero step finalization</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Zero step when receiving the ball but no during the finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Travelling due to two consecutive steps with the same foot</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Is the referee right?</text>
+</name>
+<questiontext>
+<text>Is the referee right?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos12.mp4</source>
+</media>
+<answer fraction="100">
+<text>Yes</text>
+<feedback><text>The center makes travelling after receiving the ball</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answers (one or more)</text>
+</name>
+<questiontext>
+<text>Choose the correct answers (one or more)</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos15.mp4</source>
+</media>
+<answer fraction="0">
+<text>Illegal movement when receiving the ball, then correct finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Illegal movement when receiving the ball and correct finalization</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Legal movement when receiving the ball and illegal finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Illegal movement when receiving the ball and illegal finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Is there something illegal?</text>
+</name>
+<questiontext>
+<text>¿Is there something illegal?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos16.mp4</source>
+</media>
+<answer fraction="100">
+<text>Yes</text>
+<feedback><text>Travelling when receiving the ball</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer­</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos20.mp4</source>
+</media>
+<answer fraction="0">
+<text>Travelling when receiving the ball</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Two consecutive steps with the same foot. Violation</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Travelling when getting the ball in the air</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Illegal play. Three steps in the finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+</quiz>

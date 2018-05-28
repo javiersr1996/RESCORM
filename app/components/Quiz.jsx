@@ -121,7 +121,7 @@ export default class Quiz extends React.Component {
     let timeDown = "";
     if(GLOBAL_CONFIG.modo === "examen"){
       secondsRemaining = GLOBAL_CONFIG.secondsRemaining;
-      timeDown = (<TimeDown finishTime={this.finishTime.bind(this)} secondsRemaining={secondsRemaining}/>);
+      timeDown = (<TimeDown I18n={this.props.I18n} finishTime={this.finishTime.bind(this)} secondsRemaining={secondsRemaining}/>);
     } else if(GLOBAL_CONFIG.modo === "repaso"){
       secondsRemaining = 0;
       // timeDown =(<TimeDown finishTime={this.finishTime.bind(this)} secondsRemaining={secondsRemaining} key={this.state.num_key}/>);

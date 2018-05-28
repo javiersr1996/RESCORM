@@ -28,9 +28,9 @@ export default class SolucionesPregunta extends React.Component {
 
     }
     if(nSoluciones === 1){
-      textoInicial = "SOLUCIÓN";
+      textoInicial = this.props.I18n.getTrans("i.solution");
     } else {
-      textoInicial = "SOLUCIONES";
+      textoInicial = this.props.I18n.getTrans("i.solutions");
     }
     return (
       <div key={key}>

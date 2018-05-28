@@ -4,8 +4,8 @@ export let GLOBAL_CONFIG = {
     debug_scorm_api:false,
     debug_scorm_api_window:false,
     available_locales:["es", "en"],
-    //locale fuerza el idioma
-    locale: "es",
+    //locale fuerza el idioma a emplear
+    locale: "en",
     adaptive:true,
     finish_screen:true,
     scorm:{
@@ -13,9 +13,9 @@ export let GLOBAL_CONFIG = {
       score_threshold:0.6,
     },
     // numero de preguntas maximas a mostrar
-    n:2,
+    n:5,
     // modo de juego: examen o repaso
-    modo:"examen",
+    modo:"repaso",
     /*
     ****************************************************************************
     xml: "assets/<CUESTIONARIO>.xml",
@@ -23,7 +23,7 @@ export let GLOBAL_CONFIG = {
     <CUESTIONARIO> en inglés: examen1_en, examen2_en, repaso1_en, repaso2_en
     ****************************************************************************
     */
-    xml:"assets/examen_pasos.xml",
+    xml:"assets/examen_pasos_en.xml",
 
         // tiempo para completar la partida --> modo examen
     secondsRemaining: 600,
