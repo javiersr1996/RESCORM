@@ -129,11 +129,11 @@ export default class FinishScreen extends React.Component {
     }
 
     let finishTitleText = this._getFinishScreenTitle(this.props.tracking.progress_measure, this.props.tracking.score);
-    if(GLOBAL_CONFIG.modo === "examen"){
+    if(GLOBAL_CONFIG.modo === "examen" && GLOBAL_CONFIG.feedback === true){
       return (
         <div id="AppTodo" className="finish_screen">
           <h2 />
-          <div id="appPresentacion">
+          <div id="appPresentacionFinal">
             <img align="middle" src="assets/images/quiz_logo.png" className="center" />
           </div>
           <h1 id="finish_title">{finishTitleText}</h1>
@@ -143,16 +143,19 @@ export default class FinishScreen extends React.Component {
           {muestras_finales}
         </div>
       );
-    }
-    return (
-        <div id="AppTodo" className="finish_screen">
-          <div id="appPresentacion">
-            <img align="middle" src="assets/images/quiz_logo.png" className="center" />
+    } else {
+      return (
+          <div id="AppTodo" className="finish_screen">
+            <h2 />
+            <div id="appPresentacionFinal">
+              <img align="middle" src="assets/images/quiz_logo.png" className="center" />
+            </div>
+            <h1 id="finish_title">{finishTitleText}</h1>
+            {divNota}
           </div>
-          <h1 id="finish_title">{finishTitleText}</h1>
-          {divNota}
-        </div>
-    );
+      );
+    }
+
 
   }
 }

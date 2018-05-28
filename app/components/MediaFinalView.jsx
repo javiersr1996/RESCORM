@@ -1,5 +1,6 @@
 import React from 'react';
 import './../assets/scss/finish_screen.scss';
+import {GLOBAL_CONFIG} from '../config/config.js';
 
 export default class MediaFinalView extends React.Component {
   constructor(props){

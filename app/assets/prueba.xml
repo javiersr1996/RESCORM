@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>En la jugada...</text>
+</name>
+<questiontext>
+<text>En la jugada...</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/video4.mp4</source>
+</media>
+<answer fraction="100">
+<text>No se produce violación de campo atrás al no tener control el jugador</text>
+</answer>
+<answer fraction="0">
+<text>Árbitro sanciona correctamente violación de campo atrás al controlar el jugador el balón en campo de ataque</text>
+</answer>
+</question>
+</quiz>

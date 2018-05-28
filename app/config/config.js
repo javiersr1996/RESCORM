@@ -16,9 +16,10 @@ export let GLOBAL_CONFIG = {
       score_threshold:0.6,
     },
     // numero de preguntas maximas a mostrar
-    n:10,
+    n:1,
     // modo de juego: examen o repaso
-    modo:"examen",
+    modo:"repaso",
+    feedback:true,
     /*
     ****************************************************************************
     xml: "http://localhost:8080/config/<CUESTIONARIO>.xml",
@@ -26,7 +27,7 @@ export let GLOBAL_CONFIG = {
     <CUESTIONARIO> en inglés: examen1_en, examen2_en, repaso1_en, repaso2_en
     ****************************************************************************
     */
-    xml:"http://localhost:8080/assets/examen1.xml",
+    xml:"assets/prueba.xml",
 
         // tiempo para completar la partida --> modo examen
     secondsRemaining: 600,

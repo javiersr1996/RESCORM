@@ -142,7 +142,12 @@ export class App extends React.Component {
                 jsonpropio[num].respuestas[j] = {};
                 jsonpropio[num].respuestas[j].id = j;
                 jsonpropio[num].respuestas[j].texto = (json.quiz.question[indice].answer[j].text[0]);
-                jsonpropio[num].respuestas[j].solucion = (json.quiz.question[indice].answer[j].feedback[0].text[0]);
+                if(json.quiz.question[indice].answer[j].feedback !== undefined){
+                  jsonpropio[num].respuestas[j].solucion = (json.quiz.question[indice].answer[j].feedback[0].text[0]);
+                } else {
+                  jsonpropio[num].respuestas[j].solucion = "";
+                }
+
                 jsonpropio[num].respuestas[j].valor = (json.quiz.question[indice].answer[j].$.fraction);
                 if(j == json.quiz.question[indice].answer.length - 1){
                   jsonpropio[num].respuestas.longitud = j;
