@@ -133,7 +133,7 @@ export default class FinishScreen extends React.Component {
     }
 
     let finishTitleText = this._getFinishScreenTitle(this.props.tracking.progress_measure, this.props.tracking.score);
-    if(GLOBAL_CONFIG.modo === "examen" && GLOBAL_CONFIG.feedback === true){
+    if(GLOBAL_CONFIG.modo === "examen"){
       return (
         <div id="AppTodo" className="finish_screen">
           <h2 />

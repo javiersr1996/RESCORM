@@ -16,7 +16,6 @@ export let GLOBAL_CONFIG = {
     n:1,
     // modo de juego: examen o repaso
     modo:"examen",
-    feedback:true,
     /*
     ****************************************************************************
     xml: "assets/<CUESTIONARIO>.xml",
