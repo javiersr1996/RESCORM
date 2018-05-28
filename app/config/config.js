@@ -13,7 +13,7 @@ export let GLOBAL_CONFIG = {
       score_threshold:0.6,
     },
     // numero de preguntas maximas a mostrar
-    n:1,
+    n:2,
     // modo de juego: examen o repaso
     modo:"examen",
     /*
@@ -23,7 +23,7 @@ export let GLOBAL_CONFIG = {
     <CUESTIONARIO> en inglés: examen1_en, examen2_en, repaso1_en, repaso2_en
     ****************************************************************************
     */
-    xml:"assets/prueba.xml",
+    xml:"assets/examen_pasos.xml",
 
         // tiempo para completar la partida --> modo examen
     secondsRemaining: 600,

@@ -16,8 +16,12 @@ export default class SolucionesPregunta extends React.Component {
     for(let i = 0; i < respuestas.length; i++){
       if(respuestas[i].valor === "100" && respuestas[i].solucion !== ""){
         nSoluciones++;
-        solucion.push(<div key={i}>{respuestas[i].solucion}</div>);
-      } else if(respuestas[i].valor === "100" && respuestas[i].feedback === undefined){
+        solucion.push(
+          <div key={i}>
+            <div><b>{respuestas[i].texto}</b></div>
+            <div>{respuestas[i].solucion}</div>
+          </div>);
+      } else if(respuestas[i].valor === "100" && respuestas[i].solucion === ""){
         nSoluciones++;
         solucion.push(<div key={i}>{respuestas[i].texto}</div>);
       }
