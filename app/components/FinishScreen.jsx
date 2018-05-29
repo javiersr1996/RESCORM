@@ -47,7 +47,6 @@ export default class FinishScreen extends React.Component {
       array_totalpreguntas:array_totalpreguntas,
       array_textos:array_textos,
 
-
     });
   }
 
@@ -94,14 +93,14 @@ export default class FinishScreen extends React.Component {
 
     let muestras_finales = [];
     for(let i = 0; i < GLOBAL_CONFIG.n; i++){
-        console.log(this.state.questions[i].media.type)
-        console.log(this.state.questions[i].media.sources)
+      console.log(this.state.questions[i].media.type);
+      console.log(this.state.questions[i].media.sources);
       if(this.state.questions[i].media.sources !== undefined && this.state.questions[i].media.type === "video"){
         muestras_finales.push(
           <div className="fsPresentacionVideo" key={i}>
              <p className="totalpreguntas"><b>{this.state.array_totalpreguntas[i]}</b></p>
              <p className="respuestas">{this.state.array_textos[i]}</p>
-             <SolucionesPregunta  I18n={this.props.I18n} pregunta={this.state.questions[i]} key_pregunta={i}/>
+             <SolucionesPregunta I18n={this.props.I18n} pregunta={this.state.questions[i]} key_pregunta={i}/>
              <div className="mfv">
                <MediaFinalView tipo={this.state.questions[i].media.type} sources={this.state.questions[i].media.sources} key_fw={i}/>
              </div>
@@ -149,8 +148,8 @@ export default class FinishScreen extends React.Component {
           {muestras_finales}
         </div>
       );
-    } else {
-      return (
+    }
+    return (
           <div id="AppTodo" className="finish_screen">
             <h2 />
             <div id="appPresentacionFinal">
@@ -159,9 +158,7 @@ export default class FinishScreen extends React.Component {
             <h1 id="finish_title">{finishTitleText}</h1>
             {divNota}
           </div>
-      );
-    }
-
+    );
 
   }
 }

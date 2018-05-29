@@ -47,7 +47,7 @@ export default class TimeDown extends React.Component {
     }
    // tiempo en formato minutos:segundos
     let tiempo = Math.floor(this.state.secondsRemaining);
-    if(tiempo == -1){
+    if(tiempo === -1){
       tiempo = 0;
     }
     let tiempoTexto = this.props.I18n.getTrans("i.time");
@@ -64,8 +64,8 @@ export default class TimeDown extends React.Component {
            </div>
          </div>
       );
-    } 
-
+    }
+    return;
 
   }
 }

@@ -16,7 +16,7 @@ export default class Audio extends React.Component {
   }
 
   render(){
-      let idpanel = "";
+    let idpanel = "";
     let sources = [];
 
     for(let i = 0; i < 3; i++){
@@ -37,9 +37,9 @@ export default class Audio extends React.Component {
           </div>
         </div>
       );
-    } else {
-        idpanel = "PanelExamenAudio";
-        return (
+    }
+    idpanel = "PanelExamenAudio";
+    return (
             <div id={idpanel}>
                 <div>
                     <audio id="myAudio" onLoadStart={this.setVolume.bind(this)} key={key} width="700" height="500" autoPlay>
@@ -47,9 +47,7 @@ export default class Audio extends React.Component {
                     </audio>
                 </div>
             </div>
-        );
-    }
-
+    );
 
   }
 }

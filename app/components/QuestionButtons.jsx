@@ -6,7 +6,7 @@ export default class QuestionButtons extends React.Component {
     super(props);
   }
   render(){
-    console.log(GLOBAL_CONFIG.repeticiones)
+    console.log(GLOBAL_CONFIG.repeticiones);
 
     let disable_answer = (this.props.answered || this.props.quizCompleted);
     let disable_resetQuestion = (this.props.answered || this.props.quizCompleted || this.props.repeticiones === GLOBAL_CONFIG.repeticiones);
@@ -23,7 +23,7 @@ export default class QuestionButtons extends React.Component {
       repeticionesTextoButton = "";
     }
     if(GLOBAL_CONFIG.modo === "examen"){
-      if(this.props.question.media.type == "audio" || this.props.question.media.type == "video"){
+      if(this.props.question.media.type === "audio" || this.props.question.media.type === "video"){
         return (
           <div className="questionButtonsWrapper">
             <div className="repeticiones"><b>{repeticionesTextoButton}</b></div>

@@ -50,8 +50,7 @@ export class App extends React.Component {
           let customjson = {};
           customjson.quiz_xml = {};
           customjson.quiz_xml = (json.quiz);
-          let i = 0;
-          let j = 0;
+
             // caso de xml con mas de una pregunta y de diferentes tipos
             // sacar el numero de preguntas que tengo y la longitud de cada una de ellas
           let questions_size = [];
@@ -59,11 +58,11 @@ export class App extends React.Component {
           let question_size = 0;
           for(let i = 0; i < json.quiz.question.length; i++){
             let tipo_pregunta = (json.quiz.question[i].$.type);
-            if(tipo_pregunta == "category" && number_question == 0){
+            if(tipo_pregunta === "category" && number_question === 0){
               number_question++;
-            } else if(tipo_pregunta != "category" && number_question != 0){
+            } else if(tipo_pregunta !== "category" && number_question !== 0){
               question_size++;
-            } else if(tipo_pregunta == "category" && number_question != 0){
+            } else if(tipo_pregunta === "category" && number_question !== 0){
               questions_size.push(question_size);
               question_size = 0;
               number_question++;
@@ -72,18 +71,18 @@ export class App extends React.Component {
             // mete en el array el tamaño de la última pregunta recorrida
           questions_size.push(question_size);
             // se obtiene el indice de las preguntas
-          function indexQuestion(number_question){
+          function indexQuestion(number__question){
             let index = 0;
             let longitudes_anteriores_questions = 0;
             let long_cat = 0;
-            if(number_question == 1){
+            if(number__question === 1){
               index = 1;
             }
-            if(number_question !== 1 && number_question <= questions_size.length){
-              for(let i = 0; i < number_question - 1; i++){
+            if(number__question !== 1 && number__question <= questions_size.length){
+              for(let i = 0; i < number__question - 1; i++){
                 longitudes_anteriores_questions += questions_size[i];
               }
-              long_cat = number_question;
+              long_cat = number__question;
               index = long_cat + longitudes_anteriores_questions;
             }
             return index;
@@ -93,7 +92,7 @@ export class App extends React.Component {
             let indice = indexQuestion(i);
             let tipo_pregunta = (json.quiz.question[indice].$.type);
               // el tipo de pregunta es truefalse
-            if(tipo_pregunta == "truefalse"){
+            if(tipo_pregunta === "truefalse"){
               jsonpropio[num] = {};
               jsonpropio[num].tipo = (json.quiz.question[indice].$.type);
               jsonpropio[num].texto = (json.quiz.question[indice].name[0].text[0]);
@@ -107,14 +106,14 @@ export class App extends React.Component {
                 jsonpropio[num].respuestas[j].texto = (json.quiz.question[t].questiontext[0].text[0]);
                 jsonpropio[num].respuestas[j].id = k;
                 jsonpropio[num].respuestas[j].valor = (json.quiz.question[t].answer[0].$.fraction);
-                if(j == questions_size[i - 1] - 1){
+                if(j === questions_size[i - 1] - 1){
                   jsonpropio[num].respuestas.longitud = j;
                 }
               }
               num++;
             }
               // el tipo de pregunta es multichoice
-            else if(tipo_pregunta == "multichoice"){
+            else if(tipo_pregunta === "multichoice"){
               jsonpropio[num] = {};
               jsonpropio[num].tipo = (json.quiz.question[indice].$.type);
               jsonpropio[num].texto = (json.quiz.question[indice].questiontext[0].text[0]);
@@ -149,7 +148,7 @@ export class App extends React.Component {
                 }
 
                 jsonpropio[num].respuestas[j].valor = (json.quiz.question[indice].answer[j].$.fraction);
-                if(j == json.quiz.question[indice].answer.length - 1){
+                if(j === json.quiz.question[indice].answer.length - 1){
                   jsonpropio[num].respuestas.longitud = j;
                 }
               }
@@ -195,7 +194,7 @@ export class App extends React.Component {
   }
   render(){
 
-    console.log(this.props.jsoninterno)
+    console.log(this.props.jsoninterno);
     let TextoBienvenida = "Referee Basketball Test";
 
     let texto1 = "";
@@ -274,6 +273,7 @@ export class App extends React.Component {
       );
 
     }
+    return;
   }
 }
 

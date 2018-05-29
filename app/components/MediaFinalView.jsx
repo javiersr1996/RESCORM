@@ -51,7 +51,7 @@ export default class MediaFinalView extends React.Component {
     }
 
     let key = this.props.key_fw;
-    if(this.props.tipo === "video") {
+    if(this.props.tipo === "video"){
       return (
       <div className="mfv">
           <video id="fsmyVideo" onClick={this.fullScreenClick.bind(this)} /* onLoadStart={this.setVolumeVideo.bind(this)}*/ key={key} width="500" height="500" controls>

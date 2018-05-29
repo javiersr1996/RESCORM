@@ -57,7 +57,7 @@ export default class MCQuestion extends React.Component {
     } else {
       for(let i = 0; i < nChoices; i++){
         let choice = this.props.question.respuestas[i];
-        if(choice.valor == "100"){
+        if(choice.valor === "100"){
           totalCorrectAnswers++;
         }
         if(this.state.selected_choices_ids.indexOf(choice.id) !== -1){
@@ -108,36 +108,35 @@ export default class MCQuestion extends React.Component {
 
     let divquestion = "";
     let divmc = "";
-      if(GLOBAL_CONFIG.modo === "examen" && this.props.question.media.type === "audio"){
-          divquestion = "questionExamen";
-          divmc = "MCQuestionChoiceExamenAudio";
+    if(GLOBAL_CONFIG.modo === "examen" && this.props.question.media.type === "audio"){
+      divquestion = "questionExamen";
+      divmc = "MCQuestionChoiceExamenAudio";
 
-      } else if(GLOBAL_CONFIG.modo === "examen" && this.props.question.media.type === "no tiene"){
-          divquestion = "questionExamen";
-          divmc = "MCQuestionChoiceExamenSinMedia";
+    } else if(GLOBAL_CONFIG.modo === "examen" && this.props.question.media.type === "no tiene"){
+      divquestion = "questionExamen";
+      divmc = "MCQuestionChoiceExamenSinMedia";
 
-      } else if(GLOBAL_CONFIG.modo === "examen"){
-          divquestion = "questionExamen";
-          divmc = "MCQuestionChoiceExamen";
+    } else if(GLOBAL_CONFIG.modo === "examen"){
+      divquestion = "questionExamen";
+      divmc = "MCQuestionChoiceExamen";
 
-      } else if(GLOBAL_CONFIG.modo === "repaso" && this.props.question.media.type === "no tiene"){
-          divquestion = "questionRepaso";
-          divmc = "MCQuestionChoiceRepasoSinMedia";
+    } else if(GLOBAL_CONFIG.modo === "repaso" && this.props.question.media.type === "no tiene"){
+      divquestion = "questionRepaso";
+      divmc = "MCQuestionChoiceRepasoSinMedia";
 
-      }  else {
-        divquestion = "questionRepaso";
-        divmc = "MCQuestionChoiceRepaso";
+    } else {
+      divquestion = "questionRepaso";
+      divmc = "MCQuestionChoiceRepaso";
     }
-      let media = "";
+    let media = "";
 
-      if(this.props.question.media.type == "video"){
-          media = (<Video video={this.props.question.media.sources} key_video={this.props.key_media}/>);
-      } else if(this.props.question.media.type == "audio"){
-          media = (<Audio audio={this.props.question.media.sources} key_audio={this.props.key_media}/>);
-      } else {
-          media = "";
-      }
-
+    if(this.props.question.media.type === "video"){
+      media = (<Video video={this.props.question.media.sources} key_video={this.props.key_media}/>);
+    } else if(this.props.question.media.type === "audio"){
+      media = (<Audio audio={this.props.question.media.sources} key_audio={this.props.key_media}/>);
+    } else {
+      media = "";
+    }
 
     let choices = [];
     for(let i = 0; i < this.props.question.respuestas.length; i++){

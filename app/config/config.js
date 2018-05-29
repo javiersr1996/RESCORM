@@ -4,8 +4,8 @@ export let GLOBAL_CONFIG = {
     debug_scorm_api:false,
     debug_scorm_api_window:false,
     available_locales:["es", "en"],
-    //locale fuerza el idioma a emplear
-    locale: "en",
+    // locale fuerza el idioma a emplear
+    locale:"en",
     adaptive:true,
     finish_screen:true,
     scorm:{
@@ -26,8 +26,8 @@ export let GLOBAL_CONFIG = {
     xml:"assets/examen_pasos_en.xml",
 
         // tiempo para completar la partida --> modo examen
-    secondsRemaining: 600,
-    repeticiones: 10,
+    secondsRemaining:600,
+    repeticiones:10,
 
         // textos pantalla inicial
         // castellano modo examen1_en
@@ -38,26 +38,26 @@ export let GLOBAL_CONFIG = {
 
         // ingles modo repaso1
 
+  },
+  production:{
+    debug:true,
+    debug_scorm_api:false,
+    debug_scorm_api_window:false,
+    available_locales:["es", "en"],
+    locale:"es",
+    adaptive:true,
+    finish_screen:true,
+    scorm:{
+      completion_threshold:0.5,
+      score_threshold:0.6,
     },
-    production: {
-        debug: true,
-        debug_scorm_api: false,
-        debug_scorm_api_window: false,
-        available_locales: ["es", "en"],
-        locale: "es",
-        adaptive: true,
-        finish_screen: true,
-        scorm: {
-            completion_threshold: 0.5,
-            score_threshold: 0.6,
-        },
-        n: 10,
-        modo: "examen",
-        xml: "assets/examen_pasos.xml",
-        secondsRemaining: 360,
-        repeticiones: 10,
-    },
-}
+    n:10,
+    modo:"examen",
+    xml:"assets/examen_pasos.xml",
+    secondsRemaining:360,
+    repeticiones:10,
+  },
+};
 
 let processConfig = (function(){
   let env = process.env.NODE_ENV || 'dev';
