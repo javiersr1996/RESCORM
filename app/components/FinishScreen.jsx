@@ -113,7 +113,7 @@ export default class FinishScreen extends React.Component {
           <div className="fsPresentacionAudio" key={i}>
              <p className="totalpreguntas"><b>{this.state.array_totalpreguntas[i]}</b></p>
              <p className="respuestas">{this.state.array_textos[i]}</p>
-             <SolucionesPregunta pregunta={this.state.questions[i]} key_pregunta={i}/>
+             <SolucionesPregunta I18n={this.props.I18n} pregunta={this.state.questions[i]} key_pregunta={i}/>
              <div className="mfv">
                <MediaFinalView tipo={this.state.questions[i].media.type} sources={this.state.questions[i].media.sources} key_fw={i}/>
              </div>
@@ -126,7 +126,7 @@ export default class FinishScreen extends React.Component {
           <div className="fsPresentacion" key={i}>
              <p className="totalpreguntas"><b>{this.state.array_totalpreguntas[i]}</b></p>
              <p className="respuestas">{this.state.array_textos[i]}</p>
-             <SolucionesPregunta pregunta={this.state.questions[i]} key_pregunta={i}/>
+             <SolucionesPregunta I18n={this.props.I18n} pregunta={this.state.questions[i]} key_pregunta={i}/>
              <h3 />
           </div>
          );
