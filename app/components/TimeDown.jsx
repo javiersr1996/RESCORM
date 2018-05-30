@@ -59,7 +59,7 @@ export default class TimeDown extends React.Component {
             <div id="tiempo">
               {tiempoTexto}: {minutos} min {segundos} s
            </div>
-           <div>
+           <div id="ProgressBar">
                <ProgressBar width="100" active striped bsStyle="warning" now={100 * this.state.secondsRemaining / this.state.totalSeconds}/>
            </div>
          </div>

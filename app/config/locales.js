@@ -48,7 +48,7 @@ export let LOCALES = {
     "i.logged_as":"Logueado como",
     "i.next":"Siguiente",
     "i.progress_measure":"Medida de Progreso",
-    "i.reset_question":"Volver a repetir media",
+    "i.reset_question":"Repetir media",
     "i.reset_quiz":"Resetear cuestionario",
     "i.score":"Puntuación",
     "i.title":"Referee Basketball Test",
