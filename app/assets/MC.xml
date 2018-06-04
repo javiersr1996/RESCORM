@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>Moodle QUIZ XML export</text>
+    </category>
+  </question>
+  <question type="multichoice">
+    <name>
+      <text>¿De qué color es el caballo blanco de santiago?­</text>
+    </name>
+    <questiontext>
+      <text>¿De qué color es el caballo blanco de santiago?­</text>
+    </questiontext>
+    <shuffleanswers>1</shuffleanswers>
+    <single>true</single>
+    <answer fraction="0">
+      <text>Azul­</text>
+    </answer>
+    <answer fraction="0">
+      <text>Amarillo­</text>
+    </answer>
+    <answer fraction="100">
+      <text>Blanco­</text>
+    </answer>
+  </question>
+</quiz>

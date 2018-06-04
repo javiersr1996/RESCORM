@@ -7,7 +7,6 @@
 </question>
 <question type="multichoice">
 <dificultad>1</dificultad>
-<solucion>Jugador atacante comete violación de pasos tras rebote ofensivo antes de recibir la falta</solucion>
 <name>
 <text>Señala la respuesta correcta</text>
 </name>
@@ -27,14 +26,8 @@
 <text>Falta en acción de tiro</text>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <dificultad>1</dificultad>
-<solucion>En todos los partidos, el equipo citado en primer lugar del programa tendrá el banquillo de equipo y su propia canasta a la izquierda de la mesa de anotadores, de cara al terreno de juego, al inicio del encuentro, salvo acuerdo entre ambos equipos</solucion>
 <name>
 <text>Señala la opción correcta</text>
 </name>
@@ -43,10 +36,6 @@
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
-<media>
-<type>no tiene</type>
-<source>no tiene</source>
-</media>
 <answer fraction="0">
 <text>El primer periodo comienza cuando el árbitro principal, con el balón, entra en el círculo para administrar el salto entre dos</text>
 </answer>
@@ -57,14 +46,8 @@
 <text>En todos los partidos, el equipo citado en primer lugar del programa tendrá el banquillo de equipo y su propia canasta a la izquierda de la mesa de anotadores, de cara al terreno de juego, al inicio del encuentro, salvo acuerdo entre ambos equipos</text>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <dificultad>1</dificultad>
-<solucion>En mini hay 2 tiempos muertos por parte no acumulables, así que no tiene razón</solucion>
 <name>
 <text>Un entrenador de minibasket nos dice lo siguiente durante el partido. ¿Tiene razón?</text>
 </name>
@@ -84,17 +67,7 @@
 <text>Sí</text>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>MoodleQUIZXMLexport</text>
-</category>
-</question>
 <question type="multichoice">
-<solucion>Cuando el balón sale de las manos del árbitro principal en el salto entre dos inicial</solucion>
-<media>
-<type>no tiene</type>
-<source>no tiene</source>
-</media>
 <name>
 <text>¿Cuándo comienza oficialmente el partido?</text>
 </name>
@@ -114,14 +87,8 @@
 <text>Cuando el balón sale de las manos del árbitro principal en el salto entre dos inicial.</text>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <dificultad>1</dificultad>
-<solucion>No hay control de balón por parte del atacante (palmea) por tanto no hay campo atrás</solucion>
 <name>
 <text>En la jugada...</text>
 </name>
@@ -141,14 +108,8 @@
 <text>Árbitro sanciona correctamente violación de campo atrás al controlar el jugador el balón en campo de ataque</text>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <dificultad>2</dificultad>
-<solucion>Mal sancionada. Hay que esperar cuando jugador recibe balón para ver si lanza a canasta o no</solucion>
 <name>
 <text>Se produce violación por tres segundos en la zona</text>
 </name>
@@ -171,14 +132,8 @@
 <text>Mal sancionada</text>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <dificultad>2</dificultad>
-<solucion>Como mínimo merece aviso. Primero reacciona jocosamente y después se apoya en el árbitro</solucion>
 <name>
 <text>El entrenador reacciona de la siguiente manera</text>
 </name>
@@ -201,14 +156,8 @@
 <text>Como mínimo debe ser avisado de falta técnica</text>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <dificultad>3</dificultad>
-<solucion>Se aprecia que el atacante realiza una pantalla legal, respetando distancia y tiempo y con los pies en el suelo. Clara simulación</solucion>
 <name>
 <text>Señala la opción correcta</text>
 </name>
@@ -231,14 +180,8 @@
 <text>Simulación del defensor que debe ser avisado de falta técnica</text>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <dificultad>3</dificultad>
-<solucion>Reacción jocosa de la jugadora, la cual implica falta de respeto hacia los árbitros. Como mínimo se le debe avisar</solucion>
 <name>
 <text>Señala la opción correcta</text>
 </name>
@@ -258,17 +201,7 @@
 <text>Jugadora merece falta técnica por desprecio hacia los árbitros</text>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>MoodleQUIZXMLexport</text>
-</category>
-</question>
 <question type="multichoice">
-<solucion>Cuando el balón sale de las manos del árbitro principal en el salto entre dos inicial</solucion>
-<media>
-<type>no tiene</type>
-<source>no tiene</source>
-</media>
 <name>
 <text>¿Cuándo comienza oficialmente el partido?</text>
 </name>
@@ -288,14 +221,8 @@
 <text>Cuando el balón sale de las manos del árbitro principal en el salto entre dos inicial.</text>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <dificultad>1</dificultad>
-<solucion>No hay control de balón por parte del atacante (palmea) por tanto no hay campo atrás</solucion>
 <name>
 <text>Un tiempo muerto finaliza cuando...</text>
 </name>
@@ -304,10 +231,6 @@
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
-<media>
-<type>no tiene</type>
-<source>no tiene</source>
-</media>
 <answer fraction="100">
 <text>un árbitro hace sonar su silbato y ordena a los equipos que vuelvan a la pista</text>
 </answer>

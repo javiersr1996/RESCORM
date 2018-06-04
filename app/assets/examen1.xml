@@ -27,11 +27,6 @@
 <feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Señala la respuesta correcta</text>
@@ -64,11 +59,6 @@
 <feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Señala la respuesta correcta­</text>
@@ -99,11 +89,6 @@
 <feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Señala la respuesta correcta</text>
@@ -125,11 +110,6 @@
 <text>Falta en acción de tiro</text>
 <feedback><text>Incorrecta</text></feedback>
 </answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>
@@ -155,11 +135,6 @@
 <text>Sí</text>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>En la jugada...</text>
@@ -181,11 +156,6 @@
 <text>Árbitro sanciona correctamente violación de campo atrás al controlar el jugador el balón en campo de ataque</text>
 <feedback><text>Incorrecta</text></feedback>
 </answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>
@@ -213,11 +183,6 @@
 <feedback><text>Mal sancionada es la opción correcta de las tres, debe esperar a ver si el jugador lanza a canasta o no </text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>El entrenador reacciona de la siguiente manera. Señala la opción incorrecta</text>
@@ -244,11 +209,6 @@
 <feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Señala la opción correcta</text>
@@ -274,11 +234,6 @@
 <text>Simulación del defensor que debe ser avisado de falta técnica</text>
 <feedback><text>Simulación del defensor que debe ser avisado de falta técnica --> Se aprecia que el atacante realiza una pantalla legal, respetando distancia y tiempo y con los pies en el suelo. Clara simulación</text></feedback>
 </answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>

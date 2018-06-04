@@ -45,7 +45,7 @@ export class App extends React.Component {
         let parseString = require('xml2js').parseString;
         parseString(data, function(err, result){
           let json = (result);
-            console.log(result);
+          console.log(result);
             // json obtenido del parseado
           let customjson = {};
           customjson.quiz_xml = {};
@@ -53,45 +53,29 @@ export class App extends React.Component {
 
             // caso de xml con mas de una pregunta y de diferentes tipos
             // sacar el numero de preguntas que tengo y la longitud de cada una de ellas
-          let questions_size = [];
+          let question_size = [];
           let number_question = 0;
-          let question_size = 0;
           for(let i = 0; i < json.quiz.question.length; i++){
             let tipo_pregunta = (json.quiz.question[i].$.type);
-            if(tipo_pregunta === "category" && number_question === 0){
+            if(tipo_pregunta !== "category"){
               number_question++;
-            } else if(tipo_pregunta !== "category" && number_question !== 0){
-              question_size++;
-            } else if(tipo_pregunta === "category" && number_question !== 0){
-              questions_size.push(question_size);
-              question_size = 0;
-              number_question++;
+              question_size.push(number_question);
             }
           }
-            // mete en el array el tamaño de la última pregunta recorrida
-          questions_size.push(question_size);
+
             // se obtiene el indice de las preguntas
           function indexQuestion(number__question){
-            let index = 0;
-            let longitudes_anteriores_questions = 0;
-            let long_cat = 0;
-            if(number__question === 1){
-              index = 1;
-            }
-            if(number__question !== 1 && number__question <= questions_size.length){
-              for(let i = 0; i < number__question - 1; i++){
-                longitudes_anteriores_questions += questions_size[i];
-              }
-              long_cat = number__question;
-              index = long_cat + longitudes_anteriores_questions;
-            }
+            let index = number__question + 1;
             return index;
           }
+          console.log(number_question);
+          console.log(question_size);
           let num = 0;
-          for(let i = 0; i <= number_question; i++){
+          for(let i = 0; i < number_question; i++){
             let indice = indexQuestion(i);
             let tipo_pregunta = (json.quiz.question[indice].$.type);
               // el tipo de pregunta es truefalse
+            /*
             if(tipo_pregunta === "truefalse"){
               jsonpropio[num] = {};
               jsonpropio[num].tipo = (json.quiz.question[indice].$.type);
@@ -112,8 +96,9 @@ export class App extends React.Component {
               }
               num++;
             }
+            */
               // el tipo de pregunta es multichoice
-            else if(tipo_pregunta === "multichoice"){
+            if(tipo_pregunta === "multichoice"){
               jsonpropio[num] = {};
               jsonpropio[num].tipo = (json.quiz.question[indice].$.type);
               jsonpropio[num].texto = (json.quiz.question[indice].questiontext[0].text[0]);
@@ -205,7 +190,7 @@ export class App extends React.Component {
       texto3 = I18n.getTrans("i.videoExam");
       texto4 = I18n.getTrans("i.repetitionsExam") + GLOBAL_CONFIG.repeticiones;
       console.log(GLOBAL_CONFIG.repeticiones);
-      imgModo = (<img width="250" heigth="250" align="middle" src="assets/images/examen.png" className="center" />);
+      imgModo = (<img width="200" heigth="200" align="middle" src="assets/images/examen.png" className="center" />);
     } else {
       texto1 = I18n.getTrans("i.modeStudying");
       texto2 = I18n.getTrans("i.themeStudying");

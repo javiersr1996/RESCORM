@@ -27,11 +27,6 @@
 <feedback><text>No acierta ya que no hay pasos en la finalización</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Señala las respuestas correctas (una o más)</text>
@@ -61,11 +56,6 @@
 <type>video</type>
 <source type="video/mp4">assets/videos/pasos1.mp4</source>
 </media>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>
@@ -97,11 +87,6 @@
 <feedback><text>Los pasos de salida no generan ventaja/desventaja, por tanto es correcto no sancionarlos</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>¿Acierta el árbitro?</text>
@@ -123,11 +108,6 @@
 <text>No</text>
 <feedback><text>No acierta ya que hay pasos de salida: levanta pie de pivote antes de soltar balón</text></feedback>
 </answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>
@@ -151,11 +131,6 @@
 <feedback><text>Esta respuesta no es incorrecta, no hay pasos</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Señala la respuesta correcta</text>
@@ -178,11 +153,6 @@
 <feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Señala las respuestas correctas (una o más)</text>
@@ -204,11 +174,6 @@
 <feedback><text>Se produce salida con paso cero pie derecho</text></feedback>
 <text>Salida con paso cero pie derecho</text>
 </answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>
@@ -240,11 +205,6 @@
 <feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Señala la respuesta correcta­</text>
@@ -275,11 +235,6 @@
 <feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>¿Acierta el árbitro?</text>
@@ -302,11 +257,6 @@
 <feedback><text>Jugador con balón recibe falta antes de cometer pasos</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Señala la opción incorrecta</text>
@@ -328,11 +278,6 @@
 <text>Jugador amarillo resbala solo y comete pasos</text>
 <feedback><text>Incorrecta porque es la respuesta verdadera</text></feedback>
 </answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>
@@ -359,11 +304,6 @@
 <text>Penetración con paso cero pie derecho</text>
 <feedback><text>Esta respuesta no es incorrecta</text></feedback>
 </answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>
@@ -395,11 +335,6 @@
 <feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Señala las respuestas incorrectas (una o más)</text>
@@ -429,11 +364,6 @@
 <text>Doble apoyo consecutivo pie derecho. Pasos</text>
 <feedback><text>Incorrecta, es con el derecho</text></feedback>
 </answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>
@@ -465,11 +395,6 @@
 <feedback><text>No es cierto</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Señala las respuestas correctas (una o más)</text>
@@ -500,11 +425,6 @@
 <feedback><text>Ninguna de las dos es correcta</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>¿Acierta el árbitro?</text>
@@ -526,11 +446,6 @@
 <text>No</text>
 <feedback><text>Incorrecta</text></feedback>
 </answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>
@@ -562,11 +477,6 @@
 <feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>¿Hay en la jugada alguna acción ilegal?</text>
@@ -588,11 +498,6 @@
 <text>No</text>
 <feedback><text>Incorrecta</text></feedback>
 </answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>

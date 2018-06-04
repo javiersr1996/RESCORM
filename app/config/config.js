@@ -3,7 +3,7 @@ export let GLOBAL_CONFIG = {
     debug:true,
     debug_scorm_api:false,
     debug_scorm_api_window:false,
-    //idiomas soportados por la aplicación
+    // idiomas soportados por la aplicación
     available_locales:["es", "en"],
     // locale fuerza el idioma a emplear: en para inglés, es para castellano
     locale:"es",
@@ -24,7 +24,7 @@ export let GLOBAL_CONFIG = {
     <CUESTIONARIO> en inglés: pasos_en, antideportivas_en, violaciones_en, faltas_en
     *************************************************************************************
     */
-    xml:"assets/examen1.xml",
+    xml:"assets/examen1-en.xml",
 
         // tiempo para completar la partida --> modo examen
     secondsRemaining:600,

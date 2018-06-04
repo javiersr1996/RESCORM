@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+        <text>$course$/Por defecto en prueba</text>
+
+    </category>
+  </question>
+
+<!-- question: 282  -->
+  <question type="multichoice">
+    <name>
+      <text>MC 2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cuánto es 5+5?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>10</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>5+5 son 10. Acertaste.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>5</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Incorrecto. No es 5.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>2</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Incorrecto. No es 2.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>0</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 278  -->
+  <question type="multichoice">
+    <name>
+      <text>MC con 1 correcta</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿De qué color es el caballo blanco de santiago?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Blanco</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Respuesta correcta.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Negro.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Respuesta incorrecta. No es negro.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Azul.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Respuesta incorrecta. No es azul.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 283  -->
+  <question type="multichoice">
+    <name>
+      <text>MC Multiple Answer</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Marca todas las opciones correctas.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format="html">
+      <text>Respuesta correcta</text>
+    </correctfeedback>
+    <partiallycorrectfeedback format="html">
+      <text>Respuesta parcialmente correcta.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format="html">
+      <text>Respuesta incorrecta.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>5+5 = 10</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Correcto. 5+5 son 10.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>3*2 = 6</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>4*8 = 12</p>]]></text>
+      <feedback format="html">
+        <text></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 281  -->
+  <question type="shortanswer">
+    <name>
+      <text>OA 1</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>¿Cúanto es 2+2?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <usecase>0</usecase>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>2</text>
+      <feedback format="html">
+        <text><![CDATA[<p>Correcto.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>dos</text>
+      <feedback format="html">
+        <text><![CDATA[<p>Correcto. La respuesta es dos.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 279  -->
+  <question type="truefalse">
+    <name>
+      <text>TF</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El caballo blanco de Santiago es blanco.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text><![CDATA[<p>Claro, es blanco.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text><![CDATA[<p>Respuesta incorrecta. El caballo blanco de santiago es blanco.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+<!-- question: 280  -->
+  <question type="truefalse">
+    <name>
+      <text>TF 2</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El cielo es negro.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>1.0000000</penalty>
+    <hidden>0</hidden>
+    <answer fraction="0" format="moodle_auto_format">
+      <text>true</text>
+      <feedback format="html">
+        <text><![CDATA[<p>Incorrecta. El cielo es azul.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="100" format="moodle_auto_format">
+      <text>false</text>
+      <feedback format="html">
+        <text><![CDATA[<p>Correcto. El cielo es azul.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+</quiz>

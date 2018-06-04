@@ -37,7 +37,8 @@ export default class FinishScreen extends React.Component {
     let array_totalpreguntas = [];
     let array_textos = [];
     let index = 0;
-    for(let i = 0; i < GLOBAL_CONFIG.n; i++){
+    let long_cuestionario = Math.min(GLOBAL_CONFIG.n, this.state.questions.length);
+    for(let i = 0; i < long_cuestionario; i++){
       index = i + 1;
       array_totalpreguntas.push(this.props.I18n.getTrans("i.questionText") + index);
       array_textos.push(this.state.questions[i].texto);
@@ -90,9 +91,10 @@ export default class FinishScreen extends React.Component {
         </div>
       );
     }
-
+    let longitud_cuestionario = Math.min(GLOBAL_CONFIG.n, this.state.questions.length);
+    console.log(longitud_cuestionario);
     let muestras_finales = [];
-    for(let i = 0; i < GLOBAL_CONFIG.n; i++){
+    for(let i = 0; i < longitud_cuestionario; i++){
       console.log(this.state.questions[i].media.type);
       console.log(this.state.questions[i].media.sources);
       if(this.state.questions[i].media.sources !== undefined && this.state.questions[i].media.type === "video"){

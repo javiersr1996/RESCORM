@@ -35,6 +35,9 @@ export let LOCALES = {
     "i.solution":"Solution",
     "i.solutions":"Solutions",
     "i.examSolution":"Solution of the exam",
+    "i.answerText":"Answer:",
+    "i.correct":"Correct answer",
+    "i.incorrect":"Incorrect answer",
   },
   es:{
     "i.answer":"Responder",
@@ -72,5 +75,8 @@ export let LOCALES = {
     "i.solution":"Solución",
     "i.solutions":"Soluciones",
     "i.examSolution":"Solución del examen",
+    "i.answerText":"Respuesta:",
+    "i.correct":"Respuesta correcta",
+    "i.incorrect":"Respuesta incorrecta",
   },
 };
