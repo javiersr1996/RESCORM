@@ -20,7 +20,7 @@
 </answer>
 <answer fraction="100">
 <text>Saque de lateral para el equipo B, desde su pista delantera </text>
-<feedback><text>La respuesta correcta es: saque lateral para el equipo B, desde su pista delantera</text></feedback>
+<feedback><text>El control de balón lo sigue teniendo el equipo A (palmeo de B no implica control), por tanto es falta en ataque de A4 </text></feedback>
 </answer>
 <answer fraction="0">
 <text>­Saque de lateral para el equipo B, desde su pista trasera</text>
@@ -53,7 +53,7 @@
 </answer>
 <answer fraction="100">
 <text>Dos pasos consecutivos con el mismo pie. Violación</text>
-<feedback><text>Dos pasos consecutivos con el mismo pie. Violación --> Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</text></feedback>
+<feedback><text>Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Traspiés válido</text>
@@ -88,7 +88,7 @@
 </answer>
 <answer fraction="100">
 <text>Dos pasos consecutivos con el mismo pie. Violación</text>
-<feedback><text>Dos pasos consecutivos con el mismo pie. Violación --> Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</text></feedback>
+<feedback><text>Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Traspiés cogiendo balón en el aire</text>
@@ -119,7 +119,7 @@
 </media>
 <answer fraction="100">
 <text>Pasos tras rebote ofensivo</text>
-<feedback><text>Pasos tras rebote ofensivo --> Jugador atacante comete violación de pasos tras rebote ofensivo antes de recibir la falta</text></feedback>
+<feedback><text>Jugador atacante comete violación de pasos tras rebote ofensivo antes de recibir la falta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Falta en acción de tiro</text>
@@ -148,7 +148,7 @@
 </media>
 <answer fraction="100">
 <text>No</text>
-<feedback><text>No es la opción correcta. Hay 2 por parte no acumulables</text></feedback>
+<feedback><text>Hay 2 por parte no acumulables, por tanto no es correcto lo que se dice</text></feedback>
 </answer>
 <answer fraction="0">
 <feedback><text>Incorrecta</text></feedback>

@@ -32,6 +32,7 @@ export default class Header extends React.Component {
     }
 
     let loggedEl = null;
+    // poner {loggedEl} en return para usuario logueado
     if(typeof loggedText === "string"){
       loggedEl = <p id="logged_user">{loggedText}</p>;
     }
@@ -52,7 +53,7 @@ export default class Header extends React.Component {
           <a target="_blank" href="https://github.com/javiersr1996/RESCORM"><img id="logo" src="assets/images/quiz_logo.png"/></a>
           <h1 id="heading">{this.props.I18n.getTrans("i.title")}</h1>
           <p id="tracking">{trackingEls}</p>
-          {loggedEl}
+
         </div>
     );
 

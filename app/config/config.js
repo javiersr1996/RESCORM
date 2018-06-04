@@ -3,8 +3,9 @@ export let GLOBAL_CONFIG = {
     debug:true,
     debug_scorm_api:false,
     debug_scorm_api_window:false,
+    //idiomas soportados por la aplicación
     available_locales:["es", "en"],
-    // locale fuerza el idioma a emplear
+    // locale fuerza el idioma a emplear: en para inglés, es para castellano
     locale:"es",
     adaptive:true,
     finish_screen:true,
@@ -17,11 +18,11 @@ export let GLOBAL_CONFIG = {
     // modo de juego: examen o repaso
     modo:"examen",
     /*
-    ****************************************************************************
+    *************************************************************************************
     xml: "assets/<CUESTIONARIO>.xml",
-    <CUESTIONARIO> en castellano: examen1, examen2, repaso1, repaso2
-    <CUESTIONARIO> en inglés: examen1_en, examen2_en, repaso1_en, repaso2_en
-    ****************************************************************************
+    <CUESTIONARIO> en castellano: pasos, antideportivas, violaciones, faltas
+    <CUESTIONARIO> en inglés: pasos_en, antideportivas_en, violaciones_en, faltas_en
+    *************************************************************************************
     */
     xml:"assets/examen1.xml",
 

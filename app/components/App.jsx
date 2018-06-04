@@ -24,7 +24,7 @@ export class App extends React.Component {
     I18n.init();
     this.state = {
       presentacion:0,
-      jsoninterno:[],
+
     };
   }
   /*
@@ -45,7 +45,7 @@ export class App extends React.Component {
         let parseString = require('xml2js').parseString;
         parseString(data, function(err, result){
           let json = (result);
-            // console.log(result);
+            console.log(result);
             // json obtenido del parseado
           let customjson = {};
           customjson.quiz_xml = {};
@@ -118,11 +118,9 @@ export class App extends React.Component {
               jsonpropio[num].tipo = (json.quiz.question[indice].$.type);
               jsonpropio[num].texto = (json.quiz.question[indice].questiontext[0].text[0]);
               if(json.quiz.question[indice].media === undefined){
-                  // console.log("no tiene media")
                 jsonpropio[num].media = {};
                 jsonpropio[num].media.type = "no tiene";
                 jsonpropio[num].media.sources = "no tiene";
-
               } else {
                 jsonpropio[num].media = {};
                 jsonpropio[num].media.type = (json.quiz.question[indice].media[0].type[0]);
@@ -132,7 +130,6 @@ export class App extends React.Component {
                     jsonpropio[num].media.sources[j] = {};
                     jsonpropio[num].media.sources[j].texto = (json.quiz.question[indice].media[0].source[j]._);
                     jsonpropio[num].media.sources[j].formato = (json.quiz.question[indice].media[0].source[j].$.type);
-
                   }
                 }
               }
@@ -180,7 +177,6 @@ export class App extends React.Component {
     }
     this.setState({
       presentacion:1,
-      jsoninterno:this.props.jsoninterno,
     });
     return;
   }
@@ -232,7 +228,7 @@ export class App extends React.Component {
         }
       } else {
         appContent = (
-          <FinishScreen dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} questions={this.state.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n}/>
+          <FinishScreen dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} questions={this.props.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n}/>
         );
       }
       return (
