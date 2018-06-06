@@ -33,14 +33,14 @@ export default class SolucionesPregunta extends React.Component {
       } else if(respuestas[i].solucion === "" && respuestas[i].valor === "100"){
         solucion.push(
           <div key={i}>
-            <div className="divRespuestaCorrecta"><b>{respuestas[i].texto}</b></div>
+            <div className="divRespuestaCorrecta"><b>{textorespuesta} {respuestas[i].texto}</b></div>
             <div className="divRespuestaCorrecta"><b>{correcta}</b></div>
             <p>&nbsp;</p>
           </div>);
       } else if(respuestas[i].solucion === "" && respuestas[i].valor === "0"){
         solucion.push(
           <div key={i}>
-            <div className="divRespuestaIncorrecta">{respuestas[i].texto}</div>
+            <div className="divRespuestaIncorrecta"> {textorespuesta} {respuestas[i].texto}</div>
             <div className="divRespuestaIncorrecta">{incorrecta}</div>
             <p>&nbsp;</p>
           </div>);

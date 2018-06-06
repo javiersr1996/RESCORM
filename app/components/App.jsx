@@ -101,7 +101,13 @@ export class App extends React.Component {
             if(tipo_pregunta === "multichoice"){
               jsonpropio[num] = {};
               jsonpropio[num].tipo = (json.quiz.question[indice].$.type);
-              jsonpropio[num].texto = (json.quiz.question[indice].questiontext[0].text[0]);
+              let texto = json.quiz.question[indice].questiontext[0].text[0];
+              //se quitan etiquetas que vienen en los textos de Moodle XML
+              if(texto.substring(texto.indexOf('>')+1,texto.indexOf('<')) !== ""){
+                jsonpropio[num].texto = texto.substring(texto.indexOf('>')+1,texto.lastIndexOf('<'));
+              } else {
+                jsonpropio[num].texto = texto;
+              }
               if(json.quiz.question[indice].media === undefined){
                 jsonpropio[num].media = {};
                 jsonpropio[num].media.type = "no tiene";
@@ -122,9 +128,19 @@ export class App extends React.Component {
               for(let j = 0; j < json.quiz.question[indice].answer.length; j++){
                 jsonpropio[num].respuestas[j] = {};
                 jsonpropio[num].respuestas[j].id = j;
-                jsonpropio[num].respuestas[j].texto = (json.quiz.question[indice].answer[j].text[0]);
+                let respuesta = json.quiz.question[indice].answer[j].text[0];
+                if(respuesta.substring(respuesta.indexOf('>')+1,respuesta.lastIndexOf('<')) !== ""){
+                  jsonpropio[num].respuestas[j].texto = respuesta.substring(respuesta.indexOf('>')+1,respuesta.lastIndexOf('<'));
+                } else {
+                  jsonpropio[num].respuestas[j].texto = respuesta
+                }
                 if(json.quiz.question[indice].answer[j].feedback !== undefined){
-                  jsonpropio[num].respuestas[j].solucion = (json.quiz.question[indice].answer[j].feedback[0].text[0]);
+                  let feedback = json.quiz.question[indice].answer[j].feedback[0].text[0]
+                  if(feedback.substring(feedback.indexOf('>')+1,feedback.lastIndexOf('<')) !== ""){
+                  jsonpropio[num].respuestas[j].solucion = feedback.substring(feedback.indexOf('>')+1,feedback.lastIndexOf('<'));
+                  } else {
+                    jsonpropio[num].respuestas[j].solucion = feedback
+                  }
                 } else {
                   jsonpropio[num].respuestas[j].solucion = "";
                 }
