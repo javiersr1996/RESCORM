@@ -1,21 +1,18 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import './../assets/scss/main.scss';
-
 import {GLOBAL_CONFIG} from '../config/config.js';
 import {LOCALES} from '../config/locales.js';
 import * as I18n from '../vendors/I18n.js';
 import * as SAMPLES from '../config/samples.js';
-
 import SCORM from './SCORM.jsx';
 import Header from './Header.jsx';
 import FinishScreen from './FinishScreen.jsx';
 import Quiz from './Quiz.jsx';
-
 import {jsonSaved, finishApp} from './../reducers/actions.jsx';
 import {INITIAL_STATE} from './../constants/constants.jsx';
 import $ from 'jquery';
-
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 import {Panel, Jumbotron} from 'react-bootstrap';
 
 export class App extends React.Component {
@@ -68,8 +65,6 @@ export class App extends React.Component {
             let index = number__question + 1;
             return index;
           }
-          console.log(number_question);
-          console.log(question_size);
           let num = 0;
           for(let i = 0; i < number_question; i++){
             let indice = indexQuestion(i);
@@ -97,17 +92,45 @@ export class App extends React.Component {
               num++;
             }
             */
+            function transform(text) {
+
+              let arrayhtml = ReactHtmlParser(text);
+              console.log(arrayhtml);
+              if(arrayhtml[0].props === undefined){
+                return arrayhtml[0]
+              } else {
+                if(arrayhtml[0].props.children[0].type === undefined){
+                  return arrayhtml[0].props.children[0];
+                } else {
+                  return arrayhtml[0].props.children[0].props.children[0];
+                }
+              }
+              return;
+            }
               // el tipo de pregunta es multichoice
             if(tipo_pregunta === "multichoice"){
               jsonpropio[num] = {};
               jsonpropio[num].tipo = (json.quiz.question[indice].$.type);
               let texto = json.quiz.question[indice].questiontext[0].text[0];
-              //se quitan etiquetas que vienen en los textos de Moodle XML
-              if(texto.substring(texto.indexOf('>')+1,texto.indexOf('<')) !== ""){
-                jsonpropio[num].texto = texto.substring(texto.indexOf('>')+1,texto.lastIndexOf('<'));
+              console.log(texto);
+              // se quitan etiquetas que vienen en los textos de Moodle XML
+              console.log("html enunciado")
+              let palabra = transform("palabra");
+              console.log(palabra);
+              let parserhtml_enunciado = transform(texto);
+              //let prueba = transform(parserhtml);
+              console.log(parserhtml_enunciado);
+
+            /*
+              if(texto.substring(texto.indexOf('>') + 1, texto.indexOf('<')) !== ""){
+                jsonpropio[num].texto = texto.substring(texto.indexOf('>') + 1, texto.lastIndexOf('<'));
               } else {
                 jsonpropio[num].texto = texto;
               }
+              */
+
+              jsonpropio[num].texto = parserhtml_enunciado;
+              console.log(jsonpropio[num].texto);
               if(json.quiz.question[indice].media === undefined){
                 jsonpropio[num].media = {};
                 jsonpropio[num].media.type = "no tiene";
@@ -129,20 +152,39 @@ export class App extends React.Component {
                 jsonpropio[num].respuestas[j] = {};
                 jsonpropio[num].respuestas[j].id = j;
                 let respuesta = json.quiz.question[indice].answer[j].text[0];
-                if(respuesta.substring(respuesta.indexOf('>')+1,respuesta.lastIndexOf('<')) !== ""){
-                  jsonpropio[num].respuestas[j].texto = respuesta.substring(respuesta.indexOf('>')+1,respuesta.lastIndexOf('<'));
+                console.log("html respuesta")
+                let parserhtml_respuesta = transform(respuesta);
+                /*
+                if(respuesta.substring(respuesta.indexOf('>') + 1, respuesta.lastIndexOf('<')) !== ""){
+                  jsonpropio[num].respuestas[j].texto = respuesta.substring(respuesta.indexOf('>') + 1, respuesta.lastIndexOf('<'));
                 } else {
-                  jsonpropio[num].respuestas[j].texto = respuesta
+                  jsonpropio[num].respuestas[j].texto = respuesta;
                 }
-                if(json.quiz.question[indice].answer[j].feedback !== undefined){
-                  let feedback = json.quiz.question[indice].answer[j].feedback[0].text[0]
-                  if(feedback.substring(feedback.indexOf('>')+1,feedback.lastIndexOf('<')) !== ""){
-                  jsonpropio[num].respuestas[j].solucion = feedback.substring(feedback.indexOf('>')+1,feedback.lastIndexOf('<'));
+                */
+                jsonpropio[num].respuestas[j].texto = parserhtml_respuesta;
+                console.log(jsonpropio[num].respuestas[j].texto);
+                if(json.quiz.question[indice].answer[j].feedback !== undefined && json.quiz.question[indice].answer[j].feedback[0].text[0] !== ""){
+                  let feedback = json.quiz.question[indice].answer[j].feedback[0].text[0];
+                  console.log("html feedback")
+                  let parserhtml_feedback = transform(feedback);
+                  /*
+                  if(feedback.substring(feedback.indexOf('>') + 1, feedback.lastIndexOf('<')) !== ""){
+                    jsonpropio[num].respuestas[j].solucion = feedback.substring(feedback.indexOf('>') + 1, feedback.lastIndexOf('<'));
                   } else {
-                    jsonpropio[num].respuestas[j].solucion = feedback
+                    jsonpropio[num].respuestas[j].solucion = feedback;
                   }
+                  */
+                  jsonpropio[num].respuestas[j].solucion = parserhtml_feedback;
+                  console.log(jsonpropio[num].respuestas[j].solucion)
                 } else {
-                  jsonpropio[num].respuestas[j].solucion = "";
+
+                  if(json.quiz.question[indice].answer[j].$.fraction === "100"){
+                    jsonpropio[num].respuestas[j].solucion = I18n.getTrans("i.correct");
+                    console.log(jsonpropio[num].respuestas[j].solucion);
+                  } else {
+                    jsonpropio[num].respuestas[j].solucion = I18n.getTrans("i.incorrect");
+                    console.log(jsonpropio[num].respuestas[j].solucion);
+                  }
                 }
 
                 jsonpropio[num].respuestas[j].valor = (json.quiz.question[indice].answer[j].$.fraction);
@@ -205,7 +247,6 @@ export class App extends React.Component {
       texto2 = I18n.getTrans("i.questionsExam");
       texto3 = I18n.getTrans("i.videoExam");
       texto4 = I18n.getTrans("i.repetitionsExam") + GLOBAL_CONFIG.repeticiones;
-      console.log(GLOBAL_CONFIG.repeticiones);
       imgModo = (<img width="200" heigth="200" align="middle" src="assets/images/examen.png" className="center" />);
     } else {
       texto1 = I18n.getTrans("i.modeStudying");
@@ -270,7 +311,7 @@ export class App extends React.Component {
       );
 
     }
-    return;
+    return null;
   }
 }
 

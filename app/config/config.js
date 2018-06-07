@@ -16,7 +16,7 @@ export let GLOBAL_CONFIG = {
     // numero de preguntas maximas a mostrar
     n:5,
     // modo de juego: examen o repaso
-    modo:"examen",
+    modo:"repaso",
     /*
     *************************************************************************************
     xml: "assets/<CUESTIONARIO>.xml",
@@ -24,7 +24,7 @@ export let GLOBAL_CONFIG = {
     <CUESTIONARIO> en inglés: pasos_en, antideportivas_en, violaciones_en, faltas_en
     *************************************************************************************
     */
-    xml:"assets/testmoodle.xml",
+    xml:"assets/examen1.xml",
 
         // tiempo para completar la partida --> modo examen
     secondsRemaining:600,

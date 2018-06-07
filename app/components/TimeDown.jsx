@@ -65,7 +65,7 @@ export default class TimeDown extends React.Component {
          </div>
       );
     }
-    return;
+    return null;
 
   }
 }

@@ -14,7 +14,7 @@
       <text>MC 2</text>
     </name>
     <questiontext format="html">
-      <text><![CDATA[<pppppp>¿Cuánto es 5+5?</pppppp>]]></text>
+      <text><![CDATA[<div><p>¿Cuánto es 5+5?</p></div>]]></text>
     </questiontext>
     <generalfeedback format="html">
       <text></text>
@@ -141,7 +141,7 @@
         <text><![CDATA[<p>Correcto. 5+5 son 10.</p>]]></text>
       </feedback>
     </answer>
-    <answer fraction="0" format="html">
+    <answer fraction="100" format="html">
       <text><![CDATA[<p>3*2 = 6</p>]]></text>
       <feedback format="html">
         <text></text>
