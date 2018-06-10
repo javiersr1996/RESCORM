@@ -24,7 +24,6 @@ export default class Audio extends React.Component {
         sources.push(<source src={this.props.audio[i].texto} type={this.props.audio[i].formato} key={i}/>);
       }
     }
-    // console.log("estoy en Video.jsx y la source es "+ this.props.video);
     let key = this.props.key_audio;
     if(GLOBAL_CONFIG.modo === "repaso"){
       idpanel = "PanelRepaso";

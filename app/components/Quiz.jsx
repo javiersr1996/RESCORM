@@ -6,6 +6,7 @@ import {addObjectives, resetObjectives, finishApp} from './../reducers/actions';
 import {GLOBAL_CONFIG} from '../config/config.js';
 import QuizHeader from './QuizHeader.jsx';
 import MCQuestion from './MCQuestion.jsx';
+import MCQuestionOne100 from './MCQuestionOne100.jsx';
 import TimeDown from './TimeDown.jsx';
 
 export default class Quiz extends React.Component {
@@ -111,6 +112,9 @@ export default class Quiz extends React.Component {
     switch (currentQuestion.tipo){
     case "multichoice":
       currentQuestionRender = (<MCQuestion question={currentQuestion} key_media={this.state.num_key} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished} hiddenSolucion={this.state.hiddenSolucion}/>);
+      break;
+    case "multichoiceOne100":
+      currentQuestionRender = (<MCQuestionOne100 question={currentQuestion} key_media={this.state.num_key} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished} hiddenSolucion={this.state.hiddenSolucion}/>);
       break;
     default:
       currentQuestionRender = "Question type not supported";

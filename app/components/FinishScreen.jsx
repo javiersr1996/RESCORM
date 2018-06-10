@@ -92,11 +92,8 @@ export default class FinishScreen extends React.Component {
       );
     }
     let longitud_cuestionario = Math.min(GLOBAL_CONFIG.n, this.state.questions.length);
-    console.log(longitud_cuestionario);
     let muestras_finales = [];
     for(let i = 0; i < longitud_cuestionario; i++){
-      console.log(this.state.questions[i].media.type);
-      console.log(this.state.questions[i].media.sources);
       if(this.state.questions[i].media.sources !== undefined && this.state.questions[i].media.type === "video"){
         muestras_finales.push(
           <div className="fsPresentacionVideo" key={i}>

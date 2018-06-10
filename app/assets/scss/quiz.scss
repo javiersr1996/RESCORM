@@ -99,6 +99,13 @@ div.questionRepaso div.question_choice div.questionC1{
   margin-top: 9px;
   margin-left: 10px;
 }
+div.questionRepaso div.question_choice div.questionC1radio{
+  float: left;
+  width: 5%;
+  //margin-top: 5px;
+  margin-left: 9px;
+
+}
 
 div.questionRepaso div.question_choice div.questionC2{
   display: inline-block;
@@ -115,8 +122,19 @@ div.questionRepaso div.question_choice input[type="checkbox"] {
   cursor: pointer;
 
 }
+div.questionRepaso div.question_choice input[type="radio"] {
+  width:13px;
+  height: 13px;
+  cursor: pointer;
+  margin: 20px 0px 20px;
+
+}
 
 div.questionRepaso div.question_choice input[type="checkbox"][disabled]{
+  cursor: default;
+
+}
+div.questionRepaso div.question_choice input[type="radio"][disabled]{
   cursor: default;
 
 }
@@ -174,6 +192,11 @@ div.questionExamen div.question_choice div.questionC1{
   margin-top: 9px;
   margin-left: 10px;
 }
+div.questionExamen div.question_choice div.questionC1radio{
+  float: left;
+  width: 5%;
+  margin-left: 9px;
+}
 
 div.questionExamen div.question_choice div.questionC2{
   display: inline-block;
@@ -194,6 +217,15 @@ div.questionExamen div.question_choice input[type="checkbox"] {
 div.questionExamen div.question_choice input[type="checkbox"][disabled]{
   cursor: default;
 
+}
+div.questionExamen div.question_choice input[type="radio"] {
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+  margin: 18px 0px 18px;
+}
+div.questionExamen div.question_choice input[type="radio"][disabled]{
+  cursor: default;
 }
 
 div.questionExamen div.question_choice p {

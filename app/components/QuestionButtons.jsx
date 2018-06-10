@@ -6,7 +6,6 @@ export default class QuestionButtons extends React.Component {
     super(props);
   }
   render(){
-    console.log(GLOBAL_CONFIG.repeticiones);
 
     let disable_answer = (this.props.answered || this.props.quizCompleted);
     let disable_resetQuestion = (this.props.answered || this.props.quizCompleted || this.props.repeticiones === GLOBAL_CONFIG.repeticiones);

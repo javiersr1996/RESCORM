@@ -7,8 +7,6 @@ export default class QuizHeader extends React.Component {
     super(props);
   }
   render(){
-    // console.log("render quiz header")
-    // console.log(this.props.questions)
 
     return (
       <div className="quizHeader">

@@ -27,11 +27,6 @@
 <feedback><text>He's not right. No travelling in the finalization</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Choose the correct answers (one or more)</text>
@@ -61,11 +56,6 @@
 <type>video</type>
 <source type="video/mp4">assets/videos/pasos1.mp4</source>
 </media>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>
@@ -97,11 +87,6 @@
 <feedback><text>Travelling doesn't generate advantage/disadvantage, so is correct not penalise</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Is the referee right?</text>
@@ -123,11 +108,6 @@
 <text>No</text>
 <feedback><text>The referee is not right: the player raises the pivot foot before leaking the ball</text></feedback>
 </answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>
@@ -151,11 +131,6 @@
 <feedback><text>This answer is not incorrect because there's no travelling</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Choose the correct answer</text>
@@ -178,14 +153,9 @@
 <feedback><text>Incorrect</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
-<text>Choose the correct answers (one or more)</text>
+<text>Choose the correct answer</text>
 </name>
 <questiontext>
 <text>Choose the correct answer</text>
@@ -205,17 +175,12 @@
 <feedback><text>Correct</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
-<text>Choose the correct answers (one or more)</text>
+<text>Choose the correct answers</text>
 </name>
 <questiontext>
-<text>Choose the correct answers (one or more)</text>
+<text>Choose the correct answers</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
@@ -239,11 +204,6 @@
 <text>Illegal movement when receiving the ball and illegal finalization</text>
 <feedback><text>Incorrect</text></feedback>
 </answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>
@@ -275,11 +235,6 @@
 <feedback><text>Incorrect</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Is the referee right?</text>
@@ -302,11 +257,6 @@
 <feedback><text>Personal foul before travelling</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Choose the incorrect answer</text>
@@ -328,11 +278,6 @@
 <text>Yellow player slips making travelling</text>
 <feedback><text>Incorrect because is the correct one</text></feedback>
 </answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>
@@ -360,17 +305,12 @@
 <feedback><text>This answer is not incorrect</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
-<text>Choose the incorrect answers (one or more)</text>
+<text>Choose the incorrect answer</text>
 </name>
 <questiontext>
-<text>Choose the incorrect answers (one or more)</text>
+<text>Choose the incorrect answer</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
@@ -395,17 +335,12 @@
 <feedback><text>Incorrect</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
-<text>Choose the incorrect answers (one or more)</text>
+<text>Choose the incorrect answer</text>
 </name>
 <questiontext>
-<text>Choose the incorrect answers (one or more)</text>
+<text>Choose the incorrect answer</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
@@ -429,11 +364,6 @@
 <text>Two consecutive steps with the right foot. Violation</text>
 <feedback><text>Incorrect</text></feedback>
 </answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>
@@ -465,17 +395,12 @@
 <feedback><text>False</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
-<text>Choose the correct answers (one or more)</text>
+<text>Choose the correct answer</text>
 </name>
 <questiontext>
-<text>Choose the correct answers (one or more)</text>
+<text>Choose the correct answer</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
@@ -500,11 +425,6 @@
 <feedback><text>Incorrect</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>Is the referee right?</text>
@@ -527,17 +447,12 @@
 <feedback><text>Incorrect</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
-<text>Choose the correct answers (one or more)</text>
+<text>Choose the correct answer</text>
 </name>
 <questiontext>
-<text>Choose the correct answers (one or more)</text>
+<text>Choose the correct answer</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
@@ -562,11 +477,6 @@
 <feedback><text>Incorrect</text></feedback>
 </answer>
 </question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
-</question>
 <question type="multichoice">
 <name>
 <text>¿Is there something illegal?</text>
@@ -588,11 +498,6 @@
 <text>No</text>
 <feedback><text>Incorrect</text></feedback>
 </answer>
-</question>
-<question type="category">
-<category>
-<text>Moodle QUIZ XML export</text>
-</category>
 </question>
 <question type="multichoice">
 <name>

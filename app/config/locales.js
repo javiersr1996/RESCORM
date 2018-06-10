@@ -38,6 +38,8 @@ export let LOCALES = {
     "i.answerText":"Answer:",
     "i.correct":"Correct answer",
     "i.incorrect":"Incorrect answer",
+    "i.err":"Error while reading the XML file. Please, check it",
+    "i.noErr":"Correct reading of the XML file",
   },
   es:{
     "i.answer":"Responder",
@@ -78,5 +80,7 @@ export let LOCALES = {
     "i.answerText":"Respuesta:",
     "i.correct":"Respuesta correcta",
     "i.incorrect":"Respuesta incorrecta",
+    "i.err":"Error al leer el archivo XML. Por favor, revise mencionado archivo",
+    "i.noErr":"Correcta lectura del archivo XML",
   },
 };

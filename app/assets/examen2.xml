@@ -43,7 +43,7 @@
 <text>En todos los periodos extra, los equipos intercambiarán las canastas</text>
 </answer>
 <answer fraction="100">
-<text>En todos los partidos, el equipo citado en primer lugar del programa tendrá el banquillo de equipo y su propia canasta a la izquierda de la mesa de anotadores, de cara al terreno de juego, al inicio del encuentro, salvo acuerdo entre ambos equipos</text>
+<text>En todos los partidos, equipo local a la izquierda y visitante a la derecha salvo acuerdo entre ambos equipos</text>
 </answer>
 </question>
 <question type="multichoice">
@@ -199,26 +199,6 @@
 </answer>
 <answer fraction="100">
 <text>Jugadora merece falta técnica por desprecio hacia los árbitros</text>
-</answer>
-</question>
-<question type="multichoice">
-<name>
-<text>¿Cuándo comienza oficialmente el partido?</text>
-</name>
-<questiontext>
-<text>¿Cuándo comienza oficialmente el partido?</text>
-</questiontext>
-<shuffleanswers>0</shuffleanswers>
-<single>true</single>
-<answer fraction="0">
-<text>20 minutos antes de la hora de inicio programada
-­</text>
-</answer>
-<answer fraction="0">
-<text>Cuando el árbitro principal entra en el círculo central para administrar el salto entre dos inicial.</text>
-</answer>
-<answer fraction="100">
-<text>Cuando el balón sale de las manos del árbitro principal en el salto entre dos inicial.</text>
 </answer>
 </question>
 <question type="multichoice">

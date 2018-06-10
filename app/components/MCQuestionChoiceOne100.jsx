@@ -2,7 +2,7 @@ import React from 'react';
 import {GLOBAL_CONFIG} from '../config/config.js';
 import './../assets/scss/quiz.scss';
 
-export default class MCQuestionChoice extends React.Component {
+export default class MCQuestionChoiceOne100 extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -11,11 +11,11 @@ export default class MCQuestionChoice extends React.Component {
     };
   }
   render(){
+
     let questionClassName = "question_choice";
     let showCorrection = (this.props.questionAnswered);
     if(showCorrection){
       if(this.props.checked){
-
         if(this.props.choice.valor === "100"){
           if(GLOBAL_CONFIG.modo === "examen"){
 
@@ -45,8 +45,8 @@ export default class MCQuestionChoice extends React.Component {
       return (
 
             <div className={questionClassName}>
-              <div className="questionC1">
-                <input type="checkbox" checked={this.props.checked} onChange={() => this.props.handleChange(this.props.choice)} disabled={showCorrection}/>
+              <div className="questionC1radio">
+                <input type="radio" name="nombre" checked={this.props.checked} onChange={() => this.props.handleChange(this.props.choice)} disabled={showCorrection}/>
               </div>
               <div className="questionC2">
                 <p>{this.props.choice.texto}</p>
@@ -61,8 +61,8 @@ export default class MCQuestionChoice extends React.Component {
     return (
 
             <div className={questionClassName}>
-              <div className="questionC1">
-                <input type="checkbox" checked={this.props.checked} onChange={() => this.props.handleChange(this.props.choice)} disabled={showCorrection}/>
+              <div className="questionC1radio">
+                <input type="radio" name="nombre" checked={this.props.checked} onChange={() => this.props.handleChange(this.props.choice)} disabled={showCorrection}/>
               </div>
               <div className="questionC2">
                 <p>{this.props.choice.texto}</p>

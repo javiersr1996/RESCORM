@@ -12,7 +12,7 @@ import Quiz from './Quiz.jsx';
 import {jsonSaved, finishApp} from './../reducers/actions.jsx';
 import {INITIAL_STATE} from './../constants/constants.jsx';
 import $ from 'jquery';
-import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+import ReactHtmlParser, {processNodes, convertNodeToElement, htmlparser2} from 'react-html-parser';
 import {Panel, Jumbotron} from 'react-bootstrap';
 
 export class App extends React.Component {
@@ -23,6 +23,9 @@ export class App extends React.Component {
       presentacion:0,
 
     };
+
+    // eliminar etiquetas hmtl del formato de moodle
+
   }
   /*
   *****************************************
@@ -30,6 +33,19 @@ export class App extends React.Component {
   *****************************************
   */
   componentDidMount(){
+    function transform(text){
+      let arrayhtml = ReactHtmlParser(text);
+      let value_return = "";
+      if(arrayhtml[0].props === undefined){
+        value_return = arrayhtml[0];
+      } else if(arrayhtml[0].props.children[0].type === undefined){
+        value_return = arrayhtml[0].props.children[0];
+      } else {
+        value_return = arrayhtml[0].props.children[0].props.children[0];
+      }
+      return value_return;
+    }
+
     let jsonpropio = [];
     let jsonredux = [];
     // Load Moodle XML file
@@ -42,8 +58,14 @@ export class App extends React.Component {
         let parseString = require('xml2js').parseString;
         parseString(data, function(err, result){
           let json = (result);
-          console.log(result);
-            // json obtenido del parseado
+          // console.log(result);
+          if(!result){
+            err = I18n.getTrans("i.err");
+          } else {
+            err = I18n.getTrans("i.noErr");
+          }
+          console.log(err);
+
           let customjson = {};
           customjson.quiz_xml = {};
           customjson.quiz_xml = (json.quiz);
@@ -66,6 +88,7 @@ export class App extends React.Component {
             return index;
           }
           let num = 0;
+
           for(let i = 0; i < number_question; i++){
             let indice = indexQuestion(i);
             let tipo_pregunta = (json.quiz.question[indice].$.type);
@@ -92,34 +115,16 @@ export class App extends React.Component {
               num++;
             }
             */
-            function transform(text) {
 
-              let arrayhtml = ReactHtmlParser(text);
-              console.log(arrayhtml);
-              if(arrayhtml[0].props === undefined){
-                return arrayhtml[0]
-              } else {
-                if(arrayhtml[0].props.children[0].type === undefined){
-                  return arrayhtml[0].props.children[0];
-                } else {
-                  return arrayhtml[0].props.children[0].props.children[0];
-                }
-              }
-              return;
-            }
               // el tipo de pregunta es multichoice
             if(tipo_pregunta === "multichoice"){
+              let correctas = 0;
               jsonpropio[num] = {};
               jsonpropio[num].tipo = (json.quiz.question[indice].$.type);
               let texto = json.quiz.question[indice].questiontext[0].text[0];
-              console.log(texto);
               // se quitan etiquetas que vienen en los textos de Moodle XML
-              console.log("html enunciado")
-              let palabra = transform("palabra");
-              console.log(palabra);
               let parserhtml_enunciado = transform(texto);
-              //let prueba = transform(parserhtml);
-              console.log(parserhtml_enunciado);
+              // let prueba = transform(parserhtml);
 
             /*
               if(texto.substring(texto.indexOf('>') + 1, texto.indexOf('<')) !== ""){
@@ -130,7 +135,6 @@ export class App extends React.Component {
               */
 
               jsonpropio[num].texto = parserhtml_enunciado;
-              console.log(jsonpropio[num].texto);
               if(json.quiz.question[indice].media === undefined){
                 jsonpropio[num].media = {};
                 jsonpropio[num].media.type = "no tiene";
@@ -152,7 +156,6 @@ export class App extends React.Component {
                 jsonpropio[num].respuestas[j] = {};
                 jsonpropio[num].respuestas[j].id = j;
                 let respuesta = json.quiz.question[indice].answer[j].text[0];
-                console.log("html respuesta")
                 let parserhtml_respuesta = transform(respuesta);
                 /*
                 if(respuesta.substring(respuesta.indexOf('>') + 1, respuesta.lastIndexOf('<')) !== ""){
@@ -162,10 +165,8 @@ export class App extends React.Component {
                 }
                 */
                 jsonpropio[num].respuestas[j].texto = parserhtml_respuesta;
-                console.log(jsonpropio[num].respuestas[j].texto);
                 if(json.quiz.question[indice].answer[j].feedback !== undefined && json.quiz.question[indice].answer[j].feedback[0].text[0] !== ""){
                   let feedback = json.quiz.question[indice].answer[j].feedback[0].text[0];
-                  console.log("html feedback")
                   let parserhtml_feedback = transform(feedback);
                   /*
                   if(feedback.substring(feedback.indexOf('>') + 1, feedback.lastIndexOf('<')) !== ""){
@@ -175,24 +176,28 @@ export class App extends React.Component {
                   }
                   */
                   jsonpropio[num].respuestas[j].solucion = parserhtml_feedback;
-                  console.log(jsonpropio[num].respuestas[j].solucion)
+                } else if(json.quiz.question[indice].answer[j].$.fraction === "100"){
+                  jsonpropio[num].respuestas[j].solucion = I18n.getTrans("i.correct");
                 } else {
-
-                  if(json.quiz.question[indice].answer[j].$.fraction === "100"){
-                    jsonpropio[num].respuestas[j].solucion = I18n.getTrans("i.correct");
-                    console.log(jsonpropio[num].respuestas[j].solucion);
-                  } else {
-                    jsonpropio[num].respuestas[j].solucion = I18n.getTrans("i.incorrect");
-                    console.log(jsonpropio[num].respuestas[j].solucion);
-                  }
+                  jsonpropio[num].respuestas[j].solucion = I18n.getTrans("i.incorrect");
                 }
 
                 jsonpropio[num].respuestas[j].valor = (json.quiz.question[indice].answer[j].$.fraction);
+                let puntuacion = jsonpropio[num].respuestas[j].valor;
+                if(puntuacion === "100"){
+                  correctas++;
+                }
+
                 if(j === json.quiz.question[indice].answer.length - 1){
                   jsonpropio[num].respuestas.longitud = j;
                 }
+
+              }
+              if(correctas === 1){
+                jsonpropio[num].tipo = "multichoiceOne100";
               }
               num++;
+
             }
           }
           jsonredux = jsonpropio;
@@ -201,6 +206,7 @@ export class App extends React.Component {
         }.bind(this));
       }.bind(this),
       error:function(xhr, status, err){
+
         console.log(status, err.toString());
       },
     });
@@ -208,6 +214,7 @@ export class App extends React.Component {
   }
   // -----------------FIN COMPONENTDIDMOUNT--------------------------------------------
   // ---------------------------------------------------------------------------------
+
   /*
   ******************************************************************************
   metodo que permite la presentacion de la aplicacion
@@ -233,7 +240,7 @@ export class App extends React.Component {
   }
   render(){
 
-    console.log(this.props.jsoninterno);
+    // console.log(this.props.jsoninterno);
     let TextoBienvenida = "Referee Basketball Test";
 
     let texto1 = "";

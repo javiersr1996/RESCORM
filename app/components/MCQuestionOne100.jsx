@@ -6,15 +6,15 @@ import Audio from './Audio.jsx';
 import * as Utils from '../vendors/Utils.js';
 import {objectiveAccomplished, objectiveAccomplishedThunk} from './../reducers/actions';
 
-import MCQuestionChoice from './MCQuestionChoice.jsx';
+import MCQuestionChoiceOne100 from './MCQuestionChoiceOne100.jsx';
 import QuestionButtons from './QuestionButtons.jsx';
 import {GLOBAL_CONFIG} from '../config/config.js';
 
-export default class MCQuestion extends React.Component {
+export default class MCQuestionOne100 extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      selected_choices_ids:[],
+      selected_choice:"",
       answered:false,
       repeticiones:0,
       hiddenSolucion:true,
@@ -23,18 +23,12 @@ export default class MCQuestion extends React.Component {
 
   componentWillUpdate(prevProps, prevState){
     if(prevProps.question !== this.props.question){
-      this.setState({selected_choices_ids:[], answered:false});
+      this.setState({selected_choice:"", answered:false});
     }
   }
   handleChoiceChange(choice){
-    let newSelectedChoices = Object.assign([], this.state.selected_choices_ids);
-    let indexOf = newSelectedChoices.indexOf(choice.id);
-    if(indexOf === -1){
-      newSelectedChoices.push(choice.id);
-    } else {
-      newSelectedChoices.splice(indexOf, 1);
-    }
-    this.setState({selected_choices_ids:newSelectedChoices});
+    let newSelectedChoice = choice;
+    this.setState({selected_choice:newSelectedChoice});
   }
   onAnswerQuestion(){
     // Calculate score
@@ -49,35 +43,23 @@ export default class MCQuestion extends React.Component {
     let incorrectAnswers = 0;
     let blankAnswers = 0;
     let totalCorrectAnswers = 0;
-    // si no se ha seleccionado ninguna respuesta
-    if(this.state.selected_choices_ids === 0){
+
+    if(this.state.selected_choice === ""){
       correctAnswers = 0;
       incorrectAnswers = 0;
 
     } else {
-      for(let i = 0; i < nChoices; i++){
-        let choice = this.props.question.respuestas[i];
-        if(choice.valor === "100"){
-          totalCorrectAnswers++;
-        }
-        if(this.state.selected_choices_ids.indexOf(choice.id) !== -1){
-          // Answered choice
-          if(choice.valor === "100"){
-            correctAnswers += 1;
-          } else if(choice.valor === "0"){
-            incorrectAnswers += 1;
-          }
-        } else {
-          blankAnswers += 1;
-        }
+      let choice = this.state.selected_choice;
+      if(choice.valor === "100"){
+        correctAnswers = 1;
+        incorrectAnswers = 0;
+      } else {
+        correctAnswers = 0;
+        incorrectAnswers = 0;
       }
     }
-    if(correctAnswers !== totalCorrectAnswers){
-      correctAnswers = 0;
-      incorrectAnswers = 0;
-    }
 
-    let scorePercentage = Math.max(0, (correctAnswers - 10 * incorrectAnswers) / this.props.question.respuestas.filter(function(c){return c.valor === "100";}).length);
+    let scorePercentage = Math.max(0, correctAnswers);
     // Send data via SCORM
     let objective = this.props.objective;
     this.props.dispatch(objectiveAccomplished(objective.id, objective.score * scorePercentage));
@@ -88,7 +70,7 @@ export default class MCQuestion extends React.Component {
   }
   onResetQuestion(){
     this.setState({
-      selected_choices_ids:[],
+      selected_choice:"",
       answered:false,
       repeticiones:this.state.repeticiones + 1,
     });
@@ -140,7 +122,11 @@ export default class MCQuestion extends React.Component {
 
     let choices = [];
     for(let i = 0; i < this.props.question.respuestas.length; i++){
-      choices.push(<MCQuestionChoice key={"MyQuestion_" + "question_choice_" + i} choice={this.props.question.respuestas[i]} hiddenSolucion={this.state.hiddenSolucion} checked={this.state.selected_choices_ids.indexOf(this.props.question.respuestas[i].id) !== -1} handleChange={this.handleChoiceChange.bind(this)} questionAnswered={this.state.answered}/>);
+      let checked = false;
+      if(this.state.selected_choice === this.props.question.respuestas[i]){
+        checked = true;
+      }
+      choices.push(<MCQuestionChoiceOne100 key={"MyQuestion_" + "question_choice_" + i} choice={this.props.question.respuestas[i]} hiddenSolucion={this.state.hiddenSolucion} checked={checked} handleChange={this.handleChoiceChange.bind(this)} questionAnswered={this.state.answered}/>);
     }
     return (
        <div>
