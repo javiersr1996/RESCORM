@@ -1,291 +1,356 @@
-div.quizHeader p {
-  font-size: 30px;
-  margin-top: 25px;
-  margin-bottom: 20px;
-  width:800px;
-  background-color: #f5f5f0;
-  margin-left: 1%;
-}
-div.hiddenDiv {
-  visibility: hidden;
-}
-div.questionC3 {
-  margin-left: 8%;
 
-}
-div.questionC3  {
-  font-size: 10px;
-}
-#textoSolucion  {
-  font-size: 13px;
-}
-div.MCQuestionChoiceExamen{
-  height: 390px;
-  float:left;
-  width:50%;
-}
-div.MCQuestionChoiceExamenSinMedia{
-  height: 390px;
-  width:50%;
-}
-div.MCQuestionChoiceExamenAudio{
-  height: 390px;
-  width:50%;
-  float:left;
-}
-div.MCQuestionChoiceRepaso{
-  height: 440px;
-  float:left;
-  width:50%;
-}
-div.MCQuestionChoiceRepasoSinMedia{
-  height: 440px;
-  width:50%;
-}
+  div.quizHeader p {
+    font-size: 30px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    width:800px;
+    background-color: #f5f5f0;
+    margin-left: 1%;
+  }
+  div.hiddenDiv {
+    visibility: hidden;
+  }
+  div.questionC3 {
+    margin-left: 8%;
 
-div.questionRepaso{
-  width: 100%;
-  height: 440px;
-  margin-left: 0.5%;
-}
-div.questionRepaso h1{
- padding: 10px;
-}
-div.questionExamen{
-  width: 100%;
-  height: 390px;
-  margin-left: 0.5%;
-}
-div.questionExamen h1{
-  padding: 10px;
-}
+  }
+  div.questionC3  {
+    font-size: 10px;
+  }
+  #textoSolucion  {
+    font-size: 13px;
+  }
+  div.MCQuestionChoiceExamen{
+    height: 390px;
+    float:left;
+    width:50%;
+  }
+  div.MCQuestionChoiceExamenSinMedia{
+    height: 390px;
+    width:50%;
+  }
+  div.MCQuestionChoiceExamenAudio{
+    height: 390px;
+    width:50%;
+    float:left;
+  }
+  div.MCQuestionChoiceRepaso{
+    height: 440px;
+    float:left;
+    width:50%;
+  }
+  div.MCQuestionChoiceRepasoSinMedia{
+    height: 440px;
+    width:50%;
+  }
 
-div.repeticiones p{
-  color:orange;
-  font-size: 20px;
-  text-align: center;
-}
-div.repeticiones {
-  width: 100%
-}
-div.repeticionessinmedia {
-  width: 100%
-}
-div.repeticionessinmedia p{
-  color: #f5f5f0;
-  font-size: 20px;
-  text-align: center;
-}
+  div.questionRepaso{
+    width: 100%;
+    height: 440px;
+    margin-left: 0.5%;
+  }
+  div.questionRepaso h1{
+   padding: 10px;
+  }
+  div.questionExamen{
+    width: 100%;
+    height: 390px;
+    margin-left: 0.5%;
+  }
+  div.questionExamen h1{
+    padding: 10px;
+  }
 
-div.questionRepaso h1 {
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width:100%;
-  margin-left: 1%;
-}
-div.questionRepaso div.question_choice {
-  background:#f5f5f0;
-  margin: 10px;
-  padding: 2px;
-  width: 90%;
-  height: 100px;
+  div.repeticiones p{
+    color:orange;
+    font-size: 20px;
+    text-align: center;
+  }
+  div.repeticiones {
+    width: 100%
+  }
+  div.repeticionessinmedia {
+    width: 100%
+  }
+  div.repeticionessinmedia p{
+    color: #f5f5f0;
+    font-size: 20px;
+    text-align: center;
+  }
 
-}
+  div.questionRepaso h1 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width:100%;
+    margin-left: 1%;
+  }
+  div.questionRepaso div.question_choice {
+    background:#f5f5f0;
+    margin: 10px;
+    padding: 2px;
+    width: 90%;
+    height: 100px;
 
-div.questionRepaso div.question_choice div.questionC1{
-  float: left;
-  width: 5%;
-  margin-top: 9px;
-  margin-left: 10px;
-}
-div.questionRepaso div.question_choice div.questionC1radio{
-  float: left;
-  width: 5%;
-  //margin-top: 5px;
-  margin-left: 9px;
+  }
 
-}
+  div.questionRepaso div.question_choice div.questionC1{
+    float: left;
+    width: 5%;
+    margin-top: 9px;
+    margin-left: 10px;
+  }
+  div.questionRepaso div.question_choice div.questionC1radio{
+    float: left;
+    width: 5%;
+    //margin-top: 5px;
+    margin-left: 9px;
 
-div.questionRepaso div.question_choice div.questionC2{
-  display: inline-block;
-  width: 90%;
-  margin: 12px 8px 12px 8px;
+  }
 
+  div.questionRepaso div.question_choice div.questionC2{
+    display: inline-block;
+    width: 90%;
+    margin: 12px 8px 12px 8px;
+  }
 
+  div.questionRepaso div.question_choice input[type="checkbox"] {
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
 
-}
+  }
+  div.questionRepaso div.question_choice input[type="radio"] {
+    width:13px;
+    height: 13px;
+    cursor: pointer;
+    margin: 20px 0px 20px;
 
-div.questionRepaso div.question_choice input[type="checkbox"] {
-  width: 23px;
-  height: 23px;
-  cursor: pointer;
+  }
 
-}
-div.questionRepaso div.question_choice input[type="radio"] {
-  width:13px;
-  height: 13px;
-  cursor: pointer;
-  margin: 20px 0px 20px;
+  div.questionRepaso div.question_choice input[type="checkbox"][disabled]{
+    cursor: default;
 
-}
+  }
+  div.questionRepaso div.question_choice input[type="radio"][disabled]{
+    cursor: default;
 
-div.questionRepaso div.question_choice input[type="checkbox"][disabled]{
-  cursor: default;
+  }
 
-}
-div.questionRepaso div.question_choice input[type="radio"][disabled]{
-  cursor: default;
+  div.questionRepaso div.question_choice p {
+    display: inline-block;
+    font-size: 20px;
+    margin: 0px 0px 0px 0px;
 
-}
+  }
 
-div.questionRepaso div.question_choice p {
-  display: inline-block;
-  font-size: 20px;
-  margin: 0px 0px 0px 0px;
+  div.questionRepaso div.question_choice_correct_examen {
+    color: black;
+    border-radius: 25px;
+    background:#f5f5f0;
+  }
+  div.questionRepaso div.question_choice_correct {
+    color: black;
+    border-radius: 25px;
+    background:#7cfC00;
+  }
 
-}
-
-div.questionRepaso div.question_choice_correct_examen {
-  color: black;
-  border-radius: 25px;
-  background:#f5f5f0;
-}
-div.questionRepaso div.question_choice_correct {
-  color: black;
-  border-radius: 25px;
-  background:#7cfC00;
-}
-
-div.questionRepaso div.question_choice_incorrect {
-  color: black;
-  border-radius: 25px;
-  background:#ff6347;
-
-}
-div.questionRepaso div.question_choice_incorrect_examen {
-  color: black;
-  border-radius: 25px;
-  background:#f5f5f0;
-}
+  div.questionRepaso div.question_choice_incorrect {
+    color: black;
+    border-radius: 25px;
+    background:#ff6347;
+  }
+  div.questionRepaso div.question_choice_incorrect_examen {
+    color: black;
+    border-radius: 25px;
+    background:#f5f5f0;
+  }
 
 
-div.questionExamen h1 {
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width:100%;
-  margin-left: 1%;
-}
-div.questionExamen div.question_choice {
-  background:#f5f5f0;
-  margin: 10px;
-  padding: 2px;
-  width: 90%;
-  height: 100px;
+  div.questionExamen h1 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width:100%;
+    margin-left: 1%;
+  }
+  div.questionExamen div.question_choice {
+    background:#f5f5f0;
+    margin: 10px;
+    padding: 2px;
+    width: 90%;
+    height: 100px;
 
-}
+  }
 
-div.questionExamen div.question_choice div.questionC1{
-  float: left;
-  width: 5%;
-  margin-top: 9px;
-  margin-left: 10px;
-}
-div.questionExamen div.question_choice div.questionC1radio{
-  float: left;
-  width: 5%;
-  margin-left: 9px;
-}
+  div.questionExamen div.question_choice div.questionC1{
+    float: left;
+    width: 5%;
+    margin-top: 9px;
+    margin-left: 10px;
+  }
+  div.questionExamen div.question_choice div.questionC1radio{
+    float: left;
+    width: 5%;
+    margin-left: 9px;
+  }
 
-div.questionExamen div.question_choice div.questionC2{
-  display: inline-block;
-  width: 90%;
-  margin: 12px 8px 12px 8px;
+  div.questionExamen div.question_choice div.questionC2{
+    display: inline-block;
+    width: 90%;
+    margin: 12px 8px 12px 8px;
 
 
 
-}
+  }
 
-div.questionExamen div.question_choice input[type="checkbox"] {
-  width: 23px;
-  height: 23px;
-  cursor: pointer;
+  div.questionExamen div.question_choice input[type="checkbox"] {
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
 
-}
+  }
 
-div.questionExamen div.question_choice input[type="checkbox"][disabled]{
-  cursor: default;
+  div.questionExamen div.question_choice input[type="checkbox"][disabled]{
+    cursor: default;
 
-}
-div.questionExamen div.question_choice input[type="radio"] {
-  width: 13px;
-  height: 13px;
-  cursor: pointer;
-  margin: 18px 0px 18px;
-}
-div.questionExamen div.question_choice input[type="radio"][disabled]{
-  cursor: default;
-}
+  }
+  div.questionExamen div.question_choice input[type="radio"] {
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    margin: 18px 0px 18px;
+  }
+  div.questionExamen div.question_choice input[type="radio"][disabled]{
+    cursor: default;
+  }
 
-div.questionExamen div.question_choice p {
-  display: inline-block;
-  font-size: 20px;
-  margin: 0px 0px 0px 0px;
+  div.questionExamen div.question_choice p {
+    display: inline-block;
+    font-size: 20px;
+    margin: 0px 0px 0px 0px;
 
-}
+  }
 
-div.questionExamen div.question_choice_correct_examen {
-  color: black;
-  border-radius: 25px;
-  background:#f5f5f0;
-}
-div.questionExamen div.question_choice_correct {
-  color: black;
-  border-radius: 25px;
-  background:#7cfC00;
-}
+  div.questionExamen div.question_choice_correct_examen {
+    color: black;
+    border-radius: 25px;
+    background:#f5f5f0;
+  }
+  div.questionExamen div.question_choice_correct {
+    color: black;
+    border-radius: 25px;
+    background:#7cfC00;
+  }
 
-div.questionExamen div.question_choice_incorrect {
-  color: black;
-  border-radius: 25px;
-  background:#ff6347;
+  div.questionExamen div.question_choice_incorrect {
+    color: black;
+    border-radius: 25px;
+    background:#ff6347;
 
-}
-div.questionExamen div.question_choice_incorrect_examen {
-  color: black;
-  border-radius: 25px;
-  background:#f5f5f0;
-}
-
-
-div.buttons div.questionButtonsWrapper {
-  padding: 10px;
-  background: #f5f5f0;
-  height: 100px;
-  bottom:0;
-  width: 100%;
-  text-align: center;
-
-}
-
-div.buttons div.questionButtonsWrapper button.answerQuestion, div.buttons div.questionButtonsWrapper button.resetQuestion, div.buttons div.questionButtonsWrapper button.resetQuiz, div.buttons div.questionButtonsWrapper button.nextQuestion {
-  padding: 10px;
-  margin-left: 10px;
-  color: black;
-  background: white;
-  border: 2px solid black;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  background-color: #f5f5f0;
+  }
+  div.questionExamen div.question_choice_incorrect_examen {
+    color: black;
+    border-radius: 25px;
+    background:#f5f5f0;
+  }
 
 
-}
+  div.buttons div.questionButtonsWrapper {
+    padding: 10px;
+    background: #f5f5f0;
+    height: 100px;
+    bottom:0;
+    width: 100%;
+    text-align: center;
 
-div.buttons div.questionButtonsWrapper button[disabled]{
-  color: gray;
-  border: 2px solid gray;
-  cursor: default;
-  background-color: #f5f5f0;
-}
+  }
+
+  div.buttons div.questionButtonsWrapper button.answerQuestion, div.buttons div.questionButtonsWrapper button.resetQuestion, div.buttons div.questionButtonsWrapper button.resetQuiz, div.buttons div.questionButtonsWrapper button.nextQuestion {
+    padding: 10px;
+    margin-left: 10px;
+    color: black;
+    background: white;
+    border: 2px solid black;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #f5f5f0;
+
+
+  }
+
+  div.buttons div.questionButtonsWrapper button[disabled]{
+    color: gray;
+    border: 2px solid gray;
+    cursor: default;
+    background-color: #f5f5f0;
+  }
+
+  @media only screen and (max-height: 750px){
+
+      div.MCQuestionChoiceRepaso{
+        height: 700px;
+        float:left;
+        width:50%;
+      }
+      div.MCQuestionChoiceRepasoSinMedia{
+        height: 700px;
+        width:50%;
+      }
+      div.MCQuestionChoiceExamen{
+        height: 700px;
+        float:left;
+        width:50%;
+      }
+      div.MCQuestionChoiceExamenSinMedia{
+        height: 700px;
+        width:50%;
+      }
+      div.questionRepaso div.question_choice {
+        background:#f5f5f0;
+        margin: 10px;
+        padding: 2px;
+        width: 90%;
+        height: 150px;
+      }
+      div.questionRepaso div.question_choice div.questionC2{
+        display: inline-block;
+        width: 80%;
+        margin: 12px 8px 12px 8px;
+      }
+      div.questionExamen div.question_choice div.questionC2{
+        display: inline-block;
+        width: 80%;
+        margin: 12px 8px 12px 8px;
+      }
+      div.questionRepaso{
+        width: 100%;
+        height: 500px;
+        margin-left: 0.5%;
+      }
+      div.questionExamen{
+        width: 100%;
+        height: 600px;
+        margin-left: 0.5%;
+      }
+      div.questionRepaso div.question_choice_correct {
+        color: black;
+        border-radius: 25px;
+        background:#7cfC00;
+      }
+      div.questionRepaso div.question_choice_incorrect {
+        color: black;
+        border-radius: 25px;
+        background:#ff6347;
+      }
+      div.questionRepaso div.question_choice p {
+        display: inline-block;
+        font-size: 15px;
+        margin: 0px 0px 0px 0px;
+
+      }
+
+
+
+  }

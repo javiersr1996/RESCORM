@@ -58,7 +58,7 @@ export class App extends React.Component {
         let parseString = require('xml2js').parseString;
         parseString(data, function(err, result){
           let json = (result);
-          // console.log(result);
+          console.log(result);
           if(!result){
             err = I18n.getTrans("i.err");
           } else {
@@ -240,7 +240,7 @@ export class App extends React.Component {
   }
   render(){
 
-    // console.log(this.props.jsoninterno);
+    console.log(this.props.jsoninterno);
     let TextoBienvenida = "Referee Basketball Test";
 
     let texto1 = "";

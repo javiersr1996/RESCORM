@@ -24,7 +24,7 @@ export let GLOBAL_CONFIG = {
     <CUESTIONARIO> en inglés: pasos_en, antideportivas_en, violaciones_en, faltas_en
     *************************************************************************************
     */
-    xml:"assets/examen2.xml",
+    xml:"assets/examen1.xml",
 
         // tiempo para completar la partida --> modo examen
     secondsRemaining:600,
