@@ -30,7 +30,7 @@ export default class Audio extends React.Component {
       return (
         <div id={idpanel}>
           <div>
-            <audio id="myAudio" onLoadStart={this.setVolume.bind(this)} key={key} width="700" height="500" controls>
+            <audio id="myAudio" onLoadStart={this.setVolume.bind(this)} key={key} width="700" height="500" controls controlsList="nodownload">
               {sources}
             </audio>
           </div>

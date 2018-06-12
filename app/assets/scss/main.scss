@@ -94,6 +94,16 @@ div.divJumbotron{
   width: 50%;
   height: 440px;
   float: right;
+  video::-webkit-media-controls-download-button {
+    display:none;
+  }
+  video::-webkit-media-controls-enclosure {
+    overflow:hidden;
+ }
+
+ video::-webkit-media-controls-panel {
+    width: calc(100% + 30px); /* Adjust as needed */
+ }
 }
 #PanelExamen {
   width: 50%;

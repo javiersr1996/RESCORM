@@ -81,7 +81,7 @@ export default class Video extends React.Component {
     } else {
       idpanel = "PanelRepaso";
       video = (
-          <video id="myVideoRepaso" className="myVideoRepaso" onLoadStart={this.setVolumeRepaso.bind(this)} onClick={this.fullScreenClickRepaso.bind(this)} key={key} controls>
+          <video id="myVideoRepaso" className="myVideoRepaso" onLoadStart={this.setVolumeRepaso.bind(this)} onClick={this.fullScreenClickRepaso.bind(this)} key={key} controls controlsList="nodownload">
             {sources}
           </video>);
     }
