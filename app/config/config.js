@@ -16,7 +16,7 @@ export let GLOBAL_CONFIG = {
     // numero de preguntas maximas a mostrar
     n:20,
     // modo de juego: examen o repaso
-    modo:"repaso",
+    modo:"examen",
     /*
     *************************************************************************************
     xml: "assets/<CUESTIONARIO>.xml",

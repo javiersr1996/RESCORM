@@ -18,7 +18,7 @@ export default class SolucionesPregunta extends React.Component {
     for(let i = 0; i < respuestas.length; i++){
       if(respuestas[i].solucion !== "" && respuestas[i].valor === "100"){
         solucion.push(
-          <div key={i}>
+          <div key={i} className="soluciones">
             <div className="divRespuestaCorrecta"><b>{textorespuesta} {respuestas[i].texto}</b></div>
             <div className="divRespuestaCorrecta"><b>{respuestas[i].solucion}</b></div>
             <p>&nbsp;</p>
