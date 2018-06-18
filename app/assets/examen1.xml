@@ -59,33 +59,25 @@
 </question>
 <question type="multichoice">
 <name>
-<text>Señala la respuesta correcta­</text>
+<text>Señala la respuesta correcta</text>
 </name>
 <questiontext>
 <text>Señala la respuesta correcta</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
-<single>false</single>
-<media>
-<type>video</type>
-<source type="video/mp4">assets/videos/video2.mp4</source>
-</media>
+<single>true</single>
 <answer fraction="0">
-<text>Pasos en la recepción de balón</text>
+<text>Jugada bien arbitrada</text>
 <feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="100">
-<text>Dos pasos consecutivos con el mismo pie. Violación</text>
-<feedback><text>Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</text></feedback>
+<text>Jugada mal arbitrada</text>
+<feedback><text>Clara antideportiva por agarre a jugador con balón</text></feedback>
 </answer>
-<answer fraction="0">
-<text>Traspiés cogiendo balón en el aire</text>
-<feedback><text>Incorrecta</text></feedback>
-</answer>
-<answer fraction="0">
-<text>Jugada ilegal por dar tres apoyos con el balón en las manos</text>
-<feedback><text>Incorrecta</text></feedback>
-</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u2.mp4</source>
+</media>
 </question>
 <question type="multichoice">
 <name>

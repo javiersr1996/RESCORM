@@ -50,6 +50,7 @@ export default class Quiz extends React.Component {
       current_question_index:1,
       num_key:1,
       hiddenSolucion:false,
+      repeticiones: 0,
     };
     // this.tiempoAgotado = this.tiempoAgotado.bind(this);
   }
@@ -63,6 +64,9 @@ export default class Quiz extends React.Component {
       objectives.push(new Utils.Objective({id:("Question" + (i + 1)), progress_measure:(1 / nQuestions), score:(1 / nQuestions)}));
     }
     this.props.dispatch(addObjectives(objectives));
+  }
+  onRepeticiones(){
+    this.setState({repeticiones: this.state.repeticiones+1});
   }
   onNextQuestion(){
     this.setState({num_key:this.state.num_key + 1});
@@ -111,10 +115,10 @@ export default class Quiz extends React.Component {
 
     switch (currentQuestion.tipo){
     case "multichoice":
-      currentQuestionRender = (<MCQuestion question={currentQuestion} key_media={this.state.num_key} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished} hiddenSolucion={this.state.hiddenSolucion}/>);
+      currentQuestionRender = (<MCQuestion repeticiones={this.state.repeticiones}  question={currentQuestion} key_media={this.state.num_key} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished} hiddenSolucion={this.state.hiddenSolucion} onRepeticiones={this.onRepeticiones.bind(this)} />);
       break;
     case "multichoiceOne100":
-      currentQuestionRender = (<MCQuestionOne100 question={currentQuestion} key_media={this.state.num_key} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished} hiddenSolucion={this.state.hiddenSolucion}/>);
+      currentQuestionRender = (<MCQuestionOne100 question={currentQuestion} key_media={this.state.num_key} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished} hiddenSolucion={this.state.hiddenSolucion} repeticiones={this.state.repeticiones} onRepeticiones={this.onRepeticiones.bind(this)}/>);
       break;
     default:
       currentQuestionRender = "Question type not supported";

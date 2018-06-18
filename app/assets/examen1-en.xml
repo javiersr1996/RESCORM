@@ -16,12 +16,15 @@
 <single>true</single>
 <answer fraction="0">
 <text>Free throws for B5</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="100">
 <text>Saque de lateral para el equipo B, desde su pista delantera </text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>­Saque de lateral para el equipo B, desde su pista trasera</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
@@ -39,15 +42,19 @@
 </media>
 <answer fraction="0">
 <text>Correct 'step 0'</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="100">
 <text>Violation: two steps with the same feet</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Traspiés válido</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Illegal play: three steps with the ball in the hands</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
@@ -65,15 +72,19 @@
 </media>
 <answer fraction="0">
 <text>Traveling when receiving the ball</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="100">
 <text>Violation: two steps with the same feet</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Legal play when getting the ball in the air</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Illegal play: three steps with the ball in the hands</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
@@ -91,14 +102,16 @@
 </media>
 <answer fraction="100">
 <text>Traveling violation after offensive rebound</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Personal foul when shooting</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
 <name>
-<text>Minibasket coach ask referee this question. ¿Is him right?</text>
+<text>Listen to the audio. ¿Is it right?</text>
 </name>
 <questiontext>
 <text>Minibasket coach ask referee this question. ¿Is him right?</text>
@@ -111,9 +124,11 @@
 </media>
 <answer fraction="100">
 <text>No</text>
+<feedback><text>In minibasket there are 2 timeouts per half</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Yes</text>
+<feedback><text>Incorrect</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
@@ -130,7 +145,8 @@
 <source type="video/mp4">assets/videos/video4.mp4</source>
 </media>
 <answer fraction="100">
-<text>There's no backcourt violation: player isn't dribbling</text>
+<text>There's no backcourt violation </text>
+<feedback><text>Player isn't dribbling, he hasn't control of the ball</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Correct backourt violation</text>
@@ -151,12 +167,15 @@
 </media>
 <answer fraction="100">
 <text>Correct violation applied by the referee</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="100">
 <text>Correct violation applied by the referee (better seconds before)</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Incorrect violation applied by the referee</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
@@ -174,12 +193,15 @@
 </media>
 <answer fraction="100">
 <text>Correct decision from officials (they don't do nothing)</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Coach deserves technical foul</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Coach deserves, at least, a notice of technical foul</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
@@ -197,12 +219,15 @@
 </media>
 <answer fraction="0">
 <text>Falta en ataque por pantalla ilegal</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="0">
 <text>Simulación del defensor, el cual no merece falta técnica</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="100">
 <text>Simulación del defensor que debe ser avisado de falta técnica</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
@@ -220,9 +245,11 @@
 </media>
 <answer fraction="0">
 <text>Hay falta que no debía haber sido sancionada</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="100">
 <text>Jugadora merece falta técnica por desprecio hacia los árbitros</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 </quiz>

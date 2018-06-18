@@ -16,7 +16,6 @@ export default class MCQuestionOne100 extends React.Component {
     this.state = {
       selected_choice:"",
       answered:false,
-      repeticiones:0,
       hiddenSolucion:true,
     };
   }
@@ -72,8 +71,8 @@ export default class MCQuestionOne100 extends React.Component {
     this.setState({
       selected_choice:"",
       answered:false,
-      repeticiones:this.state.repeticiones + 1,
     });
+    this.props.onRepeticiones();
     this.props.numKey();
     // console.log("repeticiones "+this.state.repeticiones);
 
@@ -138,7 +137,7 @@ export default class MCQuestionOne100 extends React.Component {
           {media}
         </div>
         <div className="buttons">
-          <QuestionButtons question={this.props.question} repeticiones={this.state.repeticiones} I18n={this.props.I18n} onAnswerQuestion={this.onAnswerQuestion.bind(this)} onResetQuestion={this.onResetQuestion.bind(this)} onResetQuiz={this.props.onResetQuiz} onNextQuestion={this.onNextQuestion.bind(this)} answered={this.state.answered} quizCompleted={this.props.quizCompleted} allow_finish={this.props.isLastQuestion}/>
+          <QuestionButtons question={this.props.question} repeticiones={this.props.repeticiones} I18n={this.props.I18n} onAnswerQuestion={this.onAnswerQuestion.bind(this)} onResetQuestion={this.onResetQuestion.bind(this)} onResetQuiz={this.props.onResetQuiz} onNextQuestion={this.onNextQuestion.bind(this)} answered={this.state.answered} quizCompleted={this.props.quizCompleted} allow_finish={this.props.isLastQuestion}/>
         </div>
       </div>
     );

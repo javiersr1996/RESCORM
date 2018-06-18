@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Last two minutes of the game. Is the referee right?</text>
+</name>
+<questiontext>
+<text>Last two minutes of the game. Is the referee right?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u1.mp4</source>
+</media>
+<answer fraction="100">
+<text>Yes</text>
+<feedback><text>Yes. In the last two minutes of the game, every foul without ball is an unsportsmanlike foul</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Well done by referee</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Wrong done by referee</text>
+<feedback><text>Unsportsmanlike foul. Player grabs the arm of his rival without intention of playing the ball</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u2.mp4</source>
+</media>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answers</text>
+</name>
+<questiontext>
+<text>Choose the correct answers</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u3.mp4</source>
+</media>
+<answer fraction="100">
+<text>There's a foul</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Is an unsportsmanlike foul, it cuts the fastbreak </text>
+<feedback><text>Clara falta U</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No foul, correct defensive position</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No unsportsmanlike foul, is personal foul</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Is the referee right?</text>
+</name>
+<questiontext>
+<text>Is the referee right?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u4.mp4</source>
+</media>
+<answer fraction="0">
+<text>Yes</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>No because is an unsportsmanlike foul (player grabs the arm of this rival without playing the ball) </text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u5.mp4</source>
+</media>
+<answer fraction="100">
+<text>Referee is right</text>
+<feedback><text>No acierta, es falta unsportsmanlike foul clara por agarre en transición</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Referee is not right</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>During the play, there is a foul, which is....</text>
+</name>
+<questiontext>
+<text>During the play, there is a foul, which is....</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u6.mp4</source>
+</media>
+<answer fraction="100">
+<text>Unsportsmanlike foul</text>
+<feedback><text>No intention of playing the ball, it cuts the fastbreak and the player recognizes it</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Personal foul</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Why unsportsmanlike foul?</text>
+</name>
+<questiontext>
+<text>Why unsportsmanlike foul?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u7.mp4</source>
+</media>
+<answer fraction="0">
+<text>Last defender</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<feedback><text>Defender doesn't reach the ball. Violent impact</text></feedback>
+<text>Abrupt contact</text>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u8.mp4</source>
+</media>
+<answer fraction="0">
+<text>Yellow defender makes personal foul while he tries to play the ball</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Yellow defender makes an intentional foul in order to stop the fastbreak</text>
+<feedback><text>No sanctioned unsportsmanlike foul </text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answers</text>
+</name>
+<questiontext>
+<text>Choose the correct answers</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u9.mp4</source>
+</media>
+<answer fraction="0">
+<text>No unsportsmanlike foul</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Unsportsmanlike foul</text>
+<feedback><text>Player grabs his rival arm without playing the ball</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Some protests deserve technical foul</text>
+<feedback><text>Correct </text></feedback>
+</answer>
+<answer fraction="0">
+<text>There are protests that doesn't deserve technical foul</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Is the referee right?</text>
+</name>
+<questiontext>
+<text>Is the referee right?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u10.mp4</source>
+</media>
+<answer fraction="100">
+<text>Yes</text>
+<feedback><text>Defender makes contact far away from the ball, unsportsmanlike foul</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the incorrect answer</text>
+</name>
+<questiontext>
+<text>Choose the incorrect answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u11.mp4</source>
+</media>
+<answer fraction="100">
+<text>No unsportsmanlike foul, defender touches the ball in every single moment</text>
+<feedback><text>Defender grabs the arm, unsportsmanlike foul</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Unsportsmanlike foul for grabbing the arm</text>
+<feedback><text>Incorrect, it is the correct answer</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Se sanciona correctamente la falta?</text>
+</name>
+<questiontext>
+<text>¿Se sanciona correctamente la falta?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u12.mp4</source>
+</media>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>No es falta unsportsmanlike foul, jugador llega a tocar balón</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Yes</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the incorrect answer</text>
+</name>
+<questiontext>
+<text>Choose the incorrect answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u13.mp4</source>
+</media>
+<answer fraction="100">
+<text>La falta sancionada es unsportsmanlike foul</text>
+<feedback><text>No es falta unsportsmanlike foul la falta cometida por el 35, la falta anterior sí puede interpretarse como unsportsmanlike foul </text></feedback>
+</answer>
+<answer fraction="0">
+<text>La falta sancionada no es unsportsmanlike foul</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Well done by referee?</text>
+</name>
+<questiontext>
+<text>¿Well done by referee?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u14.mp4</source>
+</media>
+<answer fraction="100">
+<text>Yes</text>
+<feedback><text>Clara falta unsportsmanlike foul, contacto muy lejos de balón</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Well done by referee?</text>
+</name>
+<questiontext>
+<text>¿Well done by referee?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u15.mp4</source>
+</media>
+<answer fraction="0">
+<text>Yes</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Clara falta unsportsmanlike foul: último defensor, corta transición y contacto muy lejos de balón</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u16.mp4</source>
+</media>
+<answer fraction="100">
+<text>La falta cometida es unsportsmanlike foul</text>
+<feedback><text>Falta unsportsmanlike foul, contacta sin intención de disputar el balón</text></feedback>
+</answer>
+<answer fraction="0">
+<text>La falta cometida no es unsportsmanlike foul</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Is the referee right?</text>
+</name>
+<questiontext>
+<text>Is the referee right?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u17.mp4</source>
+</media>
+<answer fraction="100">
+<text>Yes</text>
+<feedback><text>Clara falta unsportsmanlike foul: jugador tras perder balón agarra pierna de su adversario</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u18.mp4</source>
+</media>
+<answer fraction="100">
+<text>Jugador azul comete falta unsportsmanlike foul</text>
+<feedback><text>Clara falta unsportsmanlike foul: contacta con brusquedad sin balón en juego</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Jugador azul no comete falta unsportsmanlike foul</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Correct sanción por parte del árbitro?</text>
+</name>
+<questiontext>
+<text>¿Correct sanción por parte del árbitro?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u19.mp4</source>
+</media>
+<answer fraction="100">
+<text>Yes</text>
+<feedback><text>Ambos jugadores defensores contactan a jugador atacante en transición muy lejos de balón</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u20.mp4</source>
+</media>
+<answer fraction="0">
+<text>Defensor llega a tocar balón, personal foul</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Defensor corta a propósito al atacante que se va solo hacia canasta, falta unsportsmanlike foul</text>
+<feedback><text>Unsportsmanlike foul muy clara no sancionada: agarra a propósito al jugador atacante con objetivo de impedirle finalizar</text></feedback>
+</answer>
+</question>
+</quiz>

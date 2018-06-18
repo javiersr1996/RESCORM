@@ -22,9 +22,9 @@
 <text>Sí</text>
 <feedback><text>Sí acierta. En los dos últimos minutos del partido cualquier falta sin balón en juego es antideportiva</text></feedback>
 </answer>
-<answer fraction="100">
+<answer fraction="0">
 <text>No</text>
-<feedback><text>Falso</text></feedback>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
@@ -32,7 +32,7 @@
 <text>Señala la respuesta correcta</text>
 </name>
 <questiontext>
-<text>Señala las respuesta correcta</text>
+<text>Señala la respuesta correcta</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>true</single>
@@ -103,24 +103,68 @@
 </question>
 <question type="multichoice">
 <name>
-<text>Señala la respuesta correcta­</text>
+<text>Señala la respuesta correcta</text>
 </name>
 <questiontext>
-<text>Señala la respuesta incorrecta</text>
+<text>Señala la respuesta correcta</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
 <media>
 <type>video</type>
-<source type="video/mp4">assets/videos/pasos3.mp4</source>
+<source type="video/mp4">assets/videos/u5.mp4</source>
 </media>
 <answer fraction="100">
-<text>Pasos en la recepción de balón</text>
-<feedback><text>Pasos en la recepción de balón es incorrecta ya que no hay pasos de salida en la recepción (paso cero)</text></feedback>
+<text>El árbitro acierta</text>
+<feedback><text>No acierta, es falta antideportiva clara por agarre en transición</text></feedback>
 </answer>
 <answer fraction="0">
-<text>No hay pasos en la recepción de balón</text>
-<feedback><text>Esta respuesta no es incorrecta, no hay pasos</text></feedback>
+<text>El árbitro no acierta</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Se aprecia una falta en la jugada que es....</text>
+</name>
+<questiontext>
+<text>Se aprecia una falta en la jugada que es....</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u6.mp4</source>
+</media>
+<answer fraction="100">
+<text>Antideportiva</text>
+<feedback><text>Sin intención de disputar el balón, corta contraataque y reconoce la falta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>falta normal</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Por qué es falta antideportiva?</text>
+</name>
+<questiontext>
+<text>¿Por qué es falta antideportiva?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u7.mp4</source>
+</media>
+<answer fraction="0">
+<text>Último defensor</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<feedback><text>No llega al balón. Impacta violentamente</text></feedback>
+<text>Brusquedad en el contacto</text>
 </answer>
 </question>
 <question type="multichoice">
@@ -128,102 +172,50 @@
 <text>Señala la respuesta correcta</text>
 </name>
 <questiontext>
-<text>­En esta jugada, el orden de acontecimientos es...</text>
+<text>Señala la respuesta correcta</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
 <media>
 <type>video</type>
-<source type="video/mp4">assets/videos/pasos4.mp4</source>
+<source type="video/mp4">assets/videos/u8.mp4</source>
 </media>
-<answer fraction="100">
-<text>Pasos tras rebote ofensivo y falta personal</text>
-<feedback><text> Jugador atacante comete violación de pasos tras rebote ofensivo antes de recibir la falta</text></feedback>
-</answer>
 <answer fraction="0">
-<text>Falta en acción de tiro antes de realizar pasos</text>
+<text>Defensor amarillo comete falta tratando de disputar el balón</text>
 <feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Defensor amarillo para intencionadamente el contraataque del equipo rival</text>
+<feedback><text>Clara falta antideportiva que debía haber sido sancionada</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
 <name>
-<text>Señala las respuesta correcta</text>
+<text>Señala la respuestas correctas</text>
 </name>
 <questiontext>
-<text>Señala la respuesta correcta</text>
+<text>Señala las respuestas correctas</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
 <media>
 <type>video</type>
-<source type="video/mp4">assets/videos/pasos5.mp4</source>
+<source type="video/mp4">assets/videos/u9.mp4</source>
 </media>
 <answer fraction="0">
-<text>Salida con paso cero pie izquierdo</text>
+<text>No hay falta antideportiva</text>
 <feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="100">
-<feedback><text>Se produce salida con paso cero pie derecho</text></feedback>
-<text>Salida con paso cero pie derecho</text>
-</answer>
-</question>
-<question type="multichoice">
-<name>
-<text>Señala la respuesta correcta</text>
-</name>
-<questiontext>
-<text>Señala la respuesta correcta</text>
-</questiontext>
-<shuffleanswers>0</shuffleanswers>
-<single>false</single>
-<media>
-<type>video</type>
-<source type="video/mp4">assets/videos/pasos6.mp4</source>
-</media>
-<answer fraction="0">
-<text>Jugador realiza salida legal y finalización legal</text>
-<feedback><text>Incorrecta</text></feedback>
+<text>Clara falta antideportiva por agarre sin balón</text>
+<feedback><text>Defensor comete clara falta antideportiva por agarrar en transición a jugador sin balón</text></feedback>
 </answer>
 <answer fraction="100">
-<text>Jugador realiza salida ilegal y finalización legal</text>
-<feedback><text>Pasos de salida. Finalización legal</text></feedback>
+<text>Hay protestas que merecen falta técnica</text>
+<feedback><text>Jugador sancionado cona antideportiva protesta continuamente después, merece falta técnica </text></feedback>
 </answer>
 <answer fraction="0">
-<text>Jugador realiza salida legal y finalización ilegal</text>
-<feedback><text>Incorrecta</text></feedback>
-</answer>
-<answer fraction="0">
-<text>Jugador realiza salida ilegal y finalización ilegal</text>
-<feedback><text>Incorrecta</text></feedback>
-</answer>
-</question>
-<question type="multichoice">
-<name>
-<text>Señala la respuesta correcta­</text>
-</name>
-<questiontext>
-<text>Señala la respuesta correcta</text>
-</questiontext>
-<shuffleanswers>0</shuffleanswers>
-<single>false</single>
-<media>
-<type>video</type>
-<source type="video/mp4">assets/videos/pasos19.mp4</source>
-</media>
-<answer fraction="0">
-<text>Pasos en la recepción de balón</text>
-<feedback><text>Incorrecta</text></feedback>
-</answer>
-<answer fraction="100">
-<text>Dos pasos consecutivos con el mismo pie. Violación</text>
-<feedback><text>Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</text></feedback>
-</answer>
-<answer fraction="0">
-<text>Traspiés cogiendo balón en el aire</text>
-<feedback><text>Incorrecta</text></feedback>
-</answer>
-<answer fraction="0">
-<text>Jugada ilegal por dar tres apoyos con el balón en las manos</text>
+<text>Hay protestas pero no merecen falta técnica</text>
 <feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
@@ -238,15 +230,15 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source type="video/mp4">assets/videos/pasos13.mp4</source>
+<source type="video/mp4">assets/videos/u10.mp4</source>
 </media>
-<answer fraction="0">
+<answer fraction="100">
 <text>Sí</text>
-<feedback><text>Incorrecta, antes falta que pasos</text></feedback>
+<feedback><text>Defensor realiza contacto muy alejado de balón, falta antideportiva</text></feedback>
 </answer>
-<answer fraction="100">
+<answer fraction="0">
 <text>No</text>
-<feedback><text>Jugador con balón recibe falta antes de cometer pasos</text></feedback>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
@@ -260,70 +252,36 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source type="video/mp4">assets/videos/pasos14.mp4</source>
+<source type="video/mp4">assets/videos/u11.mp4</source>
 </media>
 <answer fraction="100">
-<text>Jugador amarillo recibe falta personal, lo que hace que resbale</text>
-<feedback><text>Jugador se resbala solo</text></feedback>
+<text>No es falta antideportiva ya que defensor toca balón en todo momento</text>
+<feedback><text>Clara falta antideportiva por agarrar brazo en la finalización</text></feedback>
 </answer>
 <answer fraction="0">
-<text>Jugador amarillo resbala solo y comete pasos</text>
+<text>Falta antideportiva por agarrar del brazo en la finalización</text>
 <feedback><text>Incorrecta porque es la respuesta verdadera</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
 <name>
-<text>Señala las respuestas incorrectas</text>
+<text>¿Se sanciona correctamente la falta?</text>
 </name>
 <questiontext>
-<text>Señala las respuestas incorrectas</text>
+<text>¿Se sanciona correctamente la falta?</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
 <media>
 <type>video</type>
-<source type="video/mp4">assets/videos/pasos7.mp4</source>
+<source type="video/mp4">assets/videos/u12.mp4</source>
 </media>
 <answer fraction="100">
-<text>Penetración sin paso cero</text>
-<feedback><text>Hay paso cero en la penetración</text></feedback>
-</answer>
-<answer fraction="100">
-<text>Penetración con paso cero pie izquierdo</text>
-<feedback><text>Paso cero es el pie derecho</text></feedback>
+<text>No</text>
+<feedback><text>No es falta antideportiva, jugador llega a tocar balón</text></feedback>
 </answer>
 <answer fraction="0">
-<text>Penetración con paso cero pie derecho</text>
-<feedback><text>Esta respuesta no es incorrecta</text></feedback>
-</answer>
-</question>
-<question type="multichoice">
-<name>
-<text>Señala la respuesta incorrecta</text>
-</name>
-<questiontext>
-<text>Señala las respuesta incorrecta</text>
-</questiontext>
-<shuffleanswers>0</shuffleanswers>
-<single>false</single>
-<media>
-<type>video</type>
-<source type="video/mp4">assets/videos/pasos8.mp4</source>
-</media>
-<answer fraction="100">
-<text>Doble apoyo consecutivo con el pie derecho. Pasos</text>
-<feedback><text>Se produce violación de pasos por doble apoyo consecutivo con el pie derecho</text></feedback>
-</answer>
-<answer fraction="0">
-<text>Doble apoyo consecutivo con el pie izquierdo. Pasos</text>
-<feedback><text>Incorrecta, es con el pie derecho</text></feedback>
-</answer>
-<answer fraction="0">
-<text>Traspiés legal</text>
-<feedback><text>Incorrecta</text></feedback>
-</answer>
-<answer fraction="0">
-<text>Traspiés legal, pasos en finalización</text>
+<text>Sí</text>
 <feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
@@ -332,59 +290,65 @@
 <text>Señala la respuesta incorrecta</text>
 </name>
 <questiontext>
-<text>Señala las respuesta incorrecta</text>
+<text>Señala la respuesta incorrecta</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
 <media>
 <type>video</type>
-<source type="video/mp4">assets/videos/pasos9.mp4</source>
+<source type="video/mp4">assets/videos/u13.mp4</source>
 </media>
-<answer fraction="0">
-<text>Finalización con paso cero</text>
-<feedback><text>Incorrecta</text></feedback>
-</answer>
 <answer fraction="100">
-<text>Doble apoyo consecutivo pie izquierdo. Pasos</text>
-<feedback><text>Se realiza violación de pasos por doble apoyo consecutivo pie izquierdo</text></feedback>
+<text>La falta sancionada es antideportiva</text>
+<feedback><text>No es falta antideportiva la falta cometida por el 35, la falta anterior sí puede interpretarse como antideportiva </text></feedback>
 </answer>
 <answer fraction="0">
-<text>Pasos por dar cuatro apoyos</text>
+<text>La falta sancionada no es antideportiva</text>
 <feedback><text>Incorrecta</text></feedback>
-</answer>
-<answer fraction="0">
-<text>Doble apoyo consecutivo pie derecho. Pasos</text>
-<feedback><text>Incorrecta, es con el derecho</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
 <name>
-<text>Señala las respuestas incorrectas</text>
+<text>¿Jugada bien arbitrada?</text>
 </name>
 <questiontext>
-<text>Señala las respuestas incorrectas</text>
+<text>¿Jugada bien arbitrada?</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
 <media>
 <type>video</type>
-<source type="video/mp4">assets/videos/pasos10.mp4</source>
+<source type="video/mp4">assets/videos/u14.mp4</source>
+</media>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Clara falta antideportiva, contacto muy lejos de balón</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Jugada bien arbitrada?</text>
+</name>
+<questiontext>
+<text>¿Jugada bien arbitrada?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u15.mp4</source>
 </media>
 <answer fraction="0">
-<text>Hay pasos de salida que generan ventaja al atacante</text>
-<feedback><text>Claros pasos de salida que generan ventaja al atacante</text></feedback>
-</answer>
-<answer fraction="0">
-<text>Correcta acción continuada</text>
-<feedback><text>Jugador recibe falta con el balón es las manos; correcta acción continuada</text></feedback>
+<text>Sí</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="100">
-<text>Hay pasos pero no suponen una ventaja para el atacante</text>
-<feedback><text>Incorrecta, sí lo suponen</text></feedback>
-</answer>
-<answer fraction="100">
-<text>Incorrecta acción continuada</text>
-<feedback><text>No es cierto</text></feedback>
+<text>No</text>
+<feedback><text>Clara falta antideportiva: último defensor, corta transición y contacto muy lejos de balón</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
@@ -392,29 +356,21 @@
 <text>Señala la respuesta correcta</text>
 </name>
 <questiontext>
-<text>Señala las respuesta correcta</text>
+<text>Señala la respuesta correcta</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
 <media>
 <type>video</type>
-<source type="video/mp4">assets/videos/pasos11.mp4</source>
+<source type="video/mp4">assets/videos/u16.mp4</source>
 </media>
-<answer fraction="0">
-<text>Paso cero bien aplicado en la salida y en la finalización</text>
-<feedback><text>Incorrecta, recibe en estático y comete pasos de salida</text></feedback>
-</answer>
 <answer fraction="100">
-<text>Pasos de salida y correcta finalización con paso cero</text>
-<feedback><text>Hay pasos de salida ya que recibe en estático (no hay paso cero en estático) y la finalización es correcta con paso cero</text></feedback>
+<text>La falta cometida es antideportiva</text>
+<feedback><text>Falta antideportiva, contacta sin intención de disputar el balón</text></feedback>
 </answer>
 <answer fraction="0">
-<text>Paso cero aplicado en la salida y no en la finalización</text>
-<feedback><text>Incorrecta, es al revés</text></feedback>
-</answer>
-<answer fraction="0">
-<text>Salida legal y pasos por dos apoyos consecutivos con pie derecho</text>
-<feedback><text>Ninguna de las dos es correcta</text></feedback>
+<text>La falta cometida no es antideportiva</text>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
@@ -428,11 +384,11 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source type="video/mp4">assets/videos/pasos12.mp4</source>
+<source type="video/mp4">assets/videos/u17.mp4</source>
 </media>
 <answer fraction="100">
 <text>Sí</text>
-<feedback><text>Pasos del poste tras recepción de balón</text></feedback>
+<feedback><text>Clara falta antideportiva: jugador tras perder balón agarra pierna de su adversario</text></feedback>
 </answer>
 <answer fraction="0">
 <text>No</text>
@@ -441,59 +397,7 @@
 </question>
 <question type="multichoice">
 <name>
-<text>Señala las respuesta correcta</text>
-</name>
-<questiontext>
-<text>Señala las respuesta correcta</text>
-</questiontext>
-<shuffleanswers>0</shuffleanswers>
-<single>false</single>
-<media>
-<type>video</type>
-<source type="video/mp4">assets/videos/pasos15.mp4</source>
-</media>
-<answer fraction="0">
-<text>Jugador realiza salida legal y finalización legal</text>
-<feedback><text>Incorrecta</text></feedback>
-</answer>
-<answer fraction="100">
-<text>Jugador realiza salida ilegal y finalización legal</text>
-<feedback><text>Pasos de salida. Finalización legal</text></feedback>
-</answer>
-<answer fraction="0">
-<text>Jugador realiza salida legal y finalización ilegal</text>
-<feedback><text>Incorrecta</text></feedback>
-</answer>
-<answer fraction="0">
-<text>Jugador realiza salida ilegal y finalización ilegal</text>
-<feedback><text>Incorrecta</text></feedback>
-</answer>
-</question>
-<question type="multichoice">
-<name>
-<text>¿Hay en la jugada alguna acción ilegal?</text>
-</name>
-<questiontext>
-<text>¿Hay en la jugada alguna acción ilegal?</text>
-</questiontext>
-<shuffleanswers>0</shuffleanswers>
-<single>false</single>
-<media>
-<type>video</type>
-<source type="video/mp4">assets/videos/pasos16.mp4</source>
-</media>
-<answer fraction="100">
-<text>Sí</text>
-<feedback><text>Hay pasos de salida</text></feedback>
-</answer>
-<answer fraction="0">
-<text>No</text>
-<feedback><text>Incorrecta</text></feedback>
-</answer>
-</question>
-<question type="multichoice">
-<name>
-<text>Señala la respuesta correcta­</text>
+<text>Señala la respuesta correcta</text>
 </name>
 <questiontext>
 <text>Señala la respuesta correcta</text>
@@ -502,23 +406,59 @@
 <single>false</single>
 <media>
 <type>video</type>
-<source type="video/mp4">assets/videos/pasos20.mp4</source>
+<source type="video/mp4">assets/videos/u18.mp4</source>
+</media>
+<answer fraction="100">
+<text>Jugador azul comete falta antideportiva</text>
+<feedback><text>Clara falta antideportiva: contacta con brusquedad sin balón en juego</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Jugador azul no comete falta antideportiva</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Correcta sanción por parte del árbitro?</text>
+</name>
+<questiontext>
+<text>¿Correcta sanción por parte del árbitro?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u19.mp4</source>
+</media>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Ambos jugadores defensores contactan a jugador atacante en transición muy lejos de balón</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Señala la respuesta correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u20.mp4</source>
 </media>
 <answer fraction="0">
-<text>Pasos en la recepción de balón</text>
+<text>Defensor llega a tocar balón, falta normal</text>
 <feedback><text>Incorrecta</text></feedback>
 </answer>
 <answer fraction="100">
-<text>Dos pasos consecutivos con el mismo pie. Violación</text>
-<feedback><text>Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</text></feedback>
-</answer>
-<answer fraction="0">
-<text>Traspiés cogiendo balón en el aire</text>
-<feedback><text>Incorrecta</text></feedback>
-</answer>
-<answer fraction="0">
-<text>Jugada ilegal por dar tres apoyos con el balón en las manos</text>
-<feedback><text>Incorrecta</text></feedback>
+<text>Defensor corta a propósito al atacante que se va solo hacia canasta, falta antideportiva</text>
+<feedback><text>Antideportiva muy clara no sancionada: agarra a propósito al jugador atacante con objetivo de impedirle finalizar</text></feedback>
 </answer>
 </question>
 </quiz>
