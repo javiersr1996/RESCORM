@@ -63,11 +63,11 @@
 <source type="video/mp4">assets/videos/v3.mp4</source>
 </media>
 <answer fraction="100">
-<text>Se debe repetir</text>
+<text>se debe repetir</text>
 <feedback><text>Jugador defensor entra cuando atacante se dispone a tirar el tiro libre. Se debe repetir.</text></feedback>
 </answer>
 <answer fraction="0">
-<text>No se debe repetir </text>
+<text>no se debe repetir </text>
 <feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
@@ -125,10 +125,10 @@
 </question>
 <question type="multichoice">
 <name>
-<text>Observa el salto inicial del partido</text>
+<text>Con respecto al salto inicial del partido</text>
 </name>
 <questiontext>
-<text>Observa el salto inicial del partido</text>
+<text>Con respecto al salto inicial del partido</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
@@ -405,10 +405,10 @@
 </question>
 <question type="multichoice">
 <name>
-<text>Señala la respuestas correctas</text>
+<text>Señala las respuestas correctas</text>
 </name>
 <questiontext>
-<text>Señala la respuestas correctas</text>
+<text>Señala las respuestas correctas</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>

@@ -76,7 +76,7 @@
 </answer>
 <answer fraction="0">
 <text>No es antideportiva, es falta personal</text>
-<feedback><text>Incorrecto</text></feedback>
+<feedback><text>Incorrecta</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
@@ -116,7 +116,7 @@
 </media>
 <answer fraction="100">
 <text>El árbitro acierta</text>
-<feedback><text>No acierta, es falta antideportiva clara por agarre en transición</text></feedback>
+<feedback><text>Es falta antideportiva clara por agarre en transición</text></feedback>
 </answer>
 <answer fraction="0">
 <text>El árbitro no acierta</text>
@@ -137,7 +137,7 @@
 <source type="video/mp4">assets/videos/u6.mp4</source>
 </media>
 <answer fraction="100">
-<text>Antideportiva</text>
+<text>antideportiva</text>
 <feedback><text>Sin intención de disputar el balón, corta contraataque y reconoce la falta</text></feedback>
 </answer>
 <answer fraction="0">
@@ -191,7 +191,7 @@
 </question>
 <question type="multichoice">
 <name>
-<text>Señala la respuestas correctas</text>
+<text>Señala las respuestas correctas</text>
 </name>
 <questiontext>
 <text>Señala las respuestas correctas</text>
@@ -243,10 +243,10 @@
 </question>
 <question type="multichoice">
 <name>
-<text>Señala la opción incorrecta</text>
+<text>Señala la opción correcta</text>
 </name>
 <questiontext>
-<text>Señala la opción incorrecta</text>
+<text>Señala la opción correcta</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
@@ -254,13 +254,13 @@
 <type>video</type>
 <source type="video/mp4">assets/videos/u11.mp4</source>
 </media>
-<answer fraction="100">
-<text>No es falta antideportiva ya que defensor toca balón en todo momento</text>
-<feedback><text>Clara falta antideportiva por agarrar brazo en la finalización</text></feedback>
-</answer>
 <answer fraction="0">
+<text>No es falta antideportiva ya que defensor toca balón en todo momento</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
 <text>Falta antideportiva por agarrar del brazo en la finalización</text>
-<feedback><text>Incorrecta porque es la respuesta verdadera</text></feedback>
+<feedback><text>Correcta</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
@@ -287,10 +287,10 @@
 </question>
 <question type="multichoice">
 <name>
-<text>Señala la respuesta incorrecta</text>
+<text>Señala la respuesta correcta</text>
 </name>
 <questiontext>
-<text>Señala la respuesta incorrecta</text>
+<text>Señala la respuesta correcta</text>
 </questiontext>
 <shuffleanswers>0</shuffleanswers>
 <single>false</single>
@@ -298,13 +298,13 @@
 <type>video</type>
 <source type="video/mp4">assets/videos/u13.mp4</source>
 </media>
-<answer fraction="100">
+<answer fraction="0">
 <text>La falta sancionada es antideportiva</text>
 <feedback><text>No es falta antideportiva la falta cometida por el 35, la falta anterior sí puede interpretarse como antideportiva </text></feedback>
 </answer>
-<answer fraction="0">
+<answer fraction="100">
 <text>La falta sancionada no es antideportiva</text>
-<feedback><text>Incorrecta</text></feedback>
+<feedback><text>Correcta</text></feedback>
 </answer>
 </question>
 <question type="multichoice">
@@ -458,7 +458,7 @@
 </answer>
 <answer fraction="100">
 <text>Defensor corta a propósito al atacante que se va solo hacia canasta, falta antideportiva</text>
-<feedback><text>Antideportiva muy clara no sancionada: agarra a propósito al jugador atacante con objetivo de impedirle finalizar</text></feedback>
+<feedback><text>Agarra a propósito al jugador atacante para impedirle finalizar</text></feedback>
 </answer>
 </question>
 </quiz>

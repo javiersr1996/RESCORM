@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Correcta acción continuada?</text>
+</name>
+<questiontext>
+<text>¿Correcta acción continuada?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f1.mp4</source>
+</media>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Recibe falta con balón en las manos. 2+1</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Señala la respuesta correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="100">
+<text>Defensa legal</text>
+<feedback><text>Defensor en todo momento en correcta posición defensiva</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Defensa ilegal</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f2.mp4</source>
+</media>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Ataque?</text>
+</name>
+<questiontext>
+<text>¿Ataque?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f3.mp4</source>
+</media>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Pívot arrolla al defensor en la continuación del bloqueo</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Acierta el árbitro?</text>
+</name>
+<questiontext>
+<text>¿Acierta el árbitro?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f4.mp4</source>
+</media>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Defensor saca de trayectoria al atacante</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Señala la respuesta correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f5.mp4</source>
+</media>
+<answer fraction="0">
+<text>Atacante pierde balón sin recibir falta</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Atacante pierde balón tras recibir falta</text>
+<feedback><text>Defensor comete falta al no estar en correcta posición defensiva</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Acción continuada?</text>
+</name>
+<questiontext>
+<text>¿Acción continuada?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f6.mp4</source>
+</media>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Correcto 2+1: jugador recibe falta cuando comienza la finalización</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Acción continuada?</text>
+</name>
+<questiontext>
+<text>¿Acción continuada?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f7.mp4</source>
+</media>
+<answer fraction="0">
+<text>Sí</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<feedback><text>Atacante no está en acción de tiro cuando recibe la falta</text></feedback>
+<text>No</text>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Señala la respuesta correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f8.mp4</source>
+</media>
+<answer fraction="100">
+<text>Falta en ataque</text>
+<feedback><text>Se quita con el brazo al defensor</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Falta en defensa</text>
+<feedback><text>Defensor en correcta posición defensivo</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Señala la respuestas correctas</text>
+</name>
+<questiontext>
+<text>Señala las respuestas correctas</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f9.mp4</source>
+</media>
+<answer fraction="0">
+<text>No hay falta en el lanzamiento de tres</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Hay falta en el lanzamiento de tres</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>3+1</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Vale el triple y posesión para atacantes</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Se señala falta al jugador blanco. ¿Acierta el árbitro?</text>
+</name>
+<questiontext>
+<text>Se señala falta al jugador blanco. ¿Acierta el árbitro?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f10.mp4</source>
+</media>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Defensor en correcta posición defensiva, es falta en ataque</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Sí</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Falta o teatro?</text>
+</name>
+<questiontext>
+<text>¿Falta o teatro?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f11.mp4</source>
+</media>
+<answer fraction="0">
+<text>Falta</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Teatro</text>
+<feedback><text>Atacante realiza bloqueo legal</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Se sanciona correctamente la falta?</text>
+</name>
+<questiontext>
+<text>¿Se sanciona correctamente la falta?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f12.mp4</source>
+</media>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Robo claro</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Sí</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Señala la respuesta correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f13.mp4</source>
+</media>
+<answer fraction="100">
+<text>Falta personal. Dos tiros libres</text>
+<feedback><text>Atacante se encuentra en acción de tiro cuando recibe la falta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Falta personal. Saque de banda</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Jugada bien arbitrada?</text>
+</name>
+<questiontext>
+<text>¿Jugada bien arbitrada?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f14.mp4</source>
+</media>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Falta de ataque al no poner un bloqueo correcto</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Falta o teatro?</text>
+</name>
+<questiontext>
+<text>¿Falta o teatro?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f15.mp4</source>
+</media>
+<answer fraction="0">
+<text>Falta</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Teatro</text>
+<feedback><text>Clara simulación</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Señala la respuesta correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f16.mp4</source>
+</media>
+<answer fraction="0">
+<text>No hay falta personal</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Hay falta personal</text>
+<feedback><text>Pívot recibe clara falta personal</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Acierta el árbitro?</text>
+</name>
+<questiontext>
+<text>¿Acierta el árbitro?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f17.mp4</source>
+</media>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Clara falta en el rebote que debía haberse sancionado</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Sí</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Se produce un bloqueo indirecto. Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Se produce un bloqueo indirecto. Señala la respuesta correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f18.mp4</source>
+</media>
+<answer fraction="100">
+<text>Falta en ataque</text>
+<feedback><text>Atacante no respeta ni tiempo ni distancia</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Falta en defensa</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Correcta sanción por parte del árbitro?</text>
+</name>
+<questiontext>
+<text>¿Correcta sanción por parte del árbitro?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f19.mp4</source>
+</media>
+<answer fraction="0">
+<text>Sí</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Clara acción continuada no concedida</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Se señala falta sobre el jugador 8 azul. Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Se señala falta sobre el jugador 8 azul. Señala la respuesta correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f20.mp4</source>
+</media>
+<answer fraction="100">
+<text>Jugador 8 azul debe ser sancionado con falta técnica</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Jugador 8 azul debe ser avisado de falta técnica</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Falta del jugador 5 blanco?</text>
+</name>
+<questiontext>
+<text>¿Falta del jugador 5 blanco?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f21.mp4</source>
+</media>
+<answer fraction="0">
+<text>Sí</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Verticalidad en el salto, no hay falta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Acierta el árbitro?</text>
+</name>
+<questiontext>
+<text>¿Acierta el árbitro?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f22.mp4</source>
+</media>
+<answer fraction="0">
+<text>Sí</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>No hay nada que haga indicar falta en ataque</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Correcta recepción de balón por parte del jugador 9 blanco?</text>
+</name>
+<questiontext>
+<text>¿Correcta recepción de balón por parte del jugador 9 blanco?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f23.mp4</source>
+</media>
+<answer fraction="0">
+<text>Sí</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Falta en ataque, se quita al defensor con el brazo para recibir</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Correcta técnica sancionada?</text>
+</name>
+<questiontext>
+<text>¿Correcta técnica sancionada?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f24.mp4</source>
+</media>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Clara simulación del defensor</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Señala las respuestas correctas</text>
+</name>
+<questiontext>
+<text>Señala las respuestas correctas</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/f25.mp4</source>
+</media>
+<answer fraction="100">
+<text>Falta en ataque</text>
+<feedback><text>Atacante arolla a defensor en estático</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No hay falta en ataque, hay falta en defensa</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>En caso de falta de ataque, la canasta no hubiera debido valer</text>
+<feedback><text>Atacante lanza después de cometer la falta en ataque</text></feedback>
+</answer>
+<answer fraction="0">
+<text>En caso de falta en defensa, 2+1</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+</quiz>

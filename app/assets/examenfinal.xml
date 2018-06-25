@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>A4 controla el balón botándolo en pista delantera. B5 palmea el balón, que se aleja hacia la pista trasera del equipo A. Ambos jugadores salen corriendo para coger el balón. El árbitro sanciona falta de A4 sobre B5, quinta falta de equipo en el período, aún en pista delantera de B</text>
+</name>
+<questiontext>
+<text>A4 controla el balón botándolo en pista delantera. B5 palmea el balón, que se aleja hacia la pista trasera del equipo A. Ambos jugadores salen corriendo para coger el balón. El árbitro sanciona falta de A4 sobre B5, quinta falta de equipo en el período, aún en pista delantera de B</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>­Se conceden dos tiros libres a B5</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Saque de lateral para el equipo B, desde su pista delantera </text>
+<feedback><text>El control de balón lo sigue teniendo el equipo A (palmeo de B no implica control), por tanto es falta en ataque de A4 </text></feedback>
+</answer>
+<answer fraction="0">
+<text>Saque de lateral para el equipo B, desde su pista trasera</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Señala la respuesta correcta</text>
+</questiontext>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/video1.mp4</source>
+<source type="video/ogg">assets/videos/video1.ogg</source>
+<source type="video/webm">assets/videos/video1.webm</source>
+</media>
+<answer fraction="0">
+<text>Paso 0 correctamente aplicado</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Dos pasos consecutivos con el mismo pie. Violación</text>
+<feedback><text>Se produce violación por pasos al realizar doble apoyo consecutivo con el mismo pie con balón en las manos</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Traspiés válido</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Jugada ilegal por dar tres apoyos con el balón en las manos</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Señala la respuesta correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Jugada bien arbitrada</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Jugada mal arbitrada</text>
+<feedback><text>Clara antideportiva por agarre a jugador con balón</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u2.mp4</source>
+</media>
+</question>
+<question type="multichoice">
+<name>
+<text>En esta jugada, lo primero que se produce es...</text>
+</name>
+<questiontext>
+<text>En esta jugada, lo primero que se produce es...</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/video3.mp4</source>
+</media>
+<answer fraction="100">
+<text>pasos tras rebote ofensivo</text>
+<feedback><text>Jugador atacante comete violación de pasos tras rebote ofensivo antes de recibir la falta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>falta en acción de tiro</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Escucha el siguiente audio. ¿Es correcto lo que se dice?</text>
+</name>
+<questiontext>
+<text>Escucha el siguiente audio. ¿Es correcto lo que se dice?</text>
+</questiontext>
+<media>
+<type>audio</type>
+<source type="audio/mp3">assets/audios/audio2.mp3</source>
+<source type="audio/ogg">assets/audios/audio2.ogg</source>
+<source type="audio/wav">assets/audios/audio2.wav</source>
+</media>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Hay 2 por parte no acumulables, por tanto no es correcto lo que se dice</text></feedback>
+</answer>
+<answer fraction="0">
+<feedback><text>Incorrecta</text></feedback>
+<text>Sí</text>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>En la jugada...</text>
+</name>
+<questiontext>
+<text>En la jugada...</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/video4.mp4</source>
+</media>
+<answer fraction="100">
+<text>No se produce violación de campo atrás al no tener control el jugador</text>
+<feedback><text>No hay control de balón por parte del atacante (palmea) por tanto no hay campo atrás</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Árbitro sanciona correctamente violación de campo atrás al controlar el jugador el balón en campo de ataque</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Se produce violación por tres segundos en la zona. Señala la opción correcta</text>
+</name>
+<questiontext>
+<text>Se produce violación por tres segundos en la zona. Señala la opción correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/video5.mp4</source>
+</media>
+<answer fraction="0">
+<text>Bien sancionada</text>
+<feedback><text>Hay que esperar al jugador a ver si lanza o no a canasta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Bien sancionada, aunque hubiera estado mejor antes</text>
+<feedback><text>No está bien sancionada al hacerlo nada más recibir el jugador</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Mal sancionada</text>
+<feedback><text>Debe esperar a ver si el jugador lanza a canasta o no </text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Señala la opción correcta</text>
+</name>
+<questiontext>
+<text>Señala la opción correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/video11.mp4</source>
+</media>
+<answer fraction="0">
+<text>Tapón legal</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Falta en acción de tiro</text>
+<feedback><text>Clara falta con la cadera del jugador rojo que tapona al atacante</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Señala la opción correcta</text>
+</name>
+<questiontext>
+<text>Señala la opción correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/video7.mp4</source>
+</media>
+<answer fraction="0">
+<text>Falta en ataque por pantalla ilegal</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Simulación del defensor, el cual no merece falta técnica</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Simulación del defensor que debe ser avisado de falta técnica</text>
+<feedback><text>Se aprecia que el atacante realiza una pantalla legal, respetando distancia y tiempo y con los pies en el suelo. Clara simulación</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Señala la opción correcta</text>
+</name>
+<questiontext>
+<text>Señala la opción correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/video8.mp4</source>
+</media>
+<answer fraction="0">
+<text>Hay falta que no debía haber sido sancionada</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Jugadora merece falta técnica por desprecio hacia los árbitros</text>
+<feedback><text>Reacción jocosa de la jugadora, la cual implica falta de respeto hacia los árbitros. Como mínimo se le debe avisar</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<dificultad>1</dificultad>
+<name>
+<text>Señala la opción correcta</text>
+</name>
+<questiontext>
+<text>Señala la opción correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<answer fraction="0">
+<text>El primer periodo comienza cuando el árbitro principal, con el balón, entra en el círculo para administrar el salto entre dos</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>En todos los periodos extra, los equipos intercambiarán las canastas</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>En todos los partidos, equipo local a la izquierda y visitante a la derecha salvo acuerdo entre ambos equipos</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Cuándo comienza oficialmente el partido?</text>
+</name>
+<questiontext>
+<text>¿Cuándo comienza oficialmente el partido?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>20 minutos antes de la hora de inicio programada</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Cuando el árbitro principal entra en el círculo central para administrar el salto entre dos inicial.</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Cuando el balón sale de las manos del árbitro principal en el salto entre dos inicial.</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<dificultad>1</dificultad>
+<name>
+<text>Un tiempo muerto finaliza cuando...</text>
+</name>
+<questiontext>
+<text>Un tiempo muerto finaliza cuando...</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<answer fraction="100">
+<text>un árbitro hace sonar su silbato y ordena a los equipos que vuelvan a la pista</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>suena por segunda vez la señal del cronometrador transcurridos los 60 segundos</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>ambos equipos regresan a pista</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Señala la respuesta correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Jugada bien arbitrada</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Jugada mal arbitrada</text>
+<feedback><text>Clara antideportiva por agarre a jugador con balón</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u21.mp4</source>
+</media>
+</question>
+<question type="multichoice">
+<name>
+<text>Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Señala la respuesta correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Hay falta personal en el tiro de tres</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No hay falta personal en el tiro de tres</text>
+<feedback><text>Clara simulación, defensor brazos arriba</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/video9.mp4</source>
+</media>
+</question>
+<question type="multichoice">
+<name>
+<text>Señala la respuesta correcta</text>
+</name>
+<questiontext>
+<text>Señala la respuesta correcta</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="100">
+<text>2+1</text>
+<feedback><text>Atacante recibe falta en acción de tiro</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No es falta en acción de tiro</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/video10.mp4</source>
+</media>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Antideportiva?</text>
+</name>
+<questiontext>
+<text>¿Antideportiva?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Agarra el brazo a su rival tras perder el balón</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u24.mp4</source>
+</media>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Tiro libre bien arbitrado?</text>
+</name>
+<questiontext>
+<text>¿Tiro libre bien arbitrado?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Sí</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Pívot defensor no está bien colocado, se debe repetir</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/v28.mp4</source>
+</media>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Pasos del jugador 21 azul?</text>
+</name>
+<questiontext>
+<text>¿Pasos del jugador 21 azul?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Doble apoyo consecutivo con mismo pie</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos21.mp4</source>
+</media>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Pasos en la finalización?</text>
+</name>
+<questiontext>
+<text>¿Pasos en la finalización?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Doble apoyo consecutivo con mismo pie</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/video2.mp4</source>
+</media>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Correcto saque inicial?</text>
+</name>
+<questiontext>
+<text>¿Correcto saque inicial?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Sí</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Ninguno de los dos jugadores palmea antes de que toque el suelo</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/v26.mp4</source>
+</media>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Campo atrás?</text>
+</name>
+<questiontext>
+<text>¿Campo atrás?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Sí</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Tras tocar en defensor, atacante recupera control con balón en pista trasera</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/v27.mp4</source>
+</media>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Antideportiva?</text>
+</name>
+<questiontext>
+<text>¿Antideportiva?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Corta contraataque intencionadamente</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u22.mp4</source>
+</media>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Antideportiva?</text>
+</name>
+<questiontext>
+<text>¿Antideportiva?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>No tiene intención de disputar el balón</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u23.mp4</source>
+</media>
+</question>
+
+</quiz>

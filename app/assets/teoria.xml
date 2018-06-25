@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</name>
+<questiontext>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<media>
+<type>audio</type>
+<source type="audio/mp3">assets/audios/audio1.mp3</source>
+</media>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Qué pista es más grande, trasera o delantera?</text>
+</name>
+<questiontext>
+<text>¿Qué pista es más grande, trasera o delantera?</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Delantera</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Trasera</text>
+<feedback><text>Es más grande que delantera al incluir la línea de medio campo</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</name>
+<questiontext>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<media>
+<type>audio</type>
+<source type="audio/mp3">assets/audios/audio4.mp3</source>
+</media>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Cúando finalizan los ocho segundos en campo defensivo en minibasket?</text>
+</name>
+<questiontext>
+<text>¿Cúando finalizan los ocho segundos en campo defensivo en minibasket?</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Cuando balón llega a campo de ataque</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No hay ocho segundos en minibasket</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>En la categoría preinfantil hay un tiempo muerto por cuarto. En caso de no pedirlo, se acumula para el siguiente cuarto</text>
+</name>
+<questiontext>
+<text>En la categoría preinfantil hay un tiempo muerto por cuarto. En caso de no pedirlo, se acumula para el siguiente cuarto</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Verdadero</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Falso</text>
+<feedback><text>No son acumulables</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</name>
+<questiontext>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<media>
+<type>audio</type>
+<source type="audio/mp3">assets/audios/audio5.mp3</source>
+</media>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>En la categoría alevín hay técnicas a jugadores y entrenadores</text>
+</name>
+<questiontext>
+<text>En la categoría alevín hay técnicas a jugadores y entrenadores</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Verdadero</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Falso</text>
+<feedback><text>No hay técnicas a jugadores, sí a entrenadores</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</name>
+<questiontext>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<media>
+<type>audio</type>
+<source type="audio/mp3">assets/audios/audio6.mp3</source>
+</media>
+<answer fraction="0">
+<text>Sí</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Máximo siete jugadores en el banquillo</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Cuántos acompañantes como máximo puede haber en un cuerpo técnico?</text>
+</name>
+<questiontext>
+<text>¿Cuántos acompañantes como máximo puede haber en un cuerpo técnico?</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>8</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>7</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>6</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</name>
+<questiontext>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<media>
+<type>audio</type>
+<source type="audio/mp3">assets/audios/audio7.mp3</source>
+</media>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Cuándo comienza un intervalo de juego?</text>
+</name>
+<questiontext>
+<text>¿Cuándo comienza un intervalo de juego?</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Cuando suena la señal del reloj de partido indicando el final del período</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Cuando el árbitro hace sonar el silbato indicando el final del período</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Cuando el cronometrador inicia el reloj de partido una vez que ha finalizado el período</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</name>
+<questiontext>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<media>
+<type>audio</type>
+<source type="audio/mp3">assets/audios/audio8.mp3</source>
+</media>
+<answer fraction="0">
+<text>Sí</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Sí puede dirigir el partido, pero no puede dirigirse al árbitro</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Al mismo tiempo que suena el reloj de partido indicando el final del tercer período, se sanciona una falta y se le conceden 2 tiros libres a A4.</text>
+</name>
+<questiontext>
+<text>Al mismo tiempo que suena el reloj de partido indicando el final del tercer período, se sanciona una falta y se le conceden 2 tiros libres a A4.</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Se puede conceder tiempo muerto al equipo A</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No se puede conceder tiempo muerto a ninguno de los equipos</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Se puede conceder tiempo muerto a cualquier equipo</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</name>
+<questiontext>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<media>
+<type>audio</type>
+<source type="audio/mp3">assets/audios/audio9.mp3</source>
+</media>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>A4 lanza a canasta desde la zona de 3 puntos cuando es objeto de falta descalificante. La canasta entra.</text>
+</name>
+<questiontext>
+<text>A4 lanza a canasta desde la zona de 3 puntos cuando es objeto de falta descalificante. La canasta entra.</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Cualquier jugador del equipo A dispondrá de 2 tiros libres y el equipo A dispondrá de saque desde la línea central</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>A4 lanzará un tiro libre y el equipo A dispondrá de saque desde la línea central</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>A4 lanzará tres tiros libres y el equipo A dispondrá de saque desde la línea central</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</name>
+<questiontext>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<media>
+<type>audio</type>
+<source type="audio/mp3">assets/audios/audio10.mp3</source>
+</media>
+<answer fraction="100">
+<text>Sí</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Durante los dos últimos minutos de partido, una oportunidad de tiempo muerto comienza:</text>
+</name>
+<questiontext>
+<text>Durante los dos últimos minutos de partido, una oportunidad de tiempo muerto comienza:</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>para ambos equipos, cuando se logra un cesto de campo válido</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>sólo para el equipo que debe lanzar tiros libres si se convierte el último</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>para ambos equipos después de una violación del lanzador durante el último o único tiro libre</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Qué tiempo hay que esperar a partir de la hora fijada para el comienzo de un encuentro para que un equipo presente, al menos, cinco jugadores en pista?</text>
+</name>
+<questiontext>
+<text>¿Qué tiempo hay que esperar a partir de la hora fijada para el comienzo de un encuentro para que un equipo presente, al menos, cinco jugadores en pista?</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>5 minutos</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>15 minutos</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>20 minutos</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</name>
+<questiontext>
+<text>Escucha el audio. ¿Es correcto lo que se dice?</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<media>
+<type>audio</type>
+<source type="audio/mp3">assets/audios/audio11.mp3</source>
+</media>
+<answer fraction="0">
+<text>Sí</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Un jugador debe ser cambiado si tiene sangre</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Tras una violación de fuera de lateral, A1 tiene el balón en sus manos para el saque. Entonces, este jugador coloca el balón en el suelo y después lo coge A2</text>
+</name>
+<questiontext>
+<text>Tras una violación de fuera de lateral, A1 tiene el balón en sus manos para el saque. Entonces, este jugador coloca el balón en el suelo y después lo coge A2</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Jugada legal</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Violación de A1</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Violación de A2</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Salvo acuerdo de los equipos, en todos los partidos:</text>
+</name>
+<questiontext>
+<text>Salvo acuerdo de los equipos, en todos los partidos:</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text> El equipo local tendrá el banquillo  y la canasta rival a la izquierda de la mesa de anotadores, de cara al terreno de juego</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>El equipo local tendrá el banquillo y su propia canasta a la derecha de la mesa de anotadores, de cara al terreno de juego.</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>El equipo local tendrá el banquillo y su propia canasta a la izquierda de la mesa de anotadores, de cara al terreno de juego</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Si el reloj de partido muestra 0:00.3 (3 décimas) para el final del segundo período al efectuarse un saque:</text>
+</name>
+<questiontext>
+<text>Si el reloj de partido muestra 0:00.3 (3 décimas) para el final del segundo período al efectuarse un saque:</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Cualquier falta del equipo defensor antes de que se efectúe el saque debe sancionarse como antideportiva</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="0">
+<text>El único lanzamiento válido será un palmeo o un mate</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Un jugador podrá recibir el balón y lanzar a cesto</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Se sanciona falta descalificante a un jugador atacante. ¿Cuál será la penalización?</text>
+</name>
+<questiontext>
+<text>Se sanciona falta descalificante a un jugador atacante. ¿Cuál será la penalización?</text>
+</questiontext>
+<shuffleanswers>1</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Al ser falta del equipo con control, saque para el equipo contrario</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="0">
+<text> Dos o tres tiros libres y posesión del balón para el equipo adversario</text>
+<feedback><text>Incorrecta</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Siempre dos tiros libres y posesión del balón para el equipo contrario</text>
+<feedback><text>Correcta</text></feedback>
+</answer>
+</question>
+</quiz>

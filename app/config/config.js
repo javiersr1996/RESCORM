@@ -6,7 +6,7 @@ export let GLOBAL_CONFIG = {
     // idiomas soportados por la aplicación
     available_locales:["es", "en"],
     // locale fuerza el idioma a emplear: en para inglés, es para castellano
-    locale:"es",
+    locale:"en",
     adaptive:true,
     finish_screen:true,
     scorm:{
@@ -16,7 +16,7 @@ export let GLOBAL_CONFIG = {
     // numero de preguntas maximas a mostrar
     n:200,
     // modo de juego: examen o repaso
-    modo:"examen",
+    modo:"repaso",
     /*
     *************************************************************************************
     xml: "assets/<CUESTIONARIO>.xml",
@@ -24,7 +24,7 @@ export let GLOBAL_CONFIG = {
     <CUESTIONARIO> en inglés: pasos_en, antideportivas_en, violaciones_en, faltas_en
     *************************************************************************************
     */
-    xml:"assets/examen1.xml",
+    xml:"assets/teoria.xml",
 
         // tiempo para completar la partida --> modo examen
     secondsRemaining:600,

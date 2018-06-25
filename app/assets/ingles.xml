@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<question type="category">
+<category>
+<text>Moodle QUIZ XML export</text>
+</category>
+</question>
+<question type="multichoice">
+<name>
+<text>Last two minutes of the game. Is the referee right?</text>
+</name>
+<questiontext>
+<text>Last two minutes of the game. Is the referee right?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u1.mp4</source>
+</media>
+<answer fraction="100">
+<text>Yes</text>
+<feedback><text>Yes. In the last two minutes of the game, every foul without ball is an unsportsmanlike foul</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Well done by referee</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Wrong done by referee</text>
+<feedback><text>Unsportsmanlike foul. Player grabs the arm of his rival without intention of playing the ball</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u2.mp4</source>
+</media>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answers</text>
+</name>
+<questiontext>
+<text>Choose the correct answers</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u3.mp4</source>
+</media>
+<answer fraction="100">
+<text>There's a foul</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Is an unsportsmanlike foul, it cuts the fastbreak </text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No foul, correct defensive position</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No unsportsmanlike foul, is personal foul</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Is the referee right?</text>
+</name>
+<questiontext>
+<text>Is the referee right?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u4.mp4</source>
+</media>
+<answer fraction="0">
+<text>Yes</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Unsportsmanlike foul (player grabs the arm of this rival without playing the ball) </text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u5.mp4</source>
+</media>
+<answer fraction="100">
+<text>Referee is right</text>
+<feedback><text>Correct, unsportsmanlike foul</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Referee is not right</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>During the play, there is a foul, which is....</text>
+</name>
+<questiontext>
+<text>During the play, there is a foul, which is....</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u6.mp4</source>
+</media>
+<answer fraction="100">
+<text>unsportsmanlike foul</text>
+<feedback><text>No intention of playing the ball, it cuts the fastbreak and the player recognizes it</text></feedback>
+</answer>
+<answer fraction="0">
+<text>personal foul</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Why unsportsmanlike foul?</text>
+</name>
+<questiontext>
+<text>Why unsportsmanlike foul?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u7.mp4</source>
+</media>
+<answer fraction="0">
+<text>Last defender</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<feedback><text>Defender doesn't reach the ball. Violent impact</text></feedback>
+<text>Abrupt contact</text>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u8.mp4</source>
+</media>
+<answer fraction="0">
+<text>Yellow defender makes personal foul while he tries to play the ball</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Yellow defender makes an intentional foul in order to stop the fastbreak</text>
+<feedback><text>No sanctioned unsportsmanlike foul</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answers</text>
+</name>
+<questiontext>
+<text>Choose the correct answers</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u9.mp4</source>
+</media>
+<answer fraction="0">
+<text>No unsportsmanlike foul</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Unsportsmanlike foul</text>
+<feedback><text>Player grabs his rival arm without playing the ball</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Some protests deserve technical foul</text>
+<feedback><text>Correct </text></feedback>
+</answer>
+<answer fraction="0">
+<text>There are protests that doesn't deserve technical foul</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Is the referee right?</text>
+</name>
+<questiontext>
+<text>Is the referee right?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u10.mp4</source>
+</media>
+<answer fraction="100">
+<text>Yes</text>
+<feedback><text>Defender makes contact far away from the ball, unsportsmanlike foul</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/u11.mp4</source>
+</media>
+<answer fraction="0">
+<text>No unsportsmanlike foul, defender touches the ball</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="º00">
+<text>Unsportsmanlike foul</text>
+<feedback><text>Defender grabs the arm, unsportsmanlike foul</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Is the referee right?</text>
+</name>
+<questiontext>
+<text>Is the referee right?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos17.mp4</source>
+</media>
+<answer fraction="0">
+<text>Yes</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>He's not right. No travelling in the finalization</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answers</text>
+</name>
+<questiontext>
+<text>Choose the correct answers</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>true</single>
+<answer fraction="0">
+<text>Finalization without zero step</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Finalization with zero step</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="100">
+<text>If zero step exists, is with the right foot</text>
+<feedback><text>Zero step is with the right foot</text></feedback>
+</answer>
+<answer fraction="0">
+<text>If zero step exists, is with the left foot</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos1.mp4</source>
+</media>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answers</text>
+</name>
+<questiontext>
+<text>Choose the correct answers</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos2.mp4</source>
+</media>
+<answer fraction="0">
+<text>No travelling</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Travelling</text>
+<feedback><text>The player makes travelling clearly</text></feedback>
+</answer>
+<answer fraction="0">
+<text>The player makes a violation, which generates an advantage for him</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>The player makes a violation, but it doesn't generate an advantage for him</text>
+<feedback><text>Travelling doesn't generate advantage/disadvantage, so is correct not penalise</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Is the referee right?</text>
+</name>
+<questiontext>
+<text>Is the referee right?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos18.mp4</source>
+</media>
+<answer fraction="0">
+<text>Yes</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>The referee is not right: the player raises the pivot foot before leaking the ball</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>In this play, the order of events is...</text>
+</name>
+<questiontext>
+<text>In this play, the order of events is...</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos4.mp4</source>
+</media>
+<answer fraction="100">
+<text>first travelling when getting the offensive rebound, then player receives personal foul</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="0">
+<text>first player receives personal foul before making travelling</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos5.mp4</source>
+</media>
+<answer fraction="0">
+<text>Zero step with the left foot</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Zero step with the right foot</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answers</text>
+</name>
+<questiontext>
+<text>Choose the correct answers</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos6.mp4</source>
+</media>
+<answer fraction="0">
+<text>Illegal movement when receiving the ball, then correct finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Illegal movement when receiving the ball and correct finalization</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Legal movement when receiving the ball and illegal finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Illegal movement when receiving the ball and illegal finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos19.mp4</source>
+</media>
+<answer fraction="0">
+<text>Travelling when receiving the ball</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Two consecutive steps with the same foot. Violation</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Travelling when getting the ball in the air</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Three steps in the finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Is the referee right?</text>
+</name>
+<questiontext>
+<text>Is the referee right?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos13.mp4</source>
+</media>
+<answer fraction="0">
+<text>Yes</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>No</text>
+<feedback><text>Personal foul before travelling</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos11.mp4</source>
+</media>
+<answer fraction="0">
+<text>Zero step when receiving the ball and zero step in the finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Travelling when receiving the ball and correct zero step finalization</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Zero step when receiving the ball but no during the finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Travelling due to two consecutive steps with the same foot</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Is the referee right?</text>
+</name>
+<questiontext>
+<text>Is the referee right?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos12.mp4</source>
+</media>
+<answer fraction="100">
+<text>Yes</text>
+<feedback><text>The center makes travelling after receiving the ball</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos15.mp4</source>
+</media>
+<answer fraction="0">
+<text>Illegal movement when receiving the ball, then correct finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Illegal movement when receiving the ball and correct finalization</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Legal movement when receiving the ball and illegal finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Illegal movement when receiving the ball and illegal finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>¿Is there something illegal?</text>
+</name>
+<questiontext>
+<text>¿Is there something illegal?</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos16.mp4</source>
+</media>
+<answer fraction="100">
+<text>Yes</text>
+<feedback><text>Travelling when receiving the ball</text></feedback>
+</answer>
+<answer fraction="0">
+<text>No</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+<question type="multichoice">
+<name>
+<text>Choose the correct answer</text>
+</name>
+<questiontext>
+<text>Choose the correct answer</text>
+</questiontext>
+<shuffleanswers>0</shuffleanswers>
+<single>false</single>
+<media>
+<type>video</type>
+<source type="video/mp4">assets/videos/pasos20.mp4</source>
+</media>
+<answer fraction="0">
+<text>Travelling when receiving the ball</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="100">
+<text>Two consecutive steps with the same foot. Violation</text>
+<feedback><text>Correct</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Travelling when getting the ball in the air</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+<answer fraction="0">
+<text>Illegal play. Three steps in the finalization</text>
+<feedback><text>Incorrect</text></feedback>
+</answer>
+</question>
+</quiz>
