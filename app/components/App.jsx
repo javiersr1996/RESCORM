@@ -245,6 +245,7 @@ export class App extends React.Component {
     else if(this.state.presentacion === 0){
       return (
         <div>
+          <SCORM dispatch={this.props.dispatch} tracking={this.props.tracking} config={GLOBAL_CONFIG}/>
           <div className="divJumbotron">
               <div className="appPresentacion">
                 <img width="200" heigth="200" align="middle" src="
