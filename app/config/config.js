@@ -14,7 +14,8 @@ export let GLOBAL_CONFIG = {
       score_threshold:0.6,
     },
     // numero de preguntas maximas a mostrar
-    n:10,
+    n:20,
+    InitialScreen:true,
     // modo de juego: examen o repaso
     modo:"examen",
     /*
@@ -53,6 +54,7 @@ export let GLOBAL_CONFIG = {
       score_threshold:0.6,
     },
     n:10,
+    InitialScreen:true,
     modo:"examen",
     xml:"assets/examen_pasos.xml",
     secondsRemaining:360,

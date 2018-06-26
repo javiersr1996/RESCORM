@@ -13,14 +13,14 @@ import {jsonSaved, finishApp} from './../reducers/actions.jsx';
 import {INITIAL_STATE} from './../constants/constants.jsx';
 import $ from 'jquery';
 import ReactHtmlParser, {processNodes, convertNodeToElement, htmlparser2} from 'react-html-parser';
-import {Panel, Jumbotron} from 'react-bootstrap';
+import InitialScreen from './InitialScreen.jsx';
 
 export class App extends React.Component {
   constructor(props){
     super(props);
     I18n.init();
     this.state = {
-      presentacion:0,
+      presentacion:GLOBAL_CONFIG.InitialScreen,
 
     };
 
@@ -158,6 +158,7 @@ export class App extends React.Component {
           for(let i = 0; i < jsonpropio.length; i++){
             jsonpropio[i].respuestas.sort(function(){return Math.random() - 0.5;});
           }
+          jsonpropio.length = Math.min(GLOBAL_CONFIG.n, jsonpropio.length);
           jsonredux = jsonpropio;
           this.props.dispatch(jsonSaved(jsonredux));
         }.bind(this));
@@ -178,8 +179,9 @@ export class App extends React.Component {
   ******************************************************************************
   */
   onPresentacion(){
+    if(GLOBAL_CONFIG.InitialScreen)
     this.setState({
-      presentacion:1,
+      presentacion:false,
     });
     return;
   }
@@ -194,31 +196,11 @@ export class App extends React.Component {
   render(){
 
     // console.log(this.props.jsoninterno);
-    let TextoBienvenida = "Referee Basketball Test";
 
-    let texto1 = "";
-    let texto2 = "";
-    let texto3 = "";
-    let texto4 = "";
-    let imgModo = "";
-    let comenzar = I18n.getTrans("i.start");
-    if(GLOBAL_CONFIG.modo === "examen"){
-      texto1 = I18n.getTrans("i.modeExam");
-      texto2 = I18n.getTrans("i.questionsExam");
-      texto3 = I18n.getTrans("i.videoExam");
-      texto4 = I18n.getTrans("i.repetitionsExam") + GLOBAL_CONFIG.repeticiones;
-      imgModo = (<img width="200" heigth="200" align="middle" src="assets/images/examen.png" className="center" />);
-    } else {
-      texto1 = I18n.getTrans("i.modeStudying");
-      texto2 = I18n.getTrans("i.themeStudying");
-      texto3 = I18n.getTrans("i.timeStudying");
-      texto4 = I18n.getTrans("i.controlsStudying");
-      imgModo = (<img width="200" heigth="200" align="middle" src="assets/images/repaso.png" className="center" />);
-    }
 
     let appHeader = "";
     let appContent = "";
-    if(this.state.presentacion === 1){
+    if(!this.state.presentacion){
       if((this.props.tracking.finished !== true) || (GLOBAL_CONFIG.finish_screen === false)){
         appHeader = (
           <Header user_profile={this.props.user_profile} tracking={this.props.tracking} config={GLOBAL_CONFIG} I18n={I18n}/>
@@ -242,35 +224,12 @@ export class App extends React.Component {
       );
     }
 
-    else if(this.state.presentacion === 0){
-      return (
-        <div>
-          <SCORM dispatch={this.props.dispatch} tracking={this.props.tracking} config={GLOBAL_CONFIG}/>
-          <div className="divJumbotron">
-              <div className="appPresentacion">
-                <img width="200" heigth="200" align="middle" src="
-                assets/images/quiz_logo.png" className="center" />
-              </div>
-              <h1 id="textoBienvenida">{TextoBienvenida}</h1>
-              <div className="appPresentacion">
-                <img width="225" heigth="225" align="middle" src="assets/images/fbm.png" className="center" />
-              </div>
-          </div>
-          <div className="modoJuego">
-                  <p />
-                  <p className="quiz">{texto1}</p>
-                  <p className="quiz">{texto2}</p>
-                  <p className="quiz">{texto3}</p>
-                  <p className="quiz">{texto4}</p>
-                  {imgModo}
-              <div className="appPresentacion">
-                <p />
-                <button id="buttonApp" onClick={this.onPresentacion.bind(this)} >{comenzar}</button>
-              </div>
-          </div>
-        </div>
+    else {
+      return(
+      <div>
+        <InitialScreen dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} questions={this.props.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n} onPresentacion={this.onPresentacion.bind(this)}/>
+      </div>
       );
-
     }
     return null;
   }
