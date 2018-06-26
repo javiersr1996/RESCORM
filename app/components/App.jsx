@@ -58,13 +58,13 @@ export class App extends React.Component {
         let parseString = require('xml2js').parseString;
         parseString(data, function(err, result){
           let json = (result);
-          console.log(result);
+          // console.log(result);
           if(!result){
             err = I18n.getTrans("i.err");
           } else {
             err = I18n.getTrans("i.noErr");
           }
-          console.log(err);
+          // console.log(err);
 
           let customjson = {};
           customjson.quiz_xml = {};
@@ -92,30 +92,6 @@ export class App extends React.Component {
           for(let i = 0; i < number_question; i++){
             let indice = indexQuestion(i);
             let tipo_pregunta = (json.quiz.question[indice].$.type);
-              // el tipo de pregunta es truefalse
-            /*
-            if(tipo_pregunta === "truefalse"){
-              jsonpropio[num] = {};
-              jsonpropio[num].tipo = (json.quiz.question[indice].$.type);
-              jsonpropio[num].texto = (json.quiz.question[indice].name[0].text[0]);
-              jsonpropio[num].media = {};
-              jsonpropio[num].media.type = (json.quiz.question[indice].media[0].type[0]);
-              jsonpropio[num].media.source = (json.quiz.question[indice].media[0].source[0]);
-              jsonpropio[num].respuestas = [];
-              for(let j = 0; j < questions_size[i - 1]; j++){
-                let t = indice + j;
-                jsonpropio[num].respuestas[j] = {};
-                jsonpropio[num].respuestas[j].texto = (json.quiz.question[t].questiontext[0].text[0]);
-                jsonpropio[num].respuestas[j].id = k;
-                jsonpropio[num].respuestas[j].valor = (json.quiz.question[t].answer[0].$.fraction);
-                if(j === questions_size[i - 1] - 1){
-                  jsonpropio[num].respuestas.longitud = j;
-                }
-              }
-              num++;
-            }
-            */
-
               // el tipo de pregunta es multichoice
             if(tipo_pregunta === "multichoice"){
               let correctas = 0;
@@ -124,16 +100,6 @@ export class App extends React.Component {
               let texto = json.quiz.question[indice].questiontext[0].text[0];
               // se quitan etiquetas que vienen en los textos de Moodle XML
               let parserhtml_enunciado = transform(texto);
-              // let prueba = transform(parserhtml);
-
-            /*
-              if(texto.substring(texto.indexOf('>') + 1, texto.indexOf('<')) !== ""){
-                jsonpropio[num].texto = texto.substring(texto.indexOf('>') + 1, texto.lastIndexOf('<'));
-              } else {
-                jsonpropio[num].texto = texto;
-              }
-              */
-
               jsonpropio[num].texto = parserhtml_enunciado;
               if(json.quiz.question[indice].media === undefined){
                 jsonpropio[num].media = {};
@@ -157,24 +123,12 @@ export class App extends React.Component {
                 jsonpropio[num].respuestas[j].id = j;
                 let respuesta = json.quiz.question[indice].answer[j].text[0];
                 let parserhtml_respuesta = transform(respuesta);
-                /*
-                if(respuesta.substring(respuesta.indexOf('>') + 1, respuesta.lastIndexOf('<')) !== ""){
-                  jsonpropio[num].respuestas[j].texto = respuesta.substring(respuesta.indexOf('>') + 1, respuesta.lastIndexOf('<'));
-                } else {
-                  jsonpropio[num].respuestas[j].texto = respuesta;
-                }
-                */
+
                 jsonpropio[num].respuestas[j].texto = parserhtml_respuesta;
                 if(json.quiz.question[indice].answer[j].feedback !== undefined && json.quiz.question[indice].answer[j].feedback[0].text[0] !== ""){
                   let feedback = json.quiz.question[indice].answer[j].feedback[0].text[0];
                   let parserhtml_feedback = transform(feedback);
-                  /*
-                  if(feedback.substring(feedback.indexOf('>') + 1, feedback.lastIndexOf('<')) !== ""){
-                    jsonpropio[num].respuestas[j].solucion = feedback.substring(feedback.indexOf('>') + 1, feedback.lastIndexOf('<'));
-                  } else {
-                    jsonpropio[num].respuestas[j].solucion = feedback;
-                  }
-                  */
+
                   jsonpropio[num].respuestas[j].solucion = parserhtml_feedback;
                 } else if(json.quiz.question[indice].answer[j].$.fraction === "100"){
                   jsonpropio[num].respuestas[j].solucion = I18n.getTrans("i.correct");
@@ -200,8 +154,11 @@ export class App extends React.Component {
 
             }
           }
+          jsonpropio.sort(function(){return Math.random() - 0.5;});
+          for(let i = 0; i < jsonpropio.length; i++){
+            jsonpropio[i].respuestas.sort(function(){return Math.random() - 0.5;});
+          }
           jsonredux = jsonpropio;
-
           this.props.dispatch(jsonSaved(jsonredux));
         }.bind(this));
       }.bind(this),
@@ -221,10 +178,6 @@ export class App extends React.Component {
   ******************************************************************************
   */
   onPresentacion(){
-    this.props.jsoninterno.sort(function(){return Math.random() - 0.5;});
-    for(let i = 0; i < this.props.jsoninterno.length; i++){
-      this.props.jsoninterno[i].respuestas.sort(function(){return Math.random() - 0.5;});
-    }
     this.setState({
       presentacion:1,
     });
@@ -240,7 +193,7 @@ export class App extends React.Component {
   }
   render(){
 
-    console.log(this.props.jsoninterno);
+    // console.log(this.props.jsoninterno);
     let TextoBienvenida = "Referee Basketball Test";
 
     let texto1 = "";
@@ -270,7 +223,7 @@ export class App extends React.Component {
         appHeader = (
           <Header user_profile={this.props.user_profile} tracking={this.props.tracking} config={GLOBAL_CONFIG} I18n={I18n}/>
         );
-        if(this.props.wait_for_user_profile !== false){
+        if((this.props.wait_for_user_profile !== false || this.props.wait_for_user_profile !== true) && this.props.jsoninterno.length > 0){
           appContent = (
             <Quiz finishTime={this.AppfinishTime.bind(this)} dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} quiz={this.props.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n}/>
           );

@@ -1,6 +1,5 @@
 import React from 'react';
 import './../assets/scss/quiz.scss';
-
 import * as Utils from '../vendors/Utils.js';
 import {addObjectives, resetObjectives, finishApp} from './../reducers/actions';
 import {GLOBAL_CONFIG} from '../config/config.js';
@@ -18,9 +17,10 @@ export default class Quiz extends React.Component {
     // Adaptive behaviour
     // Sort questions based on difficulty
     let adaptive_sorted = false;
+    /*
     if((this.props.config.adaptive === true) && (typeof props.user_profile === "object") && (typeof props.user_profile.learner_preference === "object") && (typeof props.user_profile.learner_preference.difficulty === "number")){
       let difficulty = props.user_profile.learner_preference.difficulty;
-      /*
+
       if((difficulty >= 0) && (difficulty <= 10)){
         for(let i = 0; i <= questions.length; i++){
           if((typeof questions[i].dificultad !== "number") || (questions[i].dificultad < 0) || (questions[i].dificultad > 10)){
@@ -31,13 +31,13 @@ export default class Quiz extends React.Component {
         //questions.sort(function(a, b){ return b.suitability - a.suitability; });
         adaptive_sorted = true;
       }
-      */
-    }
 
+    }
+    */
     if(adaptive_sorted === false){
       // questions = Utils.shuffleArray(questions);
-
     }
+    /*
    // coje numero de preguntas determinado
     if((typeof this.props.config.n === "number") && (this.props.config.n >= 1)){
       // Limit number of questions
@@ -45,12 +45,13 @@ export default class Quiz extends React.Component {
       questions = questions.slice(0, Math.min(this.props.config.n, questions.length));
 
     }
+    */
     this.state = {
       questions:questions,
       current_question_index:1,
       num_key:1,
       hiddenSolucion:false,
-      repeticiones: 0,
+      repeticiones:0,
     };
     // this.tiempoAgotado = this.tiempoAgotado.bind(this);
   }
@@ -66,7 +67,7 @@ export default class Quiz extends React.Component {
     this.props.dispatch(addObjectives(objectives));
   }
   onRepeticiones(){
-    this.setState({repeticiones: this.state.repeticiones+1});
+    this.setState({repeticiones:this.state.repeticiones + 1});
   }
   onNextQuestion(){
     this.setState({num_key:this.state.num_key + 1});
@@ -115,7 +116,7 @@ export default class Quiz extends React.Component {
 
     switch (currentQuestion.tipo){
     case "multichoice":
-      currentQuestionRender = (<MCQuestion repeticiones={this.state.repeticiones}  question={currentQuestion} key_media={this.state.num_key} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished} hiddenSolucion={this.state.hiddenSolucion} onRepeticiones={this.onRepeticiones.bind(this)} />);
+      currentQuestionRender = (<MCQuestion repeticiones={this.state.repeticiones} question={currentQuestion} key_media={this.state.num_key} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished} hiddenSolucion={this.state.hiddenSolucion} onRepeticiones={this.onRepeticiones.bind(this)} />);
       break;
     case "multichoiceOne100":
       currentQuestionRender = (<MCQuestionOne100 question={currentQuestion} key_media={this.state.num_key} dispatch={this.props.dispatch} I18n={this.props.I18n} objective={objective} onNextQuestion={onNextQuestion} numKey={numKey} onResetQuiz={onResetQuiz} isLastQuestion={isLastQuestion} quizCompleted={this.props.tracking.finished} hiddenSolucion={this.state.hiddenSolucion} repeticiones={this.state.repeticiones} onRepeticiones={this.onRepeticiones.bind(this)}/>);

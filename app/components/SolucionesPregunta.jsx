@@ -16,8 +16,8 @@ export default class SolucionesPregunta extends React.Component {
     let divRespuestaCorrecta = "divRespuestaCorrecta";
     let divRespuestaIncorrecta = "divRespuestaIncorrecta";
     if(!this.props.pregunta.texto.indexOf("respuesta incorrecta") || !this.props.pregunta.texto.indexOf(" respuestas incorrectas")){
-       divRespuestaCorrecta = "divRespuestaIncorrecta";
-       divRespuestaIncorrecta = "divRespuestaCorrecta";
+      divRespuestaCorrecta = "divRespuestaIncorrecta";
+      divRespuestaIncorrecta = "divRespuestaCorrecta";
     }
 
     for(let i = 0; i < respuestas.length; i++){
