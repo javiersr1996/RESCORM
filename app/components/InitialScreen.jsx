@@ -3,7 +3,6 @@ import './../assets/scss/main.scss';
 import {GLOBAL_CONFIG} from '../config/config.js';
 import {LOCALES} from '../config/locales.js';
 import * as I18n from '../vendors/I18n.js';
-import SCORM from './SCORM.jsx';
 export default class InitialScreen extends React.Component {
   constructor(props){
     super(props);
@@ -36,7 +35,6 @@ export default class InitialScreen extends React.Component {
     }
     return (
       <div>
-        <SCORM dispatch={this.props.dispatch} tracking={this.props.tracking} config={GLOBAL_CONFIG}/>
         <div className="divJumbotron">
             <div className="appPresentacion">
               <img width="200" heigth="200" align="middle" src="

@@ -9,7 +9,7 @@ import SCORM from './SCORM.jsx';
 import Header from './Header.jsx';
 import FinishScreen from './FinishScreen.jsx';
 import Quiz from './Quiz.jsx';
-import {jsonSaved, finishApp} from './../reducers/actions.jsx';
+import {jsonSaved, toggleInitialScreen, finishApp} from './../reducers/actions.jsx';
 import {INITIAL_STATE} from './../constants/constants.jsx';
 import $ from 'jquery';
 import ReactHtmlParser, {processNodes, convertNodeToElement, htmlparser2} from 'react-html-parser';
@@ -19,10 +19,10 @@ export class App extends React.Component {
   constructor(props){
     super(props);
     I18n.init();
-    this.state = {
-      presentacion:GLOBAL_CONFIG.InitialScreen,
+    // this.state = {
+    //   presentacion:GLOBAL_CONFIG.InitialScreen,
 
-    };
+    // };
 
     // eliminar etiquetas hmtl del formato de moodle
 
@@ -179,11 +179,7 @@ export class App extends React.Component {
   ******************************************************************************
   */
   onPresentacion(){
-    if(GLOBAL_CONFIG.InitialScreen)
-    this.setState({
-      presentacion:false,
-    });
-    return;
+    this.props.dispatch(toggleInitialScreen(false));
   }
   /*
   *****************************************************************************
@@ -194,43 +190,35 @@ export class App extends React.Component {
     this.props.dispatch(finishApp(true));
   }
   render(){
-
-    // console.log(this.props.jsoninterno);
-
-
     let appHeader = "";
     let appContent = "";
-    if(!this.state.presentacion){
-      if((this.props.tracking.finished !== true) || (GLOBAL_CONFIG.finish_screen === false)){
-        appHeader = (
-          <Header user_profile={this.props.user_profile} tracking={this.props.tracking} config={GLOBAL_CONFIG} I18n={I18n}/>
-        );
-        if((this.props.wait_for_user_profile !== false || this.props.wait_for_user_profile !== true) && this.props.jsoninterno.length > 0){
-          appContent = (
-            <Quiz finishTime={this.AppfinishTime.bind(this)} dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} quiz={this.props.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n}/>
-          );
-        }
-      } else {
+
+    if((GLOBAL_CONFIG.InitialScreen===true)&&(this.props.initial_screen === true)){
+      appContent = (
+        <InitialScreen dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} questions={this.props.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n} onPresentacion={this.onPresentacion.bind(this)}/>
+      );
+    } else if((this.props.tracking.finished !== true) || (GLOBAL_CONFIG.finish_screen === false)){
+      appHeader = (
+        <Header user_profile={this.props.user_profile} tracking={this.props.tracking} config={GLOBAL_CONFIG} I18n={I18n}/>
+      );
+      if((this.props.wait_for_user_profile !== false || this.props.wait_for_user_profile !== true) && this.props.jsoninterno.length > 0){
         appContent = (
-          <FinishScreen dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} questions={this.props.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n}/>
+          <Quiz finishTime={this.AppfinishTime.bind(this)} dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} quiz={this.props.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n}/>
         );
       }
-      return (
-        <div id="container">
-          <SCORM dispatch={this.props.dispatch} tracking={this.props.tracking} config={GLOBAL_CONFIG}/>
-          {appHeader}
-          {appContent}
-        </div>
+    } else {
+      appContent = (
+        <FinishScreen dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} questions={this.props.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n}/>
       );
     }
-
-    else {
-      return(
-      <div>
-        <InitialScreen dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} questions={this.props.jsoninterno} config={GLOBAL_CONFIG} I18n={I18n} onPresentacion={this.onPresentacion.bind(this)}/>
+    return (
+      <div id="container">
+        <SCORM dispatch={this.props.dispatch} tracking={this.props.tracking} config={GLOBAL_CONFIG}/>
+        {appHeader}
+        {appContent}
       </div>
-      );
-    }
+    );
+    
     return null;
   }
 }

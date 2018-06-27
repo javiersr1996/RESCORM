@@ -40,6 +40,13 @@ export function jsonSaved(quiz){
   };
 }
 
+export function toggleInitialScreen(show){
+  return {
+    type:'TOGGLE_INITIAL_SCREEN',
+    show:show,
+  };
+}
+
 // Example of action created using the redux-thunk middleware for Redux
 export function objectiveAccomplishedThunk(objectiveId, accomplishedScore = null){
   return (dispatch, getState) => {

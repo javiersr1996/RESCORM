@@ -13,5 +13,5 @@ export const INITIAL_STATE = {
   },
   wait_for_user_profile:false,
   jsoninterno:{},
-
+  initial_screen: true,
 };
