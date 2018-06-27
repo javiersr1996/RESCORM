@@ -31,14 +31,6 @@ export let GLOBAL_CONFIG = {
     secondsRemaining:600,
     repeticiones:10,
 
-        // textos pantalla inicial
-        // castellano modo examen1_en
-
-        // castellano modo repaso1
-
-        // ingles modo examen1_en
-
-        // ingles modo repaso1
 
   },
   production:{
@@ -56,7 +48,14 @@ export let GLOBAL_CONFIG = {
     n:10,
     InitialScreen:true,
     modo:"examen",
-    xml:"assets/examen_pasos.xml",
+    /*
+    *************************************************************************************
+    xml: "assets/<CUESTIONARIO>.xml",
+    <CUESTIONARIO> en castellano: pasos, antideportivas, violaciones, faltas y examenfinal
+    <CUESTIONARIO> en inglés: ingles
+    *************************************************************************************
+    */
+    xml:"assets/pasos.xml",
     secondsRemaining:360,
     repeticiones:10,
   },
